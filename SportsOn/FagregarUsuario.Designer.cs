@@ -47,11 +47,10 @@
             label3 = new Label();
             Tcorreo = new TextBox();
             Tcontraseña = new TextBox();
-            Tconfcontraseña = new TextBox();
             Lsports = new Label();
             pbicono = new PictureBox();
             Lcategoria = new Label();
-            Tcategoria = new TextBox();
+            Tconfcontra = new TextBox();
             Bagregar = new Button();
             Bcancelar = new Button();
             errorNombre = new ErrorProvider(components);
@@ -59,22 +58,27 @@
             errorApellido = new ErrorProvider(components);
             errorDni = new ErrorProvider(components);
             errorDomicilio = new ErrorProvider(components);
-            errorTelefono = new ErrorProvider(components);
             errorCorreo = new ErrorProvider(components);
             errorContraseña = new ErrorProvider(components);
             errorConfcontra = new ErrorProvider(components);
             errorCategoria = new ErrorProvider(components);
+            comboBox1 = new ComboBox();
+            DTfechanac = new DateTimePicker();
+            label4 = new Label();
+            error_fechanac = new ErrorProvider(components);
+            errorTel = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pbicono).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorNombre).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorApellido).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorDni).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorDomicilio).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorTelefono).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorCorreo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorContraseña).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorConfcontra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorCategoria).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)error_fechanac).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorTel).BeginInit();
             SuspendLayout();
             // 
             // Tnombre
@@ -84,13 +88,14 @@
             Tnombre.Size = new Size(247, 23);
             Tnombre.TabIndex = 0;
             Tnombre.TextAlign = HorizontalAlignment.Center;
+            Tnombre.KeyPress += Tnombre_KeyPress;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Berlin Sans FB", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ActiveCaption;
-            label1.Location = new Point(202, 9);
+            label1.Location = new Point(399, 9);
             label1.Name = "label1";
             label1.Size = new Size(196, 30);
             label1.TabIndex = 5;
@@ -99,7 +104,7 @@
             // Lnombre
             // 
             Lnombre.AutoSize = true;
-            Lnombre.Location = new Point(90, 53);
+            Lnombre.Location = new Point(97, 53);
             Lnombre.Name = "Lnombre";
             Lnombre.Size = new Size(67, 15);
             Lnombre.TabIndex = 6;
@@ -109,7 +114,7 @@
             // Lapellido
             // 
             Lapellido.AutoSize = true;
-            Lapellido.Location = new Point(90, 94);
+            Lapellido.Location = new Point(496, 53);
             Lapellido.Name = "Lapellido";
             Lapellido.Size = new Size(67, 15);
             Lapellido.TabIndex = 7;
@@ -117,15 +122,16 @@
             // 
             // Tapellido
             // 
-            Tapellido.Location = new Point(170, 94);
+            Tapellido.Location = new Point(569, 53);
             Tapellido.Name = "Tapellido";
             Tapellido.Size = new Size(247, 23);
             Tapellido.TabIndex = 8;
             Tapellido.TextAlign = HorizontalAlignment.Center;
+            Tapellido.KeyPress += Tapellido_KeyPress;
             // 
             // Tdni
             // 
-            Tdni.Location = new Point(170, 145);
+            Tdni.Location = new Point(170, 94);
             Tdni.Name = "Tdni";
             Tdni.Size = new Size(247, 23);
             Tdni.TabIndex = 9;
@@ -135,7 +141,7 @@
             // Ldni
             // 
             Ldni.AutoSize = true;
-            Ldni.Location = new Point(109, 148);
+            Ldni.Location = new Point(118, 97);
             Ldni.Name = "Ldni";
             Ldni.Size = new Size(43, 15);
             Ldni.TabIndex = 10;
@@ -144,7 +150,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(78, 197);
+            label2.Location = new Point(489, 102);
             label2.Name = "label2";
             label2.Size = new Size(74, 15);
             label2.TabIndex = 11;
@@ -152,7 +158,7 @@
             // 
             // Tdomicilio
             // 
-            Tdomicilio.Location = new Point(170, 194);
+            Tdomicilio.Location = new Point(569, 100);
             Tdomicilio.Name = "Tdomicilio";
             Tdomicilio.Size = new Size(247, 23);
             Tdomicilio.TabIndex = 12;
@@ -161,7 +167,7 @@
             // Ltelefono
             // 
             Ltelefono.AutoSize = true;
-            Ltelefono.Location = new Point(78, 243);
+            Ltelefono.Location = new Point(90, 147);
             Ltelefono.Name = "Ltelefono";
             Ltelefono.Size = new Size(74, 15);
             Ltelefono.TabIndex = 13;
@@ -169,16 +175,17 @@
             // 
             // Tnro_telefono
             // 
-            Tnro_telefono.Location = new Point(170, 240);
+            Tnro_telefono.Location = new Point(170, 144);
             Tnro_telefono.Name = "Tnro_telefono";
             Tnro_telefono.Size = new Size(247, 23);
             Tnro_telefono.TabIndex = 14;
             Tnro_telefono.TextAlign = HorizontalAlignment.Center;
+            Tnro_telefono.KeyPress += Tnro_telefono_KeyPress;
             // 
             // CBhombre
             // 
             CBhombre.AutoSize = true;
-            CBhombre.Location = new Point(452, 196);
+            CBhombre.Location = new Point(413, 417);
             CBhombre.Name = "CBhombre";
             CBhombre.Size = new Size(70, 19);
             CBhombre.TabIndex = 15;
@@ -188,7 +195,7 @@
             // CBmujer
             // 
             CBmujer.AutoSize = true;
-            CBmujer.Location = new Point(528, 197);
+            CBmujer.Location = new Point(489, 417);
             CBmujer.Name = "CBmujer";
             CBmujer.Size = new Size(57, 19);
             CBmujer.TabIndex = 16;
@@ -198,16 +205,16 @@
             // Lcorreo
             // 
             Lcorreo.AutoSize = true;
-            Lcorreo.Location = new Point(34, 285);
+            Lcorreo.Location = new Point(514, 152);
             Lcorreo.Name = "Lcorreo";
-            Lcorreo.Size = new Size(118, 15);
+            Lcorreo.Size = new Size(49, 15);
             Lcorreo.TabIndex = 18;
-            Lcorreo.Text = "Correo electronico(*)";
+            Lcorreo.Text = "Email(*)";
             // 
             // Lcontraseña
             // 
             Lcontraseña.AutoSize = true;
-            Lcontraseña.Location = new Point(73, 332);
+            Lcontraseña.Location = new Point(82, 189);
             Lcontraseña.Name = "Lcontraseña";
             Lcontraseña.Size = new Size(79, 21);
             Lcontraseña.TabIndex = 19;
@@ -217,7 +224,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(18, 380);
+            label3.Location = new Point(27, 241);
             label3.Name = "label3";
             label3.Size = new Size(134, 21);
             label3.TabIndex = 20;
@@ -226,34 +233,27 @@
             // 
             // Tcorreo
             // 
-            Tcorreo.Location = new Point(170, 285);
+            Tcorreo.Location = new Point(569, 147);
             Tcorreo.Name = "Tcorreo";
             Tcorreo.Size = new Size(247, 23);
             Tcorreo.TabIndex = 21;
             Tcorreo.TextAlign = HorizontalAlignment.Center;
+            Tcorreo.KeyPress += Tcorreo_KeyPress;
             // 
             // Tcontraseña
             // 
-            Tcontraseña.Location = new Point(170, 332);
+            Tcontraseña.Location = new Point(170, 189);
             Tcontraseña.Name = "Tcontraseña";
             Tcontraseña.Size = new Size(247, 23);
             Tcontraseña.TabIndex = 22;
             Tcontraseña.TextAlign = HorizontalAlignment.Center;
-            // 
-            // Tconfcontraseña
-            // 
-            Tconfcontraseña.Location = new Point(170, 377);
-            Tconfcontraseña.Name = "Tconfcontraseña";
-            Tconfcontraseña.Size = new Size(247, 23);
-            Tconfcontraseña.TabIndex = 23;
-            Tconfcontraseña.TextAlign = HorizontalAlignment.Center;
             // 
             // Lsports
             // 
             Lsports.AutoSize = true;
             Lsports.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Regular, GraphicsUnit.Point);
             Lsports.ForeColor = Color.CornflowerBlue;
-            Lsports.Location = new Point(170, 509);
+            Lsports.Location = new Point(346, 501);
             Lsports.Name = "Lsports";
             Lsports.Size = new Size(280, 55);
             Lsports.TabIndex = 24;
@@ -262,7 +262,7 @@
             // pbicono
             // 
             pbicono.Image = Properties.Resources.mujer_icono;
-            pbicono.Location = new Point(452, 53);
+            pbicono.Location = new Point(417, 277);
             pbicono.Margin = new Padding(0);
             pbicono.Name = "pbicono";
             pbicono.Size = new Size(137, 137);
@@ -273,39 +273,47 @@
             // Lcategoria
             // 
             Lcategoria.AutoSize = true;
-            Lcategoria.Location = new Point(82, 418);
+            Lcategoria.Location = new Point(493, 189);
             Lcategoria.Name = "Lcategoria";
             Lcategoria.Size = new Size(70, 21);
             Lcategoria.TabIndex = 26;
             Lcategoria.Text = "Categoria(*)";
             Lcategoria.UseCompatibleTextRendering = true;
             // 
-            // Tcategoria
+            // Tconfcontra
             // 
-            Tcategoria.Location = new Point(170, 418);
-            Tcategoria.Name = "Tcategoria";
-            Tcategoria.Size = new Size(247, 23);
-            Tcategoria.TabIndex = 27;
-            Tcategoria.TextAlign = HorizontalAlignment.Center;
+            Tconfcontra.Location = new Point(170, 241);
+            Tconfcontra.Name = "Tconfcontra";
+            Tconfcontra.Size = new Size(247, 23);
+            Tconfcontra.TabIndex = 27;
+            Tconfcontra.TextAlign = HorizontalAlignment.Center;
+            Tconfcontra.KeyPress += Tconfcontra_KeyPress;
             // 
             // Bagregar
             // 
-            Bagregar.Location = new Point(170, 447);
+            Bagregar.BackColor = Color.FromArgb(128, 255, 128);
+            Bagregar.Image = Properties.Resources.guardar;
+            Bagregar.ImageAlign = ContentAlignment.TopLeft;
+            Bagregar.Location = new Point(346, 442);
             Bagregar.Name = "Bagregar";
-            Bagregar.Size = new Size(125, 37);
+            Bagregar.Size = new Size(137, 43);
             Bagregar.TabIndex = 28;
-            Bagregar.Text = "Aceptar";
-            Bagregar.UseVisualStyleBackColor = true;
+            Bagregar.Text = "Registrar";
+            Bagregar.UseVisualStyleBackColor = false;
             Bagregar.Click += Bagregar_Click;
             // 
             // Bcancelar
             // 
-            Bcancelar.Location = new Point(301, 447);
+            Bcancelar.BackColor = Color.FromArgb(255, 192, 192);
+            Bcancelar.Image = Properties.Resources.cancelar;
+            Bcancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            Bcancelar.Location = new Point(493, 442);
             Bcancelar.Name = "Bcancelar";
-            Bcancelar.Size = new Size(116, 37);
+            Bcancelar.Size = new Size(121, 43);
             Bcancelar.TabIndex = 29;
             Bcancelar.Text = "Cancelar";
-            Bcancelar.UseVisualStyleBackColor = true;
+            Bcancelar.UseVisualStyleBackColor = false;
+            Bcancelar.Click += Bcancelar_Click;
             // 
             // errorNombre
             // 
@@ -327,10 +335,6 @@
             // 
             errorDomicilio.ContainerControl = this;
             // 
-            // errorTelefono
-            // 
-            errorTelefono.ContainerControl = this;
-            // 
             // errorCorreo
             // 
             errorCorreo.ContainerControl = this;
@@ -347,19 +351,55 @@
             // 
             errorCategoria.ContainerControl = this;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(571, 189);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(250, 23);
+            comboBox1.TabIndex = 31;
+            // 
+            // DTfechanac
+            // 
+            DTfechanac.Location = new Point(569, 239);
+            DTfechanac.Name = "DTfechanac";
+            DTfechanac.Size = new Size(252, 23);
+            DTfechanac.TabIndex = 32;
+            DTfechanac.ValueChanged += DTfechanac_ValueChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(433, 241);
+            label4.Name = "label4";
+            label4.Size = new Size(130, 21);
+            label4.TabIndex = 33;
+            label4.Text = "Fecha de nacimiento(*)";
+            label4.UseCompatibleTextRendering = true;
+            // 
+            // error_fechanac
+            // 
+            error_fechanac.ContainerControl = this;
+            // 
+            // errorTel
+            // 
+            errorTel.ContainerControl = this;
+            // 
             // FagregarUsuario
             // 
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(614, 573);
+            ClientSize = new Size(926, 561);
+            Controls.Add(label4);
+            Controls.Add(DTfechanac);
+            Controls.Add(comboBox1);
             Controls.Add(Bcancelar);
             Controls.Add(Bagregar);
-            Controls.Add(Tcategoria);
+            Controls.Add(Tconfcontra);
             Controls.Add(Lcategoria);
             Controls.Add(pbicono);
             Controls.Add(Lsports);
-            Controls.Add(Tconfcontraseña);
             Controls.Add(Tcontraseña);
             Controls.Add(Tcorreo);
             Controls.Add(label3);
@@ -386,11 +426,12 @@
             ((System.ComponentModel.ISupportInitialize)errorApellido).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorDni).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorDomicilio).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorTelefono).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorCorreo).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorContraseña).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorConfcontra).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorCategoria).EndInit();
+            ((System.ComponentModel.ISupportInitialize)error_fechanac).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorTel).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -415,11 +456,10 @@
         private Label label3;
         private TextBox Tcorreo;
         private TextBox Tcontraseña;
-        private TextBox Tconfcontraseña;
         private Label Lsports;
         private PictureBox pbicono;
         private Label Lcategoria;
-        private TextBox Tcategoria;
+        private TextBox Tconfcontra;
         private Button Bagregar;
         private Button Bcancelar;
         private ErrorProvider errorNombre;
@@ -427,10 +467,14 @@
         private ErrorProvider errorApellido;
         private ErrorProvider errorDni;
         private ErrorProvider errorDomicilio;
-        private ErrorProvider errorTelefono;
         private ErrorProvider errorCorreo;
         private ErrorProvider errorContraseña;
         private ErrorProvider errorConfcontra;
         private ErrorProvider errorCategoria;
+        private ComboBox comboBox1;
+        private Label label4;
+        private DateTimePicker DTfechanac;
+        private ErrorProvider error_fechanac;
+        private ErrorProvider errorTel;
     }
 }
