@@ -24,7 +24,7 @@ namespace SportsOn
 
         private void Busuario_Click(object sender, EventArgs e)
         {
-            Form formulario = new Fagregar_usuario();
+            Form formulario = new FAgregarUsuario();
             formulario.Show();
         }
     }
