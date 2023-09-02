@@ -7,7 +7,7 @@
     <Compile Update="Fadministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FagregarUsuario.cs">
+    <Compile Update="Fagregar_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">

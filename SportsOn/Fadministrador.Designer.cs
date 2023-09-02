@@ -43,14 +43,14 @@
             Bnota = new Button();
             Bv_ventas = new Button();
             Bdatos_empleado = new Button();
-            button1 = new Button();
+            Bcaja = new Button();
             BcerrarSesion = new Button();
             Bbuscarproducto = new Button();
             Tbuscar_producto = new TextBox();
             label1 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            Binforme = new Button();
+            Bstock = new Button();
+            Busuario = new Button();
             panelEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_empleado).BeginInit();
             SuspendLayout();
@@ -184,18 +184,18 @@
             Bdatos_empleado.TextAlign = ContentAlignment.BottomCenter;
             Bdatos_empleado.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // Bcaja
             // 
-            button1.BackColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(289, 74);
-            button1.Name = "button1";
-            button1.Size = new Size(88, 93);
-            button1.TabIndex = 21;
-            button1.Text = "Caja";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = false;
+            Bcaja.BackColor = Color.White;
+            Bcaja.Image = (Image)resources.GetObject("Bcaja.Image");
+            Bcaja.ImageAlign = ContentAlignment.TopCenter;
+            Bcaja.Location = new Point(289, 74);
+            Bcaja.Name = "Bcaja";
+            Bcaja.Size = new Size(88, 93);
+            Bcaja.TabIndex = 21;
+            Bcaja.Text = "Caja";
+            Bcaja.TextAlign = ContentAlignment.BottomCenter;
+            Bcaja.UseVisualStyleBackColor = false;
             // 
             // BcerrarSesion
             // 
@@ -235,58 +235,59 @@
             label1.TabIndex = 23;
             label1.Text = "Buscar un producto por codigo:";
             // 
-            // button2
+            // Binforme
             // 
-            button2.BackColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.TopCenter;
-            button2.Location = new Point(383, 74);
-            button2.Name = "button2";
-            button2.Size = new Size(88, 93);
-            button2.TabIndex = 26;
-            button2.Text = "Informes";
-            button2.TextAlign = ContentAlignment.BottomCenter;
-            button2.UseVisualStyleBackColor = false;
+            Binforme.BackColor = Color.White;
+            Binforme.Image = (Image)resources.GetObject("Binforme.Image");
+            Binforme.ImageAlign = ContentAlignment.TopCenter;
+            Binforme.Location = new Point(383, 74);
+            Binforme.Name = "Binforme";
+            Binforme.Size = new Size(88, 93);
+            Binforme.TabIndex = 26;
+            Binforme.Text = "Informes";
+            Binforme.TextAlign = ContentAlignment.BottomCenter;
+            Binforme.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // Bstock
             // 
-            button3.BackColor = Color.White;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(477, 74);
-            button3.Name = "button3";
-            button3.Size = new Size(88, 93);
-            button3.TabIndex = 27;
-            button3.Text = "Stock";
-            button3.TextAlign = ContentAlignment.BottomCenter;
-            button3.UseVisualStyleBackColor = false;
+            Bstock.BackColor = Color.White;
+            Bstock.Image = (Image)resources.GetObject("Bstock.Image");
+            Bstock.ImageAlign = ContentAlignment.TopCenter;
+            Bstock.Location = new Point(477, 74);
+            Bstock.Name = "Bstock";
+            Bstock.Size = new Size(88, 93);
+            Bstock.TabIndex = 27;
+            Bstock.Text = "Stock";
+            Bstock.TextAlign = ContentAlignment.BottomCenter;
+            Bstock.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // Busuario
             // 
-            button4.BackColor = Color.White;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.TopCenter;
-            button4.Location = new Point(571, 74);
-            button4.Name = "button4";
-            button4.Size = new Size(88, 93);
-            button4.TabIndex = 28;
-            button4.Text = "Usuarios";
-            button4.TextAlign = ContentAlignment.BottomCenter;
-            button4.UseVisualStyleBackColor = false;
+            Busuario.BackColor = Color.White;
+            Busuario.Image = (Image)resources.GetObject("Busuario.Image");
+            Busuario.ImageAlign = ContentAlignment.TopCenter;
+            Busuario.Location = new Point(571, 74);
+            Busuario.Name = "Busuario";
+            Busuario.Size = new Size(88, 93);
+            Busuario.TabIndex = 28;
+            Busuario.Text = "Usuarios";
+            Busuario.TextAlign = ContentAlignment.BottomCenter;
+            Busuario.UseVisualStyleBackColor = false;
+            Busuario.Click += Busuario_Click;
             // 
             // Fadministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(860, 678);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(Busuario);
+            Controls.Add(Bstock);
+            Controls.Add(Binforme);
             Controls.Add(Bbuscarproducto);
             Controls.Add(Tbuscar_producto);
             Controls.Add(label1);
             Controls.Add(BcerrarSesion);
-            Controls.Add(button1);
+            Controls.Add(Bcaja);
             Controls.Add(Bdatos_empleado);
             Controls.Add(Bv_ventas);
             Controls.Add(Bnota);
@@ -319,13 +320,13 @@
         private Button Bnota;
         private Button Bv_ventas;
         private Button Bdatos_empleado;
-        private Button button1;
+        private Button Bcaja;
         private Button BcerrarSesion;
         private Button Bbuscarproducto;
         private TextBox Tbuscar_producto;
         private Label label1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button Binforme;
+        private Button Bstock;
+        private Button Busuario;
     }
 }

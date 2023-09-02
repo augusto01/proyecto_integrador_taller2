@@ -27,7 +27,6 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Sp
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.csproj.AssemblyReference.cache
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.empleado.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Fadministrador.resources
-C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.FagregarUsuario.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Form1.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Properties.Resources.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.csproj.GenerateResource.cache
@@ -40,3 +39,4 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Sp
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.pdb
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.genruntimeconfig.cache
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\ref\SportsOn.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Fagregar_usuario.resources
