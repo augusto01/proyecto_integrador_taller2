@@ -40,9 +40,9 @@
             Bstock = new Button();
             Busuario = new Button();
             pMenu = new Panel();
-            Bcerrar = new Button();
             panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            Bcerrar = new Button();
             pMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -245,20 +245,6 @@
             pMenu.TabIndex = 29;
             pMenu.Paint += pMenu_Paint;
             // 
-            // Bcerrar
-            // 
-            Bcerrar.Cursor = Cursors.Hand;
-            Bcerrar.FlatAppearance.BorderSize = 0;
-            Bcerrar.FlatStyle = FlatStyle.Flat;
-            Bcerrar.ForeColor = Color.CornflowerBlue;
-            Bcerrar.Image = Properties.Resources.cerrar;
-            Bcerrar.Location = new Point(812, 3);
-            Bcerrar.Name = "Bcerrar";
-            Bcerrar.Size = new Size(45, 45);
-            Bcerrar.TabIndex = 31;
-            Bcerrar.UseVisualStyleBackColor = true;
-            Bcerrar.Click += Bcerrar_Click;
-            // 
             // panel1
             // 
             panel1.Location = new Point(828, 167);
@@ -277,6 +263,20 @@
             flowLayoutPanel1.Size = new Size(860, 514);
             flowLayoutPanel1.TabIndex = 30;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            // 
+            // Bcerrar
+            // 
+            Bcerrar.Cursor = Cursors.Hand;
+            Bcerrar.FlatAppearance.BorderSize = 0;
+            Bcerrar.FlatStyle = FlatStyle.Flat;
+            Bcerrar.ForeColor = Color.CornflowerBlue;
+            Bcerrar.Image = (Image)resources.GetObject("Bcerrar.Image");
+            Bcerrar.Location = new Point(814, 12);
+            Bcerrar.Name = "Bcerrar";
+            Bcerrar.Size = new Size(29, 29);
+            Bcerrar.TabIndex = 34;
+            Bcerrar.UseVisualStyleBackColor = true;
+            Bcerrar.Click += Bcerrar_Click_1;
             // 
             // Fadministrador
             // 
@@ -307,7 +307,7 @@
         private Button Busuario;
         private Panel pMenu;
         private Panel panel1;
-        private Button Bcerrar;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button Bcerrar;
     }
 }

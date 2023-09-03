@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAgregarUsuario));
             Tdni = new TextBox();
-            Bcancelar = new Button();
             Bagregar = new Button();
             Lindex = new Label();
             Lsports = new Label();
@@ -50,6 +49,7 @@
             Ecel = new ErrorProvider(components);
             Eemail = new ErrorProvider(components);
             Ecategoria = new ErrorProvider(components);
+            Bcerrar = new Button();
             ((System.ComponentModel.ISupportInitialize)Enombre).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Eapellido).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Edni).BeginInit();
@@ -69,30 +69,21 @@
             Tdni.TabIndex = 32;
             Tdni.KeyPress += Tdni_KeyPress;
             // 
-            // Bcancelar
-            // 
-            Bcancelar.BackColor = Color.FromArgb(255, 192, 192);
-            Bcancelar.Image = Properties.Resources.cancelar2;
-            Bcancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            Bcancelar.Location = new Point(465, 459);
-            Bcancelar.Name = "Bcancelar";
-            Bcancelar.Size = new Size(128, 40);
-            Bcancelar.TabIndex = 31;
-            Bcancelar.Text = "Cancelar";
-            Bcancelar.UseVisualStyleBackColor = false;
-            Bcancelar.Click += Bcancelar_Click;
-            // 
             // Bagregar
             // 
-            Bagregar.BackColor = Color.FromArgb(192, 255, 192);
+            Bagregar.BackColor = Color.Transparent;
+            Bagregar.Cursor = Cursors.Hand;
+            Bagregar.FlatAppearance.BorderSize = 0;
+            Bagregar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            Bagregar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            Bagregar.FlatStyle = FlatStyle.Flat;
             Bagregar.ForeColor = SystemColors.ActiveCaptionText;
-            Bagregar.Image = Properties.Resources.guardar2;
-            Bagregar.ImageAlign = ContentAlignment.MiddleLeft;
-            Bagregar.Location = new Point(328, 459);
+            Bagregar.Image = (Image)resources.GetObject("Bagregar.Image");
+            Bagregar.ImageAlign = ContentAlignment.TopCenter;
+            Bagregar.Location = new Point(419, 441);
             Bagregar.Name = "Bagregar";
-            Bagregar.Size = new Size(128, 40);
+            Bagregar.Size = new Size(76, 72);
             Bagregar.TabIndex = 30;
-            Bagregar.Text = "Agregar";
             Bagregar.UseVisualStyleBackColor = false;
             Bagregar.Click += Bagregar_Click;
             // 
@@ -101,7 +92,7 @@
             Lindex.AutoSize = true;
             Lindex.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point);
             Lindex.ForeColor = Color.Lime;
-            Lindex.Location = new Point(328, 35);
+            Lindex.Location = new Point(328, 27);
             Lindex.Name = "Lindex";
             Lindex.Size = new Size(275, 37);
             Lindex.TabIndex = 29;
@@ -112,7 +103,7 @@
             Lsports.AutoSize = true;
             Lsports.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Regular, GraphicsUnit.Point);
             Lsports.ForeColor = Color.Lime;
-            Lsports.Location = new Point(323, 516);
+            Lsports.Location = new Point(313, 516);
             Lsports.Name = "Lsports";
             Lsports.Size = new Size(280, 55);
             Lsports.TabIndex = 28;
@@ -165,7 +156,7 @@
             // 
             // Tapellido
             // 
-            Tapellido.Location = new Point(328, 141);
+            Tapellido.Location = new Point(328, 134);
             Tapellido.Name = "Tapellido";
             Tapellido.PlaceholderText = "Apellido";
             Tapellido.Size = new Size(265, 23);
@@ -174,7 +165,7 @@
             // 
             // TBnombre
             // 
-            TBnombre.Location = new Point(328, 89);
+            TBnombre.Location = new Point(328, 85);
             TBnombre.Name = "TBnombre";
             TBnombre.PlaceholderText = "Nombre";
             TBnombre.Size = new Size(265, 23);
@@ -184,43 +175,65 @@
             // 
             // Enombre
             // 
+            Enombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Enombre.ContainerControl = this;
             Enombre.Icon = (Icon)resources.GetObject("Enombre.Icon");
             // 
             // Eapellido
             // 
+            Eapellido.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Eapellido.ContainerControl = this;
             Eapellido.Icon = (Icon)resources.GetObject("Eapellido.Icon");
             // 
             // Edni
             // 
+            Edni.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Edni.ContainerControl = this;
             Edni.Icon = (Icon)resources.GetObject("Edni.Icon");
             // 
             // Econtra
             // 
+            Econtra.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Econtra.ContainerControl = this;
             Econtra.Icon = (Icon)resources.GetObject("Econtra.Icon");
             // 
             // Edomi
             // 
+            Edomi.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Edomi.ContainerControl = this;
             Edomi.Icon = (Icon)resources.GetObject("Edomi.Icon");
             // 
             // Ecel
             // 
+            Ecel.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Ecel.ContainerControl = this;
             Ecel.Icon = (Icon)resources.GetObject("Ecel.Icon");
             // 
             // Eemail
             // 
+            Eemail.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Eemail.ContainerControl = this;
             Eemail.Icon = (Icon)resources.GetObject("Eemail.Icon");
             // 
             // Ecategoria
             // 
+            Ecategoria.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             Ecategoria.ContainerControl = this;
             Ecategoria.Icon = (Icon)resources.GetObject("Ecategoria.Icon");
+            // 
+            // Bcerrar
+            // 
+            Bcerrar.Cursor = Cursors.Hand;
+            Bcerrar.FlatAppearance.BorderSize = 0;
+            Bcerrar.FlatStyle = FlatStyle.Flat;
+            Bcerrar.ForeColor = Color.CornflowerBlue;
+            Bcerrar.Image = (Image)resources.GetObject("Bcerrar.Image");
+            Bcerrar.Location = new Point(744, 19);
+            Bcerrar.Name = "Bcerrar";
+            Bcerrar.Size = new Size(45, 45);
+            Bcerrar.TabIndex = 33;
+            Bcerrar.UseVisualStyleBackColor = true;
+            Bcerrar.Click += Bcerrar_Click;
             // 
             // FAgregarUsuario
             // 
@@ -228,8 +241,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.HotTrack;
             ClientSize = new Size(917, 637);
+            Controls.Add(Bcerrar);
             Controls.Add(Tdni);
-            Controls.Add(Bcancelar);
             Controls.Add(Bagregar);
             Controls.Add(Lindex);
             Controls.Add(Lsports);
@@ -258,7 +271,6 @@
         #endregion
 
         private TextBox Tdni;
-        private Button Bcancelar;
         private Button Bagregar;
         private Label Lindex;
         private Label Lsports;
@@ -277,5 +289,6 @@
         private ErrorProvider Ecel;
         private ErrorProvider Eemail;
         private ErrorProvider Ecategoria;
+        private Button Bcerrar;
     }
 }

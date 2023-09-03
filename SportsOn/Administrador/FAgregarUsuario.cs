@@ -220,6 +220,14 @@ namespace SportsOn
             }
         }
 
+        private void Bcerrar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro que desea cerrar sesión?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 
 }

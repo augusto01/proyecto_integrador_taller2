@@ -58,5 +58,14 @@ namespace SportsOn
                 Close();
             }
         }
+
+        private void Bcerrar_Click_1(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }

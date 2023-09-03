@@ -65,11 +65,15 @@
             // 
             // Biniciar
             // 
-            Biniciar.Location = new Point(356, 285);
+            Biniciar.FlatAppearance.BorderSize = 0;
+            Biniciar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            Biniciar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            Biniciar.FlatStyle = FlatStyle.Flat;
+            Biniciar.Image = Properties.Resources.iniciar_sesion1;
+            Biniciar.Location = new Point(367, 270);
             Biniciar.Name = "Biniciar";
-            Biniciar.Size = new Size(72, 27);
+            Biniciar.Size = new Size(47, 64);
             Biniciar.TabIndex = 3;
-            Biniciar.Text = "Entrar";
             Biniciar.UseVisualStyleBackColor = true;
             Biniciar.Click += Biniciar_Click;
             // 
