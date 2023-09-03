@@ -65,6 +65,7 @@
             // 
             // Biniciar
             // 
+            Biniciar.Cursor = Cursors.Hand;
             Biniciar.FlatAppearance.BorderSize = 0;
             Biniciar.FlatAppearance.MouseDownBackColor = Color.Transparent;
             Biniciar.FlatAppearance.MouseOverBackColor = Color.Transparent;
