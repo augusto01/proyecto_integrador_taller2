@@ -20,13 +20,28 @@ namespace SportsOn
 
         private void Bv_ventas_Click(object sender, EventArgs e)
         {
-
+            if (!pCompras.Visible)
+            {
+                pCompras.Visible = true;
+            }
+            else
+            {
+                pCompras.Visible = false;
+            }
         }
 
         private void Busuario_Click(object sender, EventArgs e)
         {
-            Form formulario = new FAgregarUsuario();
-            formulario.Show();
+            if (!pUsuarios.Visible)
+            {
+                pUsuarios.Visible = true;
+            }
+            else
+            {
+                pUsuarios.Visible = false;
+            }
+
+
         }
 
 
@@ -65,6 +80,44 @@ namespace SportsOn
             if (resultado == DialogResult.Yes)
             {
                 Close();
+            }
+        }
+
+        private void Lcargo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Luser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fadministrador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BagregarUsuario_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FAgregarUsuario();
+            formulario.Show();
+        }
+
+        private void Pstock_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Bstock_Click(object sender, EventArgs e)
+        {
+            if (!Pstock.Visible)
+            {
+                Pstock.Visible = true;
+            }
+            else
+            {
+                Pstock.Visible = false;
             }
         }
     }

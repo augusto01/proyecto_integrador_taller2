@@ -34,19 +34,54 @@ namespace SportsOn
 
 
 
-        private void Bbuscarproducto_Click(object sender, EventArgs e)
-        {
-            //VALIDA SI LOS CAMPOS ESTAN VACIOS !
-            if (Tbuscar_producto.Text.Trim() == String.Empty)
-            {
-                MessageBox.Show("El campo esta vacio!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-        }
 
         private void Bnota_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void Bcerrar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void Bcaja_Click(object sender, EventArgs e)
+        {
+            if (!pCaja.Visible)
+            {
+                pCaja.Visible = true;
+            }
+            else
+            {
+                pCaja.Visible = false;
+            }
+        }
+
+        private void Bventa_Click(object sender, EventArgs e)
+        {
+            if (!pVentas.Visible)
+            {
+                pVentas.Visible = true;
+            }
+            else
+            {
+                pVentas.Visible = false;
+            }
+        }
+
+        private void BcerrarSesion_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro que desea cerrar sesión?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }
