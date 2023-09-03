@@ -74,7 +74,7 @@
             Bcancelar.BackColor = Color.FromArgb(255, 192, 192);
             Bcancelar.Image = Properties.Resources.cancelar2;
             Bcancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            Bcancelar.Location = new Point(462, 459);
+            Bcancelar.Location = new Point(465, 459);
             Bcancelar.Name = "Bcancelar";
             Bcancelar.Size = new Size(128, 40);
             Bcancelar.TabIndex = 31;
@@ -100,7 +100,7 @@
             // 
             Lindex.AutoSize = true;
             Lindex.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            Lindex.ForeColor = SystemColors.ActiveCaption;
+            Lindex.ForeColor = Color.Lime;
             Lindex.Location = new Point(328, 35);
             Lindex.Name = "Lindex";
             Lindex.Size = new Size(275, 37);
@@ -111,8 +111,8 @@
             // 
             Lsports.AutoSize = true;
             Lsports.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            Lsports.ForeColor = Color.CornflowerBlue;
-            Lsports.Location = new Point(316, 526);
+            Lsports.ForeColor = Color.Lime;
+            Lsports.Location = new Point(323, 516);
             Lsports.Name = "Lsports";
             Lsports.Size = new Size(280, 55);
             Lsports.TabIndex = 28;
@@ -134,10 +134,11 @@
             CBcategoria.Name = "CBcategoria";
             CBcategoria.Size = new Size(265, 23);
             CBcategoria.TabIndex = 26;
+            CBcategoria.Text = "Tipo de Usuario";
             // 
             // Tcelular
             // 
-            Tcelular.Location = new Point(328, 330);
+            Tcelular.Location = new Point(328, 326);
             Tcelular.Name = "Tcelular";
             Tcelular.PlaceholderText = "Celular";
             Tcelular.Size = new Size(265, 23);
@@ -225,6 +226,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(917, 637);
             Controls.Add(Tdni);
             Controls.Add(Bcancelar);
@@ -239,7 +241,7 @@
             Controls.Add(Tapellido);
             Controls.Add(TBnombre);
             Name = "FAgregarUsuario";
-            Text = "FAgregarUsuario";
+            Text = "Agregar Usuario";
             Load += FAgregarUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)Enombre).EndInit();
             ((System.ComponentModel.ISupportInitialize)Eapellido).EndInit();

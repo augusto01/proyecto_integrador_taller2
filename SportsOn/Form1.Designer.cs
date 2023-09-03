@@ -55,8 +55,8 @@
             // Llogin
             // 
             Llogin.AutoSize = true;
-            Llogin.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            Llogin.ForeColor = Color.CornflowerBlue;
+            Llogin.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            Llogin.ForeColor = Color.Lime;
             Llogin.Location = new Point(271, 108);
             Llogin.Name = "Llogin";
             Llogin.Size = new Size(280, 55);
@@ -77,6 +77,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(800, 450);
             Controls.Add(Biniciar);
             Controls.Add(Llogin);

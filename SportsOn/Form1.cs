@@ -10,7 +10,7 @@ namespace SportsOn
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void Biniciar_Click(object sender, EventArgs e)
@@ -18,7 +18,7 @@ namespace SportsOn
             //VALIDA SI LOS CAMPOS ESTAN VACIOS !
             if (Tusername.Text.Trim() == String.Empty || Tpass.Text.Trim() == String.Empty)
             {
-                MessageBox.Show("El campo esta vacio!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El campo esta vacío!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
@@ -27,6 +27,7 @@ namespace SportsOn
                 {
                     Form formulario = new Fadministrador();
                     formulario.Show();
+
                 }
                 else
                 {
@@ -34,6 +35,7 @@ namespace SportsOn
                     {
                         Form formulario = new empleado();
                         formulario.Show();
+
                     }
                     else
                     {
@@ -41,7 +43,9 @@ namespace SportsOn
                     }
                 }
             }
-            
+
+
         }
+
     }
 }
