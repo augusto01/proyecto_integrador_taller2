@@ -60,10 +60,7 @@ namespace SportsOn
 
         }
 
-        private void pMenu_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void BcerrarSesion_Click(object sender, EventArgs e)
         {
@@ -93,11 +90,6 @@ namespace SportsOn
 
         }
 
-        private void Fadministrador_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BagregarUsuario_Click(object sender, EventArgs e)
         {
             Form formulario = new FAgregarUsuario();
@@ -119,6 +111,28 @@ namespace SportsOn
             {
                 Pstock.Visible = false;
             }
+        }
+
+        private void Fadministrador_Load_1(object sender, EventArgs e)
+        {
+            pCompras.Visible = false;
+            Pstock.Visible = false;
+            pUsuarios.Visible = false;
+        }
+
+        private void Busuario_Leave(object sender, EventArgs e)
+        {
+            pUsuarios.Visible = false;
+        }
+
+        private void Bstock_Layout(object sender, LayoutEventArgs e)
+        {
+            Pstock.Visible = false;
+        }   
+
+        private void Bv_ventas_Leave(object sender, EventArgs e)
+        {
+            pCompras.Visible=false;
         }
     }
 }

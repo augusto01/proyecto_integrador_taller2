@@ -131,6 +131,8 @@
             Bv_ventas.TextAlign = ContentAlignment.BottomCenter;
             Bv_ventas.UseVisualStyleBackColor = false;
             Bv_ventas.Click += Bv_ventas_Click;
+            
+            Bv_ventas.Leave += Bv_ventas_Leave;
             // 
             // Bdatos_empleado
             // 
@@ -228,6 +230,7 @@
             Bstock.TextAlign = ContentAlignment.BottomCenter;
             Bstock.UseVisualStyleBackColor = false;
             Bstock.Click += Bstock_Click;
+            Bstock.Layout += Bstock_Layout;
             // 
             // Busuario
             // 
@@ -248,6 +251,7 @@
             Busuario.TextAlign = ContentAlignment.BottomCenter;
             Busuario.UseVisualStyleBackColor = false;
             Busuario.Click += Busuario_Click;
+            Busuario.Leave += Busuario_Leave;
             // 
             // pMenu
             // 
@@ -272,7 +276,6 @@
             pMenu.Name = "pMenu";
             pMenu.Size = new Size(854, 164);
             pMenu.TabIndex = 29;
-            pMenu.Paint += pMenu_Paint;
             // 
             // panel3
             // 
@@ -477,6 +480,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Fadministrador";
             Text = "SportsWorld";
+            Load += Fadministrador_Load_1;
             pMenu.ResumeLayout(false);
             pMenu.PerformLayout();
             pUsuarios.ResumeLayout(false);
