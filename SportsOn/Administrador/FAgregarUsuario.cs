@@ -39,6 +39,11 @@ namespace SportsOn
         }
 
 
+        //BANDERAS PARA SABER EL ESTADOS DE LOS TEXT BOX 
+        bool banderaDNI = false;
+        bool banderaEmail = false;
+        bool banderaContraseña = false;
+
         // VALIDACION CAMPO A CAMPO 
 
         //NOMBRE
@@ -82,9 +87,13 @@ namespace SportsOn
                 Edni.SetError(Tdni, "Este Campo Solo Acepta Numeros!");
                 e.Handled = true;
                 return;
+                banderaDNI = false;
 
 
-
+            }
+            else
+            {
+                banderaDNI = true;
             }
         }
 
@@ -96,11 +105,13 @@ namespace SportsOn
                 if (Lcontra.Text.Length < 4)
                 {
                     Econtra.SetError(Lcontra, "La contraseña debe tener minimo 4 Digitos");
+                    banderaContraseña = false
 
                     ;
                 }
                 else
                 {
+                    banderaContraseña = true;
                     Econtra.Clear();
 
                 }
@@ -126,89 +137,102 @@ namespace SportsOn
             if (((!(Regex.IsMatch(Temail.Text, "@"))) && (!(Regex.IsMatch(Temail.Text, "gmail")))) || ((!(Regex.IsMatch(Temail.Text, "@"))) && (!(Regex.IsMatch(Temail.Text, "hotmail")))))
             {
                 Eemail.SetError(Temail, "No tiene el formato esperado!\nEjemplo:user@gmail.com");
-
+                banderaEmail = false;
             }
             else
             {
                 Eemail.Clear();
+                banderaEmail = true;
 
             }
         }
 
         private void Bagregar_Click(object sender, EventArgs e)
         {
-            if (Tdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || Tapellido.Text.Trim() == string.Empty
-                    || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty)
+
+            if (banderaDNI == false || banderaEmail == false ||  banderaContraseña == false)
             {
-                MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                MessageBox.Show("Algunos Campos estan Completados de manera Incorrecta!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                if (Tdni.Text.Trim() == String.Empty)
-                {
-                    Edni.SetError(Tdni, "Falta Completar este Campo!");
-                }
-                if (TBnombre.Text.Trim() == String.Empty)
-                {
-                    Enombre.SetError(TBnombre, "Falta Completar este Campo!");
-                }
-                if (Tapellido.Text.Trim() == String.Empty)
-                {
-                    Eapellido.SetError(Tapellido, "Falta Completar este Campo!");
-                }
-
-                if (Temail.Text.Trim() == String.Empty)
-                {
-                    Eemail.SetError(Temail, "Falta Completar este Campo!");
-                }
-                if (CBcategoria.SelectedIndex == -1)
-                {
-                    Ecategoria.SetError(CBcategoria, "Falta Completar este Campo!");
-                }
-
-                if (Lcontra.Text.Trim() == String.Empty)
-                {
-                    Econtra.SetError(Lcontra, "Falta Completar este Campo!");
-                }
             }
-
-            //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
             else
             {
-                DialogResult resultado = MessageBox.Show("DNI:" + Tdni.Text + "\nNombre:" + TBnombre.Text + "   Apellido:" + Tapellido.Text
-                              + "\nEmail:" + Temail.Text, "Agregar Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (resultado == DialogResult.Yes)
+                if (Tdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || Tapellido.Text.Trim() == string.Empty
+                   || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty)
                 {
-                    MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    Tdni.Clear();
-                    Tdomicilio.Clear();
-                    Tcelular.Clear();
-                    TBnombre.Clear();
-                    Tapellido.Clear();
-                    Temail.Clear();
-                    Lcontra.Clear();
-                    CBcategoria.Items.Clear();
 
-                    //errores
-                    Edni.Clear();
-                    Enombre.Clear();
-                    Eapellido.Clear();
-                    Eemail.Clear();
-                    Ecel.Clear();
-                    Econtra.Clear();
-                    Ecategoria.Clear();
-                    inicializarUsuarios();
-
-                    DialogResult respuesta = MessageBox.Show("Desea agregar otro usuario?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (respuesta == DialogResult.No)
+                    if (Tdni.Text.Trim() == String.Empty)
                     {
-                        Close();
+                        Edni.SetError(Tdni, "Falta Completar este Campo!");
+                    }
+                    if (TBnombre.Text.Trim() == String.Empty)
+                    {
+                        Enombre.SetError(TBnombre, "Falta Completar este Campo!");
+                    }
+                    if (Tapellido.Text.Trim() == String.Empty)
+                    {
+                        Eapellido.SetError(Tapellido, "Falta Completar este Campo!");
                     }
 
+                    if (Temail.Text.Trim() == String.Empty)
+                    {
+                        Eemail.SetError(Temail, "Falta Completar este Campo!");
+                    }
+                    if (CBcategoria.SelectedIndex == -1)
+                    {
+                        Ecategoria.SetError(CBcategoria, "Falta Completar este Campo!");
+                    }
 
+                    if (Lcontra.Text.Trim() == String.Empty)
+                    {
+                        Econtra.SetError(Lcontra, "Falta Completar este Campo!");
+                    }
                 }
+
+                //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
+                else
+                {
+                    DialogResult resultado = MessageBox.Show("DNI:" + Tdni.Text + "\nNombre:" + TBnombre.Text + "   Apellido:" + Tapellido.Text
+                                  + "\nEmail:" + Temail.Text, "Agregar Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Tdni.Clear();
+                        Tdomicilio.Clear();
+                        Tcelular.Clear();
+                        TBnombre.Clear();
+                        Tapellido.Clear();
+                        Temail.Clear();
+                        Lcontra.Clear();
+                        CBcategoria.Items.Clear();
+
+                        //errores
+                        Edni.Clear();
+                        Enombre.Clear();
+                        Eapellido.Clear();
+                        Eemail.Clear();
+                        Ecel.Clear();
+                        Econtra.Clear();
+                        Ecategoria.Clear();
+                        inicializarUsuarios();
+
+                        DialogResult respuesta = MessageBox.Show("Desea agregar otro usuario?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (respuesta == DialogResult.No)
+                        {
+                            Close();
+                        }
+
+
+                    }
+                }
+
             }
+           
         }
 
         private void Bcancelar_Click(object sender, EventArgs e)
@@ -228,6 +252,11 @@ namespace SportsOn
                 Close();
             }
         }
+
+        
+        }
+
+
     }
 
-}
+      

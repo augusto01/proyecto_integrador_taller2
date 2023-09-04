@@ -85,7 +85,9 @@
             Bagregar.Size = new Size(76, 72);
             Bagregar.TabIndex = 30;
             Bagregar.UseVisualStyleBackColor = false;
+          
             Bagregar.Click += Bagregar_Click;
+           
             // 
             // Lindex
             // 
