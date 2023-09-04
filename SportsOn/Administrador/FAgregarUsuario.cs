@@ -150,14 +150,9 @@ namespace SportsOn
         private void Bagregar_Click(object sender, EventArgs e)
         {
 
-            if (banderaDNI == false || banderaEmail == false ||  banderaContraseña == false)
-            {
-
-                MessageBox.Show("Algunos Campos estan Completados de manera Incorrecta!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
+            
+            
+            
                 if (Tdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || Tapellido.Text.Trim() == string.Empty
                    || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty)
                 {
@@ -190,48 +185,57 @@ namespace SportsOn
                     {
                         Econtra.SetError(Lcontra, "Falta Completar este Campo!");
                     }
-                }
+                }else{
 
-                //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
-                else
-                {
-                    DialogResult resultado = MessageBox.Show("DNI:" + Tdni.Text + "\nNombre:" + TBnombre.Text + "   Apellido:" + Tapellido.Text
-                                  + "\nEmail:" + Temail.Text, "Agregar Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (resultado == DialogResult.Yes)
+                    if (banderaDNI == false || banderaEmail == false || banderaContraseña == false)
                     {
-                        MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        Tdni.Clear();
-                        Tdomicilio.Clear();
-                        Tcelular.Clear();
-                        TBnombre.Clear();
-                        Tapellido.Clear();
-                        Temail.Clear();
-                        Lcontra.Clear();
-                        CBcategoria.Items.Clear();
-
-                        //errores
-                        Edni.Clear();
-                        Enombre.Clear();
-                        Eapellido.Clear();
-                        Eemail.Clear();
-                        Ecel.Clear();
-                        Econtra.Clear();
-                        Ecategoria.Clear();
-                        inicializarUsuarios();
-
-                        DialogResult respuesta = MessageBox.Show("Desea agregar otro usuario?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (respuesta == DialogResult.No)
-                        {
-                            Close();
-                        }
-
+                        MessageBox.Show("Valores invalidos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
-                }
+                    else
+                    {   //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
 
-            }
+                        DialogResult resultado = MessageBox.Show("DNI:" + Tdni.Text + "\nNombre:" + TBnombre.Text + "   Apellido:" + Tapellido.Text
+                                     + "\nEmail:" + Temail.Text, "Agregar Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+                        {
+                            MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Tdni.Clear();
+                            Tdomicilio.Clear();
+                            Tcelular.Clear();
+                            TBnombre.Clear();
+                            Tapellido.Clear();
+                            Temail.Clear();
+                            Lcontra.Clear();
+                            CBcategoria.Items.Clear();
+
+                            //errores
+                            Edni.Clear();
+                            Enombre.Clear();
+                            Eapellido.Clear();
+                            Eemail.Clear();
+                            Ecel.Clear();
+                            Econtra.Clear();
+                            Ecategoria.Clear();
+                            inicializarUsuarios();
+
+                            DialogResult respuesta = MessageBox.Show("Desea agregar otro usuario?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (respuesta == DialogResult.No)
+                            {
+                                Close();
+                            }
+
+
+                        }
+
+                    }
+
+                          
+
+                 }
            
         }
 
