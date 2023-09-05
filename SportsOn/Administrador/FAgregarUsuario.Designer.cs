@@ -152,7 +152,7 @@
             Lcontra.Size = new Size(265, 23);
             Lcontra.TabIndex = 23;
             Lcontra.UseSystemPasswordChar = true;
-            Lcontra.KeyPress += Lcontra_KeyPress;
+            Lcontra.TextChanged += Lcontra_TextChanged;
             // 
             // Tapellido
             // 

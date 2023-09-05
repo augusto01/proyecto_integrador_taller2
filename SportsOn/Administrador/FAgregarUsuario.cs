@@ -97,8 +97,9 @@ namespace SportsOn
             }
         }
 
+
         //CONTRASENA
-        private void Lcontra_KeyPress(object sender, KeyPressEventArgs e)
+        private void Lcontra_TextChanged(object sender, EventArgs e)
         {
             if (Lcontra.Text.Length < 4)
             {
@@ -158,10 +159,7 @@ namespace SportsOn
                 {
                     Edni.SetError(Tdni, "Campo Obligatorio!");
                 }
-                else
-                {
-                    Edni.Clear();
-                }
+
 
 
 
@@ -169,47 +167,31 @@ namespace SportsOn
                 {
                     Enombre.SetError(TBnombre, "Campo Obligatorio!!");
                 }
-                else
-                {
-                    Enombre.Clear();
-                }
+
 
                 if (Tapellido.Text.Trim() == String.Empty)
                 {
                     Eapellido.SetError(Tapellido, "Campo Obligatorio!");
-                }
-                else
-                {
-                    Eapellido.Clear();
                 }
 
                 if (Temail.Text.Trim() == String.Empty)
                 {
                     Eemail.SetError(Temail, "Campo Obligatorio!");
                 }
-                else
-                {
-                    Edni.Clear();
-                }
+
 
 
                 if (CBcategoria.SelectedIndex == -1)
                 {
                     Ecategoria.SetError(CBcategoria, "Campo Obligatorio!");
                 }
-                else
-                {
-                    Ecategoria.Clear();
-                }
+
 
                 if (Lcontra.Text.Trim() == String.Empty)
                 {
                     Econtra.SetError(Lcontra, "Campo Obligatorio!");
                 }
-                else
-                {
-                    Econtra.Clear();
-                }
+
             }
             else
             {
@@ -284,7 +266,7 @@ namespace SportsOn
             }
         }
 
-       
+        
     }
 
 
