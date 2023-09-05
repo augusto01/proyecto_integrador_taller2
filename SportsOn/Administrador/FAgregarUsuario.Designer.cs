@@ -85,9 +85,7 @@
             Bagregar.Size = new Size(76, 72);
             Bagregar.TabIndex = 30;
             Bagregar.UseVisualStyleBackColor = false;
-          
             Bagregar.Click += Bagregar_Click;
-           
             // 
             // Lindex
             // 
@@ -154,7 +152,7 @@
             Lcontra.Size = new Size(265, 23);
             Lcontra.TabIndex = 23;
             Lcontra.UseSystemPasswordChar = true;
-            Lcontra.TextChanged += Lcontra_TextChanged;
+            Lcontra.KeyPress += Lcontra_KeyPress;
             // 
             // Tapellido
             // 
