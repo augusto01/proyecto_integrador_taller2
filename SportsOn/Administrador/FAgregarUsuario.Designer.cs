@@ -50,6 +50,10 @@
             Eemail = new ErrorProvider(components);
             Ecategoria = new ErrorProvider(components);
             Bcerrar = new Button();
+            Tuser = new TextBox();
+            Tconfcontra = new TextBox();
+            Econfcontra = new ErrorProvider(components);
+            Euser = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)Enombre).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Eapellido).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Edni).BeginInit();
@@ -58,11 +62,13 @@
             ((System.ComponentModel.ISupportInitialize)Ecel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Eemail).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Ecategoria).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Econfcontra).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Euser).BeginInit();
             SuspendLayout();
             // 
             // Tdni
             // 
-            Tdni.Location = new Point(328, 185);
+            Tdni.Location = new Point(49, 129);
             Tdni.Name = "Tdni";
             Tdni.PlaceholderText = "DNI";
             Tdni.Size = new Size(265, 23);
@@ -80,7 +86,7 @@
             Bagregar.ForeColor = SystemColors.ActiveCaptionText;
             Bagregar.Image = (Image)resources.GetObject("Bagregar.Image");
             Bagregar.ImageAlign = ContentAlignment.TopCenter;
-            Bagregar.Location = new Point(419, 441);
+            Bagregar.Location = new Point(441, 374);
             Bagregar.Name = "Bagregar";
             Bagregar.Size = new Size(76, 72);
             Bagregar.TabIndex = 30;
@@ -92,7 +98,7 @@
             Lindex.AutoSize = true;
             Lindex.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point);
             Lindex.ForeColor = Color.Lime;
-            Lindex.Location = new Point(328, 27);
+            Lindex.Location = new Point(39, 16);
             Lindex.Name = "Lindex";
             Lindex.Size = new Size(275, 37);
             Lindex.TabIndex = 29;
@@ -103,7 +109,7 @@
             Lsports.AutoSize = true;
             Lsports.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Regular, GraphicsUnit.Point);
             Lsports.ForeColor = Color.Lime;
-            Lsports.Location = new Point(313, 516);
+            Lsports.Location = new Point(334, 470);
             Lsports.Name = "Lsports";
             Lsports.Size = new Size(280, 55);
             Lsports.TabIndex = 28;
@@ -111,7 +117,7 @@
             // 
             // Temail
             // 
-            Temail.Location = new Point(328, 372);
+            Temail.Location = new Point(656, 176);
             Temail.Name = "Temail";
             Temail.PlaceholderText = "Email";
             Temail.Size = new Size(265, 23);
@@ -121,7 +127,7 @@
             // CBcategoria
             // 
             CBcategoria.FormattingEnabled = true;
-            CBcategoria.Location = new Point(328, 415);
+            CBcategoria.Location = new Point(49, 227);
             CBcategoria.Name = "CBcategoria";
             CBcategoria.Size = new Size(265, 23);
             CBcategoria.TabIndex = 26;
@@ -129,7 +135,7 @@
             // 
             // Tcelular
             // 
-            Tcelular.Location = new Point(328, 326);
+            Tcelular.Location = new Point(349, 176);
             Tcelular.Name = "Tcelular";
             Tcelular.PlaceholderText = "Celular";
             Tcelular.Size = new Size(265, 23);
@@ -138,7 +144,7 @@
             // 
             // Tdomicilio
             // 
-            Tdomicilio.Location = new Point(328, 279);
+            Tdomicilio.Location = new Point(49, 176);
             Tdomicilio.Name = "Tdomicilio";
             Tdomicilio.PlaceholderText = "Domicilio";
             Tdomicilio.Size = new Size(265, 23);
@@ -146,7 +152,7 @@
             // 
             // Lcontra
             // 
-            Lcontra.Location = new Point(328, 233);
+            Lcontra.Location = new Point(349, 129);
             Lcontra.Name = "Lcontra";
             Lcontra.PlaceholderText = "Contraseña";
             Lcontra.Size = new Size(265, 23);
@@ -156,7 +162,7 @@
             // 
             // Tapellido
             // 
-            Tapellido.Location = new Point(328, 134);
+            Tapellido.Location = new Point(349, 86);
             Tapellido.Name = "Tapellido";
             Tapellido.PlaceholderText = "Apellido";
             Tapellido.Size = new Size(265, 23);
@@ -165,7 +171,7 @@
             // 
             // TBnombre
             // 
-            TBnombre.Location = new Point(328, 85);
+            TBnombre.Location = new Point(49, 86);
             TBnombre.Name = "TBnombre";
             TBnombre.PlaceholderText = "Nombre";
             TBnombre.Size = new Size(265, 23);
@@ -228,19 +234,52 @@
             Bcerrar.FlatStyle = FlatStyle.Flat;
             Bcerrar.ForeColor = Color.CornflowerBlue;
             Bcerrar.Image = (Image)resources.GetObject("Bcerrar.Image");
-            Bcerrar.Location = new Point(744, 19);
+            Bcerrar.Location = new Point(914, 8);
             Bcerrar.Name = "Bcerrar";
             Bcerrar.Size = new Size(45, 45);
             Bcerrar.TabIndex = 33;
             Bcerrar.UseVisualStyleBackColor = true;
             Bcerrar.Click += Bcerrar_Click;
             // 
+            // Tuser
+            // 
+            Tuser.Location = new Point(656, 86);
+            Tuser.Name = "Tuser";
+            Tuser.PlaceholderText = "Nombre Usuario";
+            Tuser.Size = new Size(265, 23);
+            Tuser.TabIndex = 34;
+            Tuser.TabStop = false;
+            // 
+            // Tconfcontra
+            // 
+            Tconfcontra.Location = new Point(656, 129);
+            Tconfcontra.Name = "Tconfcontra";
+            Tconfcontra.PlaceholderText = "Confirmar contraseña";
+            Tconfcontra.Size = new Size(265, 23);
+            Tconfcontra.TabIndex = 35;
+            Tconfcontra.UseSystemPasswordChar = true;
+            Tconfcontra.TextChanged += Tconfcontra_TextChanged;
+            // 
+            // Econfcontra
+            // 
+            Econfcontra.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            Econfcontra.ContainerControl = this;
+            Econfcontra.Icon = (Icon)resources.GetObject("Econfcontra.Icon");
+            // 
+            // Euser
+            // 
+            Euser.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            Euser.ContainerControl = this;
+            Euser.Icon = (Icon)resources.GetObject("Euser.Icon");
+            // 
             // FAgregarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.HotTrack;
-            ClientSize = new Size(917, 637);
+            ClientSize = new Size(971, 638);
+            Controls.Add(Tconfcontra);
+            Controls.Add(Tuser);
             Controls.Add(Bcerrar);
             Controls.Add(Tdni);
             Controls.Add(Bagregar);
@@ -264,6 +303,8 @@
             ((System.ComponentModel.ISupportInitialize)Ecel).EndInit();
             ((System.ComponentModel.ISupportInitialize)Eemail).EndInit();
             ((System.ComponentModel.ISupportInitialize)Ecategoria).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Econfcontra).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Euser).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -290,5 +331,9 @@
         private ErrorProvider Eemail;
         private ErrorProvider Ecategoria;
         private Button Bcerrar;
+        private TextBox Tconfcontra;
+        private TextBox Tuser;
+        private ErrorProvider Econfcontra;
+        private ErrorProvider Euser;
     }
 }

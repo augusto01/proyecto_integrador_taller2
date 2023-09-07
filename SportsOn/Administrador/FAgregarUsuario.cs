@@ -43,6 +43,7 @@ namespace SportsOn
         bool banderaDNI = false;
         bool banderaEmail = false;
         bool banderaContraseña = false;
+        bool banderaConfContra = false;
 
         // VALIDACION CAMPO A CAMPO 
 
@@ -114,6 +115,21 @@ namespace SportsOn
             }
         }
 
+        //CONFIRMAR CONTRASEÑA
+        private void Tconfcontra_TextChanged(object sender, EventArgs e)
+        {
+            if (Tconfcontra.Text != Lcontra.Text)
+            {
+                Econfcontra.SetError(Tconfcontra, "Las contraseñas no coinciden!");
+                banderaConfContra = false;
+            }
+            else
+            {
+                banderaConfContra = true;
+            }
+        }
+
+
         //CELULAR
         private void Tcelular_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -150,7 +166,7 @@ namespace SportsOn
 
 
             if (Tdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || Tapellido.Text.Trim() == string.Empty
-               || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty)
+               || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty || Tconfcontra.Text == String.Empty || Tuser.Text == String.Empty)
             {
                 MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -168,6 +184,10 @@ namespace SportsOn
                     Enombre.SetError(TBnombre, "Campo Obligatorio!!");
                 }
 
+                if (Tuser.Text.Trim() == String.Empty)
+                {
+                    Euser.SetError(Tuser, "Campo Obligatorio!!");
+                }
 
                 if (Tapellido.Text.Trim() == String.Empty)
                 {
@@ -192,11 +212,17 @@ namespace SportsOn
                     Econtra.SetError(Lcontra, "Campo Obligatorio!");
                 }
 
+                if (Tconfcontra.Text.Trim() == String.Empty)
+                {
+                    Econfcontra.SetError(Tconfcontra, "Campo Obligatorio!");
+                }
+
+
             }
             else
             {
 
-                if (banderaDNI == false || banderaEmail == false || banderaContraseña == false)
+                if (banderaDNI == false || banderaEmail == false || banderaContraseña == false ||banderaConfContra == false)
                 {
 
                     MessageBox.Show("Valores invalidos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -204,14 +230,14 @@ namespace SportsOn
                 }
                 else
                 {   //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
-
+                    Edni.Clear(); Econfcontra.Clear(); Enombre.Clear(); Eapellido.Clear(); Edomi.Clear(); Ecel.Clear(); Euser.Clear();
                     DialogResult resultado = MessageBox.Show("DNI:" + Tdni.Text + "\nNombre:" + TBnombre.Text + "   Apellido:" + Tapellido.Text
                                  + "\nEmail:" + Temail.Text, "Agregar Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (resultado == DialogResult.Yes)
                     {
                         MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        Tuser.Clear();
                         Tdni.Clear();
                         Tdomicilio.Clear();
                         Tcelular.Clear();
@@ -220,6 +246,7 @@ namespace SportsOn
                         Temail.Clear();
                         Lcontra.Clear();
                         CBcategoria.Items.Clear();
+                        Tconfcontra.Clear();
 
                         //errores
                         Edni.Clear();
@@ -266,7 +293,7 @@ namespace SportsOn
             }
         }
 
-        
+
     }
 
 
