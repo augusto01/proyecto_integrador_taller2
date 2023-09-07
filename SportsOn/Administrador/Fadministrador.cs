@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportsOn.Administrador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -115,22 +116,28 @@ namespace SportsOn
 
         private void Fadministrador_Load_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Busuario_Leave(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Bstock_Layout(object sender, LayoutEventArgs e)
         {
-            
-        }   
+
+        }
 
         private void Bv_ventas_Leave(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void BbuscarUsuario_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Fbuscar_usuario();
+            formulario.Show();
         }
     }
 }

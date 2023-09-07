@@ -131,7 +131,6 @@
             Bv_ventas.TextAlign = ContentAlignment.BottomCenter;
             Bv_ventas.UseVisualStyleBackColor = false;
             Bv_ventas.Click += Bv_ventas_Click;
-            
             Bv_ventas.Leave += Bv_ventas_Leave;
             // 
             // Bdatos_empleado
@@ -364,6 +363,7 @@
             BbuscarUsuario.TabIndex = 32;
             BbuscarUsuario.Text = "Buscar";
             BbuscarUsuario.UseVisualStyleBackColor = true;
+            BbuscarUsuario.Click += BbuscarUsuario_Click;
             // 
             // BagregarUsuario
             // 

@@ -133,6 +133,16 @@ namespace SportsOn.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscar5 {
+            get {
+                object obj = ResourceManager.GetObject("buscar5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buscarr {
             get {
                 object obj = ResourceManager.GetObject("buscarr", resourceCulture);
