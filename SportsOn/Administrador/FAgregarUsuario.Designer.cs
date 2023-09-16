@@ -49,7 +49,6 @@
             Ecel = new ErrorProvider(components);
             Eemail = new ErrorProvider(components);
             Ecategoria = new ErrorProvider(components);
-            Bcerrar = new Button();
             Tuser = new TextBox();
             Tconfcontra = new TextBox();
             Econfcontra = new ErrorProvider(components);
@@ -96,11 +95,11 @@
             // Lindex
             // 
             Lindex.AutoSize = true;
-            Lindex.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            Lindex.Font = new Font("Kanit SemiBold", 23.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             Lindex.ForeColor = Color.Lime;
-            Lindex.Location = new Point(39, 16);
+            Lindex.Location = new Point(248, 9);
             Lindex.Name = "Lindex";
-            Lindex.Size = new Size(275, 37);
+            Lindex.Size = new Size(265, 51);
             Lindex.TabIndex = 29;
             Lindex.Text = "Agregar Usuario";
             // 
@@ -227,20 +226,6 @@
             Ecategoria.ContainerControl = this;
             Ecategoria.Icon = (Icon)resources.GetObject("Ecategoria.Icon");
             // 
-            // Bcerrar
-            // 
-            Bcerrar.Cursor = Cursors.Hand;
-            Bcerrar.FlatAppearance.BorderSize = 0;
-            Bcerrar.FlatStyle = FlatStyle.Flat;
-            Bcerrar.ForeColor = Color.CornflowerBlue;
-            Bcerrar.Image = (Image)resources.GetObject("Bcerrar.Image");
-            Bcerrar.Location = new Point(914, 8);
-            Bcerrar.Name = "Bcerrar";
-            Bcerrar.Size = new Size(45, 45);
-            Bcerrar.TabIndex = 33;
-            Bcerrar.UseVisualStyleBackColor = true;
-            Bcerrar.Click += Bcerrar_Click;
-            // 
             // Tuser
             // 
             Tuser.Location = new Point(349, 227);
@@ -276,11 +261,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.HotTrack;
+            BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(770, 686);
             Controls.Add(Tconfcontra);
             Controls.Add(Tuser);
-            Controls.Add(Bcerrar);
             Controls.Add(Tdni);
             Controls.Add(Bagregar);
             Controls.Add(Lindex);
@@ -330,7 +314,6 @@
         private ErrorProvider Ecel;
         private ErrorProvider Eemail;
         private ErrorProvider Ecategoria;
-        private Button Bcerrar;
         private TextBox Tconfcontra;
         private TextBox Tuser;
         private ErrorProvider Econfcontra;

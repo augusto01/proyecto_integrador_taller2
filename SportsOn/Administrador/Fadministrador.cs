@@ -75,7 +75,7 @@ namespace SportsOn
 
         private void Bagregar_venta_Click(object sender, EventArgs e)
         {
-
+            abrirFormulario(new Fagregar_venta());
             /*
              codigo
              
@@ -165,6 +165,7 @@ namespace SportsOn
            */
 
             ocultar_submenu();
+           
         }
 
         private void Busuario_Click(object sender, EventArgs e)

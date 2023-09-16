@@ -121,7 +121,7 @@
   <data name="Bbuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAABLZJREFUeF7tW01oXFUUHqlWsdaCIF0I0lLEWheCLqRYEAQXLkR3loKgtpCN4Er8
+        vAAADrwBlbxySQAABLZJREFUeF7tW01oXFUUHqlWsdaCIF0I0lLEWheCLqRYEAQXLkR3loKgtpCN4Er8
         wYUbQRDBgtIu1EX8oRkzk0yTdNqYSdM22jZJm5q0SdukP0nTn8RkkjR/M/k7Pd+Z98KbyX2ZvMzLncyb
         d+Aj5N5zH/f73rn3nPuYG/BtKQsGdwSC5Z8GgqFS/lvNiBYIeK4yZ547c3Bsh0IvBcrK6xjz/CAqaIBD
         WahOOC3LgqESRjLtId4AOJUYLG0MDl5463ZIcbMRASHizTefiaR6OWDNqwd4D9gT0gw7pZdDPxPC1Zod
@@ -146,6 +146,24 @@
   </data>
   <metadata name="Euser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="id_usuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="apellido.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dni.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="usuario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Accion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="Euser.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
