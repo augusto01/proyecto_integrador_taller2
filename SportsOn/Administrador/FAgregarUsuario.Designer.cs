@@ -86,7 +86,7 @@
             Bagregar.ForeColor = SystemColors.ActiveCaptionText;
             Bagregar.Image = (Image)resources.GetObject("Bagregar.Image");
             Bagregar.ImageAlign = ContentAlignment.TopCenter;
-            Bagregar.Location = new Point(441, 374);
+            Bagregar.Location = new Point(665, 150);
             Bagregar.Name = "Bagregar";
             Bagregar.Size = new Size(76, 72);
             Bagregar.TabIndex = 30;
@@ -109,7 +109,7 @@
             Lsports.AutoSize = true;
             Lsports.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Regular, GraphicsUnit.Point);
             Lsports.ForeColor = Color.Lime;
-            Lsports.Location = new Point(334, 470);
+            Lsports.Location = new Point(248, 622);
             Lsports.Name = "Lsports";
             Lsports.Size = new Size(280, 55);
             Lsports.TabIndex = 28;
@@ -117,7 +117,7 @@
             // 
             // Temail
             // 
-            Temail.Location = new Point(656, 176);
+            Temail.Location = new Point(349, 129);
             Temail.Name = "Temail";
             Temail.PlaceholderText = "Email";
             Temail.Size = new Size(265, 23);
@@ -152,7 +152,7 @@
             // 
             // Lcontra
             // 
-            Lcontra.Location = new Point(349, 129);
+            Lcontra.Location = new Point(49, 281);
             Lcontra.Name = "Lcontra";
             Lcontra.PlaceholderText = "Contraseña";
             Lcontra.Size = new Size(265, 23);
@@ -243,7 +243,7 @@
             // 
             // Tuser
             // 
-            Tuser.Location = new Point(656, 86);
+            Tuser.Location = new Point(349, 227);
             Tuser.Name = "Tuser";
             Tuser.PlaceholderText = "Nombre Usuario";
             Tuser.Size = new Size(265, 23);
@@ -252,7 +252,7 @@
             // 
             // Tconfcontra
             // 
-            Tconfcontra.Location = new Point(656, 129);
+            Tconfcontra.Location = new Point(349, 281);
             Tconfcontra.Name = "Tconfcontra";
             Tconfcontra.PlaceholderText = "Confirmar contraseña";
             Tconfcontra.Size = new Size(265, 23);
@@ -277,7 +277,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.HotTrack;
-            ClientSize = new Size(971, 638);
+            ClientSize = new Size(770, 686);
             Controls.Add(Tconfcontra);
             Controls.Add(Tuser);
             Controls.Add(Bcerrar);

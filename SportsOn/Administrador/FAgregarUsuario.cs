@@ -222,7 +222,7 @@ namespace SportsOn
             else
             {
 
-                if (banderaDNI == false || banderaEmail == false || banderaContraseña == false ||banderaConfContra == false)
+                if (banderaDNI == false || banderaEmail == false || banderaContraseña == false || banderaConfContra == false)
                 {
 
                     MessageBox.Show("Valores invalidos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
