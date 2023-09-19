@@ -64,7 +64,6 @@
             Lindex.Size = new Size(247, 51);
             Lindex.TabIndex = 30;
             Lindex.Text = "Buscar Usuario";
-            Lindex.Click += Lindex_Click;
             // 
             // Tdni
             // 

@@ -1,4 +1,6 @@
 ﻿using SportsOn.Administrador;
+using SportsOn.Administrador.Clientes;
+using SportsOn.Administrador.Venta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,6 +88,7 @@ namespace SportsOn
 
         private void Bbuscar_venta_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new buscar_venta());
             /*
             codigo
 
@@ -123,8 +126,11 @@ namespace SportsOn
         {
             mostrar_submenu(Psubmenu_producto);
         }
+
+
         private void Bagregar_producto_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new Fagregar_producto());
             /*
            codigo
 
@@ -135,6 +141,7 @@ namespace SportsOn
 
         private void Bbuscar_producto_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new Fbuscar_producto());
             /*
            codigo
 
@@ -248,12 +255,14 @@ namespace SportsOn
 
         private void Bagregar_cliente_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new Fagregar_cliente());
             /*CODIGO*/
             ocultar_submenu();
         }
 
         private void Bver_cliente_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new Fbuscar_cliente());
             /*CODIGO*/
             ocultar_submenu();
         }

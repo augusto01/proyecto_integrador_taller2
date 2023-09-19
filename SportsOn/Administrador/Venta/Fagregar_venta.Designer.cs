@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             Lindex = new Label();
-            DUcantidad = new DomainUpDown();
             Bagregar_producto = new Button();
             lprecio = new Label();
             CBtipo_pago = new ComboBox();
@@ -47,10 +46,12 @@
             B_generar_compra = new Button();
             B_cancelar = new Button();
             GBagregar_venta = new GroupBox();
+            UDcantidad = new NumericUpDown();
             Lprecio_unitario = new Label();
             GBprecio_total = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)DGagregar_venta).BeginInit();
             GBagregar_venta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)UDcantidad).BeginInit();
             GBprecio_total.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,14 +65,6 @@
             Lindex.Size = new Size(276, 51);
             Lindex.TabIndex = 30;
             Lindex.Text = "Gestionar Ventas";
-            // 
-            // DUcantidad
-            // 
-            DUcantidad.BackColor = Color.FromArgb(192, 255, 192);
-            DUcantidad.Location = new Point(264, 52);
-            DUcantidad.Name = "DUcantidad";
-            DUcantidad.Size = new Size(64, 23);
-            DUcantidad.TabIndex = 29;
             // 
             // Bagregar_producto
             // 
@@ -207,11 +200,11 @@
             // 
             // GBagregar_venta
             // 
+            GBagregar_venta.Controls.Add(UDcantidad);
             GBagregar_venta.Controls.Add(Lprecio_unitario);
             GBagregar_venta.Controls.Add(Bagregar_producto);
             GBagregar_venta.Controls.Add(lprecio);
             GBagregar_venta.Controls.Add(CBproducto);
-            GBagregar_venta.Controls.Add(DUcantidad);
             GBagregar_venta.Controls.Add(LSproducto);
             GBagregar_venta.Controls.Add(CBtipo_pago);
             GBagregar_venta.Controls.Add(label1);
@@ -223,6 +216,14 @@
             GBagregar_venta.TabStop = false;
             GBagregar_venta.Text = "Agregar Venta";
             GBagregar_venta.Enter += GBagregar_venta_Enter;
+            // 
+            // UDcantidad
+            // 
+            UDcantidad.BackColor = Color.FromArgb(192, 255, 192);
+            UDcantidad.Location = new Point(264, 52);
+            UDcantidad.Name = "UDcantidad";
+            UDcantidad.Size = new Size(65, 23);
+            UDcantidad.TabIndex = 49;
             // 
             // Lprecio_unitario
             // 
@@ -256,10 +257,11 @@
             Controls.Add(DGagregar_venta);
             Controls.Add(Lindex);
             Name = "Fagregar_venta";
-            Text = "Fagregar_venta";
+            Text = "Agregar Venta";
             ((System.ComponentModel.ISupportInitialize)DGagregar_venta).EndInit();
             GBagregar_venta.ResumeLayout(false);
             GBagregar_venta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)UDcantidad).EndInit();
             GBprecio_total.ResumeLayout(false);
             GBprecio_total.PerformLayout();
             ResumeLayout(false);
@@ -283,12 +285,12 @@
         private DataGridViewTextBoxColumn Precio;
         private Label lprecio;
         private Button Bagregar_producto;
-        private DomainUpDown DUcantidad;
         private Label ltotal_precio;
         private Button B_generar_compra;
         private Button B_cancelar;
         private GroupBox GBagregar_venta;
         private Label Lprecio_unitario;
         private GroupBox GBprecio_total;
+        private NumericUpDown UDcantidad;
     }
 }

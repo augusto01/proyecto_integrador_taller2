@@ -1,10 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Administrador\Fagregar_venta.cs">
+    <Compile Update="Administrador\Clientes\Fagregar_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Administrador\Fbuscar_usuario.cs">
+    <Compile Update="Administrador\Clientes\Fbuscar_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Administrador\Producto\Fagregar_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Administrador\Venta\buscar_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Administrador\Venta\Fagregar_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Administrador\Producto\Fbuscar_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Administrador\Usuario\Fbuscar_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="empleado.cs">
@@ -13,7 +28,7 @@
     <Compile Update="Administrador\Fadministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Administrador\FAgregarUsuario.cs">
+    <Compile Update="Administrador\Usuario\FAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">

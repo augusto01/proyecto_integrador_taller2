@@ -293,7 +293,10 @@ namespace SportsOn
             }
         }
 
+        private void CBcategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
 

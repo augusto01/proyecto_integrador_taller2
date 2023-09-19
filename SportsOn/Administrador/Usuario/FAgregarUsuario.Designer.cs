@@ -131,6 +131,7 @@
             CBcategoria.Size = new Size(265, 23);
             CBcategoria.TabIndex = 26;
             CBcategoria.Text = "Tipo de Usuario";
+            CBcategoria.SelectedIndexChanged += CBcategoria_SelectedIndexChanged;
             // 
             // Tcelular
             // 

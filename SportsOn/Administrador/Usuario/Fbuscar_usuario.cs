@@ -23,21 +23,7 @@ namespace SportsOn.Administrador
         bool flagCorreo = true;
         bool flagUser = true;
 
-        private void Lindex_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Fbuscar_usuario_Load(object sender, EventArgs e)
-        {
-
-
-
-
-
-            //DNI
-
-        }
 
         private void Tdni_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -102,6 +88,11 @@ namespace SportsOn.Administrador
                     MessageBox.Show("ok!", "ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+
+        }
+
+        private void Fbuscar_usuario_Load(object sender, EventArgs e)
+        {
 
         }
     }
