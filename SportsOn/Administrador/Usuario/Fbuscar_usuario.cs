@@ -93,6 +93,11 @@ namespace SportsOn.Administrador
 
         private void Fbuscar_usuario_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void dg_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

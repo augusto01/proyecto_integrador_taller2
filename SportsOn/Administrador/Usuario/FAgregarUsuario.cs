@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportsOn.Administrador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace SportsOn
 {
@@ -38,12 +40,19 @@ namespace SportsOn
             CBcategoria.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+        //DESACTIVAMOS EL BOTON DE EDITAR 
+
 
         //BANDERAS PARA SABER EL ESTADOS DE LOS TEXT BOX 
         bool banderaDNI = false;
         bool banderaEmail = false;
         bool banderaContraseña = false;
         bool banderaConfContra = false;
+
+        //variable global posicion para el arrray de editar usuario 
+        int posicion = 0;
+        //filtro dni
+        bool banderafiltrodni = false;
 
         // VALIDACION CAMPO A CAMPO 
 
@@ -159,6 +168,29 @@ namespace SportsOn
             }
         }
 
+
+
+
+        //FILTRO DNI
+
+        private void TBdni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                Enrodoc.SetError(TBdni, "Solo números!");
+                e.Handled = true;
+                return;
+                banderafiltrodni = false;
+
+
+            }
+            else
+            {
+                banderafiltrodni = true;
+            }
+        }
+
+
         private void Bagregar_Click(object sender, EventArgs e)
         {
 
@@ -236,33 +268,15 @@ namespace SportsOn
 
                     if (resultado == DialogResult.Yes)
                     {
+                        //si la respuesta es si cargamos el usuario 
+                        CargaUsuario();
+
                         MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Tuser.Clear();
-                        Tdni.Clear();
-                        Tdomicilio.Clear();
-                        Tcelular.Clear();
-                        TBnombre.Clear();
-                        Tapellido.Clear();
-                        Temail.Clear();
-                        Lcontra.Clear();
-                        CBcategoria.Items.Clear();
-                        Tconfcontra.Clear();
 
-                        //errores
-                        Edni.Clear();
-                        Enombre.Clear();
-                        Eapellido.Clear();
-                        Eemail.Clear();
-                        Ecel.Clear();
-                        Econtra.Clear();
-                        Ecategoria.Clear();
-                        inicializarUsuarios();
+                        LimpiarCampos();
+                        LimpiarErrores();
 
-                        DialogResult respuesta = MessageBox.Show("Desea agregar otro usuario?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (respuesta == DialogResult.No)
-                        {
-                            Close();
-                        }
+
 
 
                     }
@@ -273,6 +287,32 @@ namespace SportsOn
 
             }
 
+        }
+
+        private void LimpiarCampos()
+        {
+            Tuser.Clear();
+            Tdni.Clear();
+            Tdomicilio.Clear();
+            Tcelular.Clear();
+            TBnombre.Clear();
+            Tapellido.Clear();
+            Temail.Clear();
+            Lcontra.Clear();
+            CBcategoria.Items.Clear();
+            Tconfcontra.Clear();
+        }
+
+        private void LimpiarErrores()
+        {
+            Edni.Clear();
+            Enombre.Clear();
+            Eapellido.Clear();
+            Eemail.Clear();
+            Ecel.Clear();
+            Econtra.Clear();
+            Ecategoria.Clear();
+            inicializarUsuarios();
         }
 
         private void Bcancelar_Click(object sender, EventArgs e)
@@ -293,10 +333,118 @@ namespace SportsOn
             }
         }
 
-        private void CBcategoria_SelectedIndexChanged(object sender, EventArgs e)
+        //BUSQUEDA DE LOS USUARIOS EN EL DATAGRID
+        private void busqueda_usuario(DataGridView d, int columna)
         {
 
+            if (TBdni.Text.Length > 0)
+            {
+                bool flaguser = false;
+
+                for (int i = 0; i < d.Rows.Count - 1; i++)
+                {
+                    String dato = Convert.ToString(d.Rows[i].Cells[columna].Value);
+                    if (dato == TBdni.Text.Trim())
+                    {
+
+                    }
+                }
+
+            }
+
         }
+  
+
+        private void CargaUsuario()
+        {
+            /*codigo para cargar el datagrid*/
+            int n = dg_usuarios.Rows.Add();
+            //Anadimos registros al data grid
+
+            dg_usuarios.Rows[n].Cells[1].Value = TBnombre.Text;
+            dg_usuarios.Rows[n].Cells[2].Value = Tapellido.Text;
+            dg_usuarios.Rows[n].Cells[3].Value = Tdni.Text;
+            dg_usuarios.Rows[n].Cells[4].Value = Tuser.Text;
+
+            //scroll automatico del dg
+            dg_usuarios.FirstDisplayedScrollingRowIndex = dg_usuarios.RowCount - 1;
+        }
+
+
+
+
+        //EDITAR REGISTROS      
+        private void editarUsuario_Click(object sender, EventArgs e)
+        {
+            
+            DialogResult resultado = MessageBox.Show("Seguro que desea editar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                string nombre, apellido, usuario, dni;
+
+                nombre = TBnombre.Text;
+                apellido = Tapellido.Text;
+                usuario = Tuser.Text;
+                dni = Tdni.Text;
+
+                dg_usuarios[1, posicion].Value = TBnombre.Text;
+                dg_usuarios[2, posicion].Value = Tapellido.Text;
+                dg_usuarios[3, posicion].Value = Tdni.Text;
+                dg_usuarios[4, posicion].Value = Tuser.Text;
+                LimpiarCampos();
+                TBnombre.Focus();
+
+                Bagregar.Visible = true;
+                editarUsuario.Visible = false;
+            }
+           
+        }
+
+        private void dg_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (this.dg_usuarios.CurrentRow.Index != -1 && dg_usuarios.Columns[e.ColumnIndex].Name == "editar")
+            {
+
+
+                Bagregar.Visible = false;
+                editarUsuario.Visible = true;
+                posicion = dg_usuarios.CurrentRow.Index;
+                TBnombre.Text = dg_usuarios[1, posicion].Value.ToString();
+                Tapellido.Text = dg_usuarios[2, posicion].Value.ToString();
+                Tdni.Text = dg_usuarios[3, posicion].Value.ToString();
+                Tuser.Text = dg_usuarios[4, posicion].Value.ToString();
+                
+            }
+
+        }
+
+
+        //ELIMNAR REGISTROS 
+        private void EliminarUsuario()
+        {
+            if (this.dg_usuarios.CurrentRow.Index != -1)
+            {
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    this.dg_usuarios.Rows.RemoveAt(this.dg_usuarios.CurrentRow.Index);
+                }
+
+            }
+        }
+
+        private void dg_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_usuarios.Columns[e.ColumnIndex].Name == "eliminar")
+            {
+                EliminarUsuario();
+            }
+
+
+        }
+
+
     }
 
 

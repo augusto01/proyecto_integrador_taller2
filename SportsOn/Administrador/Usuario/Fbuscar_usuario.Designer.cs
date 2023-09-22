@@ -39,18 +39,19 @@
             errorProvider1 = new ErrorProvider(components);
             Edni = new ErrorProvider(components);
             Ecorreo = new ErrorProvider(components);
-            dataGridView1 = new DataGridView();
+            dg_usuarios = new DataGridView();
             id_usuario = new DataGridViewTextBoxColumn();
             nombre = new DataGridViewTextBoxColumn();
             apellido = new DataGridViewTextBoxColumn();
             dni = new DataGridViewTextBoxColumn();
             usuario = new DataGridViewTextBoxColumn();
-            Accion = new DataGridViewTextBoxColumn();
+            Accion = new DataGridViewImageColumn();
+            eliminar = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)Euser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Edni).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Ecorreo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dg_usuarios).BeginInit();
             SuspendLayout();
             // 
             // Lindex
@@ -68,7 +69,7 @@
             // Tdni
             // 
             Tdni.AcceptsReturn = true;
-            Tdni.Location = new Point(76, 126);
+            Tdni.Location = new Point(12, 128);
             Tdni.Name = "Tdni";
             Tdni.PlaceholderText = "Buscar por DNI";
             Tdni.Size = new Size(218, 23);
@@ -77,7 +78,7 @@
             // 
             // Tuser
             // 
-            Tuser.Location = new Point(76, 97);
+            Tuser.Location = new Point(12, 99);
             Tuser.Name = "Tuser";
             Tuser.PlaceholderText = "Buscar por nombre de usuario";
             Tuser.Size = new Size(218, 23);
@@ -85,7 +86,7 @@
             // 
             // Tcorreo
             // 
-            Tcorreo.Location = new Point(76, 155);
+            Tcorreo.Location = new Point(12, 157);
             Tcorreo.Name = "Tcorreo";
             Tcorreo.PlaceholderText = "Buscar por correo";
             Tcorreo.Size = new Size(218, 23);
@@ -126,15 +127,16 @@
             Ecorreo.ContainerControl = this;
             Ecorreo.Icon = (Icon)resources.GetObject("Ecorreo.Icon");
             // 
-            // dataGridView1
+            // dg_usuarios
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { id_usuario, nombre, apellido, dni, usuario, Accion });
-            dataGridView1.Location = new Point(76, 186);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(643, 261);
-            dataGridView1.TabIndex = 37;
+            dg_usuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_usuarios.Columns.AddRange(new DataGridViewColumn[] { id_usuario, nombre, apellido, dni, usuario, Accion, eliminar });
+            dg_usuarios.Location = new Point(12, 186);
+            dg_usuarios.Name = "dg_usuarios";
+            dg_usuarios.RowTemplate.Height = 25;
+            dg_usuarios.Size = new Size(746, 261);
+            dg_usuarios.TabIndex = 37;
+            dg_usuarios.CellContentClick += dg_usuarios_CellContentClick;
             // 
             // id_usuario
             // 
@@ -163,8 +165,17 @@
             // 
             // Accion
             // 
-            Accion.HeaderText = "Accion";
+            Accion.HeaderText = "Editar";
+            Accion.Image = Properties.Resources.lapiz;
             Accion.Name = "Accion";
+            Accion.Resizable = DataGridViewTriState.True;
+            Accion.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // eliminar
+            // 
+            eliminar.HeaderText = "Eliminar";
+            eliminar.Image = Properties.Resources.eliminar;
+            eliminar.Name = "eliminar";
             // 
             // Fbuscar_usuario
             // 
@@ -172,7 +183,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             ClientSize = new Size(770, 686);
-            Controls.Add(dataGridView1);
+            Controls.Add(dg_usuarios);
             Controls.Add(Bbuscar);
             Controls.Add(Tcorreo);
             Controls.Add(Tuser);
@@ -185,7 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ((System.ComponentModel.ISupportInitialize)Edni).EndInit();
             ((System.ComponentModel.ISupportInitialize)Ecorreo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dg_usuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -201,12 +212,13 @@
         private ErrorProvider errorProvider1;
         private ErrorProvider Edni;
         private ErrorProvider Ecorreo;
-        private DataGridView dataGridView1;
+        private DataGridView dg_usuarios;
         private DataGridViewTextBoxColumn id_usuario;
         private DataGridViewTextBoxColumn nombre;
         private DataGridViewTextBoxColumn apellido;
         private DataGridViewTextBoxColumn dni;
         private DataGridViewTextBoxColumn usuario;
-        private DataGridViewTextBoxColumn Accion;
+        private DataGridViewImageColumn Accion;
+        private DataGridViewImageColumn eliminar;
     }
 }
