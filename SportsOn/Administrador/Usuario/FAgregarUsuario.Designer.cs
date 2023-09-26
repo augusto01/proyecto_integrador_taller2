@@ -62,8 +62,10 @@
             editar = new DataGridViewImageColumn();
             eliminar = new DataGridViewImageColumn();
             groupBox1 = new GroupBox();
+            Bcancelar = new Button();
             editarUsuario = new Button();
             groupBox2 = new GroupBox();
+            bbuscar = new Button();
             TBdni = new TextBox();
             TBusername = new TextBox();
             Enrodoc = new ErrorProvider(components);
@@ -90,7 +92,7 @@
             Tdni.Location = new Point(19, 76);
             Tdni.Name = "Tdni";
             Tdni.PlaceholderText = "DNI";
-            Tdni.Size = new Size(265, 23);
+            Tdni.Size = new Size(265, 29);
             Tdni.TabIndex = 32;
             Tdni.KeyPress += Tdni_KeyPress;
             // 
@@ -105,7 +107,7 @@
             Bagregar.ForeColor = SystemColors.ActiveCaptionText;
             Bagregar.Image = (Image)resources.GetObject("Bagregar.Image");
             Bagregar.ImageAlign = ContentAlignment.TopCenter;
-            Bagregar.Location = new Point(635, 33);
+            Bagregar.Location = new Point(735, 53);
             Bagregar.Name = "Bagregar";
             Bagregar.Size = new Size(76, 72);
             Bagregar.TabIndex = 30;
@@ -117,7 +119,7 @@
             Lindex.AutoSize = true;
             Lindex.Font = new Font("Kanit SemiBold", 23.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             Lindex.ForeColor = Color.Lime;
-            Lindex.Location = new Point(248, 9);
+            Lindex.Location = new Point(364, 9);
             Lindex.Name = "Lindex";
             Lindex.Size = new Size(304, 51);
             Lindex.TabIndex = 29;
@@ -128,7 +130,7 @@
             Temail.Location = new Point(319, 76);
             Temail.Name = "Temail";
             Temail.PlaceholderText = "Email";
-            Temail.Size = new Size(265, 23);
+            Temail.Size = new Size(265, 29);
             Temail.TabIndex = 27;
             Temail.KeyPress += Temail_KeyPress;
             // 
@@ -137,17 +139,16 @@
             CBcategoria.FormattingEnabled = true;
             CBcategoria.Location = new Point(19, 174);
             CBcategoria.Name = "CBcategoria";
-            CBcategoria.Size = new Size(265, 23);
+            CBcategoria.Size = new Size(265, 29);
             CBcategoria.TabIndex = 26;
             CBcategoria.Text = "Tipo de Usuario";
-            
             // 
             // Tcelular
             // 
             Tcelular.Location = new Point(319, 123);
             Tcelular.Name = "Tcelular";
             Tcelular.PlaceholderText = "Celular";
-            Tcelular.Size = new Size(265, 23);
+            Tcelular.Size = new Size(265, 29);
             Tcelular.TabIndex = 25;
             Tcelular.KeyPress += Tcelular_KeyPress;
             // 
@@ -156,7 +157,7 @@
             Tdomicilio.Location = new Point(19, 123);
             Tdomicilio.Name = "Tdomicilio";
             Tdomicilio.PlaceholderText = "Domicilio";
-            Tdomicilio.Size = new Size(265, 23);
+            Tdomicilio.Size = new Size(265, 29);
             Tdomicilio.TabIndex = 24;
             // 
             // Lcontra
@@ -164,7 +165,7 @@
             Lcontra.Location = new Point(19, 228);
             Lcontra.Name = "Lcontra";
             Lcontra.PlaceholderText = "Contraseña";
-            Lcontra.Size = new Size(265, 23);
+            Lcontra.Size = new Size(265, 29);
             Lcontra.TabIndex = 23;
             Lcontra.UseSystemPasswordChar = true;
             Lcontra.TextChanged += Lcontra_TextChanged;
@@ -174,7 +175,7 @@
             Tapellido.Location = new Point(319, 33);
             Tapellido.Name = "Tapellido";
             Tapellido.PlaceholderText = "Apellido";
-            Tapellido.Size = new Size(265, 23);
+            Tapellido.Size = new Size(265, 29);
             Tapellido.TabIndex = 22;
             Tapellido.KeyPress += Tapellido_KeyPress;
             // 
@@ -184,7 +185,7 @@
             TBnombre.Location = new Point(19, 33);
             TBnombre.Name = "TBnombre";
             TBnombre.PlaceholderText = "Nombre";
-            TBnombre.Size = new Size(265, 23);
+            TBnombre.Size = new Size(265, 29);
             TBnombre.TabIndex = 21;
             TBnombre.TabStop = false;
             TBnombre.KeyPress += TBnombre_KeyPress;
@@ -242,7 +243,7 @@
             Tuser.Location = new Point(319, 174);
             Tuser.Name = "Tuser";
             Tuser.PlaceholderText = "Nombre Usuario";
-            Tuser.Size = new Size(265, 23);
+            Tuser.Size = new Size(265, 29);
             Tuser.TabIndex = 34;
             Tuser.TabStop = false;
             // 
@@ -251,7 +252,7 @@
             Tconfcontra.Location = new Point(319, 228);
             Tconfcontra.Name = "Tconfcontra";
             Tconfcontra.PlaceholderText = "Confirmar contraseña";
-            Tconfcontra.Size = new Size(265, 23);
+            Tconfcontra.Size = new Size(265, 29);
             Tconfcontra.TabIndex = 35;
             Tconfcontra.UseSystemPasswordChar = true;
             Tconfcontra.TextChanged += Tconfcontra_TextChanged;
@@ -270,18 +271,21 @@
             // 
             // dg_usuarios
             // 
+            dg_usuarios.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 192, 192);
             dg_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dg_usuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dg_usuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dg_usuarios.BackgroundColor = SystemColors.MenuHighlight;
             dg_usuarios.BorderStyle = BorderStyle.Fixed3D;
             dg_usuarios.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dg_usuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_usuarios.Columns.AddRange(new DataGridViewColumn[] { id_usuario, nombre, apellido, dni, usuario, editar, eliminar });
-            dg_usuarios.Location = new Point(6, 46);
+            dg_usuarios.Location = new Point(6, 66);
             dg_usuarios.Name = "dg_usuarios";
             dg_usuarios.RowTemplate.Height = 25;
             dg_usuarios.ScrollBars = ScrollBars.Vertical;
-            dg_usuarios.Size = new Size(730, 300);
+            dg_usuarios.Size = new Size(928, 280);
             dg_usuarios.TabIndex = 38;
             dg_usuarios.CellClick += dg_usuarios_CellClick;
             dg_usuarios.CellContentClick += dg_usuarios_CellContentClick;
@@ -291,7 +295,7 @@
             id_usuario.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             id_usuario.HeaderText = "id_usuario";
             id_usuario.Name = "id_usuario";
-            id_usuario.Width = 86;
+            id_usuario.Width = 107;
             // 
             // nombre
             // 
@@ -321,7 +325,7 @@
             editar.Name = "editar";
             editar.Resizable = DataGridViewTriState.True;
             editar.SortMode = DataGridViewColumnSortMode.Automatic;
-            editar.Width = 62;
+            editar.Width = 75;
             // 
             // eliminar
             // 
@@ -329,10 +333,11 @@
             eliminar.HeaderText = "Eliminar";
             eliminar.Image = Properties.Resources.eliminar;
             eliminar.Name = "eliminar";
-            eliminar.Width = 56;
+            eliminar.Width = 73;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(Bcancelar);
             groupBox1.Controls.Add(editarUsuario);
             groupBox1.Controls.Add(Tconfcontra);
             groupBox1.Controls.Add(Tuser);
@@ -345,12 +350,32 @@
             groupBox1.Controls.Add(Lcontra);
             groupBox1.Controls.Add(Tapellido);
             groupBox1.Controls.Add(TBnombre);
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(18, 50);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(736, 266);
+            groupBox1.Size = new Size(934, 266);
             groupBox1.TabIndex = 39;
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar Usuarios";
+            // 
+            // Bcancelar
+            // 
+            Bcancelar.BackColor = Color.Transparent;
+            Bcancelar.Cursor = Cursors.Hand;
+            Bcancelar.FlatAppearance.BorderSize = 0;
+            Bcancelar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            Bcancelar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            Bcancelar.FlatStyle = FlatStyle.Flat;
+            Bcancelar.ForeColor = SystemColors.ActiveCaptionText;
+            Bcancelar.Image = (Image)resources.GetObject("Bcancelar.Image");
+            Bcancelar.ImageAlign = ContentAlignment.TopCenter;
+            Bcancelar.Location = new Point(735, 131);
+            Bcancelar.Name = "Bcancelar";
+            Bcancelar.Size = new Size(81, 80);
+            Bcancelar.TabIndex = 37;
+            Bcancelar.UseVisualStyleBackColor = false;
+            Bcancelar.Visible = false;
+            Bcancelar.Click += Bcancelar_Click_1;
             // 
             // editarUsuario
             // 
@@ -363,7 +388,7 @@
             editarUsuario.ForeColor = SystemColors.ActiveCaptionText;
             editarUsuario.Image = (Image)resources.GetObject("editarUsuario.Image");
             editarUsuario.ImageAlign = ContentAlignment.TopCenter;
-            editarUsuario.Location = new Point(635, 134);
+            editarUsuario.Location = new Point(735, 53);
             editarUsuario.Name = "editarUsuario";
             editarUsuario.Size = new Size(76, 72);
             editarUsuario.TabIndex = 36;
@@ -373,33 +398,43 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(bbuscar);
             groupBox2.Controls.Add(TBdni);
             groupBox2.Controls.Add(TBusername);
             groupBox2.Controls.Add(dg_usuarios);
+            groupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.Location = new Point(18, 322);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(736, 352);
+            groupBox2.Size = new Size(940, 352);
             groupBox2.TabIndex = 40;
             groupBox2.TabStop = false;
             groupBox2.Text = "Buscar Usuarios";
             // 
+            // bbuscar
+            // 
+            bbuscar.Location = new Point(533, 27);
+            bbuscar.Name = "bbuscar";
+            bbuscar.Size = new Size(130, 29);
+            bbuscar.TabIndex = 43;
+            bbuscar.Text = "Buscar";
+            bbuscar.UseVisualStyleBackColor = true;
+            // 
             // TBdni
             // 
             TBdni.AcceptsReturn = true;
-            TBdni.Location = new Point(281, 17);
+            TBdni.Location = new Point(276, 28);
             TBdni.Name = "TBdni";
             TBdni.PlaceholderText = "Buscar por DNI";
-            TBdni.Size = new Size(218, 23);
+            TBdni.Size = new Size(218, 29);
             TBdni.TabIndex = 42;
-            
             TBdni.KeyPress += TBdni_KeyPress;
             // 
             // TBusername
             // 
-            TBusername.Location = new Point(6, 17);
+            TBusername.Location = new Point(6, 28);
             TBusername.Name = "TBusername";
             TBusername.PlaceholderText = "Buscar por nombre de usuario";
-            TBusername.Size = new Size(218, 23);
+            TBusername.Size = new Size(218, 29);
             TBusername.TabIndex = 41;
             // 
             // Enrodoc
@@ -415,7 +450,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
-            ClientSize = new Size(770, 686);
+            ClientSize = new Size(970, 686);
             Controls.Add(groupBox1);
             Controls.Add(Lindex);
             Controls.Add(groupBox2);
@@ -482,5 +517,7 @@
         private DataGridViewTextBoxColumn usuario;
         private DataGridViewImageColumn editar;
         private DataGridViewImageColumn eliminar;
+        private Button bbuscar;
+        private Button Bcancelar;
     }
 }

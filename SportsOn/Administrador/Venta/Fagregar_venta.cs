@@ -17,25 +17,12 @@ namespace SportsOn.Administrador
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //declaracion de flags
+        bool flagproducto = false;
+        bool flagtipopago = false;
+        bool cantidad = false;
 
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void TBcantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Bcerrar_Click(object sender, EventArgs e)
         {
@@ -48,6 +35,52 @@ namespace SportsOn.Administrador
 
         private void GBagregar_venta_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void Fagregar_venta_Load(object sender, EventArgs e)
+        {
+            fechaactual.Text = "Fecha: " + DateTime.Today.Date.ToString("d");
+
+
+
+
+        }
+
+        private void validar_campos()
+        {
+           
+        }
+
+        private void Bagregar_producto_Click(object sender, EventArgs e)
+        {
+            if(CBproducto.SelectedIndex == -1 || CBtipo_pago.SelectedIndex == -1 || UDcantidad.Value == 0)
+            {
+                MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (UDcantidad.Value == 0)
+                {
+                    Ecantidad.SetError(UDcantidad, "Campo Obligatorio!");
+                }
+
+                if (CBtipo_pago.SelectedIndex == -1)
+                {
+                    Etipopago.SetError(CBtipo_pago, "Campo Obligatorio!");
+                }
+
+
+
+                if (CBtipo_pago.SelectedIndex == -1)
+                {
+                    Eproducto.SetError(CBproducto, "Campo Obligatorio!!");
+                }
+            }
+            else
+            {
+              //COMPROBAR QUE LA CANTIDAD SEA MENOR O IGUAL AL STOCK DISPONIBLE, HACER LA INSERCION AL DATAGRID
+
+            }
+
 
         }
     }

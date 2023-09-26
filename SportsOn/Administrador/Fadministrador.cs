@@ -172,7 +172,7 @@ namespace SportsOn
            */
 
             ocultar_submenu();
-           
+
         }
 
         private void Busuario_Click(object sender, EventArgs e)

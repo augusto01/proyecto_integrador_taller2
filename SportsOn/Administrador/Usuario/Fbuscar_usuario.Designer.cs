@@ -30,80 +30,29 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fbuscar_usuario));
-            Lindex = new Label();
-            Tdni = new TextBox();
-            Tuser = new TextBox();
-            Tcorreo = new TextBox();
-            Bbuscar = new Button();
             Euser = new ErrorProvider(components);
             errorProvider1 = new ErrorProvider(components);
             Edni = new ErrorProvider(components);
             Ecorreo = new ErrorProvider(components);
-            dg_usuarios = new DataGridView();
-            id_usuario = new DataGridViewTextBoxColumn();
-            nombre = new DataGridViewTextBoxColumn();
-            apellido = new DataGridViewTextBoxColumn();
-            dni = new DataGridViewTextBoxColumn();
-            usuario = new DataGridViewTextBoxColumn();
-            Accion = new DataGridViewImageColumn();
-            eliminar = new DataGridViewImageColumn();
+            groupBox1 = new GroupBox();
+            Tconfcontra = new TextBox();
+            Tuser = new TextBox();
+            Bagregar = new Button();
+            Tdni = new TextBox();
+            Temail = new TextBox();
+            CBcategoria = new ComboBox();
+            Tcelular = new TextBox();
+            Tdomicilio = new TextBox();
+            Lcontra = new TextBox();
+            Tapellido = new TextBox();
+            TBnombre = new TextBox();
+            Lindex = new Label();
             ((System.ComponentModel.ISupportInitialize)Euser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Edni).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Ecorreo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dg_usuarios).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // Lindex
-            // 
-            Lindex.AutoSize = true;
-            Lindex.BackColor = SystemColors.Highlight;
-            Lindex.Font = new Font("Kanit SemiBold", 23.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            Lindex.ForeColor = Color.Lime;
-            Lindex.Location = new Point(323, 9);
-            Lindex.Name = "Lindex";
-            Lindex.Size = new Size(247, 51);
-            Lindex.TabIndex = 30;
-            Lindex.Text = "Buscar Usuario";
-            // 
-            // Tdni
-            // 
-            Tdni.AcceptsReturn = true;
-            Tdni.Location = new Point(12, 128);
-            Tdni.Name = "Tdni";
-            Tdni.PlaceholderText = "Buscar por DNI";
-            Tdni.Size = new Size(218, 23);
-            Tdni.TabIndex = 33;
-            Tdni.KeyPress += Tdni_KeyPress;
-            // 
-            // Tuser
-            // 
-            Tuser.Location = new Point(12, 99);
-            Tuser.Name = "Tuser";
-            Tuser.PlaceholderText = "Buscar por nombre de usuario";
-            Tuser.Size = new Size(218, 23);
-            Tuser.TabIndex = 34;
-            // 
-            // Tcorreo
-            // 
-            Tcorreo.Location = new Point(12, 157);
-            Tcorreo.Name = "Tcorreo";
-            Tcorreo.PlaceholderText = "Buscar por correo";
-            Tcorreo.Size = new Size(218, 23);
-            Tcorreo.TabIndex = 35;
-            Tcorreo.KeyPress += Tcorreo_KeyPress;
-            // 
-            // Bbuscar
-            // 
-            Bbuscar.FlatAppearance.BorderSize = 0;
-            Bbuscar.FlatStyle = FlatStyle.Flat;
-            Bbuscar.Image = (Image)resources.GetObject("Bbuscar.Image");
-            Bbuscar.Location = new Point(607, 99);
-            Bbuscar.Name = "Bbuscar";
-            Bbuscar.Size = new Size(112, 81);
-            Bbuscar.TabIndex = 36;
-            Bbuscar.UseVisualStyleBackColor = true;
-            Bbuscar.Click += Bbuscar_Click;
             // 
             // Euser
             // 
@@ -127,55 +76,141 @@
             Ecorreo.ContainerControl = this;
             Ecorreo.Icon = (Icon)resources.GetObject("Ecorreo.Icon");
             // 
-            // dg_usuarios
+            // groupBox1
             // 
-            dg_usuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dg_usuarios.Columns.AddRange(new DataGridViewColumn[] { id_usuario, nombre, apellido, dni, usuario, Accion, eliminar });
-            dg_usuarios.Location = new Point(12, 186);
-            dg_usuarios.Name = "dg_usuarios";
-            dg_usuarios.RowTemplate.Height = 25;
-            dg_usuarios.Size = new Size(746, 261);
-            dg_usuarios.TabIndex = 37;
-            dg_usuarios.CellContentClick += dg_usuarios_CellContentClick;
+            groupBox1.Controls.Add(Tconfcontra);
+            groupBox1.Controls.Add(Tuser);
+            groupBox1.Controls.Add(Bagregar);
+            groupBox1.Controls.Add(Tdni);
+            groupBox1.Controls.Add(Temail);
+            groupBox1.Controls.Add(CBcategoria);
+            groupBox1.Controls.Add(Tcelular);
+            groupBox1.Controls.Add(Tdomicilio);
+            groupBox1.Controls.Add(Lcontra);
+            groupBox1.Controls.Add(Tapellido);
+            groupBox1.Controls.Add(TBnombre);
+            groupBox1.Location = new Point(17, 52);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(736, 266);
+            groupBox1.TabIndex = 42;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Agregar Usuarios";
+            groupBox1.Enter += groupBox1_Enter;
             // 
-            // id_usuario
+            // Tconfcontra
             // 
-            id_usuario.HeaderText = "id_usuario";
-            id_usuario.Name = "id_usuario";
+            Tconfcontra.Location = new Point(319, 228);
+            Tconfcontra.Name = "Tconfcontra";
+            Tconfcontra.PlaceholderText = "Confirmar contraseña";
+            Tconfcontra.Size = new Size(265, 23);
+            Tconfcontra.TabIndex = 35;
+            Tconfcontra.UseSystemPasswordChar = true;
             // 
-            // nombre
+            // Tuser
             // 
-            nombre.HeaderText = "Nombre";
-            nombre.Name = "nombre";
+            Tuser.Location = new Point(319, 174);
+            Tuser.Name = "Tuser";
+            Tuser.PlaceholderText = "Nombre Usuario";
+            Tuser.Size = new Size(265, 23);
+            Tuser.TabIndex = 34;
+            Tuser.TabStop = false;
             // 
-            // apellido
+            // Bagregar
             // 
-            apellido.HeaderText = "Apellido";
-            apellido.Name = "apellido";
+            Bagregar.BackColor = Color.Transparent;
+            Bagregar.Cursor = Cursors.Hand;
+            Bagregar.FlatAppearance.BorderSize = 0;
+            Bagregar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            Bagregar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            Bagregar.FlatStyle = FlatStyle.Flat;
+            Bagregar.ForeColor = SystemColors.ActiveCaptionText;
+            Bagregar.Image = (Image)resources.GetObject("Bagregar.Image");
+            Bagregar.ImageAlign = ContentAlignment.TopCenter;
+            Bagregar.Location = new Point(629, 97);
+            Bagregar.Name = "Bagregar";
+            Bagregar.Size = new Size(76, 72);
+            Bagregar.TabIndex = 30;
+            Bagregar.UseVisualStyleBackColor = false;
+             
             // 
-            // dni
+            // Tdni
             // 
-            dni.HeaderText = "DNI";
-            dni.Name = "dni";
+            Tdni.Location = new Point(19, 76);
+            Tdni.Name = "Tdni";
+            Tdni.PlaceholderText = "DNI";
+            Tdni.Size = new Size(265, 23);
+            Tdni.TabIndex = 32;
             // 
-            // usuario
+            // Temail
             // 
-            usuario.HeaderText = "Usuario";
-            usuario.Name = "usuario";
+            Temail.Location = new Point(319, 76);
+            Temail.Name = "Temail";
+            Temail.PlaceholderText = "Email";
+            Temail.Size = new Size(265, 23);
+            Temail.TabIndex = 27;
             // 
-            // Accion
+            // CBcategoria
             // 
-            Accion.HeaderText = "Editar";
-            Accion.Image = Properties.Resources.lapiz;
-            Accion.Name = "Accion";
-            Accion.Resizable = DataGridViewTriState.True;
-            Accion.SortMode = DataGridViewColumnSortMode.Automatic;
+            CBcategoria.FormattingEnabled = true;
+            CBcategoria.Location = new Point(19, 174);
+            CBcategoria.Name = "CBcategoria";
+            CBcategoria.Size = new Size(265, 23);
+            CBcategoria.TabIndex = 26;
+            CBcategoria.Text = "Tipo de Usuario";
             // 
-            // eliminar
+            // Tcelular
             // 
-            eliminar.HeaderText = "Eliminar";
-            eliminar.Image = Properties.Resources.eliminar;
-            eliminar.Name = "eliminar";
+            Tcelular.Location = new Point(319, 123);
+            Tcelular.Name = "Tcelular";
+            Tcelular.PlaceholderText = "Celular";
+            Tcelular.Size = new Size(265, 23);
+            Tcelular.TabIndex = 25;
+            // 
+            // Tdomicilio
+            // 
+            Tdomicilio.Location = new Point(19, 123);
+            Tdomicilio.Name = "Tdomicilio";
+            Tdomicilio.PlaceholderText = "Domicilio";
+            Tdomicilio.Size = new Size(265, 23);
+            Tdomicilio.TabIndex = 24;
+            // 
+            // Lcontra
+            // 
+            Lcontra.Location = new Point(19, 228);
+            Lcontra.Name = "Lcontra";
+            Lcontra.PlaceholderText = "Contraseña";
+            Lcontra.Size = new Size(265, 23);
+            Lcontra.TabIndex = 23;
+            Lcontra.UseSystemPasswordChar = true;
+            // 
+            // Tapellido
+            // 
+            Tapellido.Location = new Point(319, 33);
+            Tapellido.Name = "Tapellido";
+            Tapellido.PlaceholderText = "Apellido";
+            Tapellido.Size = new Size(265, 23);
+            Tapellido.TabIndex = 22;
+            // 
+            // TBnombre
+            // 
+            TBnombre.BackColor = Color.White;
+            TBnombre.Location = new Point(19, 33);
+            TBnombre.Name = "TBnombre";
+            TBnombre.PlaceholderText = "Nombre";
+            TBnombre.Size = new Size(265, 23);
+            TBnombre.TabIndex = 21;
+            TBnombre.TabStop = false;
+            // 
+            // Lindex
+            // 
+            Lindex.AutoSize = true;
+            Lindex.Font = new Font("Kanit SemiBold", 23.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            Lindex.ForeColor = Color.Lime;
+            Lindex.Location = new Point(247, 11);
+            Lindex.Name = "Lindex";
+            Lindex.Size = new Size(280, 51);
+            Lindex.TabIndex = 41;
+            Lindex.Text = "Agregar Usuarios";
             // 
             // Fbuscar_usuario
             // 
@@ -183,42 +218,37 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
             ClientSize = new Size(770, 686);
-            Controls.Add(dg_usuarios);
-            Controls.Add(Bbuscar);
-            Controls.Add(Tcorreo);
-            Controls.Add(Tuser);
-            Controls.Add(Tdni);
+            Controls.Add(groupBox1);
             Controls.Add(Lindex);
             Name = "Fbuscar_usuario";
             Text = "Fbuscar_usuario";
-            Load += Fbuscar_usuario_Load;
             ((System.ComponentModel.ISupportInitialize)Euser).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ((System.ComponentModel.ISupportInitialize)Edni).EndInit();
             ((System.ComponentModel.ISupportInitialize)Ecorreo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dg_usuarios).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label Lindex;
-        private TextBox Tdni;
-        private TextBox Tuser;
-        private TextBox Tcorreo;
-        private Button Bbuscar;
         private ErrorProvider Euser;
         private ErrorProvider errorProvider1;
         private ErrorProvider Edni;
         private ErrorProvider Ecorreo;
-        private DataGridView dg_usuarios;
-        private DataGridViewTextBoxColumn id_usuario;
-        private DataGridViewTextBoxColumn nombre;
-        private DataGridViewTextBoxColumn apellido;
-        private DataGridViewTextBoxColumn dni;
-        private DataGridViewTextBoxColumn usuario;
-        private DataGridViewImageColumn Accion;
-        private DataGridViewImageColumn eliminar;
+        private GroupBox groupBox1;
+        private TextBox Tconfcontra;
+        private TextBox Tuser;
+        private Button Bagregar;
+        private TextBox Tdni;
+        private TextBox Temail;
+        private ComboBox CBcategoria;
+        private TextBox Tcelular;
+        private TextBox Tdomicilio;
+        private TextBox Lcontra;
+        private TextBox Tapellido;
+        private TextBox TBnombre;
+        private Label Lindex;
     }
 }

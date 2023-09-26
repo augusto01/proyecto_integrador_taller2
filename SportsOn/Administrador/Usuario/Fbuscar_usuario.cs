@@ -22,8 +22,11 @@ namespace SportsOn.Administrador
         bool flagDni = true;
         bool flagCorreo = true;
         bool flagUser = true;
+        //variable global 
+    
 
-
+        //Definiomos una variable compuesta para mandar al formulario de busqueda 
+      
 
         private void Tdni_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -41,64 +44,12 @@ namespace SportsOn.Administrador
                 flagDni = true;
             }
         }
-        private void Tcorreo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (((!(Regex.IsMatch(Tcorreo.Text, "@"))) && (!(Regex.IsMatch(Tcorreo.Text, "gmail")))) || ((!(Regex.IsMatch(Tcorreo.Text, "@"))) && (!(Regex.IsMatch(Tcorreo.Text, "hotmail")))))
-            {
-                Ecorreo.SetError(Tcorreo, "No tiene el formato esperado!\nEjemplo:user@gmail.com");
-                flagCorreo = false;
-            }
-            else
-            {
-                Ecorreo.Clear();
-                flagCorreo = true;
 
-            }
-        }
-
-        private void Bbuscar_Click(object sender, EventArgs e)
-        {
-            if (Tcorreo.Text == String.Empty && Tuser.Text == String.Empty && Tdni.Text == String.Empty)
-            {
-                MessageBox.Show("Ingrese al menos un campo!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (Tdni.Text.Trim() == String.Empty)
-                {
-                    Edni.SetError(Tdni, "Ingrese DNI!");
-                }
-
-
-                if (Tuser.Text.Trim() == String.Empty)
-                {
-                    Euser.SetError(Tuser, "Ingrese nombre de usuario!");
-                }
-
-                if (Tcorreo.Text.Trim() == String.Empty)
-                {
-                    Ecorreo.SetError(Tcorreo, "Ingrese correo!");
-                }
-            }
-            else
-            {
-                if (flagCorreo == false || flagDni == false || flagUser == false)
-                {
-                    MessageBox.Show("Valores invalidos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("ok!", "ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-
-        }
-
-        private void Fbuscar_usuario_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dg_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

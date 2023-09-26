@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,7 @@ namespace SportsOn
         public FAgregarUsuario()
         {
             InitializeComponent();
+
         }
 
         private void FAgregarUsuario_Load(object sender, EventArgs e)
@@ -334,28 +336,10 @@ namespace SportsOn
         }
 
         //BUSQUEDA DE LOS USUARIOS EN EL DATAGRID
-        private void busqueda_usuario(DataGridView d, int columna)
-        {
 
-            if (TBdni.Text.Length > 0)
-            {
-                bool flaguser = false;
 
-                for (int i = 0; i < d.Rows.Count - 1; i++)
-                {
-                    String dato = Convert.ToString(d.Rows[i].Cells[columna].Value);
-                    if (dato == TBdni.Text.Trim())
-                    {
 
-                    }
-                }
-
-            }
-
-        }
-  
-
-        private void CargaUsuario()
+        public void CargaUsuario()
         {
             /*codigo para cargar el datagrid*/
             int n = dg_usuarios.Rows.Add();
@@ -376,7 +360,7 @@ namespace SportsOn
         //EDITAR REGISTROS      
         private void editarUsuario_Click(object sender, EventArgs e)
         {
-            
+
             DialogResult resultado = MessageBox.Show("Seguro que desea editar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
@@ -397,7 +381,15 @@ namespace SportsOn
                 Bagregar.Visible = true;
                 editarUsuario.Visible = false;
             }
-           
+            else
+            {
+                LimpiarCampos();
+                editarUsuario.Visible = false;
+                Bagregar.Visible = true;
+
+
+            }
+
         }
 
         private void dg_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -409,12 +401,13 @@ namespace SportsOn
 
                 Bagregar.Visible = false;
                 editarUsuario.Visible = true;
+                Bcancelar.Visible = true;
                 posicion = dg_usuarios.CurrentRow.Index;
                 TBnombre.Text = dg_usuarios[1, posicion].Value.ToString();
                 Tapellido.Text = dg_usuarios[2, posicion].Value.ToString();
                 Tdni.Text = dg_usuarios[3, posicion].Value.ToString();
                 Tuser.Text = dg_usuarios[4, posicion].Value.ToString();
-                
+
             }
 
         }
@@ -444,9 +437,57 @@ namespace SportsOn
 
         }
 
+        private void Bcancelar_Click_1(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro que desea cancelar la edicion?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
 
+
+
+
+                posicion = dg_usuarios.CurrentRow.Index;
+                TBnombre.Clear();
+                Tapellido.Clear();
+                Tdni.Clear();
+                Tuser.Clear();
+                editarUsuario.Visible = false;
+                Bcancelar.Visible = false;
+                Bagregar.Visible = true;
+
+
+            }
+        }
+
+
+        //buscar registro por dni
+        /*private void BusquedaGrid(DataGridView d, int column)
+        {
+       
+            for (int i = 0; i < d.Rows.Count; i++)
+            {
+                String dato = Convert.ToString(d.Rows[i].Cells[column].Value);
+                if (dato !=TBdni.Text.Trim())
+                {
+                    d.CurrentRow.Visible = false;
+                   
+                    break;
+                }
+
+         
+            }
+
+
+
+
+
+
+        }
+
+        private void bbuscar_Click(object sender, EventArgs e)
+        {
+            BusquedaGrid(dg_usuarios, 3);
+        }*/
     }
-
-
 }
 

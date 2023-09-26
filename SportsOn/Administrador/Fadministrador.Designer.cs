@@ -85,7 +85,7 @@
             Lsports.AutoSize = true;
             Lsports.Font = new Font("Berlin Sans FB Demi", 36F, FontStyle.Regular, GraphicsUnit.Point);
             Lsports.ForeColor = Color.CornflowerBlue;
-            Lsports.Location = new Point(422, 798);
+            Lsports.Location = new Point(560, 793);
             Lsports.Name = "Lsports";
             Lsports.Size = new Size(280, 55);
             Lsports.TabIndex = 16;
@@ -99,10 +99,10 @@
             Bcerrar.FlatStyle = FlatStyle.Flat;
             Bcerrar.ForeColor = Color.CornflowerBlue;
             Bcerrar.Image = (Image)resources.GetObject("Bcerrar.Image");
-            Bcerrar.Location = new Point(745, 12);
+            Bcerrar.Location = new Point(914, 12);
             Bcerrar.Margin = new Padding(3, 4, 3, 4);
             Bcerrar.Name = "Bcerrar";
-            Bcerrar.Size = new Size(29, 43);
+            Bcerrar.Size = new Size(72, 43);
             Bcerrar.TabIndex = 34;
             Bcerrar.UseVisualStyleBackColor = true;
             Bcerrar.Click += Bcerrar_Click;
@@ -647,14 +647,14 @@
             Pcontent.Controls.Add(Plogo_content);
             Pcontent.Location = new Point(194, 65);
             Pcontent.Name = "Pcontent";
-            Pcontent.Size = new Size(786, 725);
+            Pcontent.Size = new Size(986, 725);
             Pcontent.TabIndex = 36;
             Pcontent.Paint += Pcontent_Paint;
             // 
             // Plogo_content
             // 
             Plogo_content.Image = Properties.Resources.logo_small_icon_only_inverted2;
-            Plogo_content.Location = new Point(252, 129);
+            Plogo_content.Location = new Point(366, 115);
             Plogo_content.Name = "Plogo_content";
             Plogo_content.Size = new Size(298, 271);
             Plogo_content.TabIndex = 0;
@@ -668,14 +668,14 @@
             panel1.Location = new Point(194, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(786, 65);
+            panel1.Size = new Size(986, 65);
             panel1.TabIndex = 37;
             // 
             // Fadministrador
             // 
             AutoScaleDimensions = new SizeF(7F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(980, 857);
+            ClientSize = new Size(1180, 857);
             Controls.Add(panel1);
             Controls.Add(Pcontent);
             Controls.Add(panel_menu_lateral);
