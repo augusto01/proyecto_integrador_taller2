@@ -16,7 +16,7 @@ namespace SportsOn
 {
     public partial class FAgregarUsuario : Form
     {
-
+        
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
         String[] TipoUsuario = { "Empleado", "Administrador", "Gerente" };
         public FAgregarUsuario()
@@ -28,6 +28,7 @@ namespace SportsOn
         private void FAgregarUsuario_Load(object sender, EventArgs e)
         {
             inicializarUsuarios();
+            listar_usuarios();
         }
 
         private void inicializarUsuarios()
@@ -73,7 +74,7 @@ namespace SportsOn
                 Enombre.Clear();
             }
         }
-
+        
 
         //APELLIDO
         private void Tapellido_KeyPress(object sender, KeyPressEventArgs e)
@@ -345,6 +346,7 @@ namespace SportsOn
             int n = dg_usuarios.Rows.Add();
             //Anadimos registros al data grid
 
+
             dg_usuarios.Rows[n].Cells[1].Value = TBnombre.Text;
             dg_usuarios.Rows[n].Cells[2].Value = Tapellido.Text;
             dg_usuarios.Rows[n].Cells[3].Value = Tdni.Text;
@@ -458,6 +460,34 @@ namespace SportsOn
 
             }
         }
+        // LLAMAMOS USARIOS EXISTENTE EN LA BASE DE DATOS 
+
+        private void listar_usuarios()
+        {
+            try
+            {
+             
+                datosSql ds = new datosSql();
+                dg_usuarios.DataSource = ds.listarUsuarios();
+
+               
+            }
+
+            catch (Exception ex) 
+            {
+
+                MessageBox.Show("Error en la base de datos!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+
+
+
+
+
 
 
         //buscar registro por dni

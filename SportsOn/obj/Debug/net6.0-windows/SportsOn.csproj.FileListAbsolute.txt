@@ -47,3 +47,10 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Sp
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Venta.buscar_venta.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Clientes.Fagregar_cliente.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Clientes.Fbuscar_cliente.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.csproj.CopyComplete
