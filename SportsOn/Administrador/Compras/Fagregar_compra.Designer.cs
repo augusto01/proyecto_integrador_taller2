@@ -50,6 +50,7 @@
             descripcion = new DataGridViewTextBoxColumn();
             talle = new DataGridViewTextBoxColumn();
             proveedor = new DataGridViewTextBoxColumn();
+            monto = new DataGridViewTextBoxColumn();
             Eproducto = new ErrorProvider(components);
             Ecantidad = new ErrorProvider(components);
             Edesc = new ErrorProvider(components);
@@ -57,7 +58,6 @@
             Emontototal = new ErrorProvider(components);
             Eproveedor = new ErrorProvider(components);
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            monto = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_compras).BeginInit();
@@ -79,6 +79,7 @@
             Lindex.Size = new Size(303, 51);
             Lindex.TabIndex = 31;
             Lindex.Text = "Gestionar Compras";
+            Lindex.Click += Lindex_Click;
             // 
             // groupBox1
             // 
@@ -96,6 +97,7 @@
             groupBox1.TabIndex = 40;
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar Compra";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // cbtalle
             // 
@@ -105,6 +107,7 @@
             cbtalle.Size = new Size(265, 29);
             cbtalle.TabIndex = 35;
             cbtalle.Text = "Talle";
+            cbtalle.SelectedIndexChanged += cbtalle_SelectedIndexChanged;
             // 
             // Tmonto
             // 
@@ -114,6 +117,7 @@
             Tmonto.Size = new Size(265, 29);
             Tmonto.TabIndex = 34;
             Tmonto.TabStop = false;
+            Tmonto.TextChanged += Tmonto_TextChanged;
             Tmonto.KeyPress += Tmonto_KeyPress;
             // 
             // Bagregar_compra
@@ -141,6 +145,7 @@
             Tcantidad.PlaceholderText = "Cantidad";
             Tcantidad.Size = new Size(265, 29);
             Tcantidad.TabIndex = 32;
+            Tcantidad.TextChanged += Tcantidad_TextChanged;
             Tcantidad.KeyPress += Tcantidad_KeyPress;
             // 
             // CBproveedor
@@ -151,6 +156,7 @@
             CBproveedor.Size = new Size(265, 29);
             CBproveedor.TabIndex = 26;
             CBproveedor.Text = "Proveedor";
+            CBproveedor.SelectedIndexChanged += CBproveedor_SelectedIndexChanged;
             // 
             // Tdesc
             // 
@@ -159,6 +165,7 @@
             Tdesc.PlaceholderText = "Descripcion";
             Tdesc.Size = new Size(265, 29);
             Tdesc.TabIndex = 22;
+            Tdesc.TextChanged += Tdesc_TextChanged;
             // 
             // Tproducto
             // 
@@ -169,6 +176,7 @@
             Tproducto.Size = new Size(265, 29);
             Tproducto.TabIndex = 21;
             Tproducto.TabStop = false;
+            Tproducto.TextChanged += Tproducto_TextChanged;
             // 
             // groupBox2
             // 
@@ -183,6 +191,7 @@
             groupBox2.TabIndex = 41;
             groupBox2.TabStop = false;
             groupBox2.Text = "Buscar Compras";
+            groupBox2.Enter += groupBox2_Enter;
             // 
             // bbuscar
             // 
@@ -192,6 +201,7 @@
             bbuscar.TabIndex = 43;
             bbuscar.Text = "Buscar";
             bbuscar.UseVisualStyleBackColor = true;
+            bbuscar.Click += bbuscar_Click;
             // 
             // TBdni
             // 
@@ -201,6 +211,7 @@
             TBdni.PlaceholderText = "Buscar por DNI";
             TBdni.Size = new Size(218, 29);
             TBdni.TabIndex = 42;
+            TBdni.TextChanged += TBdni_TextChanged;
             // 
             // TBusername
             // 
@@ -209,6 +220,7 @@
             TBusername.PlaceholderText = "Buscar por nombre de usuario";
             TBusername.Size = new Size(218, 29);
             TBusername.TabIndex = 41;
+            TBusername.TextChanged += TBusername_TextChanged;
             // 
             // dg_compras
             // 
@@ -228,6 +240,7 @@
             dg_compras.ScrollBars = ScrollBars.Vertical;
             dg_compras.Size = new Size(928, 263);
             dg_compras.TabIndex = 38;
+            dg_compras.CellContentClick += dg_compras_CellContentClick;
             // 
             // id_compra
             // 
@@ -255,6 +268,11 @@
             // 
             proveedor.HeaderText = "Proveedor";
             proveedor.Name = "proveedor";
+            // 
+            // monto
+            // 
+            monto.HeaderText = "Monto";
+            monto.Name = "monto";
             // 
             // Eproducto
             // 
@@ -284,11 +302,6 @@
             // 
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
-            // 
-            // monto
-            // 
-            monto.HeaderText = "Monto";
-            monto.Name = "monto";
             // 
             // Fagregar_compra
             // 

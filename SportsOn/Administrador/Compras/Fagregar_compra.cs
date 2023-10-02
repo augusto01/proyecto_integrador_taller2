@@ -207,5 +207,58 @@ namespace SportsOn.Administrador.Compras
         {
 
         }
+
+        private void Tproducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void cbtalle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Tmonto_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Tcantidad_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void CBproveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Tdesc_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Lindex_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void bbuscar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void TBdni_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void TBusername_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void dg_compras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }

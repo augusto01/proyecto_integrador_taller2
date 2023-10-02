@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic.ApplicationServices;
+using SportsOn.Gerente;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -69,7 +70,17 @@ namespace SportsOn
                     }
                     else
                     {
-                        MessageBox.Show("Usuario y contraseña incorrectos!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (Tusername.Text == "gerente" && Tpass.Text == "gerente")
+                        {
+                            Form formulario = new Fgerentecs();
+                            formulario.Show();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario y contraseña incorrectos!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        
                     }
                 }
             }

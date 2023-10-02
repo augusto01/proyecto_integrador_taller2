@@ -61,5 +61,29 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Gerente\Caja\Caja_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gerente\Cliente\Fagregar_cliente_ger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gerente\Compra\Fagregar_compra_ger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gerente\Fgerentecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gerente\Informe\Fagregar_informe_ger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gerente\Producto\Fagregar_producto_ger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gerente\Usuario\Fagregar_usuario_ger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gerente\Venta\Fagregar_venta_ger.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

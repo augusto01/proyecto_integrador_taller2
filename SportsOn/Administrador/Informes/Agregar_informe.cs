@@ -42,5 +42,10 @@ namespace SportsOn.Administrador.Informes
                 MessageBox.Show("Seleccione un tipo de informe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Agregar_informe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

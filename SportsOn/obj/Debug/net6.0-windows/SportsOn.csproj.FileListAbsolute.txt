@@ -109,3 +109,11 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Sp
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Caja.Fvercaja_emp.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Empleado.Caja.vercaja_empleado.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Empleado.Clientes.Fagregar_cliente.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Fgerentecs.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Usuario.Fagregar_usuario_ger.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Producto.Fagregar_producto_ger.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Venta.Fagregar_venta_ger.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Cliente.Fagregar_cliente_ger.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Informe.Fagregar_informe_ger.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Compra.Fagregar_compra_ger.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Caja.Caja_gerente.resources

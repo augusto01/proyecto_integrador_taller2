@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_cliente));
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Enombre = new ErrorProvider(components);
             Edni = new ErrorProvider(components);
             Eapellido = new ErrorProvider(components);
@@ -113,6 +113,7 @@
             groupBox2.TabIndex = 46;
             groupBox2.TabStop = false;
             groupBox2.Text = "Buscar Cliente";
+            groupBox2.Enter += groupBox2_Enter;
             // 
             // bbuscar
             // 
@@ -122,6 +123,7 @@
             bbuscar.TabIndex = 43;
             bbuscar.Text = "Buscar";
             bbuscar.UseVisualStyleBackColor = true;
+            bbuscar.Click += bbuscar_Click;
             // 
             // TBdni
             // 
@@ -131,6 +133,7 @@
             TBdni.PlaceholderText = "Buscar por DNI";
             TBdni.Size = new Size(218, 29);
             TBdni.TabIndex = 42;
+            TBdni.TextChanged += TBdni_TextChanged;
             // 
             // TBusername
             // 
@@ -139,12 +142,13 @@
             TBusername.PlaceholderText = "Buscar por nombre de usuario";
             TBusername.Size = new Size(218, 29);
             TBusername.TabIndex = 41;
+            TBusername.TextChanged += TBusername_TextChanged;
             // 
             // dg_cliente
             // 
             dg_cliente.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 192, 192);
-            dg_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 192, 192);
+            dg_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dg_cliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dg_cliente.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dg_cliente.BackgroundColor = SystemColors.MenuHighlight;
@@ -229,6 +233,7 @@
             groupBox1.TabIndex = 47;
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar Cliente";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // Bcancelar
             // 
@@ -247,6 +252,7 @@
             Bcancelar.TabIndex = 37;
             Bcancelar.UseVisualStyleBackColor = false;
             Bcancelar.Visible = false;
+            Bcancelar.Click += Bcancelar_Click;
             // 
             // editarCliente
             // 
@@ -292,6 +298,7 @@
             Tdni.PlaceholderText = "DNI";
             Tdni.Size = new Size(265, 29);
             Tdni.TabIndex = 32;
+            Tdni.TextChanged += Tdni_TextChanged;
             Tdni.KeyPress += Tdni_KeyPress;
             // 
             // Temail
@@ -301,6 +308,7 @@
             Temail.PlaceholderText = "Email";
             Temail.Size = new Size(265, 29);
             Temail.TabIndex = 27;
+            Temail.TextChanged += Temail_TextChanged;
             Temail.KeyPress += Temail_KeyPress;
             // 
             // Tcelular
@@ -310,6 +318,7 @@
             Tcelular.PlaceholderText = "Celular";
             Tcelular.Size = new Size(265, 29);
             Tcelular.TabIndex = 25;
+            Tcelular.TextChanged += Tcelular_TextChanged;
             Tcelular.KeyPress += Tcelular_KeyPress;
             // 
             // Tdomicilio
@@ -319,6 +328,7 @@
             Tdomicilio.PlaceholderText = "Domicilio";
             Tdomicilio.Size = new Size(265, 29);
             Tdomicilio.TabIndex = 24;
+            Tdomicilio.TextChanged += Tdomicilio_TextChanged;
             // 
             // Tapellido
             // 
@@ -327,6 +337,7 @@
             Tapellido.PlaceholderText = "Apellido";
             Tapellido.Size = new Size(265, 29);
             Tapellido.TabIndex = 22;
+            Tapellido.TextChanged += Tapellido_TextChanged;
             Tapellido.KeyPress += Tapellido_KeyPress;
             // 
             // TBnombre
@@ -338,6 +349,7 @@
             TBnombre.Size = new Size(265, 29);
             TBnombre.TabIndex = 21;
             TBnombre.TabStop = false;
+            TBnombre.TextChanged += TBnombre_TextChanged;
             TBnombre.KeyPress += TBnombre_KeyPress_1;
             // 
             // Lindex
@@ -351,6 +363,7 @@
             Lindex.Size = new Size(293, 51);
             Lindex.TabIndex = 48;
             Lindex.Text = "Gestionar Clientes";
+            Lindex.Click += Lindex_Click;
             // 
             // Fagregar_cliente
             // 
@@ -364,6 +377,7 @@
             ForeColor = SystemColors.ActiveCaptionText;
             Name = "Fagregar_cliente";
             Text = "Fagregar_cliente";
+            Load += Fagregar_cliente_Load;
             ((System.ComponentModel.ISupportInitialize)Enombre).EndInit();
             ((System.ComponentModel.ISupportInitialize)Edni).EndInit();
             ((System.ComponentModel.ISupportInitialize)Eapellido).EndInit();

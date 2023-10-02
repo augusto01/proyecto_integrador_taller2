@@ -173,6 +173,7 @@
             Controls.Add(linforme);
             Name = "Agregar_informe";
             Text = "Agregar_informe";
+            Load += Agregar_informe_Load;
             gbinforme.ResumeLayout(false);
             gbinforme.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

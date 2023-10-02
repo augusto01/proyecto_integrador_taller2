@@ -40,11 +40,6 @@
             b_cerrar_caja = new Button();
             Bver_caja = new Button();
             Bcaja = new Button();
-            Psubmenu_informe = new Panel();
-            Bcerrar_sesion = new Button();
-            Bbuscar_informe = new Button();
-            Bagregar_informe = new Button();
-            Binforme = new Button();
             Psubmenu_usuario = new Panel();
             Bbuscar_usuario = new Button();
             Bagregar_usuario = new Button();
@@ -69,7 +64,6 @@
             panel_menu_lateral.SuspendLayout();
             Psubmenu_cliente.SuspendLayout();
             Psubmenu_caja.SuspendLayout();
-            Psubmenu_informe.SuspendLayout();
             Psubmenu_usuario.SuspendLayout();
             Psubmenu_producto.SuspendLayout();
             Psubmenu_compras.SuspendLayout();
@@ -115,8 +109,6 @@
             panel_menu_lateral.Controls.Add(Bcliente);
             panel_menu_lateral.Controls.Add(Psubmenu_caja);
             panel_menu_lateral.Controls.Add(Bcaja);
-            panel_menu_lateral.Controls.Add(Psubmenu_informe);
-            panel_menu_lateral.Controls.Add(Binforme);
             panel_menu_lateral.Controls.Add(Psubmenu_usuario);
             panel_menu_lateral.Controls.Add(Busuario);
             panel_menu_lateral.Controls.Add(Psubmenu_producto);
@@ -141,10 +133,10 @@
             Psubmenu_cliente.Controls.Add(Bver_cliente);
             Psubmenu_cliente.Controls.Add(Bagregar_cliente);
             Psubmenu_cliente.Dock = DockStyle.Top;
-            Psubmenu_cliente.Location = new Point(0, 885);
+            Psubmenu_cliente.Location = new Point(0, 755);
             Psubmenu_cliente.Margin = new Padding(3, 4, 3, 4);
             Psubmenu_cliente.Name = "Psubmenu_cliente";
-            Psubmenu_cliente.Size = new Size(177, 86);
+            Psubmenu_cliente.Size = new Size(194, 86);
             Psubmenu_cliente.TabIndex = 49;
             Psubmenu_cliente.Visible = false;
             // 
@@ -192,11 +184,11 @@
             Bcliente.ForeColor = Color.White;
             Bcliente.Image = (Image)resources.GetObject("Bcliente.Image");
             Bcliente.ImageAlign = ContentAlignment.MiddleRight;
-            Bcliente.Location = new Point(0, 841);
+            Bcliente.Location = new Point(0, 711);
             Bcliente.Margin = new Padding(3, 4, 3, 4);
             Bcliente.Name = "Bcliente";
             Bcliente.Padding = new Padding(10, 0, 0, 0);
-            Bcliente.Size = new Size(177, 44);
+            Bcliente.Size = new Size(194, 44);
             Bcliente.TabIndex = 48;
             Bcliente.Text = "Clientes";
             Bcliente.TextAlign = ContentAlignment.MiddleLeft;
@@ -209,10 +201,10 @@
             Psubmenu_caja.Controls.Add(b_cerrar_caja);
             Psubmenu_caja.Controls.Add(Bver_caja);
             Psubmenu_caja.Dock = DockStyle.Top;
-            Psubmenu_caja.Location = new Point(0, 755);
+            Psubmenu_caja.Location = new Point(0, 625);
             Psubmenu_caja.Margin = new Padding(3, 4, 3, 4);
             Psubmenu_caja.Name = "Psubmenu_caja";
-            Psubmenu_caja.Size = new Size(177, 86);
+            Psubmenu_caja.Size = new Size(194, 86);
             Psubmenu_caja.TabIndex = 47;
             // 
             // b_cerrar_caja
@@ -259,96 +251,16 @@
             Bcaja.ForeColor = Color.White;
             Bcaja.Image = Properties.Resources.caja_registradora;
             Bcaja.ImageAlign = ContentAlignment.MiddleRight;
-            Bcaja.Location = new Point(0, 711);
+            Bcaja.Location = new Point(0, 581);
             Bcaja.Margin = new Padding(3, 4, 3, 4);
             Bcaja.Name = "Bcaja";
             Bcaja.Padding = new Padding(10, 0, 0, 0);
-            Bcaja.Size = new Size(177, 44);
+            Bcaja.Size = new Size(194, 44);
             Bcaja.TabIndex = 46;
             Bcaja.Text = "Caja";
             Bcaja.TextAlign = ContentAlignment.MiddleLeft;
             Bcaja.UseVisualStyleBackColor = true;
             Bcaja.Click += Bcaja_Click;
-            // 
-            // Psubmenu_informe
-            // 
-            Psubmenu_informe.BackColor = Color.FromArgb(35, 32, 39);
-            Psubmenu_informe.Controls.Add(Bcerrar_sesion);
-            Psubmenu_informe.Controls.Add(Bbuscar_informe);
-            Psubmenu_informe.Controls.Add(Bagregar_informe);
-            Psubmenu_informe.Dock = DockStyle.Top;
-            Psubmenu_informe.Location = new Point(0, 625);
-            Psubmenu_informe.Margin = new Padding(3, 4, 3, 4);
-            Psubmenu_informe.Name = "Psubmenu_informe";
-            Psubmenu_informe.Size = new Size(177, 86);
-            Psubmenu_informe.TabIndex = 45;
-            // 
-            // Bcerrar_sesion
-            // 
-            Bcerrar_sesion.Cursor = Cursors.Hand;
-            Bcerrar_sesion.FlatAppearance.BorderSize = 0;
-            Bcerrar_sesion.FlatStyle = FlatStyle.Flat;
-            Bcerrar_sesion.Image = (Image)resources.GetObject("Bcerrar_sesion.Image");
-            Bcerrar_sesion.Location = new Point(78, 130);
-            Bcerrar_sesion.Name = "Bcerrar_sesion";
-            Bcerrar_sesion.Size = new Size(32, 32);
-            Bcerrar_sesion.TabIndex = 36;
-            Bcerrar_sesion.UseVisualStyleBackColor = true;
-            Bcerrar_sesion.Click += Bcerrar_sesion_Click;
-            // 
-            // Bbuscar_informe
-            // 
-            Bbuscar_informe.FlatAppearance.BorderSize = 0;
-            Bbuscar_informe.FlatStyle = FlatStyle.Flat;
-            Bbuscar_informe.Font = new Font("Mukta", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Bbuscar_informe.ForeColor = Color.White;
-            Bbuscar_informe.Location = new Point(0, 43);
-            Bbuscar_informe.Margin = new Padding(3, 4, 3, 4);
-            Bbuscar_informe.Name = "Bbuscar_informe";
-            Bbuscar_informe.Padding = new Padding(35, 0, 0, 0);
-            Bbuscar_informe.Size = new Size(174, 35);
-            Bbuscar_informe.TabIndex = 37;
-            Bbuscar_informe.Text = "Buscar Informe";
-            Bbuscar_informe.TextAlign = ContentAlignment.MiddleLeft;
-            Bbuscar_informe.UseVisualStyleBackColor = true;
-            Bbuscar_informe.Click += Bbuscar_informe_Click;
-            // 
-            // Bagregar_informe
-            // 
-            Bagregar_informe.FlatAppearance.BorderSize = 0;
-            Bagregar_informe.FlatStyle = FlatStyle.Flat;
-            Bagregar_informe.Font = new Font("Mukta", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Bagregar_informe.ForeColor = Color.White;
-            Bagregar_informe.Location = new Point(0, 0);
-            Bagregar_informe.Margin = new Padding(3, 4, 3, 4);
-            Bagregar_informe.Name = "Bagregar_informe";
-            Bagregar_informe.Padding = new Padding(35, 0, 0, 0);
-            Bagregar_informe.Size = new Size(174, 35);
-            Bagregar_informe.TabIndex = 36;
-            Bagregar_informe.Text = "Agregar Informe";
-            Bagregar_informe.TextAlign = ContentAlignment.MiddleLeft;
-            Bagregar_informe.UseVisualStyleBackColor = true;
-            Bagregar_informe.Click += Bagregar_informe_Click;
-            // 
-            // Binforme
-            // 
-            Binforme.Dock = DockStyle.Top;
-            Binforme.FlatAppearance.BorderSize = 0;
-            Binforme.FlatStyle = FlatStyle.Flat;
-            Binforme.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Binforme.ForeColor = Color.White;
-            Binforme.Image = Properties.Resources.reportes;
-            Binforme.ImageAlign = ContentAlignment.MiddleRight;
-            Binforme.Location = new Point(0, 581);
-            Binforme.Margin = new Padding(3, 4, 3, 4);
-            Binforme.Name = "Binforme";
-            Binforme.Padding = new Padding(10, 0, 0, 0);
-            Binforme.Size = new Size(177, 44);
-            Binforme.TabIndex = 44;
-            Binforme.Text = "Informes";
-            Binforme.TextAlign = ContentAlignment.MiddleLeft;
-            Binforme.UseVisualStyleBackColor = true;
-            Binforme.Click += Binforme_Click;
             // 
             // Psubmenu_usuario
             // 
@@ -359,7 +271,7 @@
             Psubmenu_usuario.Location = new Point(0, 495);
             Psubmenu_usuario.Margin = new Padding(3, 4, 3, 4);
             Psubmenu_usuario.Name = "Psubmenu_usuario";
-            Psubmenu_usuario.Size = new Size(177, 86);
+            Psubmenu_usuario.Size = new Size(194, 86);
             Psubmenu_usuario.TabIndex = 42;
             // 
             // Bbuscar_usuario
@@ -410,7 +322,7 @@
             Busuario.Margin = new Padding(3, 4, 3, 4);
             Busuario.Name = "Busuario";
             Busuario.Padding = new Padding(10, 0, 0, 0);
-            Busuario.Size = new Size(177, 44);
+            Busuario.Size = new Size(194, 44);
             Busuario.TabIndex = 43;
             Busuario.Text = "Usuarios";
             Busuario.TextAlign = ContentAlignment.MiddleLeft;
@@ -426,7 +338,7 @@
             Psubmenu_producto.Location = new Point(0, 366);
             Psubmenu_producto.Margin = new Padding(3, 4, 3, 4);
             Psubmenu_producto.Name = "Psubmenu_producto";
-            Psubmenu_producto.Size = new Size(177, 85);
+            Psubmenu_producto.Size = new Size(194, 85);
             Psubmenu_producto.TabIndex = 40;
             // 
             // Bbuscar_producto
@@ -477,7 +389,7 @@
             Bproducto.Margin = new Padding(3, 4, 3, 4);
             Bproducto.Name = "Bproducto";
             Bproducto.Padding = new Padding(10, 0, 0, 0);
-            Bproducto.Size = new Size(177, 44);
+            Bproducto.Size = new Size(194, 44);
             Bproducto.TabIndex = 41;
             Bproducto.Text = "Producto";
             Bproducto.TextAlign = ContentAlignment.MiddleLeft;
@@ -493,7 +405,7 @@
             Psubmenu_compras.Location = new Point(0, 238);
             Psubmenu_compras.Margin = new Padding(3, 4, 3, 4);
             Psubmenu_compras.Name = "Psubmenu_compras";
-            Psubmenu_compras.Size = new Size(177, 84);
+            Psubmenu_compras.Size = new Size(194, 84);
             Psubmenu_compras.TabIndex = 38;
             // 
             // Bbuscar_compra
@@ -544,7 +456,7 @@
             Bcompras.Margin = new Padding(3, 4, 3, 4);
             Bcompras.Name = "Bcompras";
             Bcompras.Padding = new Padding(10, 0, 0, 0);
-            Bcompras.Size = new Size(177, 44);
+            Bcompras.Size = new Size(194, 44);
             Bcompras.TabIndex = 39;
             Bcompras.Text = "Compras";
             Bcompras.TextAlign = ContentAlignment.MiddleLeft;
@@ -560,7 +472,7 @@
             Psubmenu_ventas.Location = new Point(0, 109);
             Psubmenu_ventas.Margin = new Padding(3, 4, 3, 4);
             Psubmenu_ventas.Name = "Psubmenu_ventas";
-            Psubmenu_ventas.Size = new Size(177, 85);
+            Psubmenu_ventas.Size = new Size(194, 85);
             Psubmenu_ventas.TabIndex = 36;
             // 
             // Bbuscar_venta
@@ -612,7 +524,7 @@
             Bventas.Margin = new Padding(3, 4, 3, 4);
             Bventas.Name = "Bventas";
             Bventas.Padding = new Padding(10, 0, 0, 0);
-            Bventas.Size = new Size(177, 44);
+            Bventas.Size = new Size(194, 44);
             Bventas.TabIndex = 37;
             Bventas.Text = "Ventas";
             Bventas.TextAlign = ContentAlignment.MiddleLeft;
@@ -626,7 +538,7 @@
             panel_logo.Location = new Point(0, 0);
             panel_logo.Margin = new Padding(3, 4, 3, 4);
             panel_logo.Name = "panel_logo";
-            panel_logo.Size = new Size(177, 65);
+            panel_logo.Size = new Size(194, 65);
             panel_logo.TabIndex = 36;
             // 
             // label1
@@ -689,7 +601,6 @@
             panel_menu_lateral.ResumeLayout(false);
             Psubmenu_cliente.ResumeLayout(false);
             Psubmenu_caja.ResumeLayout(false);
-            Psubmenu_informe.ResumeLayout(false);
             Psubmenu_usuario.ResumeLayout(false);
             Psubmenu_producto.ResumeLayout(false);
             Psubmenu_compras.ResumeLayout(false);
@@ -733,11 +644,6 @@
         private Button Bagregar_cliente;
         private Button Bcliente;
         private Panel panel1;
-        private Panel Psubmenu_informe;
-        private Button Bcerrar_sesion;
-        private Button Bbuscar_informe;
-        private Button Bagregar_informe;
-        private Button Binforme;
         private Panel Psubmenu_usuario;
         private Button Bbuscar_usuario;
         private Button Bagregar_usuario;

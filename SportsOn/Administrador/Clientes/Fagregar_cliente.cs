@@ -310,6 +310,62 @@ namespace SportsOn.Administrador.Clientes
 
         }
 
-        
+        private void TBnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void bbuscar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void TBdni_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void TBusername_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void Bcancelar_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Tdni_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Temail_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Tcelular_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Tdomicilio_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Tapellido_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Lindex_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Fagregar_cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
