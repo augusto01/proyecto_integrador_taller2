@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,225 +18,229 @@ namespace SportsOn
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void pbicono_Click(object sender, EventArgs e)
+        private void FagregarUsuario_Load(object sender, EventArgs e)
         {
+            inicializarUsuarios();
 
         }
-        //VALIDACION APELLIDO
-        private void Tapellido_KeyPress(object sender, KeyPressEventArgs e)
+        //INICIALIZAMOS LAS CATEGORIAS DE LOS USUARIOS 
+        String[] categorias = { "Empleado", "Administrador", "Gerente" };
+        private void inicializarUsuarios()
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                errorApellido.SetError(Tapellido, "Este Campo Solo Acepta Letras!");
-                e.Handled = true;
-                return;
+            int i;
 
-            }
-            else
+            for (i = 0; i < categorias.Length; i++)
             {
-                errorApellido.Clear();
+                CBcategoria.Items.Add(categorias[i]);
             }
 
+            CBcategoria.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
         //VALIDACION NOMBRE
-        private void Tnombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void TBnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
-                errorNombre.SetError(Tnombre, "Este Campo Solo Acepta Letras!");
+                Enombre.SetError(TBnombre, "Solo letras!");
                 e.Handled = true;
                 return;
 
             }
             else
             {
-                errorNombre.Clear();
+                Enombre.Clear();
             }
+            Enombre.Clear();
         }
+        // VALIDACION APELLIDO
+        private void TBapellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                Eapellido.SetError(TBapellido, "Solo letras!");
+                e.Handled = true;
+                return;
 
-        //VALIDACION DNI
-        private void Tdni_KeyPress(object sender, KeyPressEventArgs e)
+            }
+            else
+            {
+                Eapellido.Clear();
+            }
+            Eapellido.Clear();
+        }
+        //VALIDACION DNI 
+        private void TBdni_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                errorDni.SetError(Tdni, "Solo acepta numeros!");
+                Edni.SetError(TBdni, "Solo acepta numeros!");
                 e.Handled = true;
+                Edni.Clear();
                 return;
 
             }
             else
             {
-                errorDni.Clear();
+                Edni.Clear();
             }
         }
 
-        //VALIDACION DE FECHA DE NACIMIENTO
-        private void DTfechanac_ValueChanged(object sender, EventArgs e)
-        {
-            int edad = 0; //definimos esta variable para calcular la edad del usuario registrado !
-            DateTime fechaActual = DateTime.Today;
-            edad = fechaActual.Year - DTfechanac.Value.Year;
-            if (fechaActual < DTfechanac.Value.AddYears(edad))
-            {
-                edad--;
-            }
-
-            if (edad < 18)
-            {
-                error_fechanac.SetError(DTfechanac, "La edad Minima para registrar a un Usuario es 18 años!");
-
-            }
-            else
-            {
-                error_fechanac.Clear();
-
-            }
-        }
-
-
-        //VALIDACION NRO TELEFONO
-        private void Tnro_telefono_KeyPress(object sender, KeyPressEventArgs e)
+        //VALIDACION CELULAR
+        private void TBcelular_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                errorTel.SetError(Tdni, "Solo acepta numeros!");
+                Ecelular.SetError(TBcelular, "Solo acepta numeros!");
                 e.Handled = true;
                 return;
 
             }
             else
             {
-                errorTel.Clear();
+                Ecelular.Clear();
             }
         }
 
-        //VALIDACION EMAIL 
-        private void Tcorreo_KeyPress(object sender, KeyPressEventArgs e)
+        //VALIDACION MAIL 
+        private void TBemail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (((!(Regex.IsMatch(Tcorreo.Text, "@"))) && (!(Regex.IsMatch(Tcorreo.Text, "gmail")))) || ((!(Regex.IsMatch(Tcorreo.Text, "@"))) && (!(Regex.IsMatch(Tcorreo.Text, "hotmail")))))
+            if (((!(Regex.IsMatch(TBemail.Text, "@"))) && (!(Regex.IsMatch(TBemail.Text, "gmail")))) || ((!(Regex.IsMatch(TBemail.Text, "@"))) && (!(Regex.IsMatch(TBemail.Text, "hotmail")))))
             {
-                errorCorreo.SetError(Tcorreo, "No tiene el formato esperado!\nEjemplo:user@gmail.com");
+                Eemail.SetError(TBemail, "No tiene el formato esperado!\nEjemplo:user@gmail.com");
 
             }
             else
             {
-                errorCorreo.Clear();
+                Eemail.Clear();
 
             }
         }
 
-        //VALIDACION CONFIRMACION DE CONTRASEÑA
-        private void Tconfcontra_KeyPress(object sender, KeyPressEventArgs e)
+        private void TBcontra_TextChanged(object sender, EventArgs e)
         {
-            if (Tconfcontra.Text != Tcontraseña.Text)
             {
-                errorConfcontra.SetError(Tconfcontra, "Las contraseñas no coinciden!");
-            }
-            else { errorConfcontra.Clear(); }
+                if (TBcontra.Enabled == true)
+                {
+                    if (TBcontra.Text.Length < 4)
+                    {
+                        Econtra.SetError(TBcontra, "La contraseña debe tener minimo 4 Digitos");
+                        return;
 
+
+                    }
+                    else
+                    {
+                        Econtra.Clear();
+
+                    }
+                }
+            }
         }
 
-        //VALIDAMOS QUE TODOS LOS DATOS ESTEN COMPLETOS 
-        private void Bagregar_Click(object sender, EventArgs e)
+        //VALIDACION CONFIRMAR CONTRASEÑA
+        /*private void TBconfcontra_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorNombre.Clear();
-            errorApellido.Clear();
-            errorContraseña.Clear();
-            errorConfcontra.Clear();
-            errorDomicilio.Clear();
-            errorCorreo.Clear();
-            errorCategoria.Clear();
-            errorDni.Clear();
-
-
-
-
-            if (Tnombre.Text.Trim() == String.Empty || Tapellido.Text.Trim() == String.Empty || Tcontraseña.Text.Trim() == String.Empty
-                || Tconfcontra.Text.Trim() == string.Empty || Tdomicilio.Text.Trim() == String.Empty || Tcorreo.Text.Trim() == String.Empty
-                || Tdni.Text.Trim() == String.Empty || Tconfcontra.Text.Trim() == String.Empty)
+            if (TBconfcontra.Text == TBcontra.Text)
             {
-
-                MessageBox.Show("Faltan Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (Tnombre.Text.Trim() == String.Empty)
-                {
-                    errorNombre.SetError(Tnombre, "Falta Completar este campo!");
-                }
-
-                if (Tapellido.Text.Trim() == String.Empty)
-                {
-                    errorApellido.SetError(Tapellido, "Falta Completar este campo!");
-                }
-
-                if (Tdni.Text.Trim() == String.Empty)
-                {
-                    errorDni.SetError(Tdni, "Falta Completar este campo!");
-                }
-
-                if (Tdomicilio.Text.Trim() == String.Empty)
-                {
-                    errorDomicilio.SetError(Tdomicilio, "Falta Completar este campo!");
-                }
-
-                if (Tcorreo.Text.Trim() == String.Empty)
-                {
-                    errorCorreo.SetError(Tcorreo, "Falta Completar este campo!");
-                }
-
-                if (Tcontraseña.Text.Trim() == String.Empty)
-                {
-                    errorContraseña.SetError(Tcontraseña, "Falta Completar este Campo!");
-                }
-
-                if (Tconfcontra.Text.Trim() == String.Empty)
-                {
-                    errorContraseña.SetError(Tconfcontra, "Falta Completar este Campo!");
-                }
-
-                if (Tconfcontra.Text.Trim() == String.Empty)
-                {
-                    errorCategoria.SetError(Tconfcontra, "Falta Completar este Campo!");
-                }
-
-
+                Econfcontra.Clear();
+                e.Handled = true;
+                
             }
             else
             {
+                Econfcontra.SetError(TBconfcontra, "Las contraseñas no coinciden!");
+                return;
+            }
+        }*/
+
+        private void Bregistrar_Click(object sender, EventArgs e)
+        {
+            if (TBdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || TBapellido.Text.Trim() == string.Empty || TBcontra.Text.Trim() == String.Empty
+                       || TBemail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1)
+            {
+                MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
-
-
-                //SI LO ESTAN MOSTRAMOS EL USARIO A AGREGAR Y SE PIDE LA CONFIRMACION
-                DialogResult respuesta = MessageBox.Show("Nombre:" + Tnombre.Text + "      Apellido:" + Tapellido.Text + "\nDNI:" + Tdni.Text, "Confirmar Insercción", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-
-                if (respuesta == DialogResult.Yes)
+                if (TBdni.Text.Trim() == String.Empty)
                 {
-
-                    MessageBox.Show("El usuario ha sido agregado correctamente!", "Confirmar Insercción", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    Edni.SetError(TBdni, "Falta Completar este Campo!");
+                }
+                if (TBcontra.Text.Trim() == String.Empty)
+                {
+                    Edni.SetError(TBcontra, "Falta Completar este Campo!");
+                }
+                if (TBnombre.Text.Trim() == String.Empty)
+                {
+                    Enombre.SetError(TBnombre, "Falta Completar este Campo!");
+                }
+                if (TBapellido.Text.Trim() == String.Empty)
+                {
+                    Enombre.SetError(TBapellido, "Falta Completar este Campo!");
                 }
 
-
+                if (TBemail.Text.Trim() == String.Empty)
+                {
+                    Eemail.SetError(TBemail, "Falta Completar este Campo!");
+                }
+                if (CBcategoria.SelectedIndex == -1)
+                {
+                    Ecategoria.SetError(CBcategoria, "Falta Completar este Campo!");
+                }
+                else
+                {
+                    Ecategoria.Clear();
+                }
             }
+            else
+            {
+                Enombre.Clear();
+                Eapellido.Clear();
+                Edni.Clear();
+                Eemail.Clear();
+                Ecategoria.Clear();
+                Edomicilio.Clear();
+                Ecelular.Clear();
+                Econtra.Clear();
+
+
+                DialogResult resultado = MessageBox.Show("DNI:" + TBdni.Text + "\nApellido:" + TBapellido.Text + "   Nombre:" + TBnombre.Text
+                       + "\nEmail:" + TBemail.Text, "Seguro que desea agregar este usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    MessageBox.Show("El Usuario:" + TBnombre.Text + " " + TBapellido.Text + "\nha sido Registrado Correctamente"
+                        , "Insercción Realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    TBdni.Clear();
+                    TBnombre.Clear();
+                    TBapellido.Clear();
+                    TBemail.Clear();
+                    TBdomicilio.Clear();
+                    TBcontra.Clear();
+                    Econtra.Clear();
+
+                    CBcategoria.Items.Clear();
+                    inicializarUsuarios();
+
+                }
+            }
+
         }
+       
 
-
-
-        private void Bcancelar_Click(object sender, EventArgs e)
+        private void Bcancelar_Click_1(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("Estas seguro que desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show("Esta seguro que desea Salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
                 Close();
             }
         }
-
-
     }
 }

@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace SportsOn
 {
-    public partial class Fadministrador : Form
+    public partial class FagregarProducto : Form
     {
-        public Fadministrador()
+        public FagregarProducto()
         {
             InitializeComponent();
-        }
-
-        private void Busuario_Click(object sender, EventArgs e)
-        {
-            Form formulario = new FagregarUsuario();
-            formulario.Show();
-
         }
     }
 }

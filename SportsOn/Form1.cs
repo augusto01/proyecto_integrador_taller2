@@ -21,6 +21,30 @@ namespace SportsOn
                 MessageBox.Show("El campo esta vacio!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+            else
+            {
+                //ADMINISTRADOR
+                if (Tusername.Text == "admin" && Tpass.Text == "admin")
+                {
+                    Form formulario = new Fadministrador();
+                    formulario.Show();
+                }
+                else
+                {
+                    //EMPLEADO
+                    if (Tusername.Text == "empleado" && Tpass.Text == "empleado")
+                    {
+                        Form formulario = new empleado();
+                        formulario.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+            }
+         
         }
     }
 }
