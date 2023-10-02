@@ -16,5 +16,10 @@ namespace SportsOn.Administrador.Venta
         {
             InitializeComponent();
         }
+
+        private void buscar_venta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

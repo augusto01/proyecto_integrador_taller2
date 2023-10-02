@@ -721,19 +721,10 @@
         private Button Bbuscar_compra;
         private Button Bagregar_compra;
         private Button Bcompras;
-        private Panel Psubmenu_usuario;
-        private Button Bbuscar_usuario;
-        private Button Bagregar_usuario;
-        private Button Busuario;
-        private Button Binforme;
-        private Panel Psubmenu_informe;
-        private Button Bbuscar_informe;
-        private Button Bagregar_informe;
         private Panel Psubmenu_caja;
         private Button b_cerrar_caja;
         private Button Bver_caja;
         private Button Bcaja;
-        private Button Bcerrar_sesion;
         private Label label1;
         private Panel Psubmenu_cliente;
         private Panel Pcontent;
@@ -742,5 +733,14 @@
         private Button Bagregar_cliente;
         private Button Bcliente;
         private Panel panel1;
+        private Panel Psubmenu_informe;
+        private Button Bcerrar_sesion;
+        private Button Bbuscar_informe;
+        private Button Bagregar_informe;
+        private Button Binforme;
+        private Panel Psubmenu_usuario;
+        private Button Bbuscar_usuario;
+        private Button Bagregar_usuario;
+        private Button Busuario;
     }
 }

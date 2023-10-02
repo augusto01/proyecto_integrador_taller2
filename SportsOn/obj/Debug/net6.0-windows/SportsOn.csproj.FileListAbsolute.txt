@@ -43,7 +43,6 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Sp
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Fbuscar_usuario.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Fagregar_venta.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Fagregar_producto.resources
-C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Fbuscar_producto.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Venta.buscar_venta.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Clientes.Fagregar_cliente.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Clientes.Fbuscar_cliente.resources
@@ -102,5 +101,11 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Sp
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\bin\Debug\net6.0-windows\EntityFramework.dll
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Conexion.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Informes.Agregar_informe.resources
-C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Caja.Fvercaja.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Compras.Fagregar_compra.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Fbuscar_producto_emp.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Empleado.Producto.FbuscarProductoEmp.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Empleado.Ventas.Fagregar_venta.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Empleado.Ventas.FbuscarVenta.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Administrador.Caja.Fvercaja_emp.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Empleado.Caja.vercaja_empleado.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Empleado.Clientes.Fagregar_cliente.resources

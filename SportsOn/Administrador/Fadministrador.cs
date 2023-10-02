@@ -72,11 +72,11 @@ namespace SportsOn
 
 
 
-
         private void Bventas_Click(object sender, EventArgs e)
         {
             mostrar_submenu(Psubmenu_ventas);
         }
+
 
         private void Bagregar_venta_Click(object sender, EventArgs e)
         {
@@ -146,7 +146,7 @@ namespace SportsOn
 
         private void Bbuscar_producto_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new Fbuscar_producto());
+            abrirFormulario(new Fbuscar_producto_emp());
             /*
            codigo
 
@@ -237,7 +237,7 @@ namespace SportsOn
 
         private void Bver_caja_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new Fvercaja());
+            abrirFormulario(new Fvercaja_emp());
             /*
            codigo
 
@@ -303,5 +303,7 @@ namespace SportsOn
         {
 
         }
+
+        
     }
 }

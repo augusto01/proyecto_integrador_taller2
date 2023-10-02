@@ -147,6 +147,7 @@
             Controls.Add(Lindex);
             Name = "buscar_venta";
             Text = "Buscar Venta";
+            Load += buscar_venta_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

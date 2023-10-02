@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SportsOn.Administrador
 {
-    public partial class Fbuscar_producto : Form
+    public partial class Fbuscar_producto_emp : Form
     {
-        public Fbuscar_producto()
+        public Fbuscar_producto_emp()
         {
             InitializeComponent();
+        }
+
+        private void Fbuscar_producto_emp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

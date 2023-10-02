@@ -34,13 +34,28 @@
     <Compile Update="Conexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="empleado.cs">
+    <Compile Update="Empleado\Caja\vercaja_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Empleado\Clientes\Fagregar_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Empleado\empleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Administrador\Fadministrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Administrador\Usuario\FAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Empleado\Producto\FbuscarProductoEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Empleado\Ventas\Fagregar_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Empleado\Ventas\FbuscarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">

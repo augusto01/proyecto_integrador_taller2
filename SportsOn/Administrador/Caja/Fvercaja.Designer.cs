@@ -1,6 +1,6 @@
 ﻿namespace SportsOn.Administrador.Caja
 {
-    partial class Fvercaja
+    partial class Fvercaja_emp
     {
         /// <summary>
         /// Required designer variable.

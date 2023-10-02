@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SportsOn.Administrador.Caja
 {
-    public partial class Fvercaja : Form
+    public partial class Fvercaja_emp : Form
     {
-        public Fvercaja()
+        public Fvercaja_emp()
         {
             InitializeComponent();
         }

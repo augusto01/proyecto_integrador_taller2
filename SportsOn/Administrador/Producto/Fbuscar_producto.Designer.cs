@@ -1,6 +1,6 @@
 ﻿namespace SportsOn.Administrador
 {
-    partial class Fbuscar_producto
+    partial class Fbuscar_producto_emp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fbuscar_producto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fbuscar_producto_emp));
             dataGridView1 = new DataGridView();
-            Bbuscar = new Button();
-            Tuser = new TextBox();
-            Tdni = new TextBox();
-            Lindex = new Label();
             id_usuario = new DataGridViewTextBoxColumn();
             nombre = new DataGridViewTextBoxColumn();
             Descripcion = new DataGridViewTextBoxColumn();
             stock = new DataGridViewTextBoxColumn();
             proveedor = new DataGridViewTextBoxColumn();
             Accion = new DataGridViewTextBoxColumn();
+            Bbuscar = new Button();
+            Tuser = new TextBox();
+            Tdni = new TextBox();
+            Lindex = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -52,6 +52,36 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(643, 261);
             dataGridView1.TabIndex = 43;
+            // 
+            // id_usuario
+            // 
+            id_usuario.HeaderText = "id_producto";
+            id_usuario.Name = "id_usuario";
+            // 
+            // nombre
+            // 
+            nombre.HeaderText = "Nombre";
+            nombre.Name = "nombre";
+            // 
+            // Descripcion
+            // 
+            Descripcion.HeaderText = "Descripcion";
+            Descripcion.Name = "Descripcion";
+            // 
+            // stock
+            // 
+            stock.HeaderText = "Stock";
+            stock.Name = "stock";
+            // 
+            // proveedor
+            // 
+            proveedor.HeaderText = "Proveedor";
+            proveedor.Name = "proveedor";
+            // 
+            // Accion
+            // 
+            Accion.HeaderText = "Accion";
+            Accion.Name = "Accion";
             // 
             // Bbuscar
             // 
@@ -93,37 +123,7 @@
             Lindex.TabIndex = 38;
             Lindex.Text = "Buscar Producto";
             // 
-            // id_usuario
-            // 
-            id_usuario.HeaderText = "id_producto";
-            id_usuario.Name = "id_usuario";
-            // 
-            // nombre
-            // 
-            nombre.HeaderText = "Nombre";
-            nombre.Name = "nombre";
-            // 
-            // Descripcion
-            // 
-            Descripcion.HeaderText = "Descripcion";
-            Descripcion.Name = "Descripcion";
-            // 
-            // stock
-            // 
-            stock.HeaderText = "Stock";
-            stock.Name = "stock";
-            // 
-            // proveedor
-            // 
-            proveedor.HeaderText = "Proveedor";
-            proveedor.Name = "proveedor";
-            // 
-            // Accion
-            // 
-            Accion.HeaderText = "Accion";
-            Accion.Name = "Accion";
-            // 
-            // Fbuscar_producto
+            // Fbuscar_producto_emp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -134,8 +134,9 @@
             Controls.Add(Tuser);
             Controls.Add(Tdni);
             Controls.Add(Lindex);
-            Name = "Fbuscar_producto";
+            Name = "Fbuscar_producto_emp";
             Text = "Fbuscar_producto";
+            Load += Fbuscar_producto_emp_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
