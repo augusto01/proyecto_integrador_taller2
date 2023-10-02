@@ -49,12 +49,12 @@ namespace SportsOn.Administrador
 
         private void validar_campos()
         {
-           
+
         }
 
         private void Bagregar_producto_Click(object sender, EventArgs e)
         {
-            if(CBproducto.SelectedIndex == -1 || CBtipo_pago.SelectedIndex == -1 || UDcantidad.Value == 0)
+            if (CBproducto.SelectedIndex == -1 || CBtipo_pago.SelectedIndex == -1 || UDcantidad.Value == 0)
             {
                 MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -77,11 +77,21 @@ namespace SportsOn.Administrador
             }
             else
             {
-              //COMPROBAR QUE LA CANTIDAD SEA MENOR O IGUAL AL STOCK DISPONIBLE, HACER LA INSERCION AL DATAGRID
+                //COMPROBAR QUE LA CANTIDAD SEA MENOR O IGUAL AL STOCK DISPONIBLE, HACER LA INSERCION AL DATAGRID
 
             }
 
 
+        }
+
+        private void B_generar_compra_Click(object sender, EventArgs e)
+        {
+          //2da parte 
+
+            if (lpreciototal.Text == "0.00")
+            {
+                MessageBox.Show("Debe agregar al menos un producto!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

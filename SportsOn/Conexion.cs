@@ -1,71 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SportsOn
 {
-    //Creamos una nueva conexion con la base de datos
-    public class Conexion
+    public partial class Conexion : Form
     {
-        //variables privadas
-        private string Base;
-        private String Servidor;
-        private String Usuario;
-        private String Clave;
 
-        //permitira autenticacion en sql server !
-        private bool seguridad;
+        static string cadenaconexion = "server= DESKTOP-FG0LK48; database= proyecto_taller2";
+        SqlConnection conexion = new SqlConnection(cadenaconexion);
 
-        //creamos un nuevo objeto con la conexion
-        private static Conexion conex = null;
-        private Conexion()
+
+        public Conexion()
         {
-            this.Base = "proyecto_taller2";
-            this.Servidor = "DESKTOP-FG0LK48";
-            this.Usuario = "sa";
-            this.Clave = "1234";
-            this.seguridad = true;
+            InitializeComponent();
         }
 
-        //creamos conexion 
-        public SqlConnection crearConexion()
+        private void Conexion_Load(object sender, EventArgs e)
         {
-            //variable tipo sql connection
-            SqlConnection cadena = new SqlConnection();
-            try
-            {
-                //creamos cadena de conexion
-                cadena.ConnectionString = "Servidor = " + this.Servidor + "; Database: " + this.Base + ";";
-                //validamos el tipo de seguridad 
-                if (this.seguridad == true)
-                {
-                    cadena.ConnectionString = cadena.ConnectionString + "Integrated Security = SSPI";
-                }
-                else
-                {
-                    cadena.ConnectionString = cadena.ConnectionString + "user ID=" + this.Usuario + "Password" + this.Clave;
-                }
-            }
-            catch (Exception ex)
-            {
-                cadena = null;
-                throw ex;
-            }
-
-            return cadena;
-        }
-
-        //generamos instancia
-        public static Conexion crearInstancia()
-        {
-            if (conex == null)
-            {
-                conex = new Conexion();
-            }
-            return conex;
+            conexion.Open();
+            MessageBox.Show("conexion a la BD: " + conexion.Database + "ha sido exitosa!");
         }
     }
 }

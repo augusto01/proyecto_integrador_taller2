@@ -27,9 +27,11 @@ namespace SportsOn
             InitializeComponent();
         }
 
-       
-     
+        //Conectamos a la base de datos 
+        static string cadenaconexion = "server= localhost; database= proyecto_taller2;";
+        SqlConnection conexion = new SqlConnection(cadenaconexion);
 
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -40,6 +42,9 @@ namespace SportsOn
 
         private void Biniciar_Click(object sender, EventArgs e)
         {
+            
+            
+            
             //VALIDA SI LOS CAMPOS ESTAN VACIOS !
             if (Tusername.Text.Trim() == String.Empty || Tpass.Text.Trim() == String.Empty)
             {

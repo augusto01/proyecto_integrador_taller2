@@ -140,6 +140,7 @@
             TBnombre.Size = new Size(265, 23);
             TBnombre.TabIndex = 36;
             TBnombre.TabStop = false;
+            TBnombre.TextChanged += TBnombre_TextChanged;
             TBnombre.KeyPress += TBnombre_KeyPress;
             // 
             // Enombre
@@ -179,6 +180,7 @@
             Tcantidad.PlaceholderText = "Cantidad";
             Tcantidad.Size = new Size(265, 23);
             Tcantidad.TabIndex = 47;
+            Tcantidad.TextChanged += Tcantidad_TextChanged;
             Tcantidad.KeyPress += Tcantidad_KeyPress;
             // 
             // Etalle

@@ -54,11 +54,11 @@
             panel2 = new Panel();
             label5 = new Label();
             label7 = new Label();
-            label2 = new Label();
-            CBcliente = new ComboBox();
             fechaactual = new Label();
             UDcantidad = new NumericUpDown();
             Lprecio_unitario = new Label();
+            label2 = new Label();
+            CBcliente = new ComboBox();
             Eproducto = new ErrorProvider(components);
             Etipopago = new ErrorProvider(components);
             Ecantidad = new ErrorProvider(components);
@@ -210,6 +210,7 @@
             B_generar_compra.TabIndex = 30;
             B_generar_compra.Text = "Generar Compra";
             B_generar_compra.UseVisualStyleBackColor = false;
+            B_generar_compra.Click += B_generar_compra_Click;
             // 
             // B_cancelar
             // 
@@ -293,24 +294,6 @@
             label7.TabIndex = 0;
             label7.Text = "$";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(30, 409);
-            label2.Name = "label2";
-            label2.Size = new Size(135, 21);
-            label2.TabIndex = 52;
-            label2.Text = "Seleccione Cliente";
-            // 
-            // CBcliente
-            // 
-            CBcliente.FormattingEnabled = true;
-            CBcliente.Location = new Point(171, 409);
-            CBcliente.Name = "CBcliente";
-            CBcliente.Size = new Size(211, 23);
-            CBcliente.TabIndex = 51;
-            // 
             // fechaactual
             // 
             fechaactual.AutoSize = true;
@@ -339,6 +322,24 @@
             Lprecio_unitario.Size = new Size(116, 21);
             Lprecio_unitario.TabIndex = 30;
             Lprecio_unitario.Text = "Precio Unitario:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(30, 409);
+            label2.Name = "label2";
+            label2.Size = new Size(135, 21);
+            label2.TabIndex = 52;
+            label2.Text = "Seleccione Cliente";
+            // 
+            // CBcliente
+            // 
+            CBcliente.FormattingEnabled = true;
+            CBcliente.Location = new Point(171, 409);
+            CBcliente.Name = "CBcliente";
+            CBcliente.Size = new Size(211, 23);
+            CBcliente.TabIndex = 51;
             // 
             // Eproducto
             // 

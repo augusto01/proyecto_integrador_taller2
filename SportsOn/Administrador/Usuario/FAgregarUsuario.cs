@@ -28,7 +28,7 @@ namespace SportsOn
         private void FAgregarUsuario_Load(object sender, EventArgs e)
         {
             inicializarUsuarios();
-            listar_usuarios();
+            
         }
 
         private void inicializarUsuarios()
@@ -196,10 +196,6 @@ namespace SportsOn
 
         private void Bagregar_Click(object sender, EventArgs e)
         {
-
-
-
-
             if (Tdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || Tapellido.Text.Trim() == string.Empty
                || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty || Tconfcontra.Text == String.Empty || Tuser.Text == String.Empty)
             {
@@ -342,7 +338,7 @@ namespace SportsOn
 
         public void CargaUsuario()
         {
-            /*codigo para cargar el datagrid*/
+           
             int n = dg_usuarios.Rows.Add();
             //Anadimos registros al data grid
 
@@ -354,6 +350,10 @@ namespace SportsOn
 
             //scroll automatico del dg
             dg_usuarios.FirstDisplayedScrollingRowIndex = dg_usuarios.RowCount - 1;
+           
+
+
+
         }
 
 
@@ -445,9 +445,6 @@ namespace SportsOn
             if (resultado == DialogResult.Yes)
             {
 
-
-
-
                 posicion = dg_usuarios.CurrentRow.Index;
                 TBnombre.Clear();
                 Tapellido.Clear();
@@ -456,32 +453,14 @@ namespace SportsOn
                 editarUsuario.Visible = false;
                 Bcancelar.Visible = false;
                 Bagregar.Visible = true;
-
-
             }
         }
-        // LLAMAMOS USARIOS EXISTENTE EN LA BASE DE DATOS 
+        
 
-        private void listar_usuarios()
-        {
-            try
-            {
-             
-                datosSql ds = new datosSql();
-                dg_usuarios.DataSource = ds.listarUsuarios();
-
-               
-            }
-
-            catch (Exception ex) 
-            {
-
-                MessageBox.Show("Error en la base de datos!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
 
-
+        // AGREGAR USUARIO A LA BASE DE DATOS 
 
 
 

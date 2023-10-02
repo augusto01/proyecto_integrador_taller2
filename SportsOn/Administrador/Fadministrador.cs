@@ -1,5 +1,8 @@
 ﻿using SportsOn.Administrador;
+using SportsOn.Administrador.Caja;
 using SportsOn.Administrador.Clientes;
+using SportsOn.Administrador.Compras;
+using SportsOn.Administrador.Informes;
 using SportsOn.Administrador.Venta;
 using System;
 using System.Collections.Generic;
@@ -105,6 +108,8 @@ namespace SportsOn
 
         private void Bagregar_compra_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new Fagregar_compra());
+
             /*
            codigo
 
@@ -196,6 +201,7 @@ namespace SportsOn
 
         private void Bagregar_informe_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new Agregar_informe());
             /*
          codigo
 
@@ -231,6 +237,7 @@ namespace SportsOn
 
         private void Bver_caja_Click(object sender, EventArgs e)
         {
+            abrirFormulario(new Fvercaja());
             /*
            codigo
 

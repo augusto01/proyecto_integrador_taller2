@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -12,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
 
 namespace SportsOn.Administrador
 {
@@ -92,7 +95,7 @@ namespace SportsOn.Administrador
         //PRECIO
         private void Tprecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255) )
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
                 Eprecio.SetError(Tprecio, "Solo numeros Positivos!");
                 e.Handled = true;
@@ -101,10 +104,10 @@ namespace SportsOn.Administrador
 
             }
             else
-            {   
-               precio = true;
-               Eprecio.Clear();
-                  
+            {
+                precio = true;
+                Eprecio.Clear();
+
             }
         }
 
@@ -325,6 +328,16 @@ namespace SportsOn.Administrador
         }
 
         private void Lmoneda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tcantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBnombre_TextChanged(object sender, EventArgs e)
         {
 
         }
