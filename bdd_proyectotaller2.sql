@@ -80,3 +80,14 @@ CREATE TABLE Venta_cabecera(
 
 
 drop table Tipo_usuario
+
+select * from Usuario 
+
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'augusto','almiron','user@gmial.com','1234',1,getdate(),42791957,'augusto01')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'jose','almiron','user@gmial.com','1234',1,getdate(),12345,'josesito1')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Micaela','disalvo','user@gmial.com','1234',1,getdate(),1234567,'mica01')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Agostina','perez','user@gmial.com','1234',1,getdate(),8998,'agos01')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Raul','almiron','user@gmial.com','1234',1,getdate(),12312,'raulito01')
+select * from Usuario
+
+DELETE from Usuario where id_usuario =2 

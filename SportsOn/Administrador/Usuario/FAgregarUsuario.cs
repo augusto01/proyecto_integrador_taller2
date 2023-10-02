@@ -11,24 +11,31 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Data.SqlClient;
 
 namespace SportsOn
 {
     public partial class FAgregarUsuario : Form
     {
-        
+
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-FG0LK48; Database=proyecto_taller2; Integrated Security=True;");
+
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
         String[] TipoUsuario = { "Empleado", "Administrador", "Gerente" };
         public FAgregarUsuario()
         {
             InitializeComponent();
+            
+
+          
 
         }
 
         private void FAgregarUsuario_Load(object sender, EventArgs e)
         {
             inicializarUsuarios();
-            
+         
+
         }
 
         private void inicializarUsuarios()
@@ -196,6 +203,7 @@ namespace SportsOn
 
         private void Bagregar_Click(object sender, EventArgs e)
         {
+            abrirConexion();
             if (Tdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || Tapellido.Text.Trim() == string.Empty
                || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty || Tconfcontra.Text == String.Empty || Tuser.Text == String.Empty)
             {
@@ -260,7 +268,9 @@ namespace SportsOn
 
                 }
                 else
-                {   //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
+                {
+                   
+                    //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
                     Edni.Clear(); Econfcontra.Clear(); Enombre.Clear(); Eapellido.Clear(); Edomi.Clear(); Ecel.Clear(); Euser.Clear();
                     DialogResult resultado = MessageBox.Show("DNI:" + Tdni.Text + "\nNombre:" + TBnombre.Text + "   Apellido:" + Tapellido.Text
                                  + "\nEmail:" + Temail.Text, "Agregar Usuario?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -269,6 +279,8 @@ namespace SportsOn
                     {
                         //si la respuesta es si cargamos el usuario 
                         CargaUsuario();
+
+                   
 
                         MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -338,22 +350,44 @@ namespace SportsOn
 
         public void CargaUsuario()
         {
-           
-            int n = dg_usuarios.Rows.Add();
-            //Anadimos registros al data grid
+            /*
+            SqlConnection conexion = new SqlConnection();
+            string consulta_agregar_usuarios = "INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'" + TBnombre.Text + "','" + Tapellido.Text + "','" + Temail.Text + "','" + Lcontra + "',1,getdate()," + Tdni.Text + ",'" + Tuser.Text + "')";
+            SqlCommand comando = new SqlCommand(consulta_agregar_usuarios, conexion);
+            comando.ExecuteNonQuery();
+
+            INSERCION DE USUARIOS A LA BASE DE DATOS, TIRA ERROR DE CONEXION SOLUCIONAREMOS EN LA 2DA PARTE 
+            */
+             int n = dg_usuarios.Rows.Add();
+             //Anadimos registros al data grid
 
 
-            dg_usuarios.Rows[n].Cells[1].Value = TBnombre.Text;
-            dg_usuarios.Rows[n].Cells[2].Value = Tapellido.Text;
-            dg_usuarios.Rows[n].Cells[3].Value = Tdni.Text;
-            dg_usuarios.Rows[n].Cells[4].Value = Tuser.Text;
+             dg_usuarios.Rows[n].Cells[1].Value = TBnombre.Text;
+             dg_usuarios.Rows[n].Cells[2].Value = Tapellido.Text;
+             dg_usuarios.Rows[n].Cells[3].Value = Tdni.Text;
+             dg_usuarios.Rows[n].Cells[4].Value = Tuser.Text;
 
-            //scroll automatico del dg
-            dg_usuarios.FirstDisplayedScrollingRowIndex = dg_usuarios.RowCount - 1;
-           
-
+             //scroll automatico del dg
+             dg_usuarios.FirstDisplayedScrollingRowIndex = dg_usuarios.RowCount - 1;
 
 
+
+
+
+        }
+
+        //conexion a la base de datos
+        private void abrirConexion()
+        {
+            try
+            {
+                conexion.Open();
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error de conexion!");
+            }
         }
 
 

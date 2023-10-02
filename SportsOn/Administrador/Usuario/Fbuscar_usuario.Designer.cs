@@ -34,24 +34,14 @@
             errorProvider1 = new ErrorProvider(components);
             Edni = new ErrorProvider(components);
             Ecorreo = new ErrorProvider(components);
-            groupBox1 = new GroupBox();
-            Tconfcontra = new TextBox();
-            Tuser = new TextBox();
-            Bagregar = new Button();
-            Tdni = new TextBox();
-            Temail = new TextBox();
-            CBcategoria = new ComboBox();
-            Tcelular = new TextBox();
-            Tdomicilio = new TextBox();
-            Lcontra = new TextBox();
-            Tapellido = new TextBox();
-            TBnombre = new TextBox();
-            Lindex = new Label();
+            lusuarios = new Label();
+            Bconectar = new Button();
+            dg_mostrarusuarios = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)Euser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Edni).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Ecorreo).BeginInit();
-            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dg_mostrarusuarios).BeginInit();
             SuspendLayout();
             // 
             // Euser
@@ -76,158 +66,53 @@
             Ecorreo.ContainerControl = this;
             Ecorreo.Icon = (Icon)resources.GetObject("Ecorreo.Icon");
             // 
-            // groupBox1
+            // lusuarios
             // 
-            groupBox1.Controls.Add(Tconfcontra);
-            groupBox1.Controls.Add(Tuser);
-            groupBox1.Controls.Add(Bagregar);
-            groupBox1.Controls.Add(Tdni);
-            groupBox1.Controls.Add(Temail);
-            groupBox1.Controls.Add(CBcategoria);
-            groupBox1.Controls.Add(Tcelular);
-            groupBox1.Controls.Add(Tdomicilio);
-            groupBox1.Controls.Add(Lcontra);
-            groupBox1.Controls.Add(Tapellido);
-            groupBox1.Controls.Add(TBnombre);
-            groupBox1.Location = new Point(17, 52);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(736, 266);
-            groupBox1.TabIndex = 42;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Agregar Usuarios";
-            groupBox1.Enter += groupBox1_Enter;
+            lusuarios.AutoSize = true;
+            lusuarios.Font = new Font("Kanit SemiBold", 23.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lusuarios.ForeColor = Color.Lime;
+            lusuarios.Location = new Point(444, 9);
+            lusuarios.Name = "lusuarios";
+            lusuarios.Size = new Size(153, 51);
+            lusuarios.TabIndex = 41;
+            lusuarios.Text = "Usuarios";
             // 
-            // Tconfcontra
+            // Bconectar
             // 
-            Tconfcontra.Location = new Point(319, 228);
-            Tconfcontra.Name = "Tconfcontra";
-            Tconfcontra.PlaceholderText = "Confirmar contraseña";
-            Tconfcontra.Size = new Size(265, 23);
-            Tconfcontra.TabIndex = 35;
-            Tconfcontra.UseSystemPasswordChar = true;
+            Bconectar.Location = new Point(125, 453);
+            Bconectar.Name = "Bconectar";
+            Bconectar.Size = new Size(96, 30);
+            Bconectar.TabIndex = 43;
+            Bconectar.Text = "conectar";
+            Bconectar.UseVisualStyleBackColor = true;
+            Bconectar.Click += Bconectar_Click;
             // 
-            // Tuser
+            // dg_mostrarusuarios
             // 
-            Tuser.Location = new Point(319, 174);
-            Tuser.Name = "Tuser";
-            Tuser.PlaceholderText = "Nombre Usuario";
-            Tuser.Size = new Size(265, 23);
-            Tuser.TabIndex = 34;
-            Tuser.TabStop = false;
-            // 
-            // Bagregar
-            // 
-            Bagregar.BackColor = Color.Transparent;
-            Bagregar.Cursor = Cursors.Hand;
-            Bagregar.FlatAppearance.BorderSize = 0;
-            Bagregar.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            Bagregar.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            Bagregar.FlatStyle = FlatStyle.Flat;
-            Bagregar.ForeColor = SystemColors.ActiveCaptionText;
-            Bagregar.Image = (Image)resources.GetObject("Bagregar.Image");
-            Bagregar.ImageAlign = ContentAlignment.TopCenter;
-            Bagregar.Location = new Point(629, 97);
-            Bagregar.Name = "Bagregar";
-            Bagregar.Size = new Size(76, 72);
-            Bagregar.TabIndex = 30;
-            Bagregar.UseVisualStyleBackColor = false;
-             
-            // 
-            // Tdni
-            // 
-            Tdni.Location = new Point(19, 76);
-            Tdni.Name = "Tdni";
-            Tdni.PlaceholderText = "DNI";
-            Tdni.Size = new Size(265, 23);
-            Tdni.TabIndex = 32;
-            // 
-            // Temail
-            // 
-            Temail.Location = new Point(319, 76);
-            Temail.Name = "Temail";
-            Temail.PlaceholderText = "Email";
-            Temail.Size = new Size(265, 23);
-            Temail.TabIndex = 27;
-            // 
-            // CBcategoria
-            // 
-            CBcategoria.FormattingEnabled = true;
-            CBcategoria.Location = new Point(19, 174);
-            CBcategoria.Name = "CBcategoria";
-            CBcategoria.Size = new Size(265, 23);
-            CBcategoria.TabIndex = 26;
-            CBcategoria.Text = "Tipo de Usuario";
-            // 
-            // Tcelular
-            // 
-            Tcelular.Location = new Point(319, 123);
-            Tcelular.Name = "Tcelular";
-            Tcelular.PlaceholderText = "Celular";
-            Tcelular.Size = new Size(265, 23);
-            Tcelular.TabIndex = 25;
-            // 
-            // Tdomicilio
-            // 
-            Tdomicilio.Location = new Point(19, 123);
-            Tdomicilio.Name = "Tdomicilio";
-            Tdomicilio.PlaceholderText = "Domicilio";
-            Tdomicilio.Size = new Size(265, 23);
-            Tdomicilio.TabIndex = 24;
-            // 
-            // Lcontra
-            // 
-            Lcontra.Location = new Point(19, 228);
-            Lcontra.Name = "Lcontra";
-            Lcontra.PlaceholderText = "Contraseña";
-            Lcontra.Size = new Size(265, 23);
-            Lcontra.TabIndex = 23;
-            Lcontra.UseSystemPasswordChar = true;
-            // 
-            // Tapellido
-            // 
-            Tapellido.Location = new Point(319, 33);
-            Tapellido.Name = "Tapellido";
-            Tapellido.PlaceholderText = "Apellido";
-            Tapellido.Size = new Size(265, 23);
-            Tapellido.TabIndex = 22;
-            // 
-            // TBnombre
-            // 
-            TBnombre.BackColor = Color.White;
-            TBnombre.Location = new Point(19, 33);
-            TBnombre.Name = "TBnombre";
-            TBnombre.PlaceholderText = "Nombre";
-            TBnombre.Size = new Size(265, 23);
-            TBnombre.TabIndex = 21;
-            TBnombre.TabStop = false;
-            // 
-            // Lindex
-            // 
-            Lindex.AutoSize = true;
-            Lindex.Font = new Font("Kanit SemiBold", 23.9999981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            Lindex.ForeColor = Color.Lime;
-            Lindex.Location = new Point(247, 11);
-            Lindex.Name = "Lindex";
-            Lindex.Size = new Size(280, 51);
-            Lindex.TabIndex = 41;
-            Lindex.Text = "Agregar Usuarios";
+            dg_mostrarusuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_mostrarusuarios.Location = new Point(12, 63);
+            dg_mostrarusuarios.Name = "dg_mostrarusuarios";
+            dg_mostrarusuarios.RowTemplate.Height = 25;
+            dg_mostrarusuarios.Size = new Size(946, 384);
+            dg_mostrarusuarios.TabIndex = 44;
             // 
             // Fbuscar_usuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Highlight;
-            ClientSize = new Size(770, 686);
-            Controls.Add(groupBox1);
-            Controls.Add(Lindex);
+            ClientSize = new Size(970, 686);
+            Controls.Add(dg_mostrarusuarios);
+            Controls.Add(Bconectar);
+            Controls.Add(lusuarios);
             Name = "Fbuscar_usuario";
-            Text = "Fbuscar_usuario";
+            Text = "Buscar Usuario";
+            Load += Fbuscar_usuario_Load;
             ((System.ComponentModel.ISupportInitialize)Euser).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ((System.ComponentModel.ISupportInitialize)Edni).EndInit();
             ((System.ComponentModel.ISupportInitialize)Ecorreo).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dg_mostrarusuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -249,6 +134,8 @@
         private TextBox Lcontra;
         private TextBox Tapellido;
         private TextBox TBnombre;
-        private Label Lindex;
+        private Label lusuarios;
+        private Button Bconectar;
+        private DataGridView dg_mostrarusuarios;
     }
 }
