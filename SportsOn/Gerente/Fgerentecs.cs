@@ -166,5 +166,10 @@ namespace SportsOn.Gerente
                 Close();
             }
         }
+
+        private void Bbuscar_usuario_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new Fbuscar_usuario());
+        }
     }
 }

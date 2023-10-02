@@ -117,3 +117,4 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Sp
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Compra.Fagregar_compra_ger.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Caja.Caja_gerente.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.FagregarProducto.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\SportsOn\obj\Debug\net6.0-windows\SportsOn.Gerente.Usuario.Fbuscar_usuario.resources

@@ -82,6 +82,9 @@
     <Compile Update="Gerente\Usuario\Fagregar_usuario_ger.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Gerente\Usuario\Fbuscar_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Gerente\Venta\Fagregar_venta_ger.cs">
       <SubType>Form</SubType>
     </Compile>

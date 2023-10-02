@@ -46,6 +46,7 @@
             label1 = new Label();
             Bcompras = new Button();
             panel1 = new Panel();
+            button1 = new Button();
             Bcerrar = new Button();
             Bbuscar_usuario = new Button();
             Pcontent = new Panel();
@@ -66,7 +67,6 @@
             Binforme = new Button();
             Psubmenu_usuario = new Panel();
             Bagregar_usuario = new Button();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)Plogo_content).BeginInit();
             Psubmenu_producto.SuspendLayout();
             Psubmenu_compras.SuspendLayout();
@@ -343,6 +343,22 @@
             panel1.Size = new Size(990, 65);
             panel1.TabIndex = 41;
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.CornflowerBlue;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(906, 11);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(72, 43);
+            button1.TabIndex = 35;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Bcerrar
             // 
             Bcerrar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -373,6 +389,7 @@
             Bbuscar_usuario.Text = "Buscar Usuario";
             Bbuscar_usuario.TextAlign = ContentAlignment.MiddleLeft;
             Bbuscar_usuario.UseVisualStyleBackColor = true;
+            Bbuscar_usuario.Click += Bbuscar_usuario_Click;
             // 
             // Pcontent
             // 
@@ -661,22 +678,6 @@
             Bagregar_usuario.TextAlign = ContentAlignment.MiddleLeft;
             Bagregar_usuario.UseVisualStyleBackColor = true;
             Bagregar_usuario.Click += Bagregar_usuario_Click;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.CornflowerBlue;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(906, 11);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(72, 43);
-            button1.TabIndex = 35;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Fgerentecs
             // 
