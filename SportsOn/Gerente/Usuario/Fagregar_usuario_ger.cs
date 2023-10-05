@@ -16,7 +16,7 @@ namespace SportsOn.Gerente.Usuario
     {
         SqlConnection conexion = new SqlConnection("Server=DESKTOP-FG0LK48; Database=proyecto_taller2; Integrated Security=True;");
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
-        String[] TipoUsuario = { "Empleado", "Administrador", "Gerente" };
+        String[] TipoUsuario = { "Administrador", "Empleado", "Gerente" };
         public Fagregar_usuario_ger()
         {
             InitializeComponent();
@@ -25,6 +25,8 @@ namespace SportsOn.Gerente.Usuario
         private void Fagregar_usuario_ger_Load(object sender, EventArgs e)
         {
             inicializarUsuarios();
+
+
         }
         private void inicializarUsuarios()
         {
@@ -297,7 +299,7 @@ namespace SportsOn.Gerente.Usuario
             {
                 agregar_usuario.Parameters.Clear();
                 agregar_usuario.ExecuteNonQuery();            
-                MessageBox.Show("El usuario "+ TBnombre.Text +" "+ Tapellido.Text + "se agreggo con exito!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El usuario "+ TBnombre.Text +" "+ Tapellido.Text + "se agrego con exito!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
