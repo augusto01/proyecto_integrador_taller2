@@ -9,11 +9,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SportsOn.Administrador.Clientes
 {
     public partial class Fagregar_cliente : Form
     {
+
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-FG0LK48; Database=proyecto_taller2; Integrated Security=True;");
         public Fagregar_cliente()
         {
             InitializeComponent();
@@ -200,6 +203,31 @@ namespace SportsOn.Administrador.Clientes
         //carga cliente al data grid
         public void CargaCliente()
         {
+
+           
+            conexion.Open();
+            SqlCommand agregar_cliente = new SqlCommand("INSERT INTO Cliente (nombre_cliente,apellido_cliente,correo_cliente,estado_cliente,fecha_creacion,dni_cliente,dom_cliente,cel_cliente) values( '"+TBnombre.Text+"','"+Tapellido.Text+"','"+Temail.Text+"',1,getdate(),"+Tdni.Text+",'"+Tdomicilio.Text+"',"+Tcelular.Text+")", conexion);
+            try
+            {
+                agregar_cliente.Parameters.Clear();
+
+                agregar_cliente.ExecuteNonQuery();
+                MessageBox.Show("El cliente: "+TBnombre.Text+""+Tapellido.Text+" se agrego con exito!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error!");
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+
+
+
+
 
             int n = dg_cliente.Rows.Add();
             //Anadimos registros al data grid

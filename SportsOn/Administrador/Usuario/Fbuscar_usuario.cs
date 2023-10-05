@@ -82,8 +82,15 @@ namespace SportsOn.Administrador
             {
                 MessageBox.Show("Error de conexion!");
             }
+            finally
+            {
+                conexion.Close();
+            }
         }
 
+        private void dg_mostrarusuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

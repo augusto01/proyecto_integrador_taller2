@@ -18,25 +18,30 @@ namespace SportsOn
     public partial class FAgregarUsuario : Form
     {
 
+        //conexion a la base de datos !
+
         SqlConnection conexion = new SqlConnection("Server=DESKTOP-FG0LK48; Database=proyecto_taller2; Integrated Security=True;");
+        string server = "Data Source = DESKTOP-FG0LK4; Initial Catalog=super; Integrated Security=True";
+
 
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
         String[] TipoUsuario = { "Empleado", "Administrador", "Gerente" };
         public FAgregarUsuario()
         {
             InitializeComponent();
-            
 
-          
+
+
 
         }
 
         private void FAgregarUsuario_Load(object sender, EventArgs e)
         {
             inicializarUsuarios();
-         
+
 
         }
+
 
         private void inicializarUsuarios()
         {
@@ -81,7 +86,7 @@ namespace SportsOn
                 Enombre.Clear();
             }
         }
-        
+
 
         //APELLIDO
         private void Tapellido_KeyPress(object sender, KeyPressEventArgs e)
@@ -203,7 +208,7 @@ namespace SportsOn
 
         private void Bagregar_Click(object sender, EventArgs e)
         {
-            abrirConexion();
+
             if (Tdni.Text.Trim() == String.Empty || TBnombre.Text.Trim() == string.Empty || Tapellido.Text.Trim() == string.Empty
                || Temail.Text.Trim() == String.Empty || CBcategoria.SelectedIndex == -1 || Lcontra.Text.Trim() == String.Empty || Tconfcontra.Text == String.Empty || Tuser.Text == String.Empty)
             {
@@ -269,7 +274,7 @@ namespace SportsOn
                 }
                 else
                 {
-                   
+
                     //SI LOS CAMPOS ESTAN COMPLETOS HACEMOS LA INSERCION DEL USUARIO NUEVO !
                     Edni.Clear(); Econfcontra.Clear(); Enombre.Clear(); Eapellido.Clear(); Edomi.Clear(); Ecel.Clear(); Euser.Clear();
                     DialogResult resultado = MessageBox.Show("DNI:" + Tdni.Text + "\nNombre:" + TBnombre.Text + "   Apellido:" + Tapellido.Text
@@ -279,16 +284,8 @@ namespace SportsOn
                     {
                         //si la respuesta es si cargamos el usuario 
                         CargaUsuario();
-
-                   
-
-                        MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                         LimpiarCampos();
                         LimpiarErrores();
-
-
-
 
                     }
 
@@ -350,45 +347,34 @@ namespace SportsOn
 
         public void CargaUsuario()
         {
-            /*
-            SqlConnection conexion = new SqlConnection();
-            string consulta_agregar_usuarios = "INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'" + TBnombre.Text + "','" + Tapellido.Text + "','" + Temail.Text + "','" + Lcontra + "',1,getdate()," + Tdni.Text + ",'" + Tuser.Text + "')";
-            SqlCommand comando = new SqlCommand(consulta_agregar_usuarios, conexion);
-            comando.ExecuteNonQuery();
 
-            INSERCION DE USUARIOS A LA BASE DE DATOS, TIRA ERROR DE CONEXION SOLUCIONAREMOS EN LA 2DA PARTE 
-            */
-             int n = dg_usuarios.Rows.Add();
-             //Anadimos registros al data grid
+            //conexion a la base de datos
 
-
-             dg_usuarios.Rows[n].Cells[1].Value = TBnombre.Text;
-             dg_usuarios.Rows[n].Cells[2].Value = Tapellido.Text;
-             dg_usuarios.Rows[n].Cells[3].Value = Tdni.Text;
-             dg_usuarios.Rows[n].Cells[4].Value = Tuser.Text;
-
-             //scroll automatico del dg
-             dg_usuarios.FirstDisplayedScrollingRowIndex = dg_usuarios.RowCount - 1;
-
-
-
-
-
-        }
-
-        //conexion a la base de datos
-        private void abrirConexion()
-        {
+            conexion.Open();
+           
+               SqlCommand agregar_usuario= new SqlCommand("INSERT INTO Usuario (id_tipo_usuario,nombre,apellido,correo,estado,fecha_creacion,dni,username,pass,cel) values("+CBcategoria.SelectedIndex+",'"+TBnombre.Text+"','"+Tapellido.Text+"','"+Temail.Text+"',1,getdate(),"+Tdni.Text+",'"+Tuser.Text+"','"+Lcontra.Text+"',"+Tcelular.Text+")", conexion);
+            
+ 
             try
             {
-                conexion.Open();
-                
+                agregar_usuario.Parameters.Clear();
+
+                agregar_usuario.ExecuteNonQuery();
+                MessageBox.Show("El Usuario: " + TBnombre.Text + " " + Tapellido.Text + " se agrego con exito!");
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error de conexion!");
+                MessageBox.Show("Error!");
             }
+            finally
+            {
+                conexion.Close();
+            }
+
         }
+
+       
 
 
 
@@ -489,9 +475,13 @@ namespace SportsOn
                 Bagregar.Visible = true;
             }
         }
-        
 
-        
+
+
+
+
+
+
 
 
         // AGREGAR USUARIO A LA BASE DE DATOS 

@@ -519,5 +519,6 @@
         private DataGridViewImageColumn eliminar;
         private Button bbuscar;
         private Button Bcancelar;
+        private Button bconectar;
     }
 }

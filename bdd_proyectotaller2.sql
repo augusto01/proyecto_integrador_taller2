@@ -91,3 +91,11 @@ INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,pa
 select * from Usuario
 
 DELETE from Usuario where id_usuario =2 
+
+INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Administrador')
+INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Empleado')
+INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Gerente')
+
+select * from Tipo_usuario
+
+alter table Tipo_usuario  alter column id_tipo_usuario int primary key  identity(1,1)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace SportsOn.Gerente.Usuario
 {
     public partial class Fagregar_usuario_ger : Form
     {
-
+        SqlConnection conexion = new SqlConnection("Server=DESKTOP-FG0LK48; Database=proyecto_taller2; Integrated Security=True;");
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
         String[] TipoUsuario = { "Empleado", "Administrador", "Gerente" };
         public Fagregar_usuario_ger()
@@ -286,6 +287,28 @@ namespace SportsOn.Gerente.Usuario
         public void CargaUsuario()
         {
 
+
+            conexion.Open();
+
+            SqlCommand agregar_usuario = new SqlCommand("INSERT INTO Usuario (id_tipo_usuario,nombre,apellido,correo,estado,fecha_creacion,dni,username,pass,cel) values(" + CBcategoria.SelectedIndex + ",'" + TBnombre.Text + "','" + Tapellido.Text + "','" + Temail.Text + "',1,getdate()," + Tdni.Text + ",'" + Tuser.Text + "','" + Lcontra.Text + "'," + Tcelular.Text + ")", conexion);
+
+
+            try
+            {
+                agregar_usuario.Parameters.Clear();
+
+                agregar_usuario.ExecuteNonQuery();
+                MessageBox.Show("El Usuario: " + TBnombre.Text + " " + Tapellido.Text + " se agrego con exito!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error!");
+            }
+            finally
+            {
+                conexion.Close();
+            }
             int n = dg_usuarios.Rows.Add();
             //Anadimos registros al data grid
 

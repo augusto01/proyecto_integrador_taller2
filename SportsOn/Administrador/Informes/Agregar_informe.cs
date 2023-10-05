@@ -45,7 +45,7 @@ namespace SportsOn.Administrador.Informes
 
         private void Agregar_informe_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

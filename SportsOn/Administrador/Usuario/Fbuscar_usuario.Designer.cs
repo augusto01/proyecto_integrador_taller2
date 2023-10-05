@@ -95,6 +95,7 @@
             dg_mostrarusuarios.RowTemplate.Height = 25;
             dg_mostrarusuarios.Size = new Size(946, 384);
             dg_mostrarusuarios.TabIndex = 44;
+            dg_mostrarusuarios.CellContentClick += dg_mostrarusuarios_CellContentClick;
             // 
             // Fbuscar_usuario
             // 
