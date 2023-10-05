@@ -351,10 +351,10 @@ namespace SportsOn
             //conexion a la base de datos
 
             conexion.Open();
-           
-               SqlCommand agregar_usuario= new SqlCommand("INSERT INTO Usuario (id_tipo_usuario,nombre,apellido,correo,estado,fecha_creacion,dni,username,pass,cel) values("+CBcategoria.SelectedIndex+",'"+TBnombre.Text+"','"+Tapellido.Text+"','"+Temail.Text+"',1,getdate(),"+Tdni.Text+",'"+Tuser.Text+"','"+Lcontra.Text+"',"+Tcelular.Text+")", conexion);
-            
- 
+
+            SqlCommand agregar_usuario = new SqlCommand("INSERT INTO Usuario (id_tipo_usuario,nombre,apellido,correo,estado,fecha_creacion,dni,username,pass,cel) values(" + CBcategoria.SelectedIndex + ",'" + TBnombre.Text + "','" + Tapellido.Text + "','" + Temail.Text + "',1,getdate()," + Tdni.Text + ",'" + Tuser.Text + "','" + Lcontra.Text + "'," + Tcelular.Text + ")", conexion);
+
+
             try
             {
                 agregar_usuario.Parameters.Clear();
@@ -374,7 +374,7 @@ namespace SportsOn
 
         }
 
-       
+
 
 
 

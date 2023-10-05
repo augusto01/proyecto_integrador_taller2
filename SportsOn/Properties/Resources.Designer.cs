@@ -243,6 +243,16 @@ namespace SportsOn.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eliminar2 {
+            get {
+                object obj = ResourceManager.GetObject("eliminar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar {
             get {
                 object obj = ResourceManager.GetObject("guardar", resourceCulture);
@@ -336,6 +346,16 @@ namespace SportsOn.Properties {
         internal static System.Drawing.Bitmap lapiz1 {
             get {
                 object obj = ResourceManager.GetObject("lapiz1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lapiz2 {
+            get {
+                object obj = ResourceManager.GetObject("lapiz2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

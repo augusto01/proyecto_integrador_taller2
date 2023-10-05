@@ -93,7 +93,7 @@
             Tdni.Name = "Tdni";
             Tdni.PlaceholderText = "DNI";
             Tdni.Size = new Size(265, 29);
-            Tdni.TabIndex = 32;
+            Tdni.TabIndex = 23;
             Tdni.KeyPress += Tdni_KeyPress;
             // 
             // Bagregar
@@ -131,7 +131,7 @@
             Temail.Name = "Temail";
             Temail.PlaceholderText = "Email";
             Temail.Size = new Size(265, 29);
-            Temail.TabIndex = 27;
+            Temail.TabIndex = 24;
             Temail.KeyPress += Temail_KeyPress;
             // 
             // CBcategoria
@@ -140,7 +140,7 @@
             CBcategoria.Location = new Point(19, 174);
             CBcategoria.Name = "CBcategoria";
             CBcategoria.Size = new Size(265, 29);
-            CBcategoria.TabIndex = 26;
+            CBcategoria.TabIndex = 27;
             CBcategoria.Text = "Tipo de Usuario";
             // 
             // Tcelular
@@ -149,7 +149,7 @@
             Tcelular.Name = "Tcelular";
             Tcelular.PlaceholderText = "Celular";
             Tcelular.Size = new Size(265, 29);
-            Tcelular.TabIndex = 25;
+            Tcelular.TabIndex = 26;
             Tcelular.KeyPress += Tcelular_KeyPress;
             // 
             // Tdomicilio
@@ -158,7 +158,7 @@
             Tdomicilio.Name = "Tdomicilio";
             Tdomicilio.PlaceholderText = "Domicilio";
             Tdomicilio.Size = new Size(265, 29);
-            Tdomicilio.TabIndex = 24;
+            Tdomicilio.TabIndex = 25;
             // 
             // Lcontra
             // 
@@ -166,7 +166,7 @@
             Lcontra.Name = "Lcontra";
             Lcontra.PlaceholderText = "Contraseña";
             Lcontra.Size = new Size(265, 29);
-            Lcontra.TabIndex = 23;
+            Lcontra.TabIndex = 29;
             Lcontra.UseSystemPasswordChar = true;
             Lcontra.TextChanged += Lcontra_TextChanged;
             // 
@@ -244,7 +244,7 @@
             Tuser.Name = "Tuser";
             Tuser.PlaceholderText = "Nombre Usuario";
             Tuser.Size = new Size(265, 29);
-            Tuser.TabIndex = 34;
+            Tuser.TabIndex = 28;
             Tuser.TabStop = false;
             // 
             // Tconfcontra
@@ -253,7 +253,7 @@
             Tconfcontra.Name = "Tconfcontra";
             Tconfcontra.PlaceholderText = "Confirmar contraseña";
             Tconfcontra.Size = new Size(265, 29);
-            Tconfcontra.TabIndex = 35;
+            Tconfcontra.TabIndex = 30;
             Tconfcontra.UseSystemPasswordChar = true;
             Tconfcontra.TextChanged += Tconfcontra_TextChanged;
             // 
@@ -388,7 +388,7 @@
             editarUsuario.ForeColor = SystemColors.ActiveCaptionText;
             editarUsuario.Image = (Image)resources.GetObject("editarUsuario.Image");
             editarUsuario.ImageAlign = ContentAlignment.TopCenter;
-            editarUsuario.Location = new Point(735, 53);
+            editarUsuario.Location = new Point(740, 53);
             editarUsuario.Name = "editarUsuario";
             editarUsuario.Size = new Size(76, 72);
             editarUsuario.TabIndex = 36;
