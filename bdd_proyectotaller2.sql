@@ -83,11 +83,11 @@ drop table Tipo_usuario
 
 select * from Usuario 
 
-INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'augusto','almiron','user@gmial.com','1234',1,getdate(),42791957,'augusto01')
-INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'jose','almiron','user@gmial.com','1234',1,getdate(),12345,'josesito1')
-INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Micaela','disalvo','user@gmial.com','1234',1,getdate(),1234567,'mica01')
-INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Agostina','perez','user@gmial.com','1234',1,getdate(),8998,'agos01')
-INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,password,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Raul','almiron','user@gmial.com','1234',1,getdate(),12312,'raulito01')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,pass,estado,fecha_creacion,dni,username)VALUES(2,null,null,'augusto','almiron','user@gmial.com','1234',1,getdate(),42791957,'augusto01')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,pass,estado,fecha_creacion,dni,username)VALUES(null,null,null,'jose','almiron','user@gmial.com','1234',1,getdate(),12345,'josesito1')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,pass,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Micaela','disalvo','user@gmial.com','1234',1,getdate(),1234567,'mica01')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,pass,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Agostina','perez','user@gmial.com','1234',1,getdate(),8998,'agos01')
+INSERT INTO Usuario(id_tipo_usuario,id_venta,id_compra,nombre,apellido,correo,pass,estado,fecha_creacion,dni,username)VALUES(null,null,null,'Raul','almiron','user@gmial.com','1234',1,getdate(),12312,'raulito01')
 select * from Usuario
 
 DELETE from Usuario where id_usuario =2 
@@ -96,6 +96,14 @@ INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Administrador')
 INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Empleado')
 INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Gerente')
 
-select * from Tipo_usuario
+select * from Usuario
 
-alter table Tipo_usuario  alter column id_tipo_usuario int primary key  identity(1,1)
+
+INSERT INTO Usuario(id_tipo_usuario,nombre,apellido,correo,pass,estado,fecha_creacion,dni,username)VALUES(2,'augusto','almiron','user@gmial.com','1234',1,getdate(),42791957,'augusto01')
+
+INSERT INTO Usuario (id_tipo_usuario,nombre,apellido,correo,estado,fecha_creacion,dni,username,pass,cel) values(2,'nombre','apellido','correo',1,getdate(),1234,'user01','pass')
+
+alter table Usuario add cel int
+
+delete from Usuario  where (id_usuario < 20)
+            

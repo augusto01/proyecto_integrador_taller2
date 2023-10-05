@@ -296,9 +296,8 @@ namespace SportsOn.Gerente.Usuario
             try
             {
                 agregar_usuario.Parameters.Clear();
-
-                agregar_usuario.ExecuteNonQuery();
-                MessageBox.Show("El Usuario: " + TBnombre.Text + " " + Tapellido.Text + " se agrego con exito!");
+                agregar_usuario.ExecuteNonQuery();            
+                MessageBox.Show("El usuario "+ TBnombre.Text +" "+ Tapellido.Text + "se agreggo con exito!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
