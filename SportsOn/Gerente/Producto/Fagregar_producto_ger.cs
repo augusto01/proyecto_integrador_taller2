@@ -24,9 +24,9 @@ namespace SportsOn.Gerente.Producto
         bool precio = false;
         //definimos array para las categorias y los talles de los productos
 
-        String[] TipoCategoria = { "Remeras", "Shorts", "Medias", "Zapatillas", "Shorts", "Medias", "Buzos", "Accesorios", "Musculosas" };
+        String[] TipoCategoria = { "Seleccione Categoria", "Remeras", "Shorts", "Medias", "Zapatillas", "Shorts", "Medias", "Buzos", "Accesorios", "Musculosas", };
 
-        String[] Talle = { "S", "M", "L", "X", "XL", "XXL" };
+        String[] Talle = { "SELECCIONE TALLE", "S", "M", "L", "X", "XL", "XXL" };
 
 
         //variable global posicion para el arrray de editar producto 

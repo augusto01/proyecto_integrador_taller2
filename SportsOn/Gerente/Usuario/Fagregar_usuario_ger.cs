@@ -16,7 +16,7 @@ namespace SportsOn.Gerente.Usuario
     {
         SqlConnection conexion = new SqlConnection("Server=DESKTOP-FG0LK48; Database=proyecto_taller2; Integrated Security=True;");
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
-        String[] TipoUsuario = { "Administrador", "Empleado", "Gerente" };
+        String[] TipoUsuario = { "Seleccione el tipo de usuario","Administrador", "Empleado", "Gerente" };
         public Fagregar_usuario_ger()
         {
             InitializeComponent();
@@ -239,10 +239,7 @@ namespace SportsOn.Gerente.Usuario
                     if (resultado == DialogResult.Yes)
                     {
                         //si la respuesta es si cargamos el usuario 
-                        CargaUsuario();
-
-                        MessageBox.Show("El Usuario:" + TBnombre.Text + " " + Tapellido.Text + "\nHa sido registrado correctamente!", "Registracion aceptada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        CargaUsuario();                  
                         LimpiarCampos();
                         LimpiarErrores();
 

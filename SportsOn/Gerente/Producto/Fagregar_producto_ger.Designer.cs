@@ -133,7 +133,7 @@
             editarProducto.ForeColor = SystemColors.ActiveCaptionText;
             editarProducto.Image = (Image)resources.GetObject("editarProducto.Image");
             editarProducto.ImageAlign = ContentAlignment.TopCenter;
-            editarProducto.Location = new Point(786, 40);
+            editarProducto.Location = new Point(732, 48);
             editarProducto.Name = "editarProducto";
             editarProducto.Size = new Size(76, 72);
             editarProducto.TabIndex = 49;
@@ -161,7 +161,7 @@
             Bagregar.ForeColor = SystemColors.ActiveCaptionText;
             Bagregar.Image = (Image)resources.GetObject("Bagregar.Image");
             Bagregar.ImageAlign = ContentAlignment.TopCenter;
-            Bagregar.Location = new Point(846, 40);
+            Bagregar.Location = new Point(732, 48);
             Bagregar.Name = "Bagregar";
             Bagregar.Size = new Size(76, 72);
             Bagregar.TabIndex = 44;

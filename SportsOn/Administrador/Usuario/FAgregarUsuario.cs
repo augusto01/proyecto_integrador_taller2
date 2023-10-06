@@ -25,7 +25,7 @@ namespace SportsOn
 
 
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
-        String[] TipoUsuario = { "Empleado", "Administrador", "Gerente" };
+        String[] TipoUsuario = { "Seleccione el tipo de usuario","Empleado", "Administrador", "Gerente" };
         public FAgregarUsuario()
         {
             InitializeComponent();
@@ -360,7 +360,7 @@ namespace SportsOn
                 agregar_usuario.Parameters.Clear();
 
                 agregar_usuario.ExecuteNonQuery();
-                MessageBox.Show("El usuario " + TBnombre.Text + " " + Tapellido.Text + " se agreggo con exito!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El usuario " + TBnombre.Text + " " + Tapellido.Text + " se agrego con exito!", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)

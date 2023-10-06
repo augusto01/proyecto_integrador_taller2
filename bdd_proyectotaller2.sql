@@ -107,3 +107,8 @@ alter table Usuario add cel int
 
 delete from Usuario  where (id_usuario < 20)
             
+			select * from Usuario
+			select * from tipo_usuario
+
+
+			select * from tipo

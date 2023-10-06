@@ -28,7 +28,7 @@ namespace SportsOn.Gerente.Usuario
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta_mostrarusuario, conexion);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
-            dg_mostrarusuarios.DataSource = dt;
+            dg_usuarios.DataSource = dt;
 
         }
     }

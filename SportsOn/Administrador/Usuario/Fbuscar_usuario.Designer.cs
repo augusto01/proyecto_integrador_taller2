@@ -157,6 +157,7 @@
             editar.Image = Properties.Resources.lapiz2;
             editar.Name = "editar";
             editar.ReadOnly = true;
+            editar.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // eliminar
             // 
@@ -164,6 +165,7 @@
             eliminar.Image = Properties.Resources.eliminar2;
             eliminar.Name = "eliminar";
             eliminar.ReadOnly = true;
+            eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // Fbuscar_usuario
             // 
