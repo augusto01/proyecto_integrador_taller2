@@ -72,22 +72,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gerente\menu_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente\menu_gerente.Designer.cs">
+      <DependentUpon>menu_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Clientes\Fagregar_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Clientes\Fagregar_cliente.Designer.cs">
+      <DependentUpon>Fagregar_cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\Fadministradornuevo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administrador\Fadministradornuevo.Designer.cs">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Usuario\Fagregar_usuario.cs">
+    <Compile Include="Vistas\Usuario\Fagregar_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Usuario\Fagregar_usuario.Designer.cs">
+    <Compile Include="Vistas\Usuario\Fagregar_usuario.Designer.cs">
       <DependentUpon>Fagregar_usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Usuario\Fbuscar_usuario.cs">
+    <Compile Include="Vistas\Usuario\Fbuscar_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Usuario\Fbuscar_usuario.Designer.cs">
+    <Compile Include="Vistas\Usuario\Fbuscar_usuario.Designer.cs">
       <DependentUpon>Fbuscar_usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Empleado\Fempleado.cs">
@@ -96,17 +108,11 @@
     <Compile Include="Empleado\Fempleado.Designer.cs">
       <DependentUpon>Fempleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gerente\Fgerente.cs">
+    <Compile Include="Vistas\Producto\Fagregar_producto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gerente\Fgerente.Designer.cs">
-      <DependentUpon>Fgerente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gerente\Usuarios\Fagregar_usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerente\Usuarios\Fagregar_usuario.Designer.cs">
-      <DependentUpon>Fagregar_usuario.cs</DependentUpon>
+    <Compile Include="Vistas\Producto\Fagregar_producto.Designer.cs">
+      <DependentUpon>Fagregar_producto.cs</DependentUpon>
     </Compile>
     <Compile Include="loguin.cs">
       <SubType>Form</SubType>
@@ -122,23 +128,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="UserModel.cs" />
+    <EmbeddedResource Include="Gerente\menu_gerente.resx">
+      <DependentUpon>menu_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Clientes\Fagregar_cliente.resx">
+      <DependentUpon>Fagregar_cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\Fadministradornuevo.resx">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Usuario\Fagregar_usuario.resx">
+    <EmbeddedResource Include="Vistas\Usuario\Fagregar_usuario.resx">
       <DependentUpon>Fagregar_usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Usuario\Fbuscar_usuario.resx">
+    <EmbeddedResource Include="Vistas\Usuario\Fbuscar_usuario.resx">
       <DependentUpon>Fbuscar_usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\Fempleado.resx">
       <DependentUpon>Fempleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gerente\Fgerente.resx">
-      <DependentUpon>Fgerente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gerente\Usuarios\Fagregar_usuario.resx">
-      <DependentUpon>Fagregar_usuario.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Producto\Fagregar_producto.resx">
+      <DependentUpon>Fagregar_producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loguin.resx">
       <DependentUpon>loguin.cs</DependentUpon>

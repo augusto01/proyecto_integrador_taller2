@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using CapaEntidad.Cache;
 using CapaEntidad;
 using CapaPresentacion.Administrador.Usuario;
+using CapaPresentacion.Administrador.Clientes;
+using CapaPresentacion.Gerente.Producto;
 
 namespace CapaPresentacion.Administrador
 {
@@ -199,13 +201,8 @@ namespace CapaPresentacion.Administrador
 
         private void bver_usuarios_Click(object sender, EventArgs e)
         {
-            
+            ocultarhora();
             abrirFormulario(new Fbuscar_usuario());
-            
-            
-             
-             
-
             ocultar_submenu();
         }
 
@@ -243,17 +240,14 @@ namespace CapaPresentacion.Administrador
             mostrar_submenu(submenu_clientes);
         }
 
-        private void bagregarclientes_Click(object sender, EventArgs e)
+        private void bagregarclientes_Click_1(object sender, EventArgs e)
         {
-            /*
-         abrirFormulario(new fagregarcliente());
-
-          codigo
-
-          */
-
+            ocultarhora();
+            abrirFormulario(new Fagregar_cliente());
             ocultar_submenu();
         }
+
+        //SUBMENUS
 
         private void bverclientes_Click(object sender, EventArgs e)
         {
@@ -405,6 +399,11 @@ namespace CapaPresentacion.Administrador
             lfecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        
+        private void bagregarproducto_Click_1(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_producto());
+            ocultar_submenu();
+        }
     }
 }

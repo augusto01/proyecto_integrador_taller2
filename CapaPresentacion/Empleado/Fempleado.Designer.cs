@@ -264,6 +264,7 @@
             this.bagregarclientes.Text = "Agregar Clientes";
             this.bagregarclientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarclientes.UseVisualStyleBackColor = true;
+            this.bagregarclientes.Click += new System.EventHandler(this.bagregarclientes_Click);
             // 
             // bClientes
             // 

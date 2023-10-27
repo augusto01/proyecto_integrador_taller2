@@ -131,7 +131,7 @@ namespace CapaPresentacion
                             break;
                         case 2:
                             // Caso Gerente
-                            Gerente.Fgerente form_gerente = new Gerente.Fgerente();
+                            Gerente.menu_gerente form_gerente = new Gerente.menu_gerente();
 
                             form_gerente.FormClosed += logout; // Sobrecarga para cerrar sesion
                             form_gerente.Show(); // Mostramos el menu SuperAdmin

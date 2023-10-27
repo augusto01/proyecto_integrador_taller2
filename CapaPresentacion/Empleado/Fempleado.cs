@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using CapaPresentacion.Administrador.Clientes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,19 @@ namespace CapaPresentacion.Empleado
         private static extern void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private static extern void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int intlparam);
+
+        private void ocultarhora()
+        {
+            lhora.Visible = false;
+            lfecha.Visible = false;
+        }
+
+        private void mostrarhora()
+        {
+            lhora.Visible = true;
+            lfecha.Visible = true;
+
+        }
         private void customizar_design()
         {
             submenu_caja.Visible = false;
@@ -157,6 +172,13 @@ namespace CapaPresentacion.Empleado
         {
             lhora.Text = DateTime.Now.ToString("hh:mm:ss");
             lfecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void bagregarclientes_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_cliente());
+            ocultar_submenu();
         }
     }
 }

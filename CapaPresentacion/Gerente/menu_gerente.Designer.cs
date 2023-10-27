@@ -1,6 +1,6 @@
-﻿namespace CapaPresentacion.Administrador
+﻿namespace CapaPresentacion.Gerente
 {
-    partial class Fadministradornuevo
+    partial class menu_gerente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fadministradornuevo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu_gerente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.bminimizar = new System.Windows.Forms.Button();
             this.bcerrar = new System.Windows.Forms.Button();
             this.brestarurar = new System.Windows.Forms.Button();
             this.menulateral = new System.Windows.Forms.Panel();
+            this.submenu_backup = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.bverbackup = new System.Windows.Forms.Button();
+            this.bagregback = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.bverbackups = new System.Windows.Forms.Button();
+            this.bagregarbackup = new System.Windows.Forms.Button();
+            this.bbackup = new System.Windows.Forms.Button();
             this.submenu_proveedor = new System.Windows.Forms.Panel();
             this.bverproveedor = new System.Windows.Forms.Button();
             this.bagregarproveedor = new System.Windows.Forms.Button();
@@ -44,10 +61,10 @@
             this.bvercompras = new System.Windows.Forms.Button();
             this.bagregarcompra = new System.Windows.Forms.Button();
             this.bcompras = new System.Windows.Forms.Button();
-            this.submenu_caja = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.bvercaja = new System.Windows.Forms.Button();
-            this.bcaja = new System.Windows.Forms.Button();
+            this.submenu_informe = new System.Windows.Forms.Panel();
+            this.bverinformes = new System.Windows.Forms.Button();
+            this.bagregarinforme = new System.Windows.Forms.Button();
+            this.binforme = new System.Windows.Forms.Button();
             this.submenu_clientes = new System.Windows.Forms.Panel();
             this.bverclientes = new System.Windows.Forms.Button();
             this.bagregarclientes = new System.Windows.Forms.Button();
@@ -75,11 +92,16 @@
             this.lfecha = new System.Windows.Forms.Label();
             this.lhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.menulateral.SuspendLayout();
+            this.submenu_backup.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.submenu_proveedor.SuspendLayout();
             this.submenu_compras.SuspendLayout();
-            this.submenu_caja.SuspendLayout();
+            this.submenu_informe.SuspendLayout();
             this.submenu_clientes.SuspendLayout();
             this.submenu_ventas.SuspendLayout();
             this.submenu_productos.SuspendLayout();
@@ -99,9 +121,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 39);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(1884, 39);
+            this.panel1.TabIndex = 7;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // button2
@@ -110,7 +131,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1113, 3);
+            this.button2.Location = new System.Drawing.Point(1797, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 29);
             this.button2.TabIndex = 7;
@@ -123,7 +144,7 @@
             this.bminimizar.FlatAppearance.BorderSize = 0;
             this.bminimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bminimizar.Image = ((System.Drawing.Image)(resources.GetObject("bminimizar.Image")));
-            this.bminimizar.Location = new System.Drawing.Point(1074, 3);
+            this.bminimizar.Location = new System.Drawing.Point(1758, 3);
             this.bminimizar.Name = "bminimizar";
             this.bminimizar.Size = new System.Drawing.Size(37, 29);
             this.bminimizar.TabIndex = 6;
@@ -136,7 +157,7 @@
             this.bcerrar.FlatAppearance.BorderSize = 0;
             this.bcerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bcerrar.Image = ((System.Drawing.Image)(resources.GetObject("bcerrar.Image")));
-            this.bcerrar.Location = new System.Drawing.Point(1160, 3);
+            this.bcerrar.Location = new System.Drawing.Point(1844, 3);
             this.bcerrar.Name = "bcerrar";
             this.bcerrar.Size = new System.Drawing.Size(37, 29);
             this.bcerrar.TabIndex = 7;
@@ -149,7 +170,7 @@
             this.brestarurar.FlatAppearance.BorderSize = 0;
             this.brestarurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brestarurar.Image = ((System.Drawing.Image)(resources.GetObject("brestarurar.Image")));
-            this.brestarurar.Location = new System.Drawing.Point(1113, 3);
+            this.brestarurar.Location = new System.Drawing.Point(1797, 3);
             this.brestarurar.Name = "brestarurar";
             this.brestarurar.Size = new System.Drawing.Size(37, 29);
             this.brestarurar.TabIndex = 8;
@@ -160,12 +181,14 @@
             // menulateral
             // 
             this.menulateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.menulateral.Controls.Add(this.submenu_backup);
+            this.menulateral.Controls.Add(this.bbackup);
             this.menulateral.Controls.Add(this.submenu_proveedor);
             this.menulateral.Controls.Add(this.bproveedor);
             this.menulateral.Controls.Add(this.submenu_compras);
             this.menulateral.Controls.Add(this.bcompras);
-            this.menulateral.Controls.Add(this.submenu_caja);
-            this.menulateral.Controls.Add(this.bcaja);
+            this.menulateral.Controls.Add(this.submenu_informe);
+            this.menulateral.Controls.Add(this.binforme);
             this.menulateral.Controls.Add(this.submenu_clientes);
             this.menulateral.Controls.Add(this.bClientes);
             this.menulateral.Controls.Add(this.submenu_ventas);
@@ -179,8 +202,275 @@
             this.menulateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.menulateral.Location = new System.Drawing.Point(0, 39);
             this.menulateral.Name = "menulateral";
-            this.menulateral.Size = new System.Drawing.Size(267, 1061);
-            this.menulateral.TabIndex = 4;
+            this.menulateral.Size = new System.Drawing.Size(267, 1022);
+            this.menulateral.TabIndex = 8;
+            // 
+            // submenu_backup
+            // 
+            this.submenu_backup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.submenu_backup.Controls.Add(this.panel5);
+            this.submenu_backup.Controls.Add(this.panel4);
+            this.submenu_backup.Controls.Add(this.bverbackups);
+            this.submenu_backup.Controls.Add(this.bagregarbackup);
+            this.submenu_backup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.submenu_backup.Location = new System.Drawing.Point(0, 1037);
+            this.submenu_backup.Name = "submenu_backup";
+            this.submenu_backup.Size = new System.Drawing.Size(267, 90);
+            this.submenu_backup.TabIndex = 32;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.panel5.Controls.Add(this.button12);
+            this.panel5.Controls.Add(this.button13);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.button16);
+            this.panel5.Controls.Add(this.bverbackup);
+            this.panel5.Controls.Add(this.bagregback);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(267, 90);
+            this.panel5.TabIndex = 37;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.Lime;
+            this.button12.Image = global::CapaPresentacion.Properties.Resources.repartidor;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.Location = new System.Drawing.Point(0, 258);
+            this.button12.Name = "button12";
+            this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button12.Size = new System.Drawing.Size(267, 39);
+            this.button12.TabIndex = 36;
+            this.button12.Text = "Proveedores";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.Lime;
+            this.button13.Image = global::CapaPresentacion.Properties.Resources.repartidor;
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button13.Location = new System.Drawing.Point(0, 219);
+            this.button13.Name = "button13";
+            this.button13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button13.Size = new System.Drawing.Size(267, 39);
+            this.button13.TabIndex = 35;
+            this.button13.Text = "Proveedores";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.panel6.Controls.Add(this.button14);
+            this.panel6.Controls.Add(this.button15);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 129);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(267, 90);
+            this.panel6.TabIndex = 34;
+            // 
+            // button14
+            // 
+            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(0, 45);
+            this.button14.Name = "button14";
+            this.button14.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button14.Size = new System.Drawing.Size(267, 45);
+            this.button14.TabIndex = 3;
+            this.button14.Text = "Ver Proveedores";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(0, 0);
+            this.button15.Name = "button15";
+            this.button15.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button15.Size = new System.Drawing.Size(267, 45);
+            this.button15.TabIndex = 2;
+            this.button15.Text = "Agregar Proveedor";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.Lime;
+            this.button16.Image = global::CapaPresentacion.Properties.Resources.repartidor;
+            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button16.Location = new System.Drawing.Point(0, 90);
+            this.button16.Name = "button16";
+            this.button16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button16.Size = new System.Drawing.Size(267, 39);
+            this.button16.TabIndex = 33;
+            this.button16.Text = "Proveedores";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // bverbackup
+            // 
+            this.bverbackup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bverbackup.FlatAppearance.BorderSize = 0;
+            this.bverbackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bverbackup.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bverbackup.ForeColor = System.Drawing.Color.White;
+            this.bverbackup.Location = new System.Drawing.Point(0, 45);
+            this.bverbackup.Name = "bverbackup";
+            this.bverbackup.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bverbackup.Size = new System.Drawing.Size(267, 45);
+            this.bverbackup.TabIndex = 3;
+            this.bverbackup.Text = "Ver Backups";
+            this.bverbackup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bverbackup.UseVisualStyleBackColor = true;
+            // 
+            // bagregback
+            // 
+            this.bagregback.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bagregback.FlatAppearance.BorderSize = 0;
+            this.bagregback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregback.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagregback.ForeColor = System.Drawing.Color.White;
+            this.bagregback.Location = new System.Drawing.Point(0, 0);
+            this.bagregback.Name = "bagregback";
+            this.bagregback.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bagregback.Size = new System.Drawing.Size(267, 45);
+            this.bagregback.TabIndex = 2;
+            this.bagregback.Text = "Agregar Backup";
+            this.bagregback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bagregback.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.button6);
+            this.panel4.Controls.Add(this.button7);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(267, 90);
+            this.panel4.TabIndex = 34;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(267, 45);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Ver Proveedores";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(267, 45);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Ver Proveedores";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(267, 45);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Agregar Proveedor";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // bverbackups
+            // 
+            this.bverbackups.FlatAppearance.BorderSize = 0;
+            this.bverbackups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bverbackups.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bverbackups.ForeColor = System.Drawing.Color.White;
+            this.bverbackups.Location = new System.Drawing.Point(0, 0);
+            this.bverbackups.Name = "bverbackups";
+            this.bverbackups.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bverbackups.Size = new System.Drawing.Size(267, 45);
+            this.bverbackups.TabIndex = 3;
+            this.bverbackups.Text = "Ver Backups";
+            this.bverbackups.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bverbackups.UseVisualStyleBackColor = true;
+            // 
+            // bagregarbackup
+            // 
+            this.bagregarbackup.FlatAppearance.BorderSize = 0;
+            this.bagregarbackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregarbackup.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagregarbackup.ForeColor = System.Drawing.Color.White;
+            this.bagregarbackup.Location = new System.Drawing.Point(0, 0);
+            this.bagregarbackup.Name = "bagregarbackup";
+            this.bagregarbackup.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bagregarbackup.Size = new System.Drawing.Size(267, 45);
+            this.bagregarbackup.TabIndex = 2;
+            this.bagregarbackup.Text = "Agregar Backup";
+            this.bagregarbackup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bagregarbackup.UseVisualStyleBackColor = true;
+            // 
+            // bbackup
+            // 
+            this.bbackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.bbackup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bbackup.FlatAppearance.BorderSize = 0;
+            this.bbackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bbackup.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bbackup.ForeColor = System.Drawing.Color.Lime;
+            this.bbackup.Image = ((System.Drawing.Image)(resources.GetObject("bbackup.Image")));
+            this.bbackup.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bbackup.Location = new System.Drawing.Point(0, 998);
+            this.bbackup.Name = "bbackup";
+            this.bbackup.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bbackup.Size = new System.Drawing.Size(267, 39);
+            this.bbackup.TabIndex = 31;
+            this.bbackup.Text = "Backup";
+            this.bbackup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bbackup.UseVisualStyleBackColor = false;
+            this.bbackup.Click += new System.EventHandler(this.bbackup_Click);
             // 
             // submenu_proveedor
             // 
@@ -188,7 +478,7 @@
             this.submenu_proveedor.Controls.Add(this.bverproveedor);
             this.submenu_proveedor.Controls.Add(this.bagregarproveedor);
             this.submenu_proveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_proveedor.Location = new System.Drawing.Point(0, 955);
+            this.submenu_proveedor.Location = new System.Drawing.Point(0, 908);
             this.submenu_proveedor.Name = "submenu_proveedor";
             this.submenu_proveedor.Size = new System.Drawing.Size(267, 90);
             this.submenu_proveedor.TabIndex = 30;
@@ -235,10 +525,10 @@
             this.bproveedor.ForeColor = System.Drawing.Color.Lime;
             this.bproveedor.Image = global::CapaPresentacion.Properties.Resources.repartidor;
             this.bproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bproveedor.Location = new System.Drawing.Point(0, 910);
+            this.bproveedor.Location = new System.Drawing.Point(0, 869);
             this.bproveedor.Name = "bproveedor";
             this.bproveedor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bproveedor.Size = new System.Drawing.Size(267, 45);
+            this.bproveedor.Size = new System.Drawing.Size(267, 39);
             this.bproveedor.TabIndex = 29;
             this.bproveedor.Text = "Proveedores";
             this.bproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,9 +541,9 @@
             this.submenu_compras.Controls.Add(this.bvercompras);
             this.submenu_compras.Controls.Add(this.bagregarcompra);
             this.submenu_compras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_compras.Location = new System.Drawing.Point(0, 820);
+            this.submenu_compras.Location = new System.Drawing.Point(0, 785);
             this.submenu_compras.Name = "submenu_compras";
-            this.submenu_compras.Size = new System.Drawing.Size(267, 90);
+            this.submenu_compras.Size = new System.Drawing.Size(267, 84);
             this.submenu_compras.TabIndex = 27;
             // 
             // bvercompras
@@ -263,10 +553,10 @@
             this.bvercompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bvercompras.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bvercompras.ForeColor = System.Drawing.Color.White;
-            this.bvercompras.Location = new System.Drawing.Point(0, 45);
+            this.bvercompras.Location = new System.Drawing.Point(0, 39);
             this.bvercompras.Name = "bvercompras";
             this.bvercompras.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.bvercompras.Size = new System.Drawing.Size(267, 45);
+            this.bvercompras.Size = new System.Drawing.Size(267, 36);
             this.bvercompras.TabIndex = 3;
             this.bvercompras.Text = "Ver Usuarios";
             this.bvercompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,7 +572,7 @@
             this.bagregarcompra.Location = new System.Drawing.Point(0, 0);
             this.bagregarcompra.Name = "bagregarcompra";
             this.bagregarcompra.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.bagregarcompra.Size = new System.Drawing.Size(267, 45);
+            this.bagregarcompra.Size = new System.Drawing.Size(267, 39);
             this.bagregarcompra.TabIndex = 2;
             this.bagregarcompra.Text = "Agregar Compra";
             this.bagregarcompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,78 +588,78 @@
             this.bcompras.ForeColor = System.Drawing.Color.Lime;
             this.bcompras.Image = ((System.Drawing.Image)(resources.GetObject("bcompras.Image")));
             this.bcompras.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bcompras.Location = new System.Drawing.Point(0, 775);
+            this.bcompras.Location = new System.Drawing.Point(0, 746);
             this.bcompras.Name = "bcompras";
             this.bcompras.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bcompras.Size = new System.Drawing.Size(267, 45);
+            this.bcompras.Size = new System.Drawing.Size(267, 39);
             this.bcompras.TabIndex = 26;
             this.bcompras.Text = "Compras";
             this.bcompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bcompras.UseVisualStyleBackColor = false;
-            this.bcompras.Click += new System.EventHandler(this.bcompras_Click_1);
+            this.bcompras.Click += new System.EventHandler(this.bcompras_Click);
             // 
-            // submenu_caja
+            // submenu_informe
             // 
-            this.submenu_caja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.submenu_caja.Controls.Add(this.button11);
-            this.submenu_caja.Controls.Add(this.bvercaja);
-            this.submenu_caja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_caja.Location = new System.Drawing.Point(0, 685);
-            this.submenu_caja.Name = "submenu_caja";
-            this.submenu_caja.Size = new System.Drawing.Size(267, 90);
-            this.submenu_caja.TabIndex = 25;
+            this.submenu_informe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.submenu_informe.Controls.Add(this.bverinformes);
+            this.submenu_informe.Controls.Add(this.bagregarinforme);
+            this.submenu_informe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.submenu_informe.Location = new System.Drawing.Point(0, 656);
+            this.submenu_informe.Name = "submenu_informe";
+            this.submenu_informe.Size = new System.Drawing.Size(267, 90);
+            this.submenu_informe.TabIndex = 25;
             // 
-            // button11
+            // bverinformes
             // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 45);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(267, 45);
-            this.button11.TabIndex = 3;
-            this.button11.Text = "Cerrar Caja";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
+            this.bverinformes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bverinformes.FlatAppearance.BorderSize = 0;
+            this.bverinformes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bverinformes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bverinformes.ForeColor = System.Drawing.Color.White;
+            this.bverinformes.Location = new System.Drawing.Point(0, 45);
+            this.bverinformes.Name = "bverinformes";
+            this.bverinformes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bverinformes.Size = new System.Drawing.Size(267, 45);
+            this.bverinformes.TabIndex = 3;
+            this.bverinformes.Text = "Ver informes";
+            this.bverinformes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bverinformes.UseVisualStyleBackColor = true;
             // 
-            // bvercaja
+            // bagregarinforme
             // 
-            this.bvercaja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bvercaja.FlatAppearance.BorderSize = 0;
-            this.bvercaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bvercaja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bvercaja.ForeColor = System.Drawing.Color.White;
-            this.bvercaja.Location = new System.Drawing.Point(0, 0);
-            this.bvercaja.Name = "bvercaja";
-            this.bvercaja.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.bvercaja.Size = new System.Drawing.Size(267, 45);
-            this.bvercaja.TabIndex = 2;
-            this.bvercaja.Text = "Ver caja";
-            this.bvercaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bvercaja.UseVisualStyleBackColor = true;
+            this.bagregarinforme.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bagregarinforme.FlatAppearance.BorderSize = 0;
+            this.bagregarinforme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregarinforme.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagregarinforme.ForeColor = System.Drawing.Color.White;
+            this.bagregarinforme.Location = new System.Drawing.Point(0, 0);
+            this.bagregarinforme.Name = "bagregarinforme";
+            this.bagregarinforme.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bagregarinforme.Size = new System.Drawing.Size(267, 45);
+            this.bagregarinforme.TabIndex = 2;
+            this.bagregarinforme.Text = "Agregar Informe";
+            this.bagregarinforme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bagregarinforme.UseVisualStyleBackColor = true;
             // 
-            // bcaja
+            // binforme
             // 
-            this.bcaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.bcaja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bcaja.FlatAppearance.BorderSize = 0;
-            this.bcaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bcaja.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bcaja.ForeColor = System.Drawing.Color.Lime;
-            this.bcaja.Image = global::CapaPresentacion.Properties.Resources.caja_registradora;
-            this.bcaja.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bcaja.Location = new System.Drawing.Point(0, 640);
-            this.bcaja.Name = "bcaja";
-            this.bcaja.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bcaja.Size = new System.Drawing.Size(267, 45);
-            this.bcaja.TabIndex = 24;
-            this.bcaja.Text = "Caja";
-            this.bcaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bcaja.UseVisualStyleBackColor = false;
-            this.bcaja.Click += new System.EventHandler(this.bcaja_Click_1);
+            this.binforme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.binforme.Dock = System.Windows.Forms.DockStyle.Top;
+            this.binforme.FlatAppearance.BorderSize = 0;
+            this.binforme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.binforme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.binforme.ForeColor = System.Drawing.Color.Lime;
+            this.binforme.Image = ((System.Drawing.Image)(resources.GetObject("binforme.Image")));
+            this.binforme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.binforme.Location = new System.Drawing.Point(0, 616);
+            this.binforme.Name = "binforme";
+            this.binforme.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.binforme.Size = new System.Drawing.Size(267, 40);
+            this.binforme.TabIndex = 24;
+            this.binforme.Text = "Informes";
+            this.binforme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.binforme.UseVisualStyleBackColor = false;
+            this.binforme.Click += new System.EventHandler(this.binforme_Click);
             // 
             // submenu_clientes
             // 
@@ -377,7 +667,7 @@
             this.submenu_clientes.Controls.Add(this.bverclientes);
             this.submenu_clientes.Controls.Add(this.bagregarclientes);
             this.submenu_clientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_clientes.Location = new System.Drawing.Point(0, 550);
+            this.submenu_clientes.Location = new System.Drawing.Point(0, 526);
             this.submenu_clientes.Name = "submenu_clientes";
             this.submenu_clientes.Size = new System.Drawing.Size(267, 90);
             this.submenu_clientes.TabIndex = 23;
@@ -413,7 +703,7 @@
             this.bagregarclientes.Text = "Agregar Clientes";
             this.bagregarclientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarclientes.UseVisualStyleBackColor = true;
-            this.bagregarclientes.Click += new System.EventHandler(this.bagregarclientes_Click_1);
+            this.bagregarclientes.Click += new System.EventHandler(this.bagregarclientes_Click);
             // 
             // bClientes
             // 
@@ -425,10 +715,10 @@
             this.bClientes.ForeColor = System.Drawing.Color.Lime;
             this.bClientes.Image = ((System.Drawing.Image)(resources.GetObject("bClientes.Image")));
             this.bClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bClientes.Location = new System.Drawing.Point(0, 505);
+            this.bClientes.Location = new System.Drawing.Point(0, 487);
             this.bClientes.Name = "bClientes";
             this.bClientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bClientes.Size = new System.Drawing.Size(267, 45);
+            this.bClientes.Size = new System.Drawing.Size(267, 39);
             this.bClientes.TabIndex = 22;
             this.bClientes.Text = "Clientes";
             this.bClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -441,7 +731,7 @@
             this.submenu_ventas.Controls.Add(this.bverventas);
             this.submenu_ventas.Controls.Add(this.bagregarventas);
             this.submenu_ventas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_ventas.Location = new System.Drawing.Point(0, 415);
+            this.submenu_ventas.Location = new System.Drawing.Point(0, 397);
             this.submenu_ventas.Name = "submenu_ventas";
             this.submenu_ventas.Size = new System.Drawing.Size(267, 90);
             this.submenu_ventas.TabIndex = 21;
@@ -488,15 +778,15 @@
             this.bventas.ForeColor = System.Drawing.Color.Lime;
             this.bventas.Image = ((System.Drawing.Image)(resources.GetObject("bventas.Image")));
             this.bventas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bventas.Location = new System.Drawing.Point(0, 370);
+            this.bventas.Location = new System.Drawing.Point(0, 358);
             this.bventas.Name = "bventas";
             this.bventas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bventas.Size = new System.Drawing.Size(267, 45);
+            this.bventas.Size = new System.Drawing.Size(267, 39);
             this.bventas.TabIndex = 20;
             this.bventas.Text = "Ventas";
             this.bventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bventas.UseVisualStyleBackColor = false;
-            this.bventas.Click += new System.EventHandler(this.bventas_Click_1);
+            this.bventas.Click += new System.EventHandler(this.bventas_Click);
             // 
             // submenu_productos
             // 
@@ -504,7 +794,7 @@
             this.submenu_productos.Controls.Add(this.button1);
             this.submenu_productos.Controls.Add(this.bagregarproducto);
             this.submenu_productos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_productos.Location = new System.Drawing.Point(0, 280);
+            this.submenu_productos.Location = new System.Drawing.Point(0, 268);
             this.submenu_productos.Name = "submenu_productos";
             this.submenu_productos.Size = new System.Drawing.Size(267, 90);
             this.submenu_productos.TabIndex = 19;
@@ -541,7 +831,7 @@
             this.bagregarproducto.Text = "Agregar Producto";
             this.bagregarproducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarproducto.UseVisualStyleBackColor = true;
-            this.bagregarproducto.Click += new System.EventHandler(this.bagregarproducto_Click_1);
+            this.bagregarproducto.Click += new System.EventHandler(this.bagregarproducto_Click);
             // 
             // bproducto
             // 
@@ -553,15 +843,15 @@
             this.bproducto.ForeColor = System.Drawing.Color.Lime;
             this.bproducto.Image = global::CapaPresentacion.Properties.Resources.camiseta;
             this.bproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bproducto.Location = new System.Drawing.Point(0, 235);
+            this.bproducto.Location = new System.Drawing.Point(0, 229);
             this.bproducto.Name = "bproducto";
             this.bproducto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bproducto.Size = new System.Drawing.Size(267, 45);
+            this.bproducto.Size = new System.Drawing.Size(267, 39);
             this.bproducto.TabIndex = 2;
             this.bproducto.Text = "Productos";
             this.bproducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bproducto.UseVisualStyleBackColor = false;
-            this.bproducto.Click += new System.EventHandler(this.bproducto_Click_1);
+            this.bproducto.Click += new System.EventHandler(this.bproducto_Click);
             // 
             // submenu_usuarios
             // 
@@ -569,7 +859,7 @@
             this.submenu_usuarios.Controls.Add(this.bver_usuarios);
             this.submenu_usuarios.Controls.Add(this.bagregar_usuarios);
             this.submenu_usuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_usuarios.Location = new System.Drawing.Point(0, 145);
+            this.submenu_usuarios.Location = new System.Drawing.Point(0, 139);
             this.submenu_usuarios.Name = "submenu_usuarios";
             this.submenu_usuarios.Size = new System.Drawing.Size(267, 90);
             this.submenu_usuarios.TabIndex = 1;
@@ -605,7 +895,7 @@
             this.bagregar_usuarios.Text = "Agregar Usuarios";
             this.bagregar_usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregar_usuarios.UseVisualStyleBackColor = true;
-            this.bagregar_usuarios.Click += new System.EventHandler(this.bagregar_usuarios_Click_1);
+            this.bagregar_usuarios.Click += new System.EventHandler(this.bagregar_usuarios_Click);
             // 
             // busuarios
             // 
@@ -620,12 +910,12 @@
             this.busuarios.Location = new System.Drawing.Point(0, 100);
             this.busuarios.Name = "busuarios";
             this.busuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.busuarios.Size = new System.Drawing.Size(267, 45);
+            this.busuarios.Size = new System.Drawing.Size(267, 39);
             this.busuarios.TabIndex = 1;
             this.busuarios.Text = "Usuarios";
             this.busuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.busuarios.UseVisualStyleBackColor = false;
-            this.busuarios.Click += new System.EventHandler(this.busuarios_Click_1);
+            this.busuarios.Click += new System.EventHandler(this.busuarios_Click);
             // 
             // panel3
             // 
@@ -653,7 +943,7 @@
             this.bcerrarsesion.TabIndex = 18;
             this.bcerrarsesion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bcerrarsesion.UseVisualStyleBackColor = true;
-            this.bcerrarsesion.Click += new System.EventHandler(this.button5_Click_1);
+            this.bcerrarsesion.Click += new System.EventHandler(this.bcerrarsesion_Click);
             // 
             // label2
             // 
@@ -662,9 +952,9 @@
             this.label2.ForeColor = System.Drawing.Color.Lime;
             this.label2.Location = new System.Drawing.Point(88, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 21);
+            this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Administrador";
+            this.label2.Text = "Gerente";
             // 
             // label1
             // 
@@ -712,17 +1002,16 @@
             // 
             // pcontent
             // 
-            this.pcontent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcontent.AutoScroll = true;
             this.pcontent.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pcontent.Controls.Add(this.lfecha);
             this.pcontent.Controls.Add(this.lhora);
+            this.pcontent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcontent.Location = new System.Drawing.Point(267, 39);
             this.pcontent.Name = "pcontent";
-            this.pcontent.Size = new System.Drawing.Size(933, 1061);
-            this.pcontent.TabIndex = 5;
-            this.pcontent.Paint += new System.Windows.Forms.PaintEventHandler(this.pcontent_Paint_1);
+            this.pcontent.Size = new System.Drawing.Size(1617, 1022);
+            this.pcontent.TabIndex = 9;
+            this.pcontent.Paint += new System.Windows.Forms.PaintEventHandler(this.pcontent_Paint);
             // 
             // lfecha
             // 
@@ -730,7 +1019,7 @@
             this.lfecha.AutoSize = true;
             this.lfecha.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lfecha.ForeColor = System.Drawing.Color.LightGray;
-            this.lfecha.Location = new System.Drawing.Point(231, 500);
+            this.lfecha.Location = new System.Drawing.Point(573, 481);
             this.lfecha.Name = "lfecha";
             this.lfecha.Size = new System.Drawing.Size(120, 42);
             this.lfecha.TabIndex = 1;
@@ -743,7 +1032,7 @@
             this.lhora.AutoSize = true;
             this.lhora.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lhora.ForeColor = System.Drawing.Color.Lime;
-            this.lhora.Location = new System.Drawing.Point(250, 385);
+            this.lhora.Location = new System.Drawing.Point(592, 366);
             this.lhora.Name = "lhora";
             this.lhora.Size = new System.Drawing.Size(335, 115);
             this.lhora.TabIndex = 0;
@@ -755,24 +1044,32 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Fadministradornuevo
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // menu_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 1100);
+            this.ClientSize = new System.Drawing.Size(1884, 1061);
             this.Controls.Add(this.pcontent);
             this.Controls.Add(this.menulateral);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Fadministradornuevo";
-            this.Text = "Fadministrador";
-            this.Load += new System.EventHandler(this.Fadministradornuevo_Load);
+            this.Name = "menu_gerente";
+            this.Text = "menu_gerente";
+            this.Load += new System.EventHandler(this.menu_gerente_Load);
             this.panel1.ResumeLayout(false);
             this.menulateral.ResumeLayout(false);
             this.menulateral.PerformLayout();
+            this.submenu_backup.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.submenu_proveedor.ResumeLayout(false);
             this.submenu_compras.ResumeLayout(false);
-            this.submenu_caja.ResumeLayout(false);
+            this.submenu_informe.ResumeLayout(false);
             this.submenu_clientes.ResumeLayout(false);
             this.submenu_ventas.ResumeLayout(false);
             this.submenu_productos.ResumeLayout(false);
@@ -789,20 +1086,40 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button brestarurar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button bminimizar;
         private System.Windows.Forms.Button bcerrar;
+        private System.Windows.Forms.Button brestarurar;
         private System.Windows.Forms.Panel menulateral;
+        private System.Windows.Forms.Panel submenu_backup;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button bverbackup;
+        private System.Windows.Forms.Button bagregback;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button bverbackups;
+        private System.Windows.Forms.Button bagregarbackup;
+        private System.Windows.Forms.Button bbackup;
+        private System.Windows.Forms.Panel submenu_proveedor;
+        private System.Windows.Forms.Button bverproveedor;
+        private System.Windows.Forms.Button bagregarproveedor;
+        private System.Windows.Forms.Button bproveedor;
         private System.Windows.Forms.Panel submenu_compras;
         private System.Windows.Forms.Button bvercompras;
         private System.Windows.Forms.Button bagregarcompra;
-        private System.Windows.Forms.Button bcerrarsesion;
         private System.Windows.Forms.Button bcompras;
-        private System.Windows.Forms.Panel submenu_caja;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button bvercaja;
-        private System.Windows.Forms.Button bcaja;
+        private System.Windows.Forms.Panel submenu_informe;
+        private System.Windows.Forms.Button bverinformes;
+        private System.Windows.Forms.Button bagregarinforme;
+        private System.Windows.Forms.Button binforme;
         private System.Windows.Forms.Panel submenu_clientes;
         private System.Windows.Forms.Button bverclientes;
         private System.Windows.Forms.Button bagregarclientes;
@@ -820,18 +1137,16 @@
         private System.Windows.Forms.Button bagregar_usuarios;
         private System.Windows.Forms.Button busuarios;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button bcerrarsesion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lnombre;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pcontent;
-        private System.Windows.Forms.Button bproveedor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel submenu_proveedor;
-        private System.Windows.Forms.Button bverproveedor;
-        private System.Windows.Forms.Button bagregarproveedor;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel pcontent;
         private System.Windows.Forms.Label lfecha;
         private System.Windows.Forms.Label lhora;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
