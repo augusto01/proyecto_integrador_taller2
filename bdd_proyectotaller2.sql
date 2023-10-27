@@ -50,7 +50,7 @@ create table Usuario (
 	nombre varchar (100) not null,
 	apellido varchar (50)not null,
 	correo varchar (50)not null,
-	password varchar (50) not null,	
+	pass varchar (50) not null,	
 	estado bit  not null,
 	fecha_creacion datetime default getdate(),
 )
@@ -112,3 +112,12 @@ delete from Usuario  where (id_usuario < 20)
 
 
 			select * from tipo
+
+
+--creamos procedimientos almacenados para el logueo
+create proc sp_logueo 
+	@username varchar (50),
+	@pass varchar (50) as
+	 select id_usuario,nombre,apellido,pass from Usuario
+	 where username = @username and pass = @pass
+go

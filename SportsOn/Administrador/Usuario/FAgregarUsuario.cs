@@ -25,7 +25,7 @@ namespace SportsOn
 
 
         //String creado para Seleccionar el tipo de usuario que se esta registrando.
-        String[] TipoUsuario = { "Seleccione el tipo de usuario","Empleado", "Administrador", "Gerente" };
+        String[] TipoUsuario = { "Seleccione el tipo de usuario", "Empleado", "Administrador", "Gerente" };
         public FAgregarUsuario()
         {
             InitializeComponent();
@@ -353,8 +353,6 @@ namespace SportsOn
             conexion.Open();
 
             SqlCommand agregar_usuario = new SqlCommand("INSERT INTO Usuario (id_tipo_usuario,nombre,apellido,correo,estado,fecha_creacion,dni,username,pass,cel) values(" + CBcategoria.SelectedIndex + ",'" + TBnombre.Text + "','" + Tapellido.Text + "','" + Temail.Text + "',1,getdate()," + Tdni.Text + ",'" + Tuser.Text + "','" + Lcontra.Text + "'," + Tcelular.Text + ")", conexion);
-
-
             try
             {
                 agregar_usuario.Parameters.Clear();
@@ -474,6 +472,11 @@ namespace SportsOn
                 Bcancelar.Visible = false;
                 Bagregar.Visible = true;
             }
+        }
+
+        private void TBnombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

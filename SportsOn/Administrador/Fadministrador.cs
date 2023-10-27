@@ -22,6 +22,7 @@ namespace SportsOn
     {
         public Fadministrador()
         {
+            
             InitializeComponent();
             customizar_design();
         }
@@ -35,7 +36,7 @@ namespace SportsOn
             Psubmenu_producto.Visible = false;  //cuando aparece el submenu por primera vez no es visible
             Psubmenu_compras.Visible = false;
             Psubmenu_usuario.Visible = false;
-           
+
             Psubmenu_caja.Visible = false;
             Psubmenu_cliente.Visible = false;
         }
@@ -47,7 +48,7 @@ namespace SportsOn
             if (Psubmenu_producto.Visible == true) Psubmenu_producto.Visible = false;
             if (Psubmenu_usuario.Visible == true) Psubmenu_usuario.Visible = false;
             if (Psubmenu_ventas.Visible == true) Psubmenu_ventas.Visible = false;
-            
+
             if (Psubmenu_caja.Visible == true) Psubmenu_caja.Visible = false;
             if (Psubmenu_cliente.Visible == true) Psubmenu_cliente.Visible = false;
 
@@ -196,7 +197,7 @@ namespace SportsOn
 
         private void Binforme_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Bagregar_informe_Click(object sender, EventArgs e)
@@ -304,6 +305,9 @@ namespace SportsOn
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

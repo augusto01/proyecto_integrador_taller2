@@ -582,6 +582,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(986, 65);
             panel1.TabIndex = 37;
+            panel1.Paint += panel1_Paint;
             // 
             // Fadministrador
             // 

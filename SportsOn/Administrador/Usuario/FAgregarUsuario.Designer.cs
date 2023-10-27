@@ -188,6 +188,7 @@
             TBnombre.Size = new Size(265, 29);
             TBnombre.TabIndex = 21;
             TBnombre.TabStop = false;
+            TBnombre.TextChanged += TBnombre_TextChanged;
             TBnombre.KeyPress += TBnombre_KeyPress;
             // 
             // Enombre
