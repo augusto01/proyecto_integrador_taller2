@@ -48,3 +48,4 @@ C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\Ca
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Administrador.Usuario.Fagregar_usuario.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Administrador.Usuario.Fbuscar_usuario.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Empleado.Fvendedor.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Gerente.Usuarios.Fagregar_usuario.resources

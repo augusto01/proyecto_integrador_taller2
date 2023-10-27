@@ -102,6 +102,12 @@
     <Compile Include="Gerente\Fgerente.Designer.cs">
       <DependentUpon>Fgerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gerente\Usuarios\Fagregar_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente\Usuarios\Fagregar_usuario.Designer.cs">
+      <DependentUpon>Fagregar_usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="loguin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente\Fgerente.resx">
       <DependentUpon>Fgerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\Usuarios\Fagregar_usuario.resx">
+      <DependentUpon>Fagregar_usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loguin.resx">
       <DependentUpon>loguin.cs</DependentUpon>

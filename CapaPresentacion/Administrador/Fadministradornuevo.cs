@@ -97,7 +97,7 @@ namespace CapaPresentacion.Administrador
 
         private void bagregar_usuarios_Click_1(object sender, EventArgs e)
         {
-           
+            ocultarhora();
             abrirFormulario(new Fagregar_usuario());
             ocultar_submenu();
         }
@@ -397,11 +397,14 @@ namespace CapaPresentacion.Administrador
         {
             lhora.Visible = true;
             lfecha.Visible = true;
+           
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             lhora.Text = DateTime.Now.ToString("hh:mm:ss");
             lfecha.Text = DateTime.Now.ToLongDateString();
         }
+
+        
     }
 }

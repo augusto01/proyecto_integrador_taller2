@@ -37,11 +37,16 @@
             this.brestarurar = new System.Windows.Forms.Button();
             this.menulateral = new System.Windows.Forms.Panel();
             this.submenu_backup = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.bverbackup = new System.Windows.Forms.Button();
+            this.bagregback = new System.Windows.Forms.Button();
+            this.bverbackups = new System.Windows.Forms.Button();
             this.bagregarbackup = new System.Windows.Forms.Button();
             this.bbackup = new System.Windows.Forms.Button();
             this.submenu_proveedor = new System.Windows.Forms.Panel();
@@ -52,7 +57,7 @@
             this.bvercompras = new System.Windows.Forms.Button();
             this.bagregarcompra = new System.Windows.Forms.Button();
             this.bcompras = new System.Windows.Forms.Button();
-            this.submenu_caja = new System.Windows.Forms.Panel();
+            this.submenu_informe = new System.Windows.Forms.Panel();
             this.bverinformes = new System.Windows.Forms.Button();
             this.bagregarinforme = new System.Windows.Forms.Button();
             this.binforme = new System.Windows.Forms.Button();
@@ -82,25 +87,19 @@
             this.pcontent = new System.Windows.Forms.Panel();
             this.lfecha = new System.Windows.Forms.Label();
             this.lhora = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menulateral.SuspendLayout();
             this.submenu_backup.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.submenu_proveedor.SuspendLayout();
             this.submenu_compras.SuspendLayout();
-            this.submenu_caja.SuspendLayout();
+            this.submenu_informe.SuspendLayout();
             this.submenu_clientes.SuspendLayout();
             this.submenu_ventas.SuspendLayout();
             this.submenu_productos.SuspendLayout();
@@ -108,8 +107,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pcontent.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -188,7 +186,7 @@
             this.menulateral.Controls.Add(this.bproveedor);
             this.menulateral.Controls.Add(this.submenu_compras);
             this.menulateral.Controls.Add(this.bcompras);
-            this.menulateral.Controls.Add(this.submenu_caja);
+            this.menulateral.Controls.Add(this.submenu_informe);
             this.menulateral.Controls.Add(this.binforme);
             this.menulateral.Controls.Add(this.submenu_clientes);
             this.menulateral.Controls.Add(this.bClientes);
@@ -210,11 +208,8 @@
             // 
             this.submenu_backup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.submenu_backup.Controls.Add(this.panel5);
-            this.submenu_backup.Controls.Add(this.button10);
-            this.submenu_backup.Controls.Add(this.button9);
             this.submenu_backup.Controls.Add(this.panel4);
-            this.submenu_backup.Controls.Add(this.button8);
-            this.submenu_backup.Controls.Add(this.button3);
+            this.submenu_backup.Controls.Add(this.bverbackups);
             this.submenu_backup.Controls.Add(this.bagregarbackup);
             this.submenu_backup.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenu_backup.Location = new System.Drawing.Point(0, 1037);
@@ -222,87 +217,171 @@
             this.submenu_backup.Size = new System.Drawing.Size(267, 90);
             this.submenu_backup.TabIndex = 32;
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 129);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(267, 90);
-            this.panel4.TabIndex = 34;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.panel5.Controls.Add(this.button12);
+            this.panel5.Controls.Add(this.button13);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.button16);
+            this.panel5.Controls.Add(this.bverbackup);
+            this.panel5.Controls.Add(this.bagregback);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(267, 90);
+            this.panel5.TabIndex = 37;
             // 
-            // button6
+            // button12
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 45);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(267, 45);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Ver Proveedores";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.Lime;
+            this.button12.Image = global::CapaPresentacion.Properties.Resources.repartidor;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.Location = new System.Drawing.Point(0, 258);
+            this.button12.Name = "button12";
+            this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button12.Size = new System.Drawing.Size(267, 39);
+            this.button12.TabIndex = 36;
+            this.button12.Text = "Proveedores";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // button13
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(267, 45);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Agregar Proveedor";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.Lime;
+            this.button13.Image = global::CapaPresentacion.Properties.Resources.repartidor;
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button13.Location = new System.Drawing.Point(0, 219);
+            this.button13.Name = "button13";
+            this.button13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button13.Size = new System.Drawing.Size(267, 39);
+            this.button13.TabIndex = 35;
+            this.button13.Text = "Proveedores";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // panel6
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Lime;
-            this.button8.Image = global::CapaPresentacion.Properties.Resources.repartidor;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(0, 90);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(267, 39);
-            this.button8.TabIndex = 33;
-            this.button8.Text = "Proveedores";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.panel6.Controls.Add(this.button14);
+            this.panel6.Controls.Add(this.button15);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 129);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(267, 90);
+            this.panel6.TabIndex = 34;
             // 
-            // button3
+            // button14
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 45);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(267, 45);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Ver Backups";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(0, 45);
+            this.button14.Name = "button14";
+            this.button14.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button14.Size = new System.Drawing.Size(267, 45);
+            this.button14.TabIndex = 3;
+            this.button14.Text = "Ver Proveedores";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(0, 0);
+            this.button15.Name = "button15";
+            this.button15.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button15.Size = new System.Drawing.Size(267, 45);
+            this.button15.TabIndex = 2;
+            this.button15.Text = "Agregar Proveedor";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.Lime;
+            this.button16.Image = global::CapaPresentacion.Properties.Resources.repartidor;
+            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button16.Location = new System.Drawing.Point(0, 90);
+            this.button16.Name = "button16";
+            this.button16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button16.Size = new System.Drawing.Size(267, 39);
+            this.button16.TabIndex = 33;
+            this.button16.Text = "Proveedores";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // bverbackup
+            // 
+            this.bverbackup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bverbackup.FlatAppearance.BorderSize = 0;
+            this.bverbackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bverbackup.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bverbackup.ForeColor = System.Drawing.Color.White;
+            this.bverbackup.Location = new System.Drawing.Point(0, 45);
+            this.bverbackup.Name = "bverbackup";
+            this.bverbackup.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bverbackup.Size = new System.Drawing.Size(267, 45);
+            this.bverbackup.TabIndex = 3;
+            this.bverbackup.Text = "Ver Backups";
+            this.bverbackup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bverbackup.UseVisualStyleBackColor = true;
+            // 
+            // bagregback
+            // 
+            this.bagregback.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bagregback.FlatAppearance.BorderSize = 0;
+            this.bagregback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregback.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagregback.ForeColor = System.Drawing.Color.White;
+            this.bagregback.Location = new System.Drawing.Point(0, 0);
+            this.bagregback.Name = "bagregback";
+            this.bagregback.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bagregback.Size = new System.Drawing.Size(267, 45);
+            this.bagregback.TabIndex = 2;
+            this.bagregback.Text = "Agregar Backup";
+            this.bagregback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bagregback.UseVisualStyleBackColor = true;
+            // 
+            // bverbackups
+            // 
+            this.bverbackups.FlatAppearance.BorderSize = 0;
+            this.bverbackups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bverbackups.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bverbackups.ForeColor = System.Drawing.Color.White;
+            this.bverbackups.Location = new System.Drawing.Point(0, 0);
+            this.bverbackups.Name = "bverbackups";
+            this.bverbackups.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bverbackups.Size = new System.Drawing.Size(267, 45);
+            this.bverbackups.TabIndex = 3;
+            this.bverbackups.Text = "Ver Backups";
+            this.bverbackups.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bverbackups.UseVisualStyleBackColor = true;
+            this.bverbackups.Click += new System.EventHandler(this.button3_Click);
             // 
             // bagregarbackup
             // 
-            this.bagregarbackup.Dock = System.Windows.Forms.DockStyle.Top;
             this.bagregarbackup.FlatAppearance.BorderSize = 0;
             this.bagregarbackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagregarbackup.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,6 +413,7 @@
             this.bbackup.Text = "Backup";
             this.bbackup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bbackup.UseVisualStyleBackColor = false;
+            this.bbackup.Click += new System.EventHandler(this.bbackup_Click);
             // 
             // submenu_proveedor
             // 
@@ -396,6 +476,7 @@
             this.bproveedor.Text = "Proveedores";
             this.bproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bproveedor.UseVisualStyleBackColor = false;
+            this.bproveedor.Click += new System.EventHandler(this.bproveedor_Click);
             // 
             // submenu_compras
             // 
@@ -458,17 +539,18 @@
             this.bcompras.Text = "Compras";
             this.bcompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bcompras.UseVisualStyleBackColor = false;
+            this.bcompras.Click += new System.EventHandler(this.bcompras_Click);
             // 
-            // submenu_caja
+            // submenu_informe
             // 
-            this.submenu_caja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.submenu_caja.Controls.Add(this.bverinformes);
-            this.submenu_caja.Controls.Add(this.bagregarinforme);
-            this.submenu_caja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_caja.Location = new System.Drawing.Point(0, 656);
-            this.submenu_caja.Name = "submenu_caja";
-            this.submenu_caja.Size = new System.Drawing.Size(267, 90);
-            this.submenu_caja.TabIndex = 25;
+            this.submenu_informe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.submenu_informe.Controls.Add(this.bverinformes);
+            this.submenu_informe.Controls.Add(this.bagregarinforme);
+            this.submenu_informe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.submenu_informe.Location = new System.Drawing.Point(0, 656);
+            this.submenu_informe.Name = "submenu_informe";
+            this.submenu_informe.Size = new System.Drawing.Size(267, 90);
+            this.submenu_informe.TabIndex = 25;
             // 
             // bverinformes
             // 
@@ -520,6 +602,7 @@
             this.binforme.Text = "Informes";
             this.binforme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.binforme.UseVisualStyleBackColor = false;
+            this.binforme.Click += new System.EventHandler(this.binforme_Click);
             // 
             // submenu_clientes
             // 
@@ -582,6 +665,7 @@
             this.bClientes.Text = "Clientes";
             this.bClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bClientes.UseVisualStyleBackColor = false;
+            this.bClientes.Click += new System.EventHandler(this.bClientes_Click);
             // 
             // submenu_ventas
             // 
@@ -644,6 +728,7 @@
             this.bventas.Text = "Ventas";
             this.bventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bventas.UseVisualStyleBackColor = false;
+            this.bventas.Click += new System.EventHandler(this.bventas_Click);
             // 
             // submenu_productos
             // 
@@ -707,6 +792,7 @@
             this.bproducto.Text = "Productos";
             this.bproducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bproducto.UseVisualStyleBackColor = false;
+            this.bproducto.Click += new System.EventHandler(this.bproducto_Click);
             // 
             // submenu_usuarios
             // 
@@ -750,6 +836,7 @@
             this.bagregar_usuarios.Text = "Agregar Usuarios";
             this.bagregar_usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregar_usuarios.UseVisualStyleBackColor = true;
+            this.bagregar_usuarios.Click += new System.EventHandler(this.bagregar_usuarios_Click);
             // 
             // busuarios
             // 
@@ -769,6 +856,7 @@
             this.busuarios.Text = "Usuarios";
             this.busuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.busuarios.UseVisualStyleBackColor = false;
+            this.busuarios.Click += new System.EventHandler(this.busuarios_Click);
             // 
             // panel3
             // 
@@ -892,195 +980,67 @@
             this.lhora.Text = "label4";
             this.lhora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Lime;
-            this.button9.Image = global::CapaPresentacion.Properties.Resources.repartidor;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(0, 219);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(267, 39);
-            this.button9.TabIndex = 35;
-            this.button9.Text = "Proveedores";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.Lime;
-            this.button10.Image = global::CapaPresentacion.Properties.Resources.repartidor;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(0, 258);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(267, 39);
-            this.button10.TabIndex = 36;
-            this.button10.Text = "Proveedores";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.panel5.Controls.Add(this.button12);
-            this.panel5.Controls.Add(this.button13);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.button16);
-            this.panel5.Controls.Add(this.button17);
-            this.panel5.Controls.Add(this.button18);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 297);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(267, 90);
-            this.panel5.TabIndex = 37;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.Lime;
-            this.button12.Image = global::CapaPresentacion.Properties.Resources.repartidor;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.Location = new System.Drawing.Point(0, 258);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(267, 39);
-            this.button12.TabIndex = 36;
-            this.button12.Text = "Proveedores";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.Lime;
-            this.button13.Image = global::CapaPresentacion.Properties.Resources.repartidor;
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button13.Location = new System.Drawing.Point(0, 219);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(267, 39);
-            this.button13.TabIndex = 35;
-            this.button13.Text = "Proveedores";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.panel6.Controls.Add(this.button14);
-            this.panel6.Controls.Add(this.button15);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 129);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(267, 90);
-            this.panel6.TabIndex = 34;
-            // 
-            // button14
-            // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(0, 45);
-            this.button14.Name = "button14";
-            this.button14.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(267, 45);
-            this.button14.TabIndex = 3;
-            this.button14.Text = "Ver Proveedores";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(0, 0);
-            this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(267, 45);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Agregar Proveedor";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.Lime;
-            this.button16.Image = global::CapaPresentacion.Properties.Resources.repartidor;
-            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button16.Location = new System.Drawing.Point(0, 90);
-            this.button16.Name = "button16";
-            this.button16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button16.Size = new System.Drawing.Size(267, 39);
-            this.button16.TabIndex = 33;
-            this.button16.Text = "Proveedores";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(0, 45);
-            this.button17.Name = "button17";
-            this.button17.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button17.Size = new System.Drawing.Size(267, 45);
-            this.button17.TabIndex = 3;
-            this.button17.Text = "Ver Proveedores";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(0, 0);
-            this.button18.Name = "button18";
-            this.button18.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button18.Size = new System.Drawing.Size(267, 45);
-            this.button18.TabIndex = 2;
-            this.button18.Text = "Agregar Proveedor";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.UseVisualStyleBackColor = true;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(267, 45);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Agregar Proveedor";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(267, 45);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Ver Proveedores";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.button6);
+            this.panel4.Controls.Add(this.button7);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(267, 90);
+            this.panel4.TabIndex = 34;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(267, 45);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Ver Proveedores";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Fgerente
             // 
@@ -1099,10 +1059,11 @@
             this.menulateral.ResumeLayout(false);
             this.menulateral.PerformLayout();
             this.submenu_backup.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.submenu_proveedor.ResumeLayout(false);
             this.submenu_compras.ResumeLayout(false);
-            this.submenu_caja.ResumeLayout(false);
+            this.submenu_informe.ResumeLayout(false);
             this.submenu_clientes.ResumeLayout(false);
             this.submenu_ventas.ResumeLayout(false);
             this.submenu_productos.ResumeLayout(false);
@@ -1112,8 +1073,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pcontent.ResumeLayout(false);
             this.pcontent.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1134,7 +1094,7 @@
         private System.Windows.Forms.Button bvercompras;
         private System.Windows.Forms.Button bagregarcompra;
         private System.Windows.Forms.Button bcompras;
-        private System.Windows.Forms.Panel submenu_caja;
+        private System.Windows.Forms.Panel submenu_informe;
         private System.Windows.Forms.Button bverinformes;
         private System.Windows.Forms.Button bagregarinforme;
         private System.Windows.Forms.Button binforme;
@@ -1165,11 +1125,7 @@
         private System.Windows.Forms.Label lfecha;
         private System.Windows.Forms.Label lhora;
         private System.Windows.Forms.Panel submenu_backup;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bverbackups;
         private System.Windows.Forms.Button bagregarbackup;
         private System.Windows.Forms.Button bbackup;
         private System.Windows.Forms.Panel panel5;
@@ -1179,10 +1135,12 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button bverbackup;
+        private System.Windows.Forms.Button bagregback;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

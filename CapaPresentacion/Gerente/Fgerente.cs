@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CapaPresentacion.Gerente.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.SymbolStore;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -24,7 +26,7 @@ namespace CapaPresentacion.Gerente
         private static extern void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int intlparam);
         private void customizar_design()
         {
-            submenu_caja.Visible = false;
+            submenu_informe.Visible = false;
             submenu_clientes.Visible = false;  //cuando aparece el submenu por primera vez no es visible
             submenu_compras.Visible = false;
             submenu_usuarios.Visible = false;
@@ -50,8 +52,28 @@ namespace CapaPresentacion.Gerente
             fh.Show();
 
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void mostrar_submenu(Panel submenu)
         {
+            if (submenu.Visible == false)
+            {
+                ocultar_submenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+            }
+
+        }
+        private void ocultar_submenu()
+        {
+            if (submenu_compras.Visible == true) submenu_compras.Visible = false;
+            if (submenu_productos.Visible == true) submenu_productos.Visible = false;
+            if (submenu_usuarios.Visible == true) submenu_usuarios.Visible = false;
+            if (submenu_ventas.Visible == true) submenu_ventas.Visible = false;
+
+            if (submenu_informe.Visible == true) submenu_informe.Visible = false;
+            if (submenu_clientes.Visible == true) submenu_clientes.Visible = false;
 
         }
 
@@ -164,6 +186,71 @@ namespace CapaPresentacion.Gerente
             {
                 Close();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void busuarios_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_usuarios);
+        }
+
+        private void bproducto_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_productos);
+        }
+
+        private void bventas_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_ventas);
+        }
+
+        private void bClientes_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_clientes);
+        }
+
+        private void binforme_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_informe);
+        }
+
+        private void bcompras_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_compras);
+        }
+
+        private void bproveedor_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_proveedor);
+        }
+
+        private void bbackup_Click(object sender, EventArgs e)
+        {
+            mostrar_submenu(submenu_backup);
+        }
+
+        private void bagregar_usuarios_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_usuario());
+            ocultar_submenu();
+        }
+
+        private void ocultarhora()
+        {
+            lhora.Visible = false;
+            lfecha.Visible = false;
+        }
+
+        private void mostrarhora()
+        {
+            lhora.Visible = true;
+            lfecha.Visible = true;
+
         }
     }
 }
