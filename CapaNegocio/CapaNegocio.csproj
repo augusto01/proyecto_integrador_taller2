@@ -51,7 +51,7 @@
       <Name>CapaDatos</Name>
     </ProjectReference>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
-      <Project>{C2E7D5B2-FAB8-4B09-AC86-5C344E3C5F30}</Project>
+      <Project>{c2e7d5b2-fab8-4b09-ac86-5c344e3c5f30}</Project>
       <Name>CapaEntidad</Name>
     </ProjectReference>
   </ItemGroup>

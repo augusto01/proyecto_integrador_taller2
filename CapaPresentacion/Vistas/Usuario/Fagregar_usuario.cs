@@ -8,6 +8,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
+using CapaEntidad;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CapaPresentacion.Administrador.Usuario
@@ -238,6 +240,12 @@ namespace CapaPresentacion.Administrador.Usuario
 
                     if (resultado == DialogResult.Yes)
                     {
+                        CE_Usuario usuario = new CE_Usuario(cbtipo.SelectedIndex,tnombre.Text,tapellido.Text,Tcorreo.Text,1,DateTime.Today,Int32.Parse(tdni.Text),Tuser.Text,Tpass.Text, Int32.Parse(Tcel.Text));
+                        CN_Usuario neg = new CN_Usuario();
+                        neg.registrar_usuario(usuario);
+                        
+
+
                         //si la respuesta es si cargamos el usuario 
                         MessageBox.Show("Exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();

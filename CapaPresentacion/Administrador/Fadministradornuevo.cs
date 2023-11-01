@@ -26,7 +26,7 @@ namespace CapaPresentacion.Administrador
           
 
         }
-        string username = CN_Usuario.username;
+
 
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
