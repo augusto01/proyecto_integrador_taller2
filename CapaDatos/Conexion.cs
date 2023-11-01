@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 namespace CapaDatos
 {
-    public abstract class Conexion
+    public  class Conexion
     {
         private readonly string connectionString;
         public Conexion()
