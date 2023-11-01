@@ -1,5 +1,6 @@
 ﻿
 using CapaPresentacion.Administrador.Clientes;
+using CapaPresentacion.Vistas.Venta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -178,6 +179,13 @@ namespace CapaPresentacion.Empleado
         {
             ocultarhora();
             abrirFormulario(new Fagregar_cliente());
+            ocultar_submenu();
+        }
+
+        private void bagregarventas_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_venta());
             ocultar_submenu();
         }
     }

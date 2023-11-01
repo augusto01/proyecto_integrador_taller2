@@ -1,6 +1,7 @@
 ﻿using CapaPresentacion.Administrador.Clientes;
 using CapaPresentacion.Administrador.Usuario;
 using CapaPresentacion.Gerente.Producto;
+using CapaPresentacion.Vistas.Proveedor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -222,7 +223,12 @@ namespace CapaPresentacion.Gerente
                 mostrar_submenu(submenu_compras);
             }
         //PROVEEDOR
-
+            private void bagregarproveedor_Click(object sender, EventArgs e)
+            {
+                ocultarhora();
+                abrirFormulario(new Fagregar_proveedor());
+                ocultar_submenu();
+            }
             private void bproveedor_Click(object sender, EventArgs e)
             {
                 mostrar_submenu(submenu_proveedor);
@@ -233,6 +239,6 @@ namespace CapaPresentacion.Gerente
                 mostrar_submenu(submenu_backup);
             }
 
-      
+       
     }
 }

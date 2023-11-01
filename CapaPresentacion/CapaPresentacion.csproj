@@ -90,6 +90,12 @@
     <Compile Include="Administrador\Fadministradornuevo.Designer.cs">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Proveedor\Fagregar_proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Proveedor\Fagregar_proveedor.Designer.cs">
+      <DependentUpon>Fagregar_proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Usuario\Fagregar_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="UserModel.cs" />
+    <Compile Include="Vistas\Venta\Fagregar_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Venta\Fagregar_venta.Designer.cs">
+      <DependentUpon>Fagregar_venta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Gerente\menu_gerente.resx">
       <DependentUpon>menu_gerente.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\Fadministradornuevo.resx">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Proveedor\Fagregar_proveedor.resx">
+      <DependentUpon>Fagregar_proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Usuario\Fagregar_usuario.resx">
       <DependentUpon>Fagregar_usuario.cs</DependentUpon>
@@ -156,6 +171,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Venta\Fagregar_venta.resx">
+      <DependentUpon>Fagregar_venta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

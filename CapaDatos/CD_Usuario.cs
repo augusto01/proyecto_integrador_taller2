@@ -14,7 +14,7 @@ namespace CapaDatos
 {
     public class CD_Usuario
     {
-        string cadenaconexion = "Server =DESKTOP-DQQ7GPL\\SQLEXPRESS; integrated Security = True; Database =proyecto_taller2";
+        string cadenaconexion = "Server =DESKTOP-FG0LK48; integrated Security = True; Database =proyecto_taller2";
 
         public void conexion()
         {

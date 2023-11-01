@@ -514,6 +514,7 @@
             this.bagregarproveedor.Text = "Agregar Proveedor";
             this.bagregarproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarproveedor.UseVisualStyleBackColor = true;
+            this.bagregarproveedor.Click += new System.EventHandler(this.bagregarproveedor_Click);
             // 
             // bproveedor
             // 

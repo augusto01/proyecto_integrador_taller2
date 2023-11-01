@@ -101,3 +101,5 @@ C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaPresent
 C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Vistas.Proveedor.Fagregar_proveedor.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Vistas.Venta.Fagregar_venta.resources

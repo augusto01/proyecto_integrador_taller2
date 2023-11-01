@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad.Cache
 {
-    public class  UserLoginCache
+    public class UserLoginCache
     {
         public static int id_usuario { get; set; }
         public static int id_tipo_usuario { get; set; }

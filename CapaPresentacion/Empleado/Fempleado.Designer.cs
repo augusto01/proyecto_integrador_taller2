@@ -328,6 +328,7 @@
             this.bagregarventas.Text = "Agregar Ventas";
             this.bagregarventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarventas.UseVisualStyleBackColor = true;
+            this.bagregarventas.Click += new System.EventHandler(this.bagregarventas_Click);
             // 
             // bventas
             // 
