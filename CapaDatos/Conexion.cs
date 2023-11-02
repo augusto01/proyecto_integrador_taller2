@@ -10,6 +10,8 @@ namespace CapaDatos
 {
     public  class Conexion
     {
+
+        
         private readonly string connectionString;
 
         public Conexion()
@@ -19,6 +21,7 @@ namespace CapaDatos
 
         }
 
+
         protected SqlConnection GetConnection()
         {
             return new SqlConnection(connectionString);
@@ -27,12 +30,13 @@ namespace CapaDatos
 
         public DataTable ConsultaUsuariosDG()
         {
+            var conexion = GetConnection();
             string consulta = "select us.id_usuario as 'ID',us.nombre_usuario as 'Nombre',us.apellido_usuario as 'Apellido',us.username as 'Username',us.dni_usuario as 'DNI',us.email_usuario AS 'Email',us.celular_usuario,us.estado_usuario as 'Estado', tu.descripcion as'Tipo usuario' from Tipo_usuario tu\r\ninner join Usuario us on tu.id_tipo_usuario = us.id_tipo_usuario";
-            SqlCommand cmd = new SqlCommand(consulta,GetConnection());
+            SqlCommand cmd = new SqlCommand(consulta,conexion);
             SqlDataAdapter data = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
             data.Fill(tabla);
-            GetConnection().Close();
+            conexion.Close();
             return tabla;
             
 
@@ -40,13 +44,14 @@ namespace CapaDatos
 
         public int insertar_usuario(string nombre_usuario,string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, string pass, int id_tipousuario)
         {
+            var conexion = GetConnection();
             int flag = 0;
-            GetConnection().Open();
+            conexion.Open();
             string query = "INSERT INTO Usuario(nombre_usuario, apellido_usuario, username, dni_usuario, email_usuario, domicilio_usuario, celular_usuario, pass, fecha_creacion, estado_usuario, id_tipo_usuario) " +
-                                        "VALUES('"+nombre_usuario+"', '"+apellido_usuario+"', '"+username+"', "+dni_usuario+", '"+email_usuario+"', '"+domicilio_usuario+"', "+celular+", '"+pass+"', getdate(), 1, "+id_tipousuario+")";
-            SqlCommand cmd = new SqlCommand(query,GetConnection());
+                            "VALUES('"+nombre_usuario+"', '"+apellido_usuario+"', '"+username+"', "+dni_usuario+", '"+email_usuario+"', '"+domicilio_usuario+"', "+celular+", '"+pass+"', getdate(), 1, "+id_tipousuario+")";
+            SqlCommand cmd = new SqlCommand(query,conexion);
             flag = cmd.ExecuteNonQuery();
-            GetConnection ().Close();
+            conexion.Close();
             return flag;
         }
 
