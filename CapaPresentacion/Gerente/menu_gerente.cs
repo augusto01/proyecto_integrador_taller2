@@ -1,7 +1,10 @@
 ﻿using CapaPresentacion.Administrador.Clientes;
 using CapaPresentacion.Administrador.Usuario;
 using CapaPresentacion.Gerente.Producto;
+using CapaPresentacion.Vistas.Backup;
+using CapaPresentacion.Vistas.Compra;
 using CapaPresentacion.Vistas.Proveedor;
+using CapaPresentacion.Vistas.Venta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +40,7 @@ namespace CapaPresentacion.Gerente
             submenu_ventas.Visible = false;
             submenu_productos.Visible = false;
             submenu_proveedor.Visible = false;
-            submenu_backup.Visible = false;
+          
         }
         private Form formulario_activo = null;
 
@@ -75,7 +78,6 @@ namespace CapaPresentacion.Gerente
             if (submenu_productos.Visible == true) submenu_productos.Visible = false;
             if (submenu_usuarios.Visible == true) submenu_usuarios.Visible = false;
             if (submenu_ventas.Visible == true) submenu_ventas.Visible = false;
-            if (submenu_backup.Visible == true) submenu_backup.Visible = false;
             if (submenu_informe.Visible == true) submenu_informe.Visible = false;
             if (submenu_clientes.Visible == true) submenu_clientes.Visible = false;
             if (submenu_proveedor.Visible == true) submenu_proveedor.Visible = false;
@@ -198,9 +200,16 @@ namespace CapaPresentacion.Gerente
             {
                  mostrar_submenu(submenu_ventas);
             }
+          
+            private void bagregarventas_Click_1(object sender, EventArgs e)
+            {
+                ocultarhora();
+                abrirFormulario(new Fagregar_venta());
+                ocultar_submenu();
+            }
         //CLIENTES
 
-            private void bClientes_Click(object sender, EventArgs e)
+        private void bClientes_Click(object sender, EventArgs e)
             {
                 mostrar_submenu(submenu_clientes);
             }
@@ -222,8 +231,14 @@ namespace CapaPresentacion.Gerente
             {
                 mostrar_submenu(submenu_compras);
             }
+            private void bagregarcompra_Click(object sender, EventArgs e)
+            {
+                ocultarhora();
+                abrirFormulario(new Fagregar_compra());
+                ocultar_submenu();
+            }
         //PROVEEDOR
-            private void bagregarproveedor_Click(object sender, EventArgs e)
+        private void bagregarproveedor_Click(object sender, EventArgs e)
             {
                 ocultarhora();
                 abrirFormulario(new Fagregar_proveedor());
@@ -236,8 +251,17 @@ namespace CapaPresentacion.Gerente
         //BACKUP
             private void bbackup_Click(object sender, EventArgs e)
             {
-                mostrar_submenu(submenu_backup);
+                //codigo
             }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            {
+                ocultarhora();
+                abrirFormulario(new Fagregar_backup());
+                ocultar_submenu();
+            }
+        }
 
        
     }

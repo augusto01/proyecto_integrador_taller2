@@ -78,6 +78,12 @@
     <Compile Include="Gerente\menu_gerente.Designer.cs">
       <DependentUpon>menu_gerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Backup\Fagregar_backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Backup\Fagregar_backup.Designer.cs">
+      <DependentUpon>Fagregar_backup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Clientes\Fagregar_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="Administrador\Fadministradornuevo.Designer.cs">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Compra\Fagregar_compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Compra\Fagregar_compra.Designer.cs">
+      <DependentUpon>Fagregar_compra.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Proveedor\Fagregar_proveedor.cs">
       <SubType>Form</SubType>
@@ -143,11 +155,17 @@
     <EmbeddedResource Include="Gerente\menu_gerente.resx">
       <DependentUpon>menu_gerente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Backup\Fagregar_backup.resx">
+      <DependentUpon>Fagregar_backup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Clientes\Fagregar_cliente.resx">
       <DependentUpon>Fagregar_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\Fadministradornuevo.resx">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Compra\Fagregar_compra.resx">
+      <DependentUpon>Fagregar_compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Proveedor\Fagregar_proveedor.resx">
       <DependentUpon>Fagregar_proveedor.cs</DependentUpon>
