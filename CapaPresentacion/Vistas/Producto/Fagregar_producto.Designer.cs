@@ -83,7 +83,7 @@
             this.cbcategoria.Location = new System.Drawing.Point(25, 271);
             this.cbcategoria.Name = "cbcategoria";
             this.cbcategoria.Size = new System.Drawing.Size(214, 32);
-            this.cbcategoria.TabIndex = 82;
+            this.cbcategoria.TabIndex = 75;
             // 
             // label6
             // 
@@ -117,7 +117,7 @@
             this.tprecio.Location = new System.Drawing.Point(328, 129);
             this.tprecio.Name = "tprecio";
             this.tprecio.Size = new System.Drawing.Size(216, 24);
-            this.tprecio.TabIndex = 74;
+            this.tprecio.TabIndex = 72;
             // 
             // label1
             // 
@@ -163,7 +163,7 @@
             this.cbtalle.Location = new System.Drawing.Point(328, 191);
             this.cbtalle.Name = "cbtalle";
             this.cbtalle.Size = new System.Drawing.Size(214, 32);
-            this.cbtalle.TabIndex = 98;
+            this.cbtalle.TabIndex = 74;
             // 
             // label12
             // 
@@ -186,7 +186,7 @@
             this.cbproveedor.Location = new System.Drawing.Point(328, 271);
             this.cbproveedor.Name = "cbproveedor";
             this.cbproveedor.Size = new System.Drawing.Size(214, 32);
-            this.cbproveedor.TabIndex = 100;
+            this.cbproveedor.TabIndex = 76;
             // 
             // nustock
             // 
@@ -197,7 +197,7 @@
             this.nustock.Location = new System.Drawing.Point(25, 191);
             this.nustock.Name = "nustock";
             this.nustock.Size = new System.Drawing.Size(214, 29);
-            this.nustock.TabIndex = 102;
+            this.nustock.TabIndex = 73;
             // 
             // label4
             // 
@@ -221,7 +221,7 @@
             this.bcancelar.Location = new System.Drawing.Point(741, 337);
             this.bcancelar.Name = "bcancelar";
             this.bcancelar.Size = new System.Drawing.Size(141, 48);
-            this.bcancelar.TabIndex = 112;
+            this.bcancelar.TabIndex = 78;
             this.bcancelar.Text = "Cancelar";
             this.bcancelar.UseVisualStyleBackColor = false;
             // 
@@ -236,7 +236,7 @@
             this.Bagregar.Location = new System.Drawing.Point(594, 337);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(141, 48);
-            this.Bagregar.TabIndex = 111;
+            this.Bagregar.TabIndex = 77;
             this.Bagregar.Text = "Agregar";
             this.Bagregar.UseVisualStyleBackColor = false;
             // 

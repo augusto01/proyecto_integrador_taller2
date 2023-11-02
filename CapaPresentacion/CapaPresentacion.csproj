@@ -78,6 +78,11 @@
     <Compile Include="Gerente\menu_gerente.Designer.cs">
       <DependentUpon>menu_gerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="proyecto_taller2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyecto_taller2DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Backup\Fagregar_backup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +223,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="proyecto_taller2DataSet.xsc">
+      <DependentUpon>proyecto_taller2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="proyecto_taller2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyecto_taller2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyecto_taller2DataSet.xss">
+      <DependentUpon>proyecto_taller2DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\menos.png" />
   </ItemGroup>
   <ItemGroup>

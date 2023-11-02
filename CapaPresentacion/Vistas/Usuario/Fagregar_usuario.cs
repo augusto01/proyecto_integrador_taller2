@@ -11,11 +11,14 @@ using System.Windows.Forms;
 using CapaNegocio;
 using CapaEntidad;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CapaPresentacion.Administrador.Usuario
 {
     public partial class Fagregar_usuario : Form
     {
+        CN_USUARIO usuario = new CN_USUARIO();
+       
         public Fagregar_usuario()
         {
             InitializeComponent();
@@ -36,6 +39,7 @@ namespace CapaPresentacion.Administrador.Usuario
         }
         private void Fagregar_usuario_Load(object sender, EventArgs e)
         {
+            dgusuarios.DataSource = usuario.ConsultaDT();
 
         }
 
@@ -240,10 +244,14 @@ namespace CapaPresentacion.Administrador.Usuario
 
                     if (resultado == DialogResult.Yes)
                     {
-                        CE_Usuario usuario = new CE_Usuario(cbtipo.SelectedIndex,tnombre.Text,tapellido.Text,Tcorreo.Text,1,DateTime.Today,Int32.Parse(tdni.Text),Tuser.Text,Tpass.Text, Int32.Parse(Tcel.Text),tdomicilio.Text);
-                        CN_Usuario usarionuevo = new CN_Usuario(cbtipo.SelectedIndex, tnombre.Text, tapellido.Text, Tcorreo.Text, 1, DateTime.Today, Int32.Parse(tdni.Text), Tuser.Text, Tpass.Text, Int32.Parse(Tcel.Text),tdomicilio.Text);
-                        usarionuevo.registrar_usuario(usuario);
-                        
+                        //CE_Usuario usuario = new CE_Usuario(cbtipo.SelectedIndex,tnombre.Text,tapellido.Text,Tcorreo.Text,1,DateTime.Today,Int32.Parse(tdni.Text),Tuser.Text,Tpass.Text, Int32.Parse(Tcel.Text),tdomicilio.Text);
+
+                        // CN_Usuario usarionuevo = new CN_Usuario(cbtipo.SelectedIndex, tnombre.Text, tapellido.Text, Tcorreo.Text, 1, DateTime.Today, Int32.Parse(tdni.Text), Tuser.Text, Tpass.Text, Int32.Parse(Tcel.Text),tdomicilio.Text);
+                        //usarionuevo.registrar_usuario(usuario);
+
+                        usuario.insertar_usuario(tnombre.Text, tapellido.Text, Tuser.Text,Int32.Parse(tdni.Text) , Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text), Tpass.Text, cbtipo.SelectedIndex);
+                        dgusuarios.DataSource = usuario.ConsultaDT();
+
 
 
                         //si la respuesta es si cargamos el usuario 
@@ -260,6 +268,7 @@ namespace CapaPresentacion.Administrador.Usuario
             }
 
         }
+       
 
         private void LimpiarCampos()
         {

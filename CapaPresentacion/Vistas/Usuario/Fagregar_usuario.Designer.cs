@@ -67,6 +67,12 @@
             this.bcancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bbuscar = new System.Windows.Forms.Button();
+            this.dgusuarios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edni)).BeginInit();
@@ -77,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.econtra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.econfcontra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgusuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,7 +121,7 @@
             this.Bagregar.Location = new System.Drawing.Point(617, 403);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(141, 48);
-            this.Bagregar.TabIndex = 17;
+            this.Bagregar.TabIndex = 25;
             this.Bagregar.Text = "Agregar";
             this.Bagregar.UseVisualStyleBackColor = false;
             this.Bagregar.Click += new System.EventHandler(this.Bagregar_Click);
@@ -140,7 +147,7 @@
             this.tapellido.Location = new System.Drawing.Point(337, 144);
             this.tapellido.Name = "tapellido";
             this.tapellido.Size = new System.Drawing.Size(202, 24);
-            this.tapellido.TabIndex = 18;
+            this.tapellido.TabIndex = 16;
             this.tapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tapellido_KeyPress);
             // 
             // label3
@@ -188,7 +195,7 @@
             this.Tcel.Location = new System.Drawing.Point(336, 208);
             this.Tcel.Name = "Tcel";
             this.Tcel.Size = new System.Drawing.Size(202, 24);
-            this.Tcel.TabIndex = 24;
+            this.Tcel.TabIndex = 18;
             this.Tcel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tcel_KeyPress);
             // 
             // label6
@@ -212,7 +219,7 @@
             this.Tcorreo.Location = new System.Drawing.Point(34, 208);
             this.Tcorreo.Name = "Tcorreo";
             this.Tcorreo.Size = new System.Drawing.Size(214, 24);
-            this.Tcorreo.TabIndex = 22;
+            this.Tcorreo.TabIndex = 17;
             this.Tcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tcorreo_KeyPress);
             // 
             // cbtipo
@@ -222,10 +229,11 @@
             this.cbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtipo.ForeColor = System.Drawing.Color.White;
             this.cbtipo.FormattingEnabled = true;
+            this.cbtipo.ItemHeight = 24;
             this.cbtipo.Location = new System.Drawing.Point(34, 286);
             this.cbtipo.Name = "cbtipo";
             this.cbtipo.Size = new System.Drawing.Size(214, 32);
-            this.cbtipo.TabIndex = 28;
+            this.cbtipo.TabIndex = 19;
             // 
             // label7
             // 
@@ -248,7 +256,7 @@
             this.Tuser.Location = new System.Drawing.Point(337, 351);
             this.Tuser.Name = "Tuser";
             this.Tuser.Size = new System.Drawing.Size(202, 24);
-            this.Tuser.TabIndex = 30;
+            this.Tuser.TabIndex = 22;
             // 
             // label4
             // 
@@ -282,7 +290,7 @@
             this.Tconfcontra.Location = new System.Drawing.Point(336, 417);
             this.Tconfcontra.Name = "Tconfcontra";
             this.Tconfcontra.Size = new System.Drawing.Size(202, 24);
-            this.Tconfcontra.TabIndex = 34;
+            this.Tconfcontra.TabIndex = 24;
             this.Tconfcontra.UseSystemPasswordChar = true;
             this.Tconfcontra.TextChanged += new System.EventHandler(this.Tconfcontra_TextChanged);
             // 
@@ -307,7 +315,7 @@
             this.Tpass.Location = new System.Drawing.Point(32, 415);
             this.Tpass.Name = "Tpass";
             this.Tpass.Size = new System.Drawing.Size(216, 24);
-            this.Tpass.TabIndex = 32;
+            this.Tpass.TabIndex = 23;
             this.Tpass.UseSystemPasswordChar = true;
             this.Tpass.TextChanged += new System.EventHandler(this.Tpass_TextChanged);
             // 
@@ -315,11 +323,11 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Berlin Sans FB Demi", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Lime;
-            this.label10.Location = new System.Drawing.Point(332, 25);
+            this.label10.Location = new System.Drawing.Point(326, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(375, 55);
+            this.label10.Size = new System.Drawing.Size(401, 56);
             this.label10.TabIndex = 36;
             this.label10.Text = "Agregar Usuario";
             // 
@@ -413,7 +421,7 @@
             this.tdomicilio.Location = new System.Drawing.Point(34, 351);
             this.tdomicilio.Name = "tdomicilio";
             this.tdomicilio.Size = new System.Drawing.Size(214, 24);
-            this.tdomicilio.TabIndex = 39;
+            this.tdomicilio.TabIndex = 21;
             // 
             // ldomicilio
             // 
@@ -437,7 +445,7 @@
             this.bcancelar.Location = new System.Drawing.Point(764, 403);
             this.bcancelar.Name = "bcancelar";
             this.bcancelar.Size = new System.Drawing.Size(141, 48);
-            this.bcancelar.TabIndex = 41;
+            this.bcancelar.TabIndex = 26;
             this.bcancelar.Text = "Cancelar";
             this.bcancelar.UseVisualStyleBackColor = false;
             this.bcancelar.Click += new System.EventHandler(this.bcancelar_Click);
@@ -464,12 +472,83 @@
             this.label11.TabIndex = 43;
             this.label11.Text = "Campo Obligatorio (*)";
             // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Lime;
+            this.label12.Location = new System.Drawing.Point(385, 480);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(216, 56);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "Usuarios";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(118, 547);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(154, 21);
+            this.comboBox1.TabIndex = 46;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(22, 549);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 19);
+            this.label13.TabIndex = 47;
+            this.label13.Text = "Buscar por";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(290, 547);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(137, 20);
+            this.textBox1.TabIndex = 48;
+            // 
+            // bbuscar
+            // 
+            this.bbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.bbuscar.FlatAppearance.BorderSize = 0;
+            this.bbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bbuscar.ForeColor = System.Drawing.Color.White;
+            this.bbuscar.Location = new System.Drawing.Point(433, 547);
+            this.bbuscar.Name = "bbuscar";
+            this.bbuscar.Size = new System.Drawing.Size(106, 21);
+            this.bbuscar.TabIndex = 49;
+            this.bbuscar.Text = "Buscar";
+            this.bbuscar.UseVisualStyleBackColor = false;
+            // 
+            // dgusuarios
+            // 
+            this.dgusuarios.AllowUserToAddRows = false;
+            this.dgusuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgusuarios.Location = new System.Drawing.Point(4, 587);
+            this.dgusuarios.Name = "dgusuarios";
+            this.dgusuarios.Size = new System.Drawing.Size(930, 273);
+            this.dgusuarios.TabIndex = 50;
+            // 
             // Fagregar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(946, 1061);
+            this.Controls.Add(this.dgusuarios);
+            this.Controls.Add(this.bbuscar);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bcancelar);
@@ -513,6 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.econtra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.econfcontra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgusuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,5 +637,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bcancelar;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button bbuscar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgusuarios;
     }
 }

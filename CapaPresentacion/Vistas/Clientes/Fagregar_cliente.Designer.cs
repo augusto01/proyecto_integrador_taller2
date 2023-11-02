@@ -145,7 +145,7 @@
             this.bcancelar.Location = new System.Drawing.Point(735, 333);
             this.bcancelar.Name = "bcancelar";
             this.bcancelar.Size = new System.Drawing.Size(114, 48);
-            this.bcancelar.TabIndex = 68;
+            this.bcancelar.TabIndex = 51;
             this.bcancelar.Text = "Cancelar";
             this.bcancelar.UseVisualStyleBackColor = false;
             this.bcancelar.Click += new System.EventHandler(this.bcancelar_Click);
@@ -171,7 +171,7 @@
             this.tdomicilio.Location = new System.Drawing.Point(46, 357);
             this.tdomicilio.Name = "tdomicilio";
             this.tdomicilio.Size = new System.Drawing.Size(214, 24);
-            this.tdomicilio.TabIndex = 66;
+            this.tdomicilio.TabIndex = 48;
             this.tdomicilio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tdomicilio_KeyPress);
             // 
             // label10
@@ -207,7 +207,7 @@
             this.Tcel.Location = new System.Drawing.Point(349, 355);
             this.Tcel.Name = "Tcel";
             this.Tcel.Size = new System.Drawing.Size(202, 24);
-            this.Tcel.TabIndex = 53;
+            this.Tcel.TabIndex = 49;
             this.Tcel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tcel_KeyPress);
             // 
             // label6
@@ -231,7 +231,7 @@
             this.Tcorreo.Location = new System.Drawing.Point(46, 264);
             this.Tcorreo.Name = "Tcorreo";
             this.Tcorreo.Size = new System.Drawing.Size(214, 24);
-            this.Tcorreo.TabIndex = 51;
+            this.Tcorreo.TabIndex = 46;
             this.Tcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tcorreo_KeyPress);
             // 
             // label3
@@ -255,7 +255,7 @@
             this.tdni.Location = new System.Drawing.Point(349, 266);
             this.tdni.Name = "tdni";
             this.tdni.Size = new System.Drawing.Size(202, 24);
-            this.tdni.TabIndex = 49;
+            this.tdni.TabIndex = 47;
             this.tdni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tdni_KeyPress);
             // 
             // label2
@@ -279,7 +279,7 @@
             this.tapellido.Location = new System.Drawing.Point(349, 161);
             this.tapellido.Name = "tapellido";
             this.tapellido.Size = new System.Drawing.Size(202, 24);
-            this.tapellido.TabIndex = 47;
+            this.tapellido.TabIndex = 45;
             this.tapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tapellido_KeyPress);
             // 
             // Bagregar
@@ -293,7 +293,7 @@
             this.Bagregar.Location = new System.Drawing.Point(615, 333);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(114, 48);
-            this.Bagregar.TabIndex = 46;
+            this.Bagregar.TabIndex = 50;
             this.Bagregar.Text = "Agregar";
             this.Bagregar.UseVisualStyleBackColor = false;
             this.Bagregar.Click += new System.EventHandler(this.Bagregar_Click);

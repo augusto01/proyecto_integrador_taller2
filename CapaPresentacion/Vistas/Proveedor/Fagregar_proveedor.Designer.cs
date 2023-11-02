@@ -88,7 +88,7 @@
             this.bcancelar.Location = new System.Drawing.Point(758, 328);
             this.bcancelar.Name = "bcancelar";
             this.bcancelar.Size = new System.Drawing.Size(114, 48);
-            this.bcancelar.TabIndex = 85;
+            this.bcancelar.TabIndex = 79;
             this.bcancelar.Text = "Cancelar";
             this.bcancelar.UseVisualStyleBackColor = false;
             // 
@@ -113,7 +113,7 @@
             this.tdomicilio.Location = new System.Drawing.Point(69, 352);
             this.tdomicilio.Name = "tdomicilio";
             this.tdomicilio.Size = new System.Drawing.Size(214, 24);
-            this.tdomicilio.TabIndex = 83;
+            this.tdomicilio.TabIndex = 75;
             // 
             // label10
             // 
@@ -148,7 +148,7 @@
             this.Tcel.Location = new System.Drawing.Point(372, 350);
             this.Tcel.Name = "Tcel";
             this.Tcel.Size = new System.Drawing.Size(202, 24);
-            this.Tcel.TabIndex = 80;
+            this.Tcel.TabIndex = 76;
             this.Tcel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tcel_KeyPress);
             // 
             // label6
@@ -172,7 +172,7 @@
             this.Tcorreo.Location = new System.Drawing.Point(69, 259);
             this.Tcorreo.Name = "Tcorreo";
             this.Tcorreo.Size = new System.Drawing.Size(214, 24);
-            this.Tcorreo.TabIndex = 78;
+            this.Tcorreo.TabIndex = 73;
             this.Tcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tcorreo_KeyPress);
             // 
             // label3
@@ -196,7 +196,7 @@
             this.tdni.Location = new System.Drawing.Point(372, 261);
             this.tdni.Name = "tdni";
             this.tdni.Size = new System.Drawing.Size(202, 24);
-            this.tdni.TabIndex = 76;
+            this.tdni.TabIndex = 74;
             this.tdni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tdni_KeyPress);
             // 
             // label2
@@ -220,7 +220,7 @@
             this.tapellido.Location = new System.Drawing.Point(372, 156);
             this.tapellido.Name = "tapellido";
             this.tapellido.Size = new System.Drawing.Size(202, 24);
-            this.tapellido.TabIndex = 74;
+            this.tapellido.TabIndex = 72;
             this.tapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tapellido_KeyPress);
             // 
             // Bagregar
@@ -234,7 +234,7 @@
             this.Bagregar.Location = new System.Drawing.Point(638, 328);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(114, 48);
-            this.Bagregar.TabIndex = 73;
+            this.Bagregar.TabIndex = 78;
             this.Bagregar.Text = "Agregar";
             this.Bagregar.UseVisualStyleBackColor = false;
             this.Bagregar.Click += new System.EventHandler(this.Bagregar_Click);
@@ -295,7 +295,7 @@
             this.trazonsocial.Location = new System.Drawing.Point(69, 454);
             this.trazonsocial.Name = "trazonsocial";
             this.trazonsocial.Size = new System.Drawing.Size(214, 24);
-            this.trazonsocial.TabIndex = 88;
+            this.trazonsocial.TabIndex = 77;
             // 
             // enombre
             // 

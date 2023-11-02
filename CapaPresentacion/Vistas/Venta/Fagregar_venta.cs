@@ -17,9 +17,12 @@ namespace CapaPresentacion.Vistas.Venta
 {
     public partial class Fagregar_venta : Form
     {
+
+        UserLoginCache usuario = new UserLoginCache();
         public Fagregar_venta()
         {
             InitializeComponent();
+            inicializar_cabecera();
             
         }
 
@@ -40,7 +43,12 @@ namespace CapaPresentacion.Vistas.Venta
 
         }
 
+        private void inicializar_cabecera()
+        {
 
+            //tnombre.Text = usuario.nombre;
+            tfecha.Text = DateTime.Today.ToString();
+        }
 
         private void Fagregar_venta_Load(object sender, EventArgs e)
         {

@@ -12,10 +12,21 @@ using System.Windows.Forms;
 
 namespace CapaDatos
 {
-    public class CD_Usuario
+    public class CD_Usuario:Conexion
     {
         string cadenaconexion = "Server =DESKTOP-FG0LK48; integrated Security = True; Database =proyecto_taller2";
 
+
+       /* public List <CE_Usuario> Listar()
+        {
+
+            List<CE_Usuario> lista = new List<CE_Usuario>();
+            using (SqlConnection conexion  = new SqlConnection (Conexion.connectionString))
+
+
+
+
+        }*/
         public void conexion()
         {
 
@@ -48,6 +59,17 @@ namespace CapaDatos
 
         }
        
+
+
+        public void mostrar_usuarios(CE_Usuario usuario)
+        {
+            string consulta = "select us.id_usuario as 'ID',us.nombre_usuario as 'Nombre',us.apellido_usuario as 'Apellido',us.username as 'Username',us.dni_usuario as 'DNI',us.email_usuario AS 'Email',us.celular_usuario,us.estado_usuario as 'Estado', tu.descripcion as'Tipo usuario' from Tipo_usuario tu\r\ninner join Usuario us on tu.id_tipo_usuario = us.id_tipo_usuario";
+            SqlDataAdapter adapter = new SqlDataAdapter(consulta, cadenaconexion);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+        }
+
     }
 }
 
