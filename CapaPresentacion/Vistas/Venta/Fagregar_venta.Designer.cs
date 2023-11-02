@@ -62,6 +62,7 @@
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tfecha = new System.Windows.Forms.TextBox();
+            this.banadir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -94,6 +95,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.banadir);
             this.groupBox2.Controls.Add(this.dgproductos);
             this.groupBox2.Controls.Add(this.tid);
             this.groupBox2.Controls.Add(this.label15);
@@ -424,6 +426,21 @@
             this.tfecha.Size = new System.Drawing.Size(98, 20);
             this.tfecha.TabIndex = 10;
             // 
+            // banadir
+            // 
+            this.banadir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.banadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.banadir.FlatAppearance.BorderSize = 0;
+            this.banadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.banadir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.banadir.ForeColor = System.Drawing.Color.White;
+            this.banadir.Location = new System.Drawing.Point(756, 30);
+            this.banadir.Name = "banadir";
+            this.banadir.Size = new System.Drawing.Size(96, 31);
+            this.banadir.TabIndex = 86;
+            this.banadir.Text = "Añadir";
+            this.banadir.UseVisualStyleBackColor = false;
+            // 
             // Fagregar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,5 +508,6 @@
         private System.Windows.Forms.DataGridViewImageColumn editar;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.TextBox tfecha;
+        private System.Windows.Forms.Button banadir;
     }
 }

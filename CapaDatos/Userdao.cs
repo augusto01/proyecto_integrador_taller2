@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using CapaEntidad;
 using System.Threading.Tasks;
 using CapaEntidad.Cache;
 
@@ -33,15 +32,18 @@ namespace CapaDatos
                     {
                         while (reader.Read())
                         {
+
                             UserLoginCache.id_usuario = reader.GetInt32(0);
                             UserLoginCache.nombre = reader.GetString(1);                                      //obtenemos los valores del usuario actual
                             UserLoginCache.apellido = reader.GetString(2);
                             UserLoginCache.username = reader.GetString(3);
+                            UserLoginCache.dni = reader.GetInt32(4);
                             UserLoginCache.correo = reader.GetString(5);                         
                             UserLoginCache.domicilio = reader.GetString(6);
                             UserLoginCache.cel = reader.GetInt32(7);
                             UserLoginCache.pass = reader.GetString(8);
                             UserLoginCache.fecha_creacion = reader.GetDateTime(9);
+                            UserLoginCache.estado = reader.GetBoolean(10);
                             UserLoginCache.id_tipo_usuario = reader.GetInt32(11);
 
 

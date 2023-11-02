@@ -53,6 +53,7 @@ CREATE TABLE Proveedor
 );
 go
 
+SELECT * FROM Venta_detalle
 CREATE TABLE Categoria
 	(
 	  id_categoria INT PRIMARY KEY NOT NULL IDENTITY (0,1),
@@ -124,21 +125,22 @@ go
 
 CREATE TABLE Venta_detalle
 (
+
 id_detalle int not null primary key identity (0,1),
+id_cabecera int,
   cantidad_producto INT NOT NULL,
+  nombre_producto varchar(100),
   id_producto INT NOT NULL,
-  FOREIGN KEY (id_producto) REFERENCES Producto(id_producto)
+  FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
+  FOREIGN KEY (id_cabecera) REFERENCES Venta_cabecera(id_cabecera)
 );
+
+drop table Venta_detalle
+
 go
-CREATE TABLE Venta
-(
-  id_venta INT NOT NULL primary key identity (0,1),
-  id_cabecera INT NOT NULL,
-  id_detalle INT NOT NULL,
-  FOREIGN KEY (id_cabecera) REFERENCES Venta_cabecera(id_cabecera),
-  FOREIGN KEY (id_detalle) REFERENCES Venta_detalle(id_detalle)
-);
-go
+
+
+SELECT * FROM Venta_Detalle
 
 ---PROCEDIMIENTOS ALMACENADOS PARA LOS ABM
 
@@ -147,8 +149,7 @@ create proc sp_listar_usuarios As
 select * from Usuario
 order by id_usuario
 go
-
-
+select * from Tipo_pago
 create proc sp_buscar_usuarios
 @dni_usuario int
 As

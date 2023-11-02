@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
+using CapaEntidad.Cache;
 using CapaNegocio;
 
 namespace CapaPresentacion.Vistas.Venta
@@ -18,16 +20,10 @@ namespace CapaPresentacion.Vistas.Venta
         public Fagregar_venta()
         {
             InitializeComponent();
-        }
-
-        private void inicializar_cabecera()
-        {
-            CN_Usuario usuario = new CN_Usuario();
-            tidvendedor.Text = usuario.id_usuario.ToString();
-            tfecha.Text = DateTime.Today.ToString();
-            tnombrevendedor.Text = usuario.nombre.ToString();
             
         }
+
+       
 
         private void label10_Click(object sender, EventArgs e)
         {
@@ -44,11 +40,13 @@ namespace CapaPresentacion.Vistas.Venta
 
         }
 
-        
+
 
         private void Fagregar_venta_Load(object sender, EventArgs e)
         {
-            inicializar_cabecera();
+            //inicializar_cabecera(usuario);
         }
+
+       
     }
 }

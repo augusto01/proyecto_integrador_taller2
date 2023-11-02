@@ -240,9 +240,9 @@ namespace CapaPresentacion.Administrador.Usuario
 
                     if (resultado == DialogResult.Yes)
                     {
-                        CE_Usuario usuario = new CE_Usuario(cbtipo.SelectedIndex,tnombre.Text,tapellido.Text,Tcorreo.Text,1,DateTime.Today,Int32.Parse(tdni.Text),Tuser.Text,Tpass.Text, Int32.Parse(Tcel.Text));
-                        CN_Usuario neg = new CN_Usuario();
-                        neg.registrar_usuario(usuario);
+                        CE_Usuario usuario = new CE_Usuario(cbtipo.SelectedIndex,tnombre.Text,tapellido.Text,Tcorreo.Text,1,DateTime.Today,Int32.Parse(tdni.Text),Tuser.Text,Tpass.Text, Int32.Parse(Tcel.Text),tdomicilio.Text);
+                        CN_Usuario usarionuevo = new CN_Usuario(cbtipo.SelectedIndex, tnombre.Text, tapellido.Text, Tcorreo.Text, 1, DateTime.Today, Int32.Parse(tdni.Text), Tuser.Text, Tpass.Text, Int32.Parse(Tcel.Text),tdomicilio.Text);
+                        usarionuevo.registrar_usuario(usuario);
                         
 
 
