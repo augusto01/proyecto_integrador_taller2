@@ -12,17 +12,17 @@ namespace CapaDatos
     public class CD_Producto:Conexion
     {
 
+
+
+
         
-
-
-
         public int insertar_producto(string descripcion, float precio_unitario, int stock, int id_talle, int id_categoria, int id_proveedor)
         {
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
             string query = "INSERT INTO Producto(id_talle, descripcion, precio_unitario, stock, fecha_alta, id_categoria, id_proveedor)" +
-                            "VALUES('" + descripcion + "', " + precio_unitario + ", " + stock + ", getdate(), " + id_categoria + ", " + id_proveedor + ")";
+                            "VALUES("+id_talle+",'" + descripcion + "', " + precio_unitario + ", " + stock + ", getdate(), " + id_categoria + ", " + id_proveedor + ")";
             SqlCommand cmd = new SqlCommand(query, conexion);
             flag = cmd.ExecuteNonQuery();
             conexion.Close();
@@ -94,9 +94,22 @@ namespace CapaDatos
             return datos;
         }
 
+        public DataTable ConsultaProductosDG()
+        {
+            var conexion = GetConnection();
+            string consulta = "";
+            SqlCommand cmd = new SqlCommand(consulta, conexion);
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+            conexion.Close();
+            return tabla;
 
 
-       
+        }
+
+
+
 
 
 

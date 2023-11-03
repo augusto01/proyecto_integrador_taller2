@@ -1,4 +1,5 @@
 ﻿using CapaNegocio;
+using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,7 +26,16 @@ namespace CapaPresentacion.Gerente.Producto
         {
             InitializeComponent();
         }
+        private void tstock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                estock.SetError(tstock, "Solo numeros!");
+                e.Handled = true;
+                return;
 
+            }
+        }
         public void cargar_combo_box()
         {
             //categoria
@@ -61,6 +71,7 @@ namespace CapaPresentacion.Gerente.Producto
 
                talle.insertar_talle(tdesctalle.Text);
                MessageBox.Show("El talle : " +tdesctalle.Text+" se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               cargar_combo_box();
             }
         }
 
@@ -74,22 +85,49 @@ namespace CapaPresentacion.Gerente.Producto
             {
                 categoria.insertar_categoria(tcategoria.Text);
                 MessageBox.Show("La categoria : " + tcategoria.Text + " se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cargar_combo_box();
             }
         }
 
         private void Bagregar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("Seguro quiere agregar el producto?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (resultado == DialogResult.Yes)
+            if (tdesc.Text == String.Empty || tprecio.Text == String.Empty || tstock.Text == String.Empty)
             {
-                //productonuevo.insertar_producto( cbtalle., int pid_categoria, string pdescripcion, int pid_proveedor, float pprecio_unitario, DateTime pfecha_alta, int pstock)
+                MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+
+                if (tprecio.Text.Trim() == String.Empty)
+                {
+                    eprecio.SetError(tprecio, "Campo Obligatorio!");
+                }
+
+                if (tdesc.Text.Trim() == String.Empty)
+                {
+                    edesc.SetError(tdesc, "Campo Obligatorio!!");
+                }
+
+                if (tstock.Text.Trim() == String.Empty)
+                {
+                    edesc.SetError(tstock, "Campo Obligatorio!!");
+                }
 
 
             }
+            else
+            {
+                DialogResult resultado = MessageBox.Show("Seguro quiere agregar el producto?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    producto.insertar_producto(tdesc.Text, float.Parse(tprecio.Text) , Int32.Parse(tstock.Text),cbtalle.SelectedIndex, cbcategoria.SelectedIndex, cbproveedor.SelectedIndex);
+                    MessageBox.Show("El producto se agrego correctamente!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+            }
+          
         }
 
-        
+       
     }
 }
 

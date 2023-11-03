@@ -42,7 +42,6 @@
             this.cbtalle = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbproveedor = new System.Windows.Forms.ComboBox();
-            this.nustock = new System.Windows.Forms.NumericUpDown();
             this.bcancelar = new System.Windows.Forms.Button();
             this.Bagregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,7 +59,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nustock)).BeginInit();
+            this.edesc = new System.Windows.Forms.ErrorProvider(this.components);
+            this.eprecio = new System.Windows.Forms.ErrorProvider(this.components);
+            this.estock = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgproductos = new System.Windows.Forms.DataGridView();
+            this.tstock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).BeginInit();
             this.panel1.SuspendLayout();
@@ -68,6 +71,10 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edesc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eprecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -104,7 +111,7 @@
             this.cbcategoria.Name = "cbcategoria";
             this.cbcategoria.Size = new System.Drawing.Size(214, 32);
             this.cbcategoria.TabIndex = 75;
-             // 
+            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -208,17 +215,6 @@
             this.cbproveedor.Size = new System.Drawing.Size(214, 32);
             this.cbproveedor.TabIndex = 76;
             // 
-            // nustock
-            // 
-            this.nustock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nustock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.nustock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.nustock.ForeColor = System.Drawing.Color.White;
-            this.nustock.Location = new System.Drawing.Point(25, 191);
-            this.nustock.Name = "nustock";
-            this.nustock.Size = new System.Drawing.Size(214, 29);
-            this.nustock.TabIndex = 73;
-            // 
             // bcancelar
             // 
             this.bcancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -229,7 +225,7 @@
             this.bcancelar.ForeColor = System.Drawing.Color.White;
             this.bcancelar.Location = new System.Drawing.Point(750, 258);
             this.bcancelar.Name = "bcancelar";
-            this.bcancelar.Size = new System.Drawing.Size(93, 45);
+            this.bcancelar.Size = new System.Drawing.Size(109, 45);
             this.bcancelar.TabIndex = 78;
             this.bcancelar.Text = "Cancelar";
             this.bcancelar.UseVisualStyleBackColor = false;
@@ -315,7 +311,7 @@
             this.bagregarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagregarcategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bagregarcategoria.ForeColor = System.Drawing.Color.White;
-            this.bagregarcategoria.Location = new System.Drawing.Point(472, 499);
+            this.bagregarcategoria.Location = new System.Drawing.Point(483, 447);
             this.bagregarcategoria.Name = "bagregarcategoria";
             this.bagregarcategoria.Size = new System.Drawing.Size(109, 33);
             this.bagregarcategoria.TabIndex = 120;
@@ -328,7 +324,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(468, 435);
+            this.label8.Location = new System.Drawing.Point(479, 383);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 19);
             this.label8.TabIndex = 119;
@@ -341,9 +337,9 @@
             this.tcategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tcategoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcategoria.ForeColor = System.Drawing.Color.White;
-            this.tcategoria.Location = new System.Drawing.Point(472, 457);
+            this.tcategoria.Location = new System.Drawing.Point(17, 98);
             this.tcategoria.Name = "tcategoria";
-            this.tcategoria.Size = new System.Drawing.Size(214, 24);
+            this.tcategoria.Size = new System.Drawing.Size(178, 24);
             this.tcategoria.TabIndex = 118;
             // 
             // label9
@@ -352,7 +348,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(472, 385);
+            this.label9.Location = new System.Drawing.Point(483, 333);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(160, 19);
             this.label9.TabIndex = 121;
@@ -372,7 +368,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tdesctalle);
-            this.panel1.Location = new System.Drawing.Point(14, 371);
+            this.panel1.Location = new System.Drawing.Point(25, 319);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(421, 188);
             this.panel1.TabIndex = 122;
@@ -391,7 +387,8 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(455, 371);
+            this.panel2.Controls.Add(this.tcategoria);
+            this.panel2.Location = new System.Drawing.Point(466, 319);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(388, 188);
             this.panel2.TabIndex = 123;
@@ -412,10 +409,49 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(635, 105);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 147);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 113;
             this.pictureBox1.TabStop = false;
+            // 
+            // edesc
+            // 
+            this.edesc.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.edesc.ContainerControl = this;
+            this.edesc.Icon = ((System.Drawing.Icon)(resources.GetObject("edesc.Icon")));
+            // 
+            // eprecio
+            // 
+            this.eprecio.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.eprecio.ContainerControl = this;
+            this.eprecio.Icon = ((System.Drawing.Icon)(resources.GetObject("eprecio.Icon")));
+            // 
+            // estock
+            // 
+            this.estock.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.estock.ContainerControl = this;
+            this.estock.Icon = ((System.Drawing.Icon)(resources.GetObject("estock.Icon")));
+            // 
+            // dgproductos
+            // 
+            this.dgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgproductos.Location = new System.Drawing.Point(25, 522);
+            this.dgproductos.Name = "dgproductos";
+            this.dgproductos.Size = new System.Drawing.Size(833, 132);
+            this.dgproductos.TabIndex = 124;
+            // 
+            // tstock
+            // 
+            this.tstock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tstock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tstock.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstock.ForeColor = System.Drawing.Color.White;
+            this.tstock.Location = new System.Drawing.Point(25, 195);
+            this.tstock.Name = "tstock";
+            this.tstock.Size = new System.Drawing.Size(214, 24);
+            this.tstock.TabIndex = 125;
+            this.tstock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tstock_KeyPress);
             // 
             // Fagregar_producto
             // 
@@ -423,17 +459,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(914, 983);
+            this.Controls.Add(this.tstock);
+            this.Controls.Add(this.dgproductos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.bagregarcategoria);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.tcategoria);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tdesc);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bcancelar);
             this.Controls.Add(this.Bagregar);
-            this.Controls.Add(this.nustock);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbproveedor);
             this.Controls.Add(this.label3);
@@ -449,15 +485,19 @@
             this.Name = "Fagregar_producto";
             this.Text = "Fagregar_producto";
             this.Load += new System.EventHandler(this.Fagregar_producto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nustock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edesc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eprecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,7 +516,6 @@
         private System.Windows.Forms.ComboBox cbtalle;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbproveedor;
-        private System.Windows.Forms.NumericUpDown nustock;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bcancelar;
         private System.Windows.Forms.Button Bagregar;
@@ -494,5 +533,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ErrorProvider edesc;
+        private System.Windows.Forms.ErrorProvider eprecio;
+        private System.Windows.Forms.ErrorProvider estock;
+        private System.Windows.Forms.DataGridView dgproductos;
+        private System.Windows.Forms.TextBox tstock;
     }
 }

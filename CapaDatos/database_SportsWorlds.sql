@@ -135,7 +135,7 @@ CREATE TABLE Producto
   descripcion INT NOT NULL,
   precio_unitario FLOAT NOT NULL,
   stock INT NOT NULL,
-  fecha_alta INT NOT NULL,
+  fecha_alta DATE NOT NULL,
   id_categoria INT NOT NULL,
   id_proveedor INT NOT NULL,
   FOREIGN KEY (id_talle) REFERENCES  Talle (id_talle),
@@ -144,8 +144,11 @@ CREATE TABLE Producto
 );
 
 select * from Producto
-go
 
+INSERT INTO Producto( id_talle, descripcion, precio_unitario, stock, fecha_alta, id_categoria, id_proveedor) 
+                            VALUES(1,'remera', 120,  10 , getdate(), 1, 1)
+go
+select * from Producto
 CREATE TABLE Venta_detalle
 (
 
@@ -216,6 +219,8 @@ begin
 	set @accion = 'Se elimino el usuario '+@username
 
 end
+
+select * from Producto
 
 
 
