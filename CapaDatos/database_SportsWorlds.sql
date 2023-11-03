@@ -106,22 +106,28 @@ CREATE TABLE Venta_cabecera
   FOREIGN KEY (id_tipo_pago) REFERENCES Tipo_pago(id_tipo_pago)
 );
 go
+
+CREATE TABLE Talle(
+id_talle int primary key identity (0,1)not null,
+descripcion varchar (20) not null
+)
+go
+
 CREATE TABLE Producto
 (
+  id_talle int not null,
   id_producto int not null primary key identity (0,1),
   descripcion INT NOT NULL,
   precio_unitario FLOAT NOT NULL,
   stock INT NOT NULL,
-  descuento FLOAT, 
-  recargo FLOAT ,
   fecha_alta INT NOT NULL,
   id_categoria INT NOT NULL,
   id_proveedor INT NOT NULL,
+  FOREIGN KEY (id_talle) REFERENCES  Talle (id_talle),
   FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
   FOREIGN KEY (id_proveedor) REFERENCES Proveedor(id_proveedor)
 );
 go
-
 
 CREATE TABLE Venta_detalle
 (

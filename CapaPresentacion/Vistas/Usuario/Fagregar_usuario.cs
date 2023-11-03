@@ -307,7 +307,7 @@ namespace CapaPresentacion.Administrador.Usuario
 
         private void dgusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgusuarios.Columns[e.ColumnIndex].Name == "eliminar")
+            if (dgusuarios.Columns[e.ColumnIndex].Name == "eliminar" && this.dgusuarios.CurrentRow.Index != -1)
             {
                 EliminarUsuario();
             }
@@ -316,7 +316,7 @@ namespace CapaPresentacion.Administrador.Usuario
         private void EliminarUsuario()
         {
             CN_USUARIO usuario = new CN_USUARIO();  
-            if (this.dgusuarios.CurrentRow.Index != -1)
+            if (this.dgusuarios.CurrentRow.Index != -1 )
             {
                 int posicion = dgusuarios.CurrentRow.Index;
                 DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -325,6 +325,26 @@ namespace CapaPresentacion.Administrador.Usuario
                       
                     usuario.eliminar_usuario(dgusuarios[6, posicion].Value.ToString());
                     this.dgusuarios.Rows.RemoveAt(this.dgusuarios.CurrentRow.Index);
+                }
+                else
+                {
+                    tnombre.Clear();
+                    tapellido.Clear();
+                    Tuser.Clear();
+                    tdni.Clear();
+                    Tcorreo.Clear();
+                    tdomicilio.Clear();
+                    Tcel.Clear();
+
+                    bcancelaredicion.Visible = false;
+                    beditar.Visible = false;
+                    bcancelar.Visible = true;
+                    bnover.Visible = true;
+                    bver.Visible = true;
+                    Tpass.Visible = true;
+                    Tconfcontra.Visible = true;
+                    lcontra.Visible = true;
+                    lconfcontra.Visible = true;
                 }
 
             }

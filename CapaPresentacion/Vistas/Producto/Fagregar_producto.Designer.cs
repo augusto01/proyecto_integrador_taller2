@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_producto));
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -36,18 +37,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tprecio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tdesc = new System.Windows.Forms.TextBox();
+            this.tdesctalle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbtalle = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbproveedor = new System.Windows.Forms.ComboBox();
             this.nustock = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
             this.bcancelar = new System.Windows.Forms.Button();
             this.Bagregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tdesc = new System.Windows.Forms.TextBox();
+            this.edesctalle = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tcategoria = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ecategoria = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nustock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -124,23 +136,23 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 105);
+            this.label1.Location = new System.Drawing.Point(21, 435);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 19);
             this.label1.TabIndex = 72;
             this.label1.Text = "Descripcion (*)";
             // 
-            // tdesc
+            // tdesctalle
             // 
-            this.tdesc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tdesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tdesc.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdesc.ForeColor = System.Drawing.Color.White;
-            this.tdesc.Location = new System.Drawing.Point(25, 129);
-            this.tdesc.Name = "tdesc";
-            this.tdesc.Size = new System.Drawing.Size(214, 24);
-            this.tdesc.TabIndex = 71;
+            this.tdesctalle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tdesctalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tdesctalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tdesctalle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tdesctalle.ForeColor = System.Drawing.Color.White;
+            this.tdesctalle.Location = new System.Drawing.Point(25, 457);
+            this.tdesctalle.Name = "tdesctalle";
+            this.tdesctalle.Size = new System.Drawing.Size(214, 24);
+            this.tdesctalle.TabIndex = 71;
             // 
             // label3
             // 
@@ -199,17 +211,6 @@
             this.nustock.Size = new System.Drawing.Size(214, 29);
             this.nustock.TabIndex = 73;
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(648, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 19);
-            this.label4.TabIndex = 114;
-            this.label4.Text = "Campo Obligatorio (*)";
-            // 
             // bcancelar
             // 
             this.bcancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -218,9 +219,9 @@
             this.bcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bcancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bcancelar.ForeColor = System.Drawing.Color.White;
-            this.bcancelar.Location = new System.Drawing.Point(741, 337);
+            this.bcancelar.Location = new System.Drawing.Point(750, 258);
             this.bcancelar.Name = "bcancelar";
-            this.bcancelar.Size = new System.Drawing.Size(141, 48);
+            this.bcancelar.Size = new System.Drawing.Size(93, 45);
             this.bcancelar.TabIndex = 78;
             this.bcancelar.Text = "Cancelar";
             this.bcancelar.UseVisualStyleBackColor = false;
@@ -233,23 +234,136 @@
             this.Bagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bagregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bagregar.ForeColor = System.Drawing.Color.White;
-            this.Bagregar.Location = new System.Drawing.Point(594, 337);
+            this.Bagregar.Location = new System.Drawing.Point(635, 258);
             this.Bagregar.Name = "Bagregar";
-            this.Bagregar.Size = new System.Drawing.Size(141, 48);
+            this.Bagregar.Size = new System.Drawing.Size(109, 45);
             this.Bagregar.TabIndex = 77;
             this.Bagregar.Text = "Agregar";
             this.Bagregar.UseVisualStyleBackColor = false;
+            this.Bagregar.Click += new System.EventHandler(this.Bagregar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(594, 129);
+            this.pictureBox1.Location = new System.Drawing.Point(635, 105);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(288, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(208, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 113;
             this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Lime;
+            this.label4.Location = new System.Drawing.Point(21, 385);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 19);
+            this.label4.TabIndex = 114;
+            this.label4.Text = "Agregar Talle";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(25, 499);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 33);
+            this.button1.TabIndex = 115;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(21, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 19);
+            this.label5.TabIndex = 117;
+            this.label5.Text = "Descripcion (*)";
+            // 
+            // tdesc
+            // 
+            this.tdesc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tdesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tdesc.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tdesc.ForeColor = System.Drawing.Color.White;
+            this.tdesc.Location = new System.Drawing.Point(25, 127);
+            this.tdesc.Name = "tdesc";
+            this.tdesc.Size = new System.Drawing.Size(214, 24);
+            this.tdesc.TabIndex = 116;
+            // 
+            // edesctalle
+            // 
+            this.edesctalle.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.edesctalle.ContainerControl = this;
+            this.edesctalle.Icon = ((System.Drawing.Icon)(resources.GetObject("edesctalle.Icon")));
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(316, 499);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 33);
+            this.button2.TabIndex = 120;
+            this.button2.Text = "Agregar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(312, 435);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 19);
+            this.label8.TabIndex = 119;
+            this.label8.Text = "Descripcion (*)";
+            // 
+            // tcategoria
+            // 
+            this.tcategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tcategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tcategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tcategoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcategoria.ForeColor = System.Drawing.Color.White;
+            this.tcategoria.Location = new System.Drawing.Point(316, 457);
+            this.tcategoria.Name = "tcategoria";
+            this.tcategoria.Size = new System.Drawing.Size(214, 24);
+            this.tcategoria.TabIndex = 118;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Lime;
+            this.label9.Location = new System.Drawing.Point(312, 385);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(160, 19);
+            this.label9.TabIndex = 121;
+            this.label9.Text = "Agregar  Categoria";
+            // 
+            // ecategoria
+            // 
+            this.ecategoria.ContainerControl = this;
             // 
             // Fagregar_producto
             // 
@@ -257,6 +371,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(914, 983);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.tcategoria);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tdesc);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bcancelar);
@@ -273,12 +394,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tprecio);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tdesc);
+            this.Controls.Add(this.tdesctalle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fagregar_producto";
             this.Text = "Fagregar_producto";
+            this.Load += new System.EventHandler(this.Fagregar_producto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nustock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,15 +416,24 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tprecio;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tdesc;
+        private System.Windows.Forms.TextBox tdesctalle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbtalle;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbproveedor;
         private System.Windows.Forms.NumericUpDown nustock;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bcancelar;
         private System.Windows.Forms.Button Bagregar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tdesc;
+        private System.Windows.Forms.ErrorProvider edesctalle;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tcategoria;
+        private System.Windows.Forms.ErrorProvider ecategoria;
     }
 }
