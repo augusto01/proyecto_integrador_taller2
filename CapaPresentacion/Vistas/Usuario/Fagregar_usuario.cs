@@ -309,20 +309,22 @@ namespace CapaPresentacion.Administrador.Usuario
         {
             if (dgusuarios.Columns[e.ColumnIndex].Name == "eliminar")
             {
-                EliminarProducto();
+                EliminarUsuario();
             }
         }
 
-        private void EliminarProducto()
+        private void EliminarUsuario()
         {
             CN_USUARIO usuario = new CN_USUARIO();  
             if (this.dgusuarios.CurrentRow.Index != -1)
             {
+                int posicion = dgusuarios.CurrentRow.Index;
                 DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Yes)
-                {
+                {                  
+                      
+                    usuario.eliminar_usuario(dgusuarios[6, posicion].Value.ToString());
                     this.dgusuarios.Rows.RemoveAt(this.dgusuarios.CurrentRow.Index);
-                    usuario.eliminar_usuario(tdni.Text);
                 }
 
             }
