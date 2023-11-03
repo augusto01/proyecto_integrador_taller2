@@ -9,25 +9,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion.Gerente.Producto
 {
     public partial class Fagregar_producto : Form
     {
 
-        CN_PRODUCTO productonuevo = new CN_PRODUCTO();
-        CN_CATEGORIA categorianueva = new CN_CATEGORIA();
-        CN_TALLE nuevotalle = new CN_TALLE();
+        CN_PRODUCTO producto = new CN_PRODUCTO();
+        CN_CATEGORIA categoria = new CN_CATEGORIA();
+        CN_TALLE talle = new CN_TALLE();
+        CN_PROVEEDOR proveedor = new CN_PROVEEDOR();
         
         public Fagregar_producto()
         {
             InitializeComponent();
         }
 
+        public void cargar_combo_box()
+        {
+            //categoria
+            categoria.obtener_categorias();
+            List<string> datos = categoria.obtener_categorias();
+            cbcategoria.DataSource = datos;
+
+            //talle
+            talle.obtener_talles();
+            List<string> datos_talle = talle.obtener_talles();
+            cbtalle.DataSource = datos_talle;
+
+            //proveedor
+            proveedor.obtener_proveedores();
+            List<string> datos_proveedor = proveedor.obtener_proveedores();
+            cbproveedor.DataSource = datos_proveedor;
+
+        }
         
         private void Fagregar_producto_Load(object sender, EventArgs e)
         {
-
+            cargar_combo_box();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +59,7 @@ namespace CapaPresentacion.Gerente.Producto
             else
             {
 
-               nuevotalle.insertar_talle(tdesctalle.Text);
+               talle.insertar_talle(tdesctalle.Text);
                MessageBox.Show("El talle : " +tdesctalle.Text+" se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -52,7 +72,7 @@ namespace CapaPresentacion.Gerente.Producto
             }
             else
             {
-                categorianueva.insertar_categoria(tcategoria.Text);
+                categoria.insertar_categoria(tcategoria.Text);
                 MessageBox.Show("La categoria : " + tcategoria.Text + " se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -68,6 +88,8 @@ namespace CapaPresentacion.Gerente.Producto
 
             }
         }
+
+        
     }
 }
 

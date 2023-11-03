@@ -71,6 +71,8 @@ CREATE TABLE Categoria
 	);
 	go
 
+	
+
 	INSERT INTO Categoria(descripcion) values ('REMERAS')
 	INSERT INTO Categoria(descripcion) values ('SHORTS')
 	INSERT INTO Categoria(descripcion) values ('PANTALONES')
@@ -122,6 +124,9 @@ id_talle int primary key identity (0,1)not null,
 descripcion varchar (20) not null
 )
 go
+
+select * from Categoria
+Insert into Talle (descripcion)values ('s')
 
 CREATE TABLE Producto
 (

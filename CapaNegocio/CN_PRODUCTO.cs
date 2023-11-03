@@ -2,6 +2,7 @@
 using CapaEntidad;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -67,6 +68,12 @@ namespace CapaNegocio
             CD_Producto talle = new CD_Producto();
             talle.cargar_talle(descripcion_talle);
         }
+        public List<string> obtener_talles()
+        {
+            CD_Producto datos = new CD_Producto();
+            return datos.obtener_talles();
+        }
+
     }
 
     public class CN_CATEGORIA
@@ -86,6 +93,14 @@ namespace CapaNegocio
             CD_Producto talle = new CD_Producto();
             talle.cargar_categoria(descripcion_categoria);
         }
+
+        public List<string> obtener_categorias()
+        {
+            CD_Producto datos = new CD_Producto();
+            return datos.obtener_categorias();
+        }
+
+       
 
     }
 

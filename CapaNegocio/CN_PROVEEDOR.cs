@@ -41,5 +41,11 @@ namespace CapaNegocio
 
         }
 
+        public List<string> obtener_proveedores()
+        {
+            CD_Proveedor datos = new CD_Proveedor();
+            return datos.obtener_proveedores();
+        }
+
     }
 }

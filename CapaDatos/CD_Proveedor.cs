@@ -28,6 +28,27 @@ namespace CapaDatos
             return flag;
         }
 
+        public List<string> obtener_proveedores()
+        {
+            List<string> datos = new List<string>();
+            var conexion = GetConnection();
+            {
+                conexion.Open();
+                string query = "SELECT nombre FROM Proveedor";
+                using (SqlCommand cmd = new SqlCommand(query, conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            datos.Add(reader["nombre"].ToString());
+                        }
+                    }
+                }
+            }
+            return datos;
+        }
+
     }
  
 

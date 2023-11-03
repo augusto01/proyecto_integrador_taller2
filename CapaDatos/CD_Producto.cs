@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -51,16 +52,51 @@ namespace CapaDatos
             return flag;
         }
 
+        public List<string> obtener_categorias()
+        {
+            List<string> datos = new List<string>();
+            var conexion = GetConnection();
+            {
+                conexion.Open();
+                string query = "SELECT descripcion FROM Categoria";
+                using (SqlCommand cmd = new SqlCommand(query, conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            datos.Add(reader["descripcion"].ToString());
+                        }
+                    }
+                }
+            }
+            return datos;
+        }
+
+        public List<string> obtener_talles()
+        {
+            List<string> datos = new List<string>();
+            var conexion = GetConnection();
+            {
+                conexion.Open();
+                string query = "SELECT descripcion FROM Talle";
+                using (SqlCommand cmd = new SqlCommand(query, conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            datos.Add(reader["descripcion"].ToString());
+                        }
+                    }
+                }
+            }
+            return datos;
+        }
 
 
 
-
-        /* public void cargar_proveedores()
-         {
-             var conexion = GetConnection();
-             conexion.Open();
-             string query = "select * from Proveedor";
-         }*/
+       
 
 
 
