@@ -1,5 +1,6 @@
 ﻿using CapaNegocio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +15,8 @@ namespace CapaPresentacion.Gerente.Producto
     public partial class Fagregar_producto : Form
     {
 
-        ce productonuevo = new CN_PRODUCTO();
-      
+        CN_PRODUCTO productonuevo = new CN_PRODUCTO();
+        
         public Fagregar_producto()
         {
             InitializeComponent();
@@ -57,7 +58,7 @@ namespace CapaPresentacion.Gerente.Producto
             DialogResult resultado = MessageBox.Show("Seguro quiere agregar el producto?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
-                
+                //productonuevo.insertar_producto( cbtalle., int pid_categoria, string pdescripcion, int pid_proveedor, float pprecio_unitario, DateTime pfecha_alta, int pstock)
 
 
 

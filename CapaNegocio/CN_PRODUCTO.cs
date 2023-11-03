@@ -26,18 +26,18 @@ namespace CapaNegocio
 
         public int stock { get; set; }  
 
-        public CN_PRODUCTO(int idproducto, int id_talle, int id_categoria, string descripcion, int id_proveedor, float precio_unitario, DateTime fecha_alta, int stock)
+       
+
+        public void CN_Usuario( int pid_talle, int pid_categoria, string pdescripcion, int pid_proveedor, float pprecio_unitario, DateTime pfecha_alta, int pstock)
         {
-            this.id_proudcto = idproducto;
-            this.id_talle=  id_talle;
-            this.id_categoria = id_categoria;
-            this.descripcion = descripcion;
-            this.id_proveedor = id_proveedor;
-            this.precio_unitario = precio_unitario;
-            this.fecha_alta= fecha_alta;
-            this.stock = stock;
-
-
+        
+            this.id_talle = pid_talle;
+            this.id_categoria = pid_categoria;
+            this.descripcion = pdescripcion;
+            this.id_proveedor = pid_proveedor;
+            this.precio_unitario = pprecio_unitario;
+            this.fecha_alta = pfecha_alta;
+            this.stock = pstock;
         }
 
         public void insertar_producto(string descripcion, float precio_unitario, int stock, int id_talle, int id_categoria, int id_proveedor)
