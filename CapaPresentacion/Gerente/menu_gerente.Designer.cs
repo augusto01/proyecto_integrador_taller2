@@ -35,6 +35,7 @@
             this.submenu_proveedor = new System.Windows.Forms.Panel();
             this.bverproveedor = new System.Windows.Forms.Button();
             this.bagregarproveedor = new System.Windows.Forms.Button();
+            this.bproveedor = new System.Windows.Forms.Button();
             this.submenu_compras = new System.Windows.Forms.Panel();
             this.bvercompras = new System.Windows.Forms.Button();
             this.bagregarcompra = new System.Windows.Forms.Button();
@@ -64,7 +65,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.button4 = new System.Windows.Forms.Button();
-            this.bproveedor = new System.Windows.Forms.Button();
             this.bcompras = new System.Windows.Forms.Button();
             this.binforme = new System.Windows.Forms.Button();
             this.bClientes = new System.Windows.Forms.Button();
@@ -174,6 +174,26 @@
             this.bagregarproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarproveedor.UseVisualStyleBackColor = true;
             this.bagregarproveedor.Click += new System.EventHandler(this.bagregarproveedor_Click);
+            // 
+            // bproveedor
+            // 
+            this.bproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.bproveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bproveedor.FlatAppearance.BorderSize = 0;
+            this.bproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bproveedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bproveedor.ForeColor = System.Drawing.Color.Lime;
+            this.bproveedor.Image = global::CapaPresentacion.Properties.Resources.repartidor1;
+            this.bproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bproveedor.Location = new System.Drawing.Point(0, 869);
+            this.bproveedor.Name = "bproveedor";
+            this.bproveedor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bproveedor.Size = new System.Drawing.Size(267, 39);
+            this.bproveedor.TabIndex = 29;
+            this.bproveedor.Text = "Proveedores";
+            this.bproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bproveedor.UseVisualStyleBackColor = false;
+            this.bproveedor.Click += new System.EventHandler(this.bproveedor_Click);
             // 
             // submenu_compras
             // 
@@ -565,26 +585,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // bproveedor
-            // 
-            this.bproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.bproveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bproveedor.FlatAppearance.BorderSize = 0;
-            this.bproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bproveedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bproveedor.ForeColor = System.Drawing.Color.Lime;
-            this.bproveedor.Image = global::CapaPresentacion.Properties.Resources.repartidor;
-            this.bproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bproveedor.Location = new System.Drawing.Point(0, 869);
-            this.bproveedor.Name = "bproveedor";
-            this.bproveedor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bproveedor.Size = new System.Drawing.Size(267, 39);
-            this.bproveedor.TabIndex = 29;
-            this.bproveedor.Text = "Proveedores";
-            this.bproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bproveedor.UseVisualStyleBackColor = false;
-            this.bproveedor.Click += new System.EventHandler(this.bproveedor_Click);
-            // 
             // bcompras
             // 
             this.bcompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
@@ -673,7 +673,7 @@
             this.bproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bproducto.ForeColor = System.Drawing.Color.Lime;
-            this.bproducto.Image = global::CapaPresentacion.Properties.Resources.camiseta;
+            this.bproducto.Image = global::CapaPresentacion.Properties.Resources.camiseta1;
             this.bproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bproducto.Location = new System.Drawing.Point(0, 229);
             this.bproducto.Name = "bproducto";
@@ -693,7 +693,7 @@
             this.busuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.busuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.busuarios.ForeColor = System.Drawing.Color.Lime;
-            this.busuarios.Image = global::CapaPresentacion.Properties.Resources.usuariobar;
+            this.busuarios.Image = global::CapaPresentacion.Properties.Resources.usuariobar1;
             this.busuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.busuarios.Location = new System.Drawing.Point(0, 100);
             this.busuarios.Name = "busuarios";

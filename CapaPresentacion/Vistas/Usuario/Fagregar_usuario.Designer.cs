@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_usuario));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,13 +47,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Tuser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lconfcontra = new System.Windows.Forms.Label();
             this.Tconfcontra = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lcontra = new System.Windows.Forms.Label();
             this.Tpass = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.bver = new System.Windows.Forms.Button();
-            this.bnover = new System.Windows.Forms.Button();
             this.enombre = new System.Windows.Forms.ErrorProvider(this.components);
             this.eapellido = new System.Windows.Forms.ErrorProvider(this.components);
             this.edni = new System.Windows.Forms.ErrorProvider(this.components);
@@ -65,7 +64,6 @@
             this.tdomicilio = new System.Windows.Forms.TextBox();
             this.ldomicilio = new System.Windows.Forms.Label();
             this.bcancelar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -73,6 +71,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bbuscar = new System.Windows.Forms.Button();
             this.dgusuarios = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bver = new System.Windows.Forms.Button();
+            this.bnover = new System.Windows.Forms.Button();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.beditar = new System.Windows.Forms.Button();
+            this.bcancelaredicion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edni)).BeginInit();
@@ -82,8 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.etipouser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.econtra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.econfcontra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgusuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -269,16 +278,16 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Nombre de Usuario (*)";
             // 
-            // label8
+            // lconfcontra
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(332, 391);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(202, 19);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Confirmar Contraseña (*)";
+            this.lconfcontra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lconfcontra.AutoSize = true;
+            this.lconfcontra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lconfcontra.Location = new System.Drawing.Point(332, 391);
+            this.lconfcontra.Name = "lconfcontra";
+            this.lconfcontra.Size = new System.Drawing.Size(202, 19);
+            this.lconfcontra.TabIndex = 35;
+            this.lconfcontra.Text = "Confirmar Contraseña (*)";
             // 
             // Tconfcontra
             // 
@@ -294,16 +303,16 @@
             this.Tconfcontra.UseSystemPasswordChar = true;
             this.Tconfcontra.TextChanged += new System.EventHandler(this.Tconfcontra_TextChanged);
             // 
-            // label9
+            // lcontra
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 391);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 19);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Contraseña (*)";
+            this.lcontra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lcontra.AutoSize = true;
+            this.lcontra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lcontra.Location = new System.Drawing.Point(30, 391);
+            this.lcontra.Name = "lcontra";
+            this.lcontra.Size = new System.Drawing.Size(121, 19);
+            this.lcontra.TabIndex = 33;
+            this.lcontra.Text = "Contraseña (*)";
             // 
             // Tpass
             // 
@@ -330,32 +339,6 @@
             this.label10.Size = new System.Drawing.Size(401, 56);
             this.label10.TabIndex = 36;
             this.label10.Text = "Agregar Usuario";
-            // 
-            // bver
-            // 
-            this.bver.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bver.FlatAppearance.BorderSize = 0;
-            this.bver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bver.Image = ((System.Drawing.Image)(resources.GetObject("bver.Image")));
-            this.bver.Location = new System.Drawing.Point(575, 416);
-            this.bver.Name = "bver";
-            this.bver.Size = new System.Drawing.Size(26, 29);
-            this.bver.TabIndex = 37;
-            this.bver.UseVisualStyleBackColor = true;
-            this.bver.Click += new System.EventHandler(this.bver_Click);
-            // 
-            // bnover
-            // 
-            this.bnover.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bnover.FlatAppearance.BorderSize = 0;
-            this.bnover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bnover.Image = ((System.Drawing.Image)(resources.GetObject("bnover.Image")));
-            this.bnover.Location = new System.Drawing.Point(575, 416);
-            this.bnover.Name = "bnover";
-            this.bnover.Size = new System.Drawing.Size(26, 29);
-            this.bnover.TabIndex = 38;
-            this.bnover.UseVisualStyleBackColor = true;
-            this.bnover.Click += new System.EventHandler(this.bnover_Click);
             // 
             // enombre
             // 
@@ -450,17 +433,6 @@
             this.bcancelar.UseVisualStyleBackColor = false;
             this.bcancelar.Click += new System.EventHandler(this.bcancelar_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(617, 138);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(288, 256);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
-            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -532,10 +504,130 @@
             this.dgusuarios.AllowUserToAddRows = false;
             this.dgusuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgusuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgusuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.editar,
+            this.eliminar});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgusuarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgusuarios.Location = new System.Drawing.Point(4, 587);
             this.dgusuarios.Name = "dgusuarios";
             this.dgusuarios.Size = new System.Drawing.Size(930, 273);
             this.dgusuarios.TabIndex = 50;
+            this.dgusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgusuarios_CellClick);
+            this.dgusuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgusuarios_CellContentClick);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Editar";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.HeaderText = "Editar";
+            this.dataGridViewImageColumn3.Image = global::CapaPresentacion.Properties.Resources.lapiz2;
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            // 
+            // dataGridViewImageColumn4
+            // 
+            this.dataGridViewImageColumn4.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn4.Image = global::CapaPresentacion.Properties.Resources.borrarr2;
+            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(617, 138);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(288, 256);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bver
+            // 
+            this.bver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bver.FlatAppearance.BorderSize = 0;
+            this.bver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bver.Image = ((System.Drawing.Image)(resources.GetObject("bver.Image")));
+            this.bver.Location = new System.Drawing.Point(575, 416);
+            this.bver.Name = "bver";
+            this.bver.Size = new System.Drawing.Size(26, 29);
+            this.bver.TabIndex = 37;
+            this.bver.UseVisualStyleBackColor = true;
+            this.bver.Click += new System.EventHandler(this.bver_Click);
+            // 
+            // bnover
+            // 
+            this.bnover.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bnover.FlatAppearance.BorderSize = 0;
+            this.bnover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bnover.Image = ((System.Drawing.Image)(resources.GetObject("bnover.Image")));
+            this.bnover.Location = new System.Drawing.Point(575, 416);
+            this.bnover.Name = "bnover";
+            this.bnover.Size = new System.Drawing.Size(26, 29);
+            this.bnover.TabIndex = 38;
+            this.bnover.UseVisualStyleBackColor = true;
+            this.bnover.Click += new System.EventHandler(this.bnover_Click);
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.Image = global::CapaPresentacion.Properties.Resources.lapiz2;
+            this.editar.Name = "editar";
+            this.editar.Width = 40;
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = global::CapaPresentacion.Properties.Resources.borrarr2;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.Width = 40;
+            // 
+            // beditar
+            // 
+            this.beditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.beditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.beditar.FlatAppearance.BorderSize = 0;
+            this.beditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.beditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beditar.ForeColor = System.Drawing.Color.White;
+            this.beditar.Location = new System.Drawing.Point(617, 403);
+            this.beditar.Name = "beditar";
+            this.beditar.Size = new System.Drawing.Size(141, 48);
+            this.beditar.TabIndex = 51;
+            this.beditar.Text = "Editar";
+            this.beditar.UseVisualStyleBackColor = false;
+            this.beditar.Visible = false;
+            this.beditar.Click += new System.EventHandler(this.beditar_Click);
+            // 
+            // bcancelaredicion
+            // 
+            this.bcancelaredicion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bcancelaredicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.bcancelaredicion.FlatAppearance.BorderSize = 0;
+            this.bcancelaredicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bcancelaredicion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bcancelaredicion.ForeColor = System.Drawing.Color.White;
+            this.bcancelaredicion.Location = new System.Drawing.Point(764, 404);
+            this.bcancelaredicion.Name = "bcancelaredicion";
+            this.bcancelaredicion.Size = new System.Drawing.Size(141, 48);
+            this.bcancelaredicion.TabIndex = 52;
+            this.bcancelaredicion.Text = "Cancelar";
+            this.bcancelaredicion.UseVisualStyleBackColor = false;
+            this.bcancelaredicion.Visible = false;
+            this.bcancelaredicion.Click += new System.EventHandler(this.bcancelaredicion_Click);
             // 
             // Fagregar_usuario
             // 
@@ -543,6 +635,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(946, 1061);
+            this.Controls.Add(this.bcancelaredicion);
+            this.Controls.Add(this.beditar);
             this.Controls.Add(this.dgusuarios);
             this.Controls.Add(this.bbuscar);
             this.Controls.Add(this.textBox1);
@@ -556,9 +650,9 @@
             this.Controls.Add(this.tdomicilio);
             this.Controls.Add(this.bver);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lconfcontra);
             this.Controls.Add(this.Tconfcontra);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lcontra);
             this.Controls.Add(this.Tpass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Tuser);
@@ -591,8 +685,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.etipouser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.econtra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.econfcontra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgusuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -616,9 +710,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox Tuser;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lconfcontra;
         private System.Windows.Forms.TextBox Tconfcontra;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lcontra;
         private System.Windows.Forms.TextBox Tpass;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button bver;
@@ -643,5 +737,13 @@
         private System.Windows.Forms.Button bbuscar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgusuarios;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn editar;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
+        private System.Windows.Forms.Button beditar;
+        private System.Windows.Forms.Button bcancelaredicion;
     }
 }
