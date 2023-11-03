@@ -63,7 +63,11 @@
             this.eprecio = new System.Windows.Forms.ErrorProvider(this.components);
             this.estock = new System.Windows.Forms.ErrorProvider(this.components);
             this.dgproductos = new System.Windows.Forms.DataGridView();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.tstock = new System.Windows.Forms.TextBox();
+            this.cancelaredicion = new System.Windows.Forms.Button();
+            this.beditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).BeginInit();
             this.panel1.SuspendLayout();
@@ -229,6 +233,7 @@
             this.bcancelar.TabIndex = 78;
             this.bcancelar.Text = "Cancelar";
             this.bcancelar.UseVisualStyleBackColor = false;
+            this.bcancelar.Click += new System.EventHandler(this.bcancelar_Click);
             // 
             // Bagregar
             // 
@@ -434,11 +439,36 @@
             // 
             // dgproductos
             // 
+            this.dgproductos.AllowUserToAddRows = false;
+            this.dgproductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgproductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgproductos.Location = new System.Drawing.Point(25, 522);
+            this.dgproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.editar,
+            this.eliminar});
+            this.dgproductos.Location = new System.Drawing.Point(25, 513);
             this.dgproductos.Name = "dgproductos";
+            this.dgproductos.ReadOnly = true;
             this.dgproductos.Size = new System.Drawing.Size(833, 132);
             this.dgproductos.TabIndex = 124;
+            this.dgproductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproductos_CellClick);
+            this.dgproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproductos_CellContentClick);
+            // 
+            // editar
+            // 
+            this.editar.FillWeight = 50.76143F;
+            this.editar.HeaderText = "Editar";
+            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            // 
+            // eliminar
+            // 
+            this.eliminar.FillWeight = 149.2386F;
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
             // 
             // tstock
             // 
@@ -453,12 +483,48 @@
             this.tstock.TabIndex = 125;
             this.tstock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tstock_KeyPress);
             // 
+            // cancelaredicion
+            // 
+            this.cancelaredicion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cancelaredicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.cancelaredicion.FlatAppearance.BorderSize = 0;
+            this.cancelaredicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelaredicion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelaredicion.ForeColor = System.Drawing.Color.White;
+            this.cancelaredicion.Location = new System.Drawing.Point(750, 258);
+            this.cancelaredicion.Name = "cancelaredicion";
+            this.cancelaredicion.Size = new System.Drawing.Size(109, 45);
+            this.cancelaredicion.TabIndex = 126;
+            this.cancelaredicion.Text = "Cancelar";
+            this.cancelaredicion.UseVisualStyleBackColor = false;
+            this.cancelaredicion.Visible = false;
+            this.cancelaredicion.Click += new System.EventHandler(this.cancelaredicion_Click);
+            // 
+            // beditar
+            // 
+            this.beditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.beditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.beditar.FlatAppearance.BorderSize = 0;
+            this.beditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.beditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beditar.ForeColor = System.Drawing.Color.White;
+            this.beditar.Location = new System.Drawing.Point(635, 258);
+            this.beditar.Name = "beditar";
+            this.beditar.Size = new System.Drawing.Size(109, 45);
+            this.beditar.TabIndex = 127;
+            this.beditar.Text = "Editar";
+            this.beditar.UseVisualStyleBackColor = false;
+            this.beditar.Visible = false;
+            this.beditar.Click += new System.EventHandler(this.beditar_Click);
+            // 
             // Fagregar_producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(914, 983);
+            this.Controls.Add(this.beditar);
+            this.Controls.Add(this.cancelaredicion);
             this.Controls.Add(this.tstock);
             this.Controls.Add(this.dgproductos);
             this.Controls.Add(this.panel1);
@@ -538,5 +604,9 @@
         private System.Windows.Forms.ErrorProvider estock;
         private System.Windows.Forms.DataGridView dgproductos;
         private System.Windows.Forms.TextBox tstock;
+        private System.Windows.Forms.DataGridViewImageColumn editar;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private System.Windows.Forms.Button beditar;
+        private System.Windows.Forms.Button cancelaredicion;
     }
 }

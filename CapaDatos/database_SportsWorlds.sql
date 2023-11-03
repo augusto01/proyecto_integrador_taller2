@@ -132,20 +132,22 @@ CREATE TABLE Producto
 (
   id_talle int not null,
   id_producto int not null primary key identity (0,1),
-  descripcion INT NOT NULL,
+  descripcion varchar(30) NOT NULL,
   precio_unitario FLOAT NOT NULL,
   stock INT NOT NULL,
   fecha_alta DATE NOT NULL,
   id_categoria INT NOT NULL,
   id_proveedor INT NOT NULL,
+  estado numeric
   FOREIGN KEY (id_talle) REFERENCES  Talle (id_talle),
   FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
   FOREIGN KEY (id_proveedor) REFERENCES Proveedor(id_proveedor)
 );
 
-select * from Producto
 
-INSERT INTO Producto( id_talle, descripcion, precio_unitario, stock, fecha_alta, id_categoria, id_proveedor) 
+select * from Proveedor
+
+INSERT INTO Producto(id_talle, descripcion, precio_unitario, stock, fecha_alta, id_categoria, id_proveedor) 
                             VALUES(1,'remera', 120,  10 , getdate(), 1, 1)
 go
 select * from Producto
@@ -165,6 +167,10 @@ drop table Venta_detalle
 
 go
 
+select Talle.descripcion as 'Talle',precio_unitario as 'Precio',stock as 'Stock',Categoria.descripcion as 'Categoria',pro.nombre as 'Proveedor' from Producto
+inner join Proveedor pro on Producto.id_proveedor = pro.id_proveedor
+inner join Talle on Producto.id_talle = Talle.id_talle
+inner join Categoria on Producto.id_categoria = Categoria.id_categoria
 
 SELECT * FROM Venta_Detalle
 

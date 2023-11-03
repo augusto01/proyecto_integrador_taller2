@@ -42,11 +42,23 @@ namespace CapaNegocio
             this.fecha_alta = pfecha_alta;
             this.stock = pstock;
         }
+        public DataTable ConsultaDT()
+        {
+            CD_Producto mostrar_productos = new CD_Producto();
+            return mostrar_productos.ConsultaProductosDG();
+        }
+
 
         public void insertar_producto(string descripcion, float precio_unitario, int stock, int id_talle, int id_categoria, int id_proveedor)
         {
             CD_Producto producto = new CD_Producto();
             producto.insertar_producto( descripcion,  precio_unitario,  stock,  id_talle,  id_categoria,  id_proveedor);
+        }
+
+        public void modificar_producto(int id_producto, string descripcion, float precio_unitario, int stock, int id_talle, int id_categoria, int id_proveedor)
+        {
+            CD_Producto producto = new CD_Producto();
+            producto.modificar_producto(id_producto, descripcion, precio_unitario, stock, id_talle, id_categoria, id_proveedor);
         }
 
 

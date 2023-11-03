@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_usuario));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,6 +71,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bbuscar = new System.Windows.Forms.Button();
             this.dgusuarios = new System.Windows.Forms.DataGridView();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -78,8 +80,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bver = new System.Windows.Forms.Button();
             this.bnover = new System.Windows.Forms.Button();
-            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.beditar = new System.Windows.Forms.Button();
             this.bcancelaredicion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
@@ -507,20 +507,37 @@
             this.dgusuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editar,
             this.eliminar});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgusuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgusuarios.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgusuarios.Location = new System.Drawing.Point(4, 587);
             this.dgusuarios.Name = "dgusuarios";
+            this.dgusuarios.ReadOnly = true;
             this.dgusuarios.Size = new System.Drawing.Size(930, 273);
             this.dgusuarios.TabIndex = 50;
             this.dgusuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgusuarios_CellClick);
             this.dgusuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgusuarios_CellContentClick);
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.Image = global::CapaPresentacion.Properties.Resources.lapiz2;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Width = 40;
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = global::CapaPresentacion.Properties.Resources.borrarr2;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Width = 40;
             // 
             // dataGridViewImageColumn1
             // 
@@ -580,20 +597,6 @@
             this.bnover.TabIndex = 38;
             this.bnover.UseVisualStyleBackColor = true;
             this.bnover.Click += new System.EventHandler(this.bnover_Click);
-            // 
-            // editar
-            // 
-            this.editar.HeaderText = "Editar";
-            this.editar.Image = global::CapaPresentacion.Properties.Resources.lapiz2;
-            this.editar.Name = "editar";
-            this.editar.Width = 40;
-            // 
-            // eliminar
-            // 
-            this.eliminar.HeaderText = "Eliminar";
-            this.eliminar.Image = global::CapaPresentacion.Properties.Resources.borrarr2;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.Width = 40;
             // 
             // beditar
             // 

@@ -367,11 +367,11 @@ namespace CapaPresentacion.Administrador.Usuario
         }
         private void dgusuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            editar_accion();
-            int posicion;
-            if (this.dgusuarios.CurrentRow.Index != -1 && dgusuarios.Columns[e.ColumnIndex].Name == "editar")
+      
+            if (this.dgusuarios.CurrentRow.Index != -1 && dgusuarios.Columns[e.ColumnIndex].Index == 0)
             {
-
+                int posicion;
+                editar_accion();
                 posicion = dgusuarios.CurrentRow.Index;
                 tnombre.Text = dgusuarios[3, posicion].Value.ToString();
                 tapellido.Text = dgusuarios[4, posicion].Value.ToString();

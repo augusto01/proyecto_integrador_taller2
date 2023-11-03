@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Fable.Import.Browser;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion.Gerente.Producto
@@ -56,7 +57,12 @@ namespace CapaPresentacion.Gerente.Producto
         }
         
         private void Fagregar_producto_Load(object sender, EventArgs e)
+
         {
+            cbcategoria.SelectedItem = null;
+            cbtalle.SelectedItem = null;
+            cbproveedor.SelectedItem = null;
+            dgproductos.DataSource = producto.ConsultaDT();
             cargar_combo_box();
         }
 
@@ -119,7 +125,9 @@ namespace CapaPresentacion.Gerente.Producto
                 if (resultado == DialogResult.Yes)
                 {
                     producto.insertar_producto(tdesc.Text, float.Parse(tprecio.Text) , Int32.Parse(tstock.Text),cbtalle.SelectedIndex, cbcategoria.SelectedIndex, cbproveedor.SelectedIndex);
+                    dgproductos.DataSource = producto.ConsultaDT();
                     MessageBox.Show("El producto se agrego correctamente!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
 
 
                 }
@@ -127,7 +135,145 @@ namespace CapaPresentacion.Gerente.Producto
           
         }
 
-       
+        private void bcancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro quiere cancelar el regsitro?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                tdesc.Clear();
+                tprecio.Clear();
+                tstock.Clear();
+                cbcategoria.SelectedItem = null;
+                cbtalle.SelectedItem = null;
+                cbproveedor.SelectedItem = null;
+
+            }
+        }
+
+        private void cancelaredicion_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro quiere cancelar la edicion?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                tdesc.Clear();
+                tprecio.Clear();
+                tstock.Clear();
+                cbcategoria.SelectedItem = null;
+                cbtalle.SelectedItem = null;
+                cbproveedor.SelectedItem = null;
+                cancelaredicion.Visible = false;
+                beditar.Visible = false;
+                bcancelar.Visible = true;
+
+            }
+        }
+
+
+        private void editar_accion()
+        {
+            cancelaredicion.Visible = true;
+            beditar.Visible = true;
+            bcancelar.Visible = false;
+          
+
+        }
+        private void dgproductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgproductos.Columns[e.ColumnIndex].Name == "eliminar" && this.dgproductos.CurrentRow.Index != -1)
+            {
+                EliminarProducto();
+            }
+        }
+
+        private void EliminarProducto()
+        {
+            CN_PRODUCTO producto = new CN_PRODUCTO();
+            if (this.dgproductos.CurrentRow.Index != -1)
+            {
+               /* int posicion = dgproductos.CurrentRow.Index;
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el producto?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+
+                    producto.eliminar_producto(dgproductos[6, posicion].Value.ToString());
+                    this.dgusuarios.Rows.RemoveAt(this.dgusuarios.CurrentRow.Index);
+                }
+                else
+                {
+                    tnombre.Clear();
+                    tapellido.Clear();
+                    Tuser.Clear();
+                    tdni.Clear();
+                    Tcorreo.Clear();
+                    tdomicilio.Clear();
+                    Tcel.Clear();
+
+                    bcancelaredicion.Visible = false;
+                    beditar.Visible = false;
+                    bcancelar.Visible = true;
+                    bnover.Visible = true;
+                    bver.Visible = true;
+                    Tpass.Visible = true;
+                    Tconfcontra.Visible = true;
+                    lcontra.Visible = true;
+                    lconfcontra.Visible = true;
+                }*/
+
+            }
+        }
+
+        private void dgproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgproductos.CurrentRow.Index != -1 && dgproductos.Columns[e.ColumnIndex].Index == 0)
+            {
+                int posicion;
+                editar_accion();
+                posicion = dgproductos.CurrentRow.Index;
+                
+                tdesc.Text = dgproductos[3, posicion].Value.ToString();
+                cbtalle.Text = dgproductos[4, posicion].Value.ToString();
+                tprecio.Text = dgproductos[5, posicion].Value.ToString();
+                tstock.Text = dgproductos[6, posicion].Value.ToString();
+                cbcategoria.Text = dgproductos[7, posicion].Value.ToString();
+                cbproveedor.Text = dgproductos[8, posicion].Value.ToString();
+
+            }
+        }
+
+        private void beditar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro quiere editar el usuario?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                int posicion;
+                posicion = dgproductos.CurrentRow.Index;
+
+
+
+                CN_PRODUCTO producto = new CN_PRODUCTO();
+                    producto.modificar_producto(Int32.Parse((dgproductos[2, posicion].Value.ToString()) ), tdesc.Text, float.Parse(tprecio.Text) , Int32.Parse(tstock.Text) , cbtalle.SelectedIndex, cbcategoria.SelectedIndex, cbproveedor.SelectedIndex);
+                    dgproductos.DataSource = producto.ConsultaDT();
+                MessageBox.Show("El producto se edito correctamente!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tdesc.Clear();
+                tprecio.Clear();
+                tstock.Clear();
+                cbcategoria.SelectedItem = null;
+                cbtalle.SelectedItem = null;
+                cbproveedor.SelectedItem = null;
+                cancelaredicion.Visible = false;
+                beditar.Visible = false;
+                bcancelar.Visible = true;
+
+                beditar.Visible = false;
+         
+
+
+            }
+         
+            
+        }
+
+        
     }
 }
 
