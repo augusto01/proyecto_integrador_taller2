@@ -318,15 +318,15 @@ namespace CapaPresentacion.Administrador.Usuario
             CN_USUARIO usuario = new CN_USUARIO();  
             if (this.dgusuarios.CurrentRow.Index != -1)
             {
-                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el producto?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Yes)
                 {
                     this.dgusuarios.Rows.RemoveAt(this.dgusuarios.CurrentRow.Index);
-
+                    usuario.eliminar_usuario(tdni.Text);
                 }
 
             }
-            usuario.eliminar_usuario(tdni.Text);
+           
 
         }
 

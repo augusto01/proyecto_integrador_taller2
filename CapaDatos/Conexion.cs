@@ -75,7 +75,7 @@ namespace CapaDatos
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
-            string query = "update Usuario set estado_usuario = 0 where dni_usuario = "+dni+"";
+            string query = "update Usuario set estado_usuario = 0 WHERE dni_usuario = '"+dni+"'";
             SqlCommand cmd = new SqlCommand(query, conexion);
             flag = cmd.ExecuteNonQuery();
             conexion.Close();
