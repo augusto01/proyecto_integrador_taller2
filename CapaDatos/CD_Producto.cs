@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -26,6 +27,42 @@ namespace CapaDatos
             conexion.Close();
             return flag;
         }
+        public int cargar_talle(string descripcion_talle)
+        {
+            var conexion = GetConnection();
+            int flag = 0;
+            conexion.Open();
+            string query = "Insert into Talle (descripcion)values ('"+descripcion_talle+"')";
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            flag = cmd.ExecuteNonQuery();
+            conexion.Close();
+            return flag;
+        }
+
+        public int cargar_categoria(string descripcion_talle)
+        {
+            var conexion = GetConnection();
+            int flag = 0;
+            conexion.Open();
+            string query = "INSERT INTO Categoria(descripcion) values ('"+descripcion_talle+"')";
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            flag = cmd.ExecuteNonQuery();
+            conexion.Close();
+            return flag;
+        }
+
+
+
+
+
+        /* public void cargar_proveedores()
+         {
+             var conexion = GetConnection();
+             conexion.Open();
+             string query = "select * from Proveedor";
+         }*/
+
+
 
 
 

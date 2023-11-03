@@ -45,13 +45,22 @@ CREATE TABLE Proveedor
 (
   id_proveedor INT NOT NULL PRIMARY KEY IDENTITY (0,1),
   nombre VARCHAR(30) NOT NULL,
+  apellido VARCHAR(30) NOT NULL,
   razonsocial VARCHAR(30) NOT NULL,
   direccion VARCHAR(30) NOT NULL,
   correo VARCHAR(30) NOT NULL,
   nro_telefono INT NOT NULL,
+  dni int
+
+  CONSTRAINT UQ_DNI UNIQUE (dni)
 
 );
-go
+
+select * from Proveedor
+
+INSERT INTO Proveedor (nombre, apellido, razonsocial,direccion,correo,nro_telefono,dni) values ('jose','fernandez','josesito','independecia1234','user@gmail.com',1234,2508201)
+INSERT INTO Proveedor (nombre, apellido, razonsocial,direccion,correo,nro_telefono,dni) values ('jose','fernandez','josesito','independecia1234','user@gmail.com',1234,2508202)
+INSERT INTO Proveedor (nombre, apellido, razonsocial,direccion,correo,nro_telefono,dni) values ('jose','fernandez','josesito','independecia1234','user@gmail.com',1234,2508203)
 
 SELECT * FROM Venta_detalle
 CREATE TABLE Categoria
@@ -92,7 +101,7 @@ go
  INSERT INTO Usuario (nombre_usuario,apellido_usuario,username,dni_usuario,email_usuario,domicilio_usuario,celular_usuario,pass,fecha_creacion,estado_usuario,id_tipo_usuario) VALUES ('Micaela','Giovino','mica1',1234,'user2@gmail.com','laprida1234',37771923,'1234',getdate(),1,2)
 
  select * from Usuario
-
+ drop table Venta_cabecera
 
 CREATE TABLE Venta_cabecera
 (
@@ -100,6 +109,7 @@ CREATE TABLE Venta_cabecera
   id_usuario INT NOT NULL,
   id_cliente INT NOT NULL,
   id_tipo_pago INT NOT NULL,
+  fecha_Venta date not null, 
   PRIMARY KEY (id_cabecera),
   FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),
   FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
@@ -127,6 +137,8 @@ CREATE TABLE Producto
   FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
   FOREIGN KEY (id_proveedor) REFERENCES Proveedor(id_proveedor)
 );
+
+select * from Producto
 go
 
 CREATE TABLE Venta_detalle

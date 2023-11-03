@@ -45,21 +45,29 @@
             this.nustock = new System.Windows.Forms.NumericUpDown();
             this.bcancelar = new System.Windows.Forms.Button();
             this.Bagregar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bagregartalle = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tdesc = new System.Windows.Forms.TextBox();
             this.edesctalle = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.bagregarcategoria = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.tcategoria = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ecategoria = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nustock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -136,7 +144,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 435);
+            this.label1.Location = new System.Drawing.Point(7, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 19);
             this.label1.TabIndex = 72;
@@ -149,7 +157,7 @@
             this.tdesctalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tdesctalle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tdesctalle.ForeColor = System.Drawing.Color.White;
-            this.tdesctalle.Location = new System.Drawing.Point(25, 457);
+            this.tdesctalle.Location = new System.Drawing.Point(11, 86);
             this.tdesctalle.Name = "tdesctalle";
             this.tdesctalle.Size = new System.Drawing.Size(214, 24);
             this.tdesctalle.TabIndex = 71;
@@ -242,44 +250,33 @@
             this.Bagregar.UseVisualStyleBackColor = false;
             this.Bagregar.Click += new System.EventHandler(this.Bagregar_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(635, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 147);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 113;
-            this.pictureBox1.TabStop = false;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(21, 385);
+            this.label4.Location = new System.Drawing.Point(7, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 19);
             this.label4.TabIndex = 114;
             this.label4.Text = "Agregar Talle";
             // 
-            // button1
+            // bagregartalle
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(25, 499);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 33);
-            this.button1.TabIndex = 115;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bagregartalle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bagregartalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.bagregartalle.FlatAppearance.BorderSize = 0;
+            this.bagregartalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregartalle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagregartalle.ForeColor = System.Drawing.Color.White;
+            this.bagregartalle.Location = new System.Drawing.Point(11, 128);
+            this.bagregartalle.Name = "bagregartalle";
+            this.bagregartalle.Size = new System.Drawing.Size(109, 33);
+            this.bagregartalle.TabIndex = 115;
+            this.bagregartalle.Text = "Agregar";
+            this.bagregartalle.UseVisualStyleBackColor = false;
+            this.bagregartalle.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -310,28 +307,28 @@
             this.edesctalle.ContainerControl = this;
             this.edesctalle.Icon = ((System.Drawing.Icon)(resources.GetObject("edesctalle.Icon")));
             // 
-            // button2
+            // bagregarcategoria
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(316, 499);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 33);
-            this.button2.TabIndex = 120;
-            this.button2.Text = "Agregar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bagregarcategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bagregarcategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.bagregarcategoria.FlatAppearance.BorderSize = 0;
+            this.bagregarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregarcategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagregarcategoria.ForeColor = System.Drawing.Color.White;
+            this.bagregarcategoria.Location = new System.Drawing.Point(472, 499);
+            this.bagregarcategoria.Name = "bagregarcategoria";
+            this.bagregarcategoria.Size = new System.Drawing.Size(109, 33);
+            this.bagregarcategoria.TabIndex = 120;
+            this.bagregarcategoria.Text = "Agregar";
+            this.bagregarcategoria.UseVisualStyleBackColor = false;
+            this.bagregarcategoria.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(312, 435);
+            this.label8.Location = new System.Drawing.Point(468, 435);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 19);
             this.label8.TabIndex = 119;
@@ -344,7 +341,7 @@
             this.tcategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tcategoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcategoria.ForeColor = System.Drawing.Color.White;
-            this.tcategoria.Location = new System.Drawing.Point(316, 457);
+            this.tcategoria.Location = new System.Drawing.Point(472, 457);
             this.tcategoria.Name = "tcategoria";
             this.tcategoria.Size = new System.Drawing.Size(214, 24);
             this.tcategoria.TabIndex = 118;
@@ -355,7 +352,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(312, 385);
+            this.label9.Location = new System.Drawing.Point(472, 385);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(160, 19);
             this.label9.TabIndex = 121;
@@ -363,7 +360,62 @@
             // 
             // ecategoria
             // 
+            this.ecategoria.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ecategoria.ContainerControl = this;
+            this.ecategoria.Icon = ((System.Drawing.Icon)(resources.GetObject("ecategoria.Icon")));
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.bagregartalle);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tdesctalle);
+            this.panel1.Location = new System.Drawing.Point(14, 371);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(421, 188);
+            this.panel1.TabIndex = 122;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Location = new System.Drawing.Point(455, 371);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(388, 188);
+            this.panel2.TabIndex = 123;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.boton_agregar;
+            this.pictureBox2.Location = new System.Drawing.Point(269, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(149, 184);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 116;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(635, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 147);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 113;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.boton_agregar;
+            this.pictureBox3.Location = new System.Drawing.Point(237, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(149, 184);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 117;
+            this.pictureBox3.TabStop = false;
             // 
             // Fagregar_producto
             // 
@@ -371,14 +423,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(914, 983);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bagregarcategoria);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tcategoria);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tdesc);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bcancelar);
             this.Controls.Add(this.Bagregar);
@@ -393,16 +444,20 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tprecio);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tdesctalle);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fagregar_producto";
             this.Text = "Fagregar_producto";
             this.Load += new System.EventHandler(this.Fagregar_producto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nustock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,14 +481,18 @@
         private System.Windows.Forms.Button bcancelar;
         private System.Windows.Forms.Button Bagregar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bagregartalle;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tdesc;
         private System.Windows.Forms.ErrorProvider edesctalle;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bagregarcategoria;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tcategoria;
         private System.Windows.Forms.ErrorProvider ecategoria;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

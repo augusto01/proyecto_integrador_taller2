@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static Fable.Import.JS;
 
 namespace CapaPresentacion.Vistas.Proveedor
 {
@@ -18,6 +20,9 @@ namespace CapaPresentacion.Vistas.Proveedor
             InitializeComponent();
         }
 
+        CN_PROVEEDOR proveedor = new CN_PROVEEDOR();
+
+        
         bool banderaDNI = false;
         bool banderaEmail = false;
 
@@ -170,8 +175,11 @@ namespace CapaPresentacion.Vistas.Proveedor
 
                     if (resultado == DialogResult.Yes)
                     {
-                        //si la respuesta es si cargamos el usuario 
-                        MessageBox.Show("Exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //si la respuesta es si cargamos el proveedor
+                        proveedor.insertar_proveedor(tnombre.Text, tapellido.Text, Tcorreo.Text, Int32.Parse(tdni.Text) , tdomicilio.Text, trazonsocial.Text, Int32.Parse(Tcel.Text) );
+
+
+                        MessageBox.Show("El proveedor: " + tnombre.Text + " " + tapellido.Text + " se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                         LimpiarErrores();
 

@@ -269,5 +269,8 @@
   <ItemGroup>
     <None Include="Resources\borrarr.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-agregar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

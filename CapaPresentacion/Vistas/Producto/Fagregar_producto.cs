@@ -16,6 +16,8 @@ namespace CapaPresentacion.Gerente.Producto
     {
 
         CN_PRODUCTO productonuevo = new CN_PRODUCTO();
+        CN_CATEGORIA categorianueva = new CN_CATEGORIA();
+        CN_TALLE nuevotalle = new CN_TALLE();
         
         public Fagregar_producto()
         {
@@ -37,7 +39,8 @@ namespace CapaPresentacion.Gerente.Producto
             else
             {
 
-                //alta
+               nuevotalle.insertar_talle(tdesctalle.Text);
+               MessageBox.Show("El talle : " +tdesctalle.Text+" se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -49,7 +52,8 @@ namespace CapaPresentacion.Gerente.Producto
             }
             else
             {
-                //alta
+                categorianueva.insertar_categoria(tcategoria.Text);
+                MessageBox.Show("La categoria : " + tcategoria.Text + " se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

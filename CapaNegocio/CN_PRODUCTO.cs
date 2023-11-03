@@ -2,7 +2,9 @@
 using CapaEntidad;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +30,7 @@ namespace CapaNegocio
 
        
 
-        public void CN_Usuario( int pid_talle, int pid_categoria, string pdescripcion, int pid_proveedor, float pprecio_unitario, DateTime pfecha_alta, int pstock)
+        public void CN_Producto( int pid_talle, int pid_categoria, string pdescripcion, int pid_proveedor, float pprecio_unitario, DateTime pfecha_alta, int pstock)
         {
         
             this.id_talle = pid_talle;
@@ -48,4 +50,47 @@ namespace CapaNegocio
 
 
     }
+
+    public class CN_TALLE
+    {
+        public int id_talle { get; set; }
+
+        public string descripcion_talle { get; set; }
+
+        public void CN_Talle(string descripcion_talle)
+        {
+            this.descripcion_talle = descripcion_talle;
+        }
+
+        public void insertar_talle(string descripcion_talle)
+        {
+            CD_Producto talle = new CD_Producto();
+            talle.cargar_talle(descripcion_talle);
+        }
+    }
+
+    public class CN_CATEGORIA
+    {
+
+        public int id_categoria { get; set; }
+
+        public string descripcion_categoria { get; set; }
+
+        public void CN_Categoria(string descripcion_categoria)
+        {
+            this.descripcion_categoria = descripcion_categoria;
+        }
+
+        public void insertar_categoria(string descripcion_categoria)
+        {
+            CD_Producto talle = new CD_Producto();
+            talle.cargar_categoria(descripcion_categoria);
+        }
+
+    }
+
+
+
+
+
 }
