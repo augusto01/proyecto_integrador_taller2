@@ -59,11 +59,12 @@ namespace CapaPresentacion.Gerente.Producto
         private void Fagregar_producto_Load(object sender, EventArgs e)
 
         {
+           
+            dgproductos.DataSource = producto.ConsultaDT();
+            cargar_combo_box();
             cbcategoria.SelectedItem = null;
             cbtalle.SelectedItem = null;
             cbproveedor.SelectedItem = null;
-            dgproductos.DataSource = producto.ConsultaDT();
-            cargar_combo_box();
         }
 
         private void button1_Click(object sender, EventArgs e)
