@@ -39,6 +39,10 @@ namespace CapaPresentacion.Gerente.Producto
         }
         public void cargar_combo_box()
         {
+            cbcategoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbproveedor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbtalle.DropDownStyle = ComboBoxStyle.DropDownList;
+
             //categoria
             categoria.obtener_categorias();
             List<string> datos = categoria.obtener_categorias();

@@ -68,7 +68,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbuscarobjeto = new System.Windows.Forms.TextBox();
             this.bbuscar = new System.Windows.Forms.Button();
             this.dgusuarios = new System.Windows.Forms.DataGridView();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -476,13 +476,14 @@
             this.label13.TabIndex = 47;
             this.label13.Text = "Buscar por";
             // 
-            // textBox1
+            // tbuscarobjeto
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(290, 547);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 48;
+            this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbuscarobjeto.Location = new System.Drawing.Point(290, 547);
+            this.tbuscarobjeto.Name = "tbuscarobjeto";
+            this.tbuscarobjeto.Size = new System.Drawing.Size(137, 20);
+            this.tbuscarobjeto.TabIndex = 48;
+            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // bbuscar
             // 
@@ -498,6 +499,7 @@
             this.bbuscar.TabIndex = 49;
             this.bbuscar.Text = "Buscar";
             this.bbuscar.UseVisualStyleBackColor = false;
+            this.bbuscar.Click += new System.EventHandler(this.bbuscar_Click);
             // 
             // dgusuarios
             // 
@@ -642,7 +644,7 @@
             this.Controls.Add(this.beditar);
             this.Controls.Add(this.dgusuarios);
             this.Controls.Add(this.bbuscar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbuscarobjeto);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label12);
@@ -738,7 +740,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button bbuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbuscarobjeto;
         private System.Windows.Forms.DataGridView dgusuarios;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;

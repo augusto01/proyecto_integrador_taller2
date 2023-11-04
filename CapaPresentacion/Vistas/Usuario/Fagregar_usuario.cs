@@ -456,5 +456,36 @@ namespace CapaPresentacion.Administrador.Usuario
             lcontra.Visible = true;
             lconfcontra.Visible = true;
         }
+
+        private void bbuscar_Click(object sender, EventArgs e)
+        {
+            string valorBuscado =""+tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgusuarios.Rows)
+            {
+                if (fila.Cells["username"].Value != null && fila.Cells["username"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                dgusuarios.CurrentCell = dgusuarios[0, rowIndex]; // Esto seleccionará la fila encontrada
+            }
+            else
+            {
+                MessageBox.Show("El usuario no existe", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
