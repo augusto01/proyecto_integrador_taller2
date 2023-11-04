@@ -69,7 +69,7 @@ namespace CapaNegocio
 
         }
 
-        public int eliminar_usuario(string dni)
+        public int eliminar_usuario(int dni)
         {
             CD_Usuario usuario = new CD_Usuario();
             return usuario.eliminar_usuario(dni);

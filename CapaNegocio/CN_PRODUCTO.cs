@@ -61,6 +61,12 @@ namespace CapaNegocio
             producto.modificar_producto(id_producto, descripcion, precio_unitario, stock, id_talle, id_categoria, id_proveedor);
         }
 
+        public void eliminar_producto(int id_producto)
+        {
+            CD_Producto producto = new CD_Producto();
+            producto.eliminar_producto(id_producto);
+        }
+
 
     }
 

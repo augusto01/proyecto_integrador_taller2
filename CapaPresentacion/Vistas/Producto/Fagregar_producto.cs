@@ -190,34 +190,27 @@ namespace CapaPresentacion.Gerente.Producto
             CN_PRODUCTO producto = new CN_PRODUCTO();
             if (this.dgproductos.CurrentRow.Index != -1)
             {
-               /* int posicion = dgproductos.CurrentRow.Index;
+                int posicion = dgproductos.CurrentRow.Index;
                 DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el producto?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Yes)
                 {
 
-                    producto.eliminar_producto(dgproductos[6, posicion].Value.ToString());
-                    this.dgusuarios.Rows.RemoveAt(this.dgusuarios.CurrentRow.Index);
+                    producto.eliminar_producto(Int32.Parse (dgproductos[2, posicion].Value.ToString()) );
+                    this.dgproductos.Rows.RemoveAt(this.dgproductos.CurrentRow.Index);
                 }
                 else
                 {
-                    tnombre.Clear();
-                    tapellido.Clear();
-                    Tuser.Clear();
-                    tdni.Clear();
-                    Tcorreo.Clear();
-                    tdomicilio.Clear();
-                    Tcel.Clear();
-
-                    bcancelaredicion.Visible = false;
+                    tdesc.Clear();
+                    tprecio.Clear();
+                    tstock.Clear();
+                    cbcategoria.SelectedItem = null;
+                    cbtalle.SelectedItem = null; 
+                    cbproveedor.SelectedItem = null;
+                     cancelaredicion.Visible = false;
                     beditar.Visible = false;
                     bcancelar.Visible = true;
-                    bnover.Visible = true;
-                    bver.Visible = true;
-                    Tpass.Visible = true;
-                    Tconfcontra.Visible = true;
-                    lcontra.Visible = true;
-                    lconfcontra.Visible = true;
-                }*/
+                 
+                }
 
             }
         }

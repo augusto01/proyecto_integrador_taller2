@@ -70,7 +70,7 @@ namespace CapaDatos
 
         }
 
-        public int eliminar_usuario(string dni)
+        public int eliminar_usuario(int dni)
         {
             var conexion = GetConnection();
             int flag = 0;

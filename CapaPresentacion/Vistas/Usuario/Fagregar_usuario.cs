@@ -323,7 +323,7 @@ namespace CapaPresentacion.Administrador.Usuario
                 if (resultado == DialogResult.Yes)
                 {                  
                       
-                    usuario.eliminar_usuario(dgusuarios[6, posicion].Value.ToString());
+                    usuario.eliminar_usuario(Int32.Parse (dgusuarios[6, posicion].Value.ToString()) );
                     this.dgusuarios.Rows.RemoveAt(this.dgusuarios.CurrentRow.Index);
                 }
                 else

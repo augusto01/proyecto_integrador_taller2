@@ -114,7 +114,7 @@
             this.cbcategoria.Location = new System.Drawing.Point(25, 271);
             this.cbcategoria.Name = "cbcategoria";
             this.cbcategoria.Size = new System.Drawing.Size(214, 32);
-            this.cbcategoria.TabIndex = 75;
+            this.cbcategoria.TabIndex = 120;
             // 
             // label6
             // 
@@ -148,7 +148,7 @@
             this.tprecio.Location = new System.Drawing.Point(328, 129);
             this.tprecio.Name = "tprecio";
             this.tprecio.Size = new System.Drawing.Size(216, 24);
-            this.tprecio.TabIndex = 72;
+            this.tprecio.TabIndex = 117;
             // 
             // label1
             // 
@@ -194,7 +194,7 @@
             this.cbtalle.Location = new System.Drawing.Point(328, 191);
             this.cbtalle.Name = "cbtalle";
             this.cbtalle.Size = new System.Drawing.Size(214, 32);
-            this.cbtalle.TabIndex = 74;
+            this.cbtalle.TabIndex = 119;
             // 
             // label12
             // 
@@ -217,7 +217,7 @@
             this.cbproveedor.Location = new System.Drawing.Point(328, 271);
             this.cbproveedor.Name = "cbproveedor";
             this.cbproveedor.Size = new System.Drawing.Size(214, 32);
-            this.cbproveedor.TabIndex = 76;
+            this.cbproveedor.TabIndex = 121;
             // 
             // bcancelar
             // 
@@ -246,7 +246,7 @@
             this.Bagregar.Location = new System.Drawing.Point(635, 258);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(109, 45);
-            this.Bagregar.TabIndex = 77;
+            this.Bagregar.TabIndex = 122;
             this.Bagregar.Text = "Agregar";
             this.Bagregar.UseVisualStyleBackColor = false;
             this.Bagregar.Click += new System.EventHandler(this.Bagregar_Click);
@@ -381,7 +381,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.boton_agregar;
-            this.pictureBox2.Location = new System.Drawing.Point(269, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(272, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(149, 184);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -480,7 +480,7 @@
             this.tstock.Location = new System.Drawing.Point(25, 195);
             this.tstock.Name = "tstock";
             this.tstock.Size = new System.Drawing.Size(214, 24);
-            this.tstock.TabIndex = 125;
+            this.tstock.TabIndex = 118;
             this.tstock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tstock_KeyPress);
             // 
             // cancelaredicion
@@ -494,7 +494,7 @@
             this.cancelaredicion.Location = new System.Drawing.Point(750, 258);
             this.cancelaredicion.Name = "cancelaredicion";
             this.cancelaredicion.Size = new System.Drawing.Size(109, 45);
-            this.cancelaredicion.TabIndex = 126;
+            this.cancelaredicion.TabIndex = 123;
             this.cancelaredicion.Text = "Cancelar";
             this.cancelaredicion.UseVisualStyleBackColor = false;
             this.cancelaredicion.Visible = false;

@@ -34,7 +34,7 @@ namespace CapaDatos
                         {
 
                             UserLoginCache.id_usuario = reader.GetInt32(0);
-                            UserLoginCache.nombre = reader.GetString(1);                                      //obtenemos los valores del usuario actual
+                            UserLoginCache.nombre = reader.GetString(1);      //obtenemos los valores del usuario actual
                             UserLoginCache.apellido = reader.GetString(2);
                             UserLoginCache.username = reader.GetString(3);
                             UserLoginCache.dni = reader.GetInt32(4);
