@@ -31,7 +31,7 @@ namespace CapaEntidad
 
        public  int estado { get; set; }
 
-        public CE_Usuario(int id_tipo_usuario, string nombre, string apellido, string correo, int estado, DateTime fecha_creacion, int dni, string username, string pass, int cel, string domicilio)
+        public  CE_Usuario(int id_tipo_usuario, string nombre, string apellido, string correo, int estado, DateTime fecha_creacion, int dni, string username, string pass, int cel, string domicilio)
         {
             this.id_tipo_usuario = id_tipo_usuario;
             this.nombre = nombre.Trim().ToString();

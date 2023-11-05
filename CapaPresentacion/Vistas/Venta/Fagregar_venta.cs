@@ -17,8 +17,8 @@ namespace CapaPresentacion.Vistas.Venta
 {
     public partial class Fagregar_venta : Form
     {
+        CN_VENTA cliente = new CN_VENTA();
 
-        UserLoginCache usuario = new UserLoginCache();
         public Fagregar_venta()
         {
             InitializeComponent();
@@ -48,6 +48,15 @@ namespace CapaPresentacion.Vistas.Venta
 
             //tnombre.Text = usuario.nombre;
             tfecha.Text = DateTime.Today.ToString();
+            tnombrevendedor.Text = CapaEntidad.Cache.UserLoginCache.nombre;
+            tidvendedor.Text = CapaEntidad.Cache.UserLoginCache.id_usuario.ToString();
+            //cargar combobox clientes
+
+            cliente.obtener_clientes();
+            List<string> datos_clientes = cliente.obtener_clientes();
+            cbcliente.DataSource = datos_clientes;
+            cbcliente.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void Fagregar_venta_Load(object sender, EventArgs e)

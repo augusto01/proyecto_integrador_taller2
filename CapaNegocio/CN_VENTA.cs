@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
+    
     public class CN_VENTA
     {
 
@@ -20,5 +22,15 @@ namespace CapaNegocio
 
         public int id_producto { get; set; }
 
+        public List<string> obtener_clientes()
+        {
+            CD_Venta datos = new CD_Venta();
+            return datos.obtener_clientes();
+        }
+
     }
+    
+
+    
+
 }

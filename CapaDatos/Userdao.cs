@@ -60,6 +60,10 @@ namespace CapaDatos
 
         }
 
+        public void datos_usuario()
+        {
+
+        }
 
 
     }
