@@ -27,7 +27,16 @@ namespace CapaNegocio
             CD_Venta datos = new CD_Venta();
             return datos.obtener_clientes();
         }
-
+        public List<string> obtener_productos()
+        {
+            CD_Venta productos = new CD_Venta();
+            return productos.obtener_productos();
+        }
+        public int ObtenerSiguienteNumeroFactura()
+        {
+            CD_Venta datos = new CD_Venta();
+            return datos.ObtenerUltimoNumeroFactura();
+        }
     }
     
 

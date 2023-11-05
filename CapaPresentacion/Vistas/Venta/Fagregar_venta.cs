@@ -18,6 +18,7 @@ namespace CapaPresentacion.Vistas.Venta
     public partial class Fagregar_venta : Form
     {
         CN_VENTA cliente = new CN_VENTA();
+        CN_PRODUCTO productoventa = new CN_PRODUCTO();
 
         public Fagregar_venta()
         {
@@ -56,12 +57,23 @@ namespace CapaPresentacion.Vistas.Venta
             List<string> datos_clientes = cliente.obtener_clientes();
             cbcliente.DataSource = datos_clientes;
             cbcliente.DropDownStyle = ComboBoxStyle.DropDownList;
+            cliente.obtener_clientes();
+
+            //cargar combobox productos
+            List<string> productos = cliente.obtener_productos();
+            cbproducto.DataSource = productos;
+            cbproducto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbproducto.Text = cliente.obtener_productos().ToString();
+
+
+            tidfactura.Text =  cliente.ObtenerSiguienteNumeroFactura().ToString();
+            
 
         }
 
         private void Fagregar_venta_Load(object sender, EventArgs e)
         {
-            //inicializar_cabecera(usuario);
+            dgproductos.DataSource = productoventa.ConsultaDT();
         }
 
        
