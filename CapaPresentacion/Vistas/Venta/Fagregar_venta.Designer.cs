@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_venta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tfecha = new System.Windows.Forms.TextBox();
             this.cbcliente = new System.Windows.Forms.ComboBox();
@@ -43,7 +44,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.banadir = new System.Windows.Forms.Button();
             this.dgproductos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tid = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tnombre = new System.Windows.Forms.TextBox();
@@ -63,6 +63,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).BeginInit();
@@ -246,11 +247,6 @@
             this.dgproductos.Name = "dgproductos";
             this.dgproductos.Size = new System.Drawing.Size(866, 118);
             this.dgproductos.TabIndex = 26;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Añadir";
-            this.Column1.Name = "Column1";
             // 
             // tid
             // 
@@ -458,6 +454,12 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "0.00 ";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Añadir";
+            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
+            this.Column1.Name = "Column1";
+            // 
             // Fagregar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,7 +520,6 @@
         private System.Windows.Forms.TextBox tnombre;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dgproductos;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.Button Bagregar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tfecha;
@@ -527,5 +528,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }
