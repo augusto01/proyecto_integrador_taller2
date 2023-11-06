@@ -426,6 +426,7 @@ namespace CapaPresentacion.Administrador.Usuario
                 {
                     CN_USUARIO usuario = new CN_USUARIO();
                     usuario.modificar_usuario(tnombre.Text, tapellido.Text, Tuser.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text), cbtipo.SelectedIndex);
+                    MessageBox.Show("El usuario se edito correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgusuarios.DataSource = usuario.ConsultaDT();
                 }
                 else
