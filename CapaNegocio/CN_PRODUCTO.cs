@@ -48,6 +48,11 @@ namespace CapaNegocio
             return mostrar_productos.ConsultaProductosDG();
         }
 
+        public DataTable consultar_precio()
+        {
+            CD_Producto consultar_precio = new CD_Producto();
+            return consultar_precio.ConsultaPreciosDG();
+        }
 
         public void insertar_producto(string descripcion, float precio_unitario, int stock, int id_talle, int id_categoria, int id_proveedor)
         {

@@ -128,6 +128,19 @@ namespace CapaDatos
 
         }
 
+        public DataTable ConsultaPreciosDG()
+        {
+            var conexion = GetConnection();
+            string consulta = "select precio_unitario From Producto";
+            SqlCommand cmd = new SqlCommand(consulta, conexion);
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+            conexion.Close();
+            return tabla;
+
+
+        }
 
 
 

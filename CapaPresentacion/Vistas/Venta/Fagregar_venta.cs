@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using CapaEntidad;
 using CapaEntidad.Cache;
 using CapaNegocio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion.Vistas.Venta
 {
@@ -19,6 +20,7 @@ namespace CapaPresentacion.Vistas.Venta
     {
         CN_VENTA cliente = new CN_VENTA();
         CN_PRODUCTO productoventa = new CN_PRODUCTO();
+
 
         public Fagregar_venta()
         {
@@ -48,7 +50,7 @@ namespace CapaPresentacion.Vistas.Venta
         {
 
             //tnombre.Text = usuario.nombre;
-            tfecha.Text = DateTime.Today.ToString();
+            tfecha.Text = DateTime.Today.Date.ToString("d");
             tnombrevendedor.Text = CapaEntidad.Cache.UserLoginCache.nombre;
             tidvendedor.Text = CapaEntidad.Cache.UserLoginCache.id_usuario.ToString();
             //cargar combobox clientes
@@ -59,15 +61,12 @@ namespace CapaPresentacion.Vistas.Venta
             cbcliente.DropDownStyle = ComboBoxStyle.DropDownList;
             cliente.obtener_clientes();
 
-            //cargar combobox productos
-            List<string> productos = cliente.obtener_productos();
-            cbproducto.DataSource = productos;
-            cbproducto.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbproducto.Text = cliente.obtener_productos().ToString();
-
-
+ 
             tidfactura.Text =  cliente.ObtenerSiguienteNumeroFactura().ToString();
-            
+            double precio;
+            lprecio.Text = (0).ToString("C");
+           
+
 
         }
 
@@ -76,6 +75,9 @@ namespace CapaPresentacion.Vistas.Venta
             dgproductos.DataSource = productoventa.ConsultaDT();
         }
 
-       
+        private void cbproducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
