@@ -146,7 +146,7 @@ namespace CapaPresentacion.Vistas.Venta
                 int cantidadValue;
                 if (int.TryParse(selectedRow.Cells[stockdisponible].Value.ToString(), out cantidadValue))
                 {
-                    int cantidad = (int)nucantidad.Value; ; // Establece aquí el valor límite que desees
+                    int cantidad = (int)nucantidad.Value;  // Establece aquí el valor límite que desees
 
                     // Realiza la validación
                     if (cantidad > stockdisponible)
