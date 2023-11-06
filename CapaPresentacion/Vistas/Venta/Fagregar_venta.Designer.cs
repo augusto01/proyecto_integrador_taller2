@@ -43,27 +43,28 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgproductos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tid = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tnombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nucantidad = new System.Windows.Forms.NumericUpDown();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.lprecio = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Bagregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgdetalle = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nucantidad)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdetalle)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -193,13 +194,14 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.dgproductos);
             this.groupBox2.Controls.Add(this.tid);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.tnombre);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Controls.Add(this.nucantidad);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(12, 175);
@@ -216,18 +218,13 @@
             this.dgproductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgproductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.dgproductos.Location = new System.Drawing.Point(18, 68);
             this.dgproductos.Name = "dgproductos";
-            this.dgproductos.Size = new System.Drawing.Size(866, 166);
+            this.dgproductos.ReadOnly = true;
+            this.dgproductos.Size = new System.Drawing.Size(791, 166);
             this.dgproductos.TabIndex = 26;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Añadir";
-            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
-            this.Column1.Name = "Column1";
+            this.dgproductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproductos_CellClick);
+            this.dgproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproductos_CellContentClick);
             // 
             // tid
             // 
@@ -277,19 +274,19 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Cantidad:";
             // 
-            // numericUpDown1
+            // nucantidad
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.White;
-            this.numericUpDown1.Location = new System.Drawing.Point(361, 39);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(102, 23);
-            this.numericUpDown1.TabIndex = 16;
+            this.nucantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.nucantidad.ForeColor = System.Drawing.Color.White;
+            this.nucantidad.Location = new System.Drawing.Point(361, 39);
+            this.nucantidad.Name = "nucantidad";
+            this.nucantidad.Size = new System.Drawing.Size(102, 23);
+            this.nucantidad.TabIndex = 16;
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox3.Controls.Add(this.listView1);
+            this.groupBox3.Controls.Add(this.dgdetalle);
             this.groupBox3.Controls.Add(this.panel1);
             this.groupBox3.Location = new System.Drawing.Point(12, 431);
             this.groupBox3.Name = "groupBox3";
@@ -298,22 +295,12 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle";
             // 
-            // listView1
-            // 
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(18, 19);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(866, 158);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lprecio);
-            this.panel1.Location = new System.Drawing.Point(769, 183);
+            this.panel1.Location = new System.Drawing.Point(769, 188);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(115, 48);
             this.panel1.TabIndex = 13;
@@ -383,6 +370,31 @@
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // dgdetalle
+            // 
+            this.dgdetalle.AllowUserToAddRows = false;
+            this.dgdetalle.AllowUserToDeleteRows = false;
+            this.dgdetalle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgdetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgdetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdetalle.Location = new System.Drawing.Point(18, 19);
+            this.dgdetalle.Name = "dgdetalle";
+            this.dgdetalle.ReadOnly = true;
+            this.dgdetalle.Size = new System.Drawing.Size(791, 166);
+            this.dgdetalle.TabIndex = 27;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(815, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(61, 65);
+            this.button2.TabIndex = 27;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Fagregar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,10 +416,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nucantidad)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +446,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lprecio;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nucantidad;
         private System.Windows.Forms.TextBox tid;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tnombre;
@@ -442,7 +455,7 @@
         private System.Windows.Forms.Button Bagregar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tfecha;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.DataGridView dgdetalle;
+        private System.Windows.Forms.Button button2;
     }
 }
