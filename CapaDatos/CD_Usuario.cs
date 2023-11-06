@@ -42,12 +42,12 @@ namespace CapaDatos
             return flag;
         }
 
-        public int modificar_usuario(string nombre_usuario, string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, string pass, int id_tipousuario)
+        public int modificar_usuario(string nombre_usuario, string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, int id_tipousuario)
         {
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
-            string query = "update Usuario set nombre_usuario = '" + nombre_usuario + "' , apellido_usuario= '" + apellido_usuario + "',username='" + username + "',dni_usuario = " + dni_usuario + ",email_usuario ='" + email_usuario + "', domicilio_usuario= '" + domicilio_usuario + "', celular_usuario = " + celular + ", pass = '" + pass + "',id_tipo_usuario = " + id_tipousuario + " WHERE dni_usuario = " + dni_usuario + "";
+            string query = "update Usuario set nombre_usuario = '" + nombre_usuario + "' , apellido_usuario= '" + apellido_usuario + "',username='" + username + "',dni_usuario = " + dni_usuario + ",email_usuario ='" + email_usuario + "', domicilio_usuario= '" + domicilio_usuario + "', celular_usuario = " + celular + ",id_tipo_usuario = " + id_tipousuario + " WHERE dni_usuario = " + dni_usuario + "";
             SqlCommand cmd = new SqlCommand(query, conexion);
             flag = cmd.ExecuteNonQuery();
             conexion.Close();

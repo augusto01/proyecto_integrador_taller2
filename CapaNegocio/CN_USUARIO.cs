@@ -55,10 +55,10 @@ namespace CapaNegocio
         }
 
 
-        public int modificar_usuario(string nombre_usuario, string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, string pass, int id_tipousuario)
+        public int modificar_usuario(string nombre_usuario, string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, int id_tipousuario)
         {
             CD_Usuario usuario = new CD_Usuario();
-            return usuario.modificar_usuario(nombre_usuario, apellido_usuario, username, dni_usuario, email_usuario, domicilio_usuario, celular, pass, id_tipousuario);    
+            return usuario.modificar_usuario(nombre_usuario, apellido_usuario, username, dni_usuario, email_usuario, domicilio_usuario, celular, id_tipousuario);    
         }
 
         public int insertar_usuario(string nombre_usuario, string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, string pass, int id_tipousuario)

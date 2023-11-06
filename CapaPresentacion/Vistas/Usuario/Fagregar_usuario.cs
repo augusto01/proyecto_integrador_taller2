@@ -425,7 +425,7 @@ namespace CapaPresentacion.Administrador.Usuario
                 if(cbtipo.SelectedIndex != -1)
                 {
                     CN_USUARIO usuario = new CN_USUARIO();
-                    usuario.modificar_usuario(tnombre.Text, tapellido.Text, Tuser.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text), Tpass.Text, cbtipo.SelectedIndex);
+                    usuario.modificar_usuario(tnombre.Text, tapellido.Text, Tuser.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text), cbtipo.SelectedIndex);
                     dgusuarios.DataSource = usuario.ConsultaDT();
                 }
                 else
