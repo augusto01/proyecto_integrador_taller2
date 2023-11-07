@@ -51,7 +51,7 @@ namespace CapaPresentacion.Vistas.Venta
 
             //tnombre.Text = usuario.nombre;
             tfecha.Text = DateTime.Today.Date.ToString("d");
-            tnombrevendedor.Text = CapaEntidad.Cache.UserLoginCache.nombre;
+            lvendedor.Text = CapaEntidad.Cache.UserLoginCache.nombre.Trim()+" "+ CapaEntidad.Cache.UserLoginCache.apellido.Trim();
             tidvendedor.Text = CapaEntidad.Cache.UserLoginCache.id_usuario.ToString();
             //cargar combobox clientes
 
