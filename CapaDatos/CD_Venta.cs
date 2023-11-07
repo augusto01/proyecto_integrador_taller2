@@ -34,6 +34,26 @@ namespace CapaDatos
             return datos;
         }
 
+        public List<string> obtener_tipo_pagos()
+        {
+            List<string> datos = new List<string>();
+            var conexion = GetConnection();
+            {
+                conexion.Open();
+                string query = "SELECT desc_tipo_pago FROM Tipo_pago";
+                using (SqlCommand cmd = new SqlCommand(query, conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            datos.Add(reader["desc_tipo_pago"].ToString());
+                        }
+                    }
+                }
+            }
+            return datos;
+        }
 
 
         public List<string> obtener_clientes()

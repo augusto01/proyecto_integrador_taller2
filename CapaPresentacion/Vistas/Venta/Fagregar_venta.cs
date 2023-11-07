@@ -61,6 +61,14 @@ namespace CapaPresentacion.Vistas.Venta
             cbcliente.DropDownStyle = ComboBoxStyle.DropDownList;
             cliente.obtener_clientes();
 
+            //cargar combobox tipospagos
+
+            cliente.obtener_clientes();
+            List<string> tipospagos = cliente.obtener_tipo_pago();
+            cbtipopago.DataSource = tipospagos;
+            cbtipopago.DropDownStyle = ComboBoxStyle.DropDownList;
+            cliente.obtener_tipo_pago();
+
             nucantidad.Value = 1;
             tidfactura.Text =  cliente.ObtenerSiguienteNumeroFactura().ToString();
             double precio;
@@ -70,10 +78,7 @@ namespace CapaPresentacion.Vistas.Venta
 
         }
 
-        private void Fagregar_venta_Load(object sender, EventArgs e)
-        {
-            dgproductos.DataSource = productoventa.ConsultaDT();
-        }
+    
 
         private void cbproducto_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -91,81 +96,9 @@ namespace CapaPresentacion.Vistas.Venta
            
         }
 
-        private void dgproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label8_Click(object sender, EventArgs e)
         {
-            if (dgproductos.Columns[e.ColumnIndex].Name == "agregarproducto" && this.dgproductos.CurrentRow.Index != -1)
-            {/*
-                // Obtiene la fila seleccionada en el dataGridView1
-                DataGridViewRow registroseleccionado = dgproductos.Rows[e.RowIndex];
 
-                // Clona la fila para copiarla al dataGridView2
-                DataGridViewRow newRow = (DataGridViewRow)registroseleccionado.Clone();
-                foreach (DataGridViewCell cell in registroseleccionado.Cells)
-                {
-                    newRow.Cells[cell.ColumnIndex].Value = cell.Value;
-                }
-
-                // Agrega la fila clonada al dataGridView2*/
-                // Obtiene la fila seleccionada en el dataGridView1
-                DataGridViewRow selectedRow = dgproductos.Rows[e.RowIndex];
-
-                // Clona la fila para copiarla al dataGridView2
-                DataGridViewRow newRow = (DataGridViewRow)selectedRow.Clone();
-
-                // Añade la fila clonada al dataGridView2
-                dgdetalle.Rows.Add(newRow);
-
-                // Copia el contenido de las celdas
-                for (int i = 0; i < selectedRow.Cells.Count; i++)
-                {
-                    newRow.Cells[i].Value = selectedRow.Cells[i].Value;
-                }
-                dgdetalle.Rows.Add(newRow);
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (dgproductos.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = dgproductos.SelectedRows[0];
-
-                // Asegúrate de que dataGridView2 tenga las mismas columnas que dataGridView1
-                if (dgdetalle.Columns.Count == 0)
-                {
-                    foreach (DataGridViewColumn column in dgproductos.Columns)
-                    {
-                        dgdetalle.Columns.Add(column.Name, column.HeaderText);
-                    }
-                }
-
-                // Obtiene el índice de la columna "Cantidad" en dataGridView1
-                int stockdisponible = dgproductos.Columns["stock"].Index;
-
-                // Obtiene el valor de la celda "Cantidad" en la fila seleccionada
-                int cantidadValue;
-                if (int.TryParse(selectedRow.Cells[stockdisponible].Value.ToString(), out cantidadValue))
-                {
-                    int cantidad = (int)nucantidad.Value;  // Establece aquí el valor límite que desees
-
-                    // Realiza la validación
-                    if (cantidad > stockdisponible)
-                    {
-                        // Muestra un mensaje de advertencia
-                        MessageBox.Show("La cantidad a vender supera el stock disponible!", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return; // No copia la fila si no cumple con la validación
-                    }
-
-                    // Clona la fila y la agrega a dataGridView2 si pasa la validación
-                    object[] rowData = new object[selectedRow.Cells.Count];
-                    for (int i = 0; i < selectedRow.Cells.Count; i++)
-                    {
-                        rowData[i] = selectedRow.Cells[i].Value;
-                    }
-                    dgdetalle.Rows.Add(rowData);
-
-                }
-            }
         }
     }
 }

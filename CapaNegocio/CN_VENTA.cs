@@ -32,6 +32,12 @@ namespace CapaNegocio
             CD_Venta productos = new CD_Venta();
             return productos.obtener_productos();
         }
+        public List<string> obtener_tipo_pago()
+        {
+            CD_Venta tipopagos = new CD_Venta();
+            return tipopagos.obtener_tipo_pagos();
+        }
+
         public int ObtenerSiguienteNumeroFactura()
         {
             CD_Venta datos = new CD_Venta();
