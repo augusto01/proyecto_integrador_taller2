@@ -71,7 +71,11 @@ namespace CapaNegocio
             CD_Producto producto = new CD_Producto();
             producto.eliminar_producto(id_producto);
         }
-
+        public List<string> obtener_productos()
+        {
+            CD_Producto productos = new CD_Producto();
+            return productos.obtener_productos_activos();
+        }
 
     }
 

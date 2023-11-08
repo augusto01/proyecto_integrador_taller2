@@ -44,7 +44,6 @@
             this.tprecioproducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.bbuscarproducto = new System.Windows.Forms.Button();
-            this.tproducto = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tcodproducto = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cbproductos = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nucantidad)).BeginInit();
@@ -177,12 +177,12 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.cbproductos);
             this.groupBox2.Controls.Add(this.tstock);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.tprecioproducto);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.bbuscarproducto);
-            this.groupBox2.Controls.Add(this.tproducto);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.tcodproducto);
             this.groupBox2.Controls.Add(this.label14);
@@ -246,21 +246,13 @@
             this.bbuscarproducto.Size = new System.Drawing.Size(27, 24);
             this.bbuscarproducto.TabIndex = 26;
             this.bbuscarproducto.UseVisualStyleBackColor = true;
-            // 
-            // tproducto
-            // 
-            this.tproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tproducto.ForeColor = System.Drawing.Color.White;
-            this.tproducto.Location = new System.Drawing.Point(233, 41);
-            this.tproducto.Name = "tproducto";
-            this.tproducto.Size = new System.Drawing.Size(137, 23);
-            this.tproducto.TabIndex = 25;
+            this.bbuscarproducto.Click += new System.EventHandler(this.bbuscarproducto_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(230, 19);
+            this.label15.Location = new System.Drawing.Point(221, 19);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 18);
             this.label15.TabIndex = 24;
@@ -367,7 +359,7 @@
             this.Bgenerarventa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.Bgenerarventa.FlatAppearance.BorderSize = 0;
             this.Bgenerarventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bgenerarventa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bgenerarventa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.Bgenerarventa.ForeColor = System.Drawing.Color.White;
             this.Bgenerarventa.Image = ((System.Drawing.Image)(resources.GetObject("Bgenerarventa.Image")));
             this.Bgenerarventa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,7 +376,7 @@
             this.bcancelarventa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.bcancelarventa.FlatAppearance.BorderSize = 0;
             this.bcancelarventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bcancelarventa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bcancelarventa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.bcancelarventa.ForeColor = System.Drawing.Color.White;
             this.bcancelarventa.Image = ((System.Drawing.Image)(resources.GetObject("bcancelarventa.Image")));
             this.bcancelarventa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -534,6 +526,16 @@
             this.eliminar.ReadOnly = true;
             this.eliminar.Text = "Eliminar";
             // 
+            // cbproductos
+            // 
+            this.cbproductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.cbproductos.ForeColor = System.Drawing.Color.White;
+            this.cbproductos.FormattingEnabled = true;
+            this.cbproductos.Location = new System.Drawing.Point(224, 40);
+            this.cbproductos.Name = "cbproductos";
+            this.cbproductos.Size = new System.Drawing.Size(150, 25);
+            this.cbproductos.TabIndex = 31;
+            // 
             // Fagregar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,7 +592,6 @@
         private System.Windows.Forms.Label lprecio;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown nucantidad;
-        private System.Windows.Forms.TextBox tproducto;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tcodproducto;
         private System.Windows.Forms.Label label14;
@@ -616,5 +617,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.DataGridViewButtonColumn eliminar;
+        private System.Windows.Forms.ComboBox cbproductos;
     }
 }

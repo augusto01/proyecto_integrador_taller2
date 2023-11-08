@@ -69,6 +69,14 @@ namespace CapaPresentacion.Vistas.Venta
             cbtipopago.DropDownStyle = ComboBoxStyle.DropDownList;
             cliente.obtener_tipo_pago();
 
+            //cargar combobox productos
+
+            productoventa.obtener_productos();
+            List<string> productos = productoventa.obtener_productos();
+            cbproductos.DataSource = productos;
+            cbproductos.DropDownStyle = ComboBoxStyle.DropDownList;
+            productoventa.obtener_productos();
+
             nucantidad.Value = 1;
             tidfactura.Text =  cliente.ObtenerSiguienteNumeroFactura().ToString();
             double precio;
@@ -99,6 +107,14 @@ namespace CapaPresentacion.Vistas.Venta
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bbuscarproducto_Click(object sender, EventArgs e)
+        {
+            
+            //
+               
+            
         }
     }
 }

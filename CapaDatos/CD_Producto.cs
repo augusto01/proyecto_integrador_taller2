@@ -92,7 +92,26 @@ namespace CapaDatos
             }
             return datos;
         }
-
+        public List<string> obtener_productos_activos()
+        {
+            List<string> datos = new List<string>();
+            var conexion = GetConnection();
+            {
+                conexion.Open();
+                string query = "SELECT descripcion FROM Producto where estado = 1";
+                using (SqlCommand cmd = new SqlCommand(query, conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            datos.Add(reader["descripcion"].ToString());
+                        }
+                    }
+                }
+            }
+            return datos;
+        }
         public List<string> obtener_talles()
         {
             List<string> datos = new List<string>();
