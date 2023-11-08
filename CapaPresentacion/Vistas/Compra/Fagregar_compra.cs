@@ -15,6 +15,18 @@ namespace CapaPresentacion.Vistas.Compra
         public Fagregar_compra()
         {
             InitializeComponent();
+            inicializar_cabecera();
         }
+        public void inicializar_cabecera()
+        {
+
+           tfecha.Text = DateTime.Today.Date.ToString("d");
+
+        }
+
+
+
+
+
     }
 }

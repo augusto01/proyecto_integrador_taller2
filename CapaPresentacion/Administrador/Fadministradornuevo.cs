@@ -14,6 +14,7 @@ using CapaEntidad;
 using CapaPresentacion.Administrador.Usuario;
 using CapaPresentacion.Administrador.Clientes;
 using CapaPresentacion.Gerente.Producto;
+using CapaPresentacion.Vistas.Compra;
 
 namespace CapaPresentacion.Administrador
 {
@@ -403,6 +404,13 @@ namespace CapaPresentacion.Administrador
         {
             ocultarhora();
             abrirFormulario(new Fagregar_producto());
+            ocultar_submenu();
+        }
+
+        private void bagregarcompra_Click_1(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_compra());
             ocultar_submenu();
         }
     }

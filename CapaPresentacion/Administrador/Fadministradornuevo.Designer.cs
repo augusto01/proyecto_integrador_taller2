@@ -287,6 +287,7 @@
             this.bagregarcompra.Text = "Agregar Compra";
             this.bagregarcompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarcompra.UseVisualStyleBackColor = true;
+            this.bagregarcompra.Click += new System.EventHandler(this.bagregarcompra_Click_1);
             // 
             // bcompras
             // 
@@ -764,6 +765,7 @@
             this.Controls.Add(this.menulateral);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Fadministradornuevo";
             this.Text = "Fadministrador";
             this.Load += new System.EventHandler(this.Fadministradornuevo_Load);
