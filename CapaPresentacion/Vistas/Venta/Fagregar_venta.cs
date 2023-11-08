@@ -26,6 +26,7 @@ namespace CapaPresentacion.Vistas.Venta
         {
             InitializeComponent();
             inicializar_cabecera();
+            cbproductos.DisplayMember = "descripcion"; 
             
         }
 
@@ -115,6 +116,25 @@ namespace CapaPresentacion.Vistas.Venta
             //
                
             
+        }
+
+        private void cbproductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbproductos.SelectedItem != null && cbproductos.SelectedItem is CN_PRODUCTO)
+            {
+                CN_PRODUCTO productoSeleccionado = (CN_PRODUCTO)cbproductos.SelectedItem;
+
+                int id = productoSeleccionado.id_proudcto; // Suponiendo que la clase Producto tiene una propiedad Id.
+                string nombre = productoSeleccionado.descripcion;
+                double precio = productoSeleccionado.precio_unitario;
+                int stock = productoSeleccionado.stock;
+
+                // Hacer lo que necesites con los datos del producto seleccionado.
+                tcodproducto.Text = ($"ID: {id}");
+                //Console.WriteLine($"Nombre: {nombre}");
+                tprecioproducto.Text=($"Precio: {precio:C}");
+                tstock.Text = ($"Stock: {stock}");
+            }
         }
     }
 }

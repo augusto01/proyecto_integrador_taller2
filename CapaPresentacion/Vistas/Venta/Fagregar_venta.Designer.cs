@@ -529,12 +529,14 @@
             // cbproductos
             // 
             this.cbproductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.cbproductos.DisplayMember = "descripcion";
             this.cbproductos.ForeColor = System.Drawing.Color.White;
             this.cbproductos.FormattingEnabled = true;
             this.cbproductos.Location = new System.Drawing.Point(224, 40);
             this.cbproductos.Name = "cbproductos";
             this.cbproductos.Size = new System.Drawing.Size(150, 25);
             this.cbproductos.TabIndex = 31;
+            this.cbproductos.SelectedIndexChanged += new System.EventHandler(this.cbproductos_SelectedIndexChanged);
             // 
             // Fagregar_venta
             // 
