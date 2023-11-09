@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_venta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tidvendedor = new System.Windows.Forms.TextBox();
             this.cbtipopago = new System.Windows.Forms.ComboBox();
@@ -336,7 +336,7 @@
             this.bagregarproducto.Image = ((System.Drawing.Image)(resources.GetObject("bagregarproducto.Image")));
             this.bagregarproducto.Location = new System.Drawing.Point(701, 9);
             this.bagregarproducto.Name = "bagregarproducto";
-            this.bagregarproducto.Size = new System.Drawing.Size(76, 72);
+            this.bagregarproducto.Size = new System.Drawing.Size(73, 72);
             this.bagregarproducto.TabIndex = 89;
             this.bagregarproducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bagregarproducto.UseVisualStyleBackColor = true;
@@ -590,12 +590,12 @@
             // 
             // eliminar
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle1;
             this.eliminar.FillWeight = 121.8274F;
             this.eliminar.HeaderText = "Eliminar";
             this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));

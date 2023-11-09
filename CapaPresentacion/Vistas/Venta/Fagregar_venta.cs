@@ -129,9 +129,11 @@ namespace CapaPresentacion.Vistas.Venta
             if (dgproductos.Columns[e.ColumnIndex].Name == "agregar" && this.dgproductos.CurrentRow.Index != -1)
             {
                 posicion = dgproductos.CurrentRow.Index;
+                tbuscarid.Text = dgproductos[1,posicion].Value.ToString();
                 tprecio.Text = dgproductos[4, posicion].Value.ToString();
                 tstock.Text = dgproductos[5, posicion].Value.ToString();
                 tnombre.Text = dgproductos[2, posicion].Value.ToString();
+               
                
 
             }
@@ -144,77 +146,66 @@ namespace CapaPresentacion.Vistas.Venta
         }
 
         private void bagregarproducto_Click(object sender, EventArgs e)
-        {
+        {  
 
             if (tcantidad.Text.Trim() == String.Empty || tprecio.Text.Trim() == String.Empty || tnombre.Text.Trim() == String.Empty)
             {
                 MessageBox.Show("Seleccione un producto!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
+            }           
             else
             {
-                /*          
-                int n = dgdetalle.Rows.Add();
-                //Anadimos registros al data grid
-
-
-                dgdetalle.Rows[n].Cells[1].Value = tnombre.Text;
-                dgdetalle.Rows[n].Cells[2].Value = tprecio.Text;
-                dgdetalle.Rows[n].Cells[3].Value = tcantidad.Text;
-                dgdetalle.Rows[n].Cells[4].Value = float.Parse((tprecio.Text)) * Int32.Parse((tcantidad.Text)) ;
-
-                //recorremos el datagrid para calcular el total 
-
-                foreach (DataGridViewRow fila in dgdetalle.Rows)
+                if (Int32.Parse(tcantidad.Text) == 0 )
                 {
-                    // Convertir el valor de la celda a decimal y acumularlo.
-                    total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                    MessageBox.Show("La cantidad debe ser mayor a 0!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                lprecio.Text = total.ToString();
-                //subtotal = 0;
-                ecantidad.Clear();
-                tcantidad.Text = "1";
-                tnombre.Clear();
-                tprecio.Clear();
-                tstock.Clear();
-                lprecio.Text = total.ToString()+"$";
-
-             
-                //scroll automatico del dg*/
-
-                int n = dgdetalle.Rows.Add();
-
-                // Anadimos registros al data grid
-                dgdetalle.Rows[n].Cells[1].Value = tnombre.Text;
-                dgdetalle.Rows[n].Cells[2].Value = tprecio.Text;
-                dgdetalle.Rows[n].Cells[3].Value = tcantidad.Text;
-
-                // Calcular el subtotal para la nueva fila
-                decimal precio = decimal.Parse(tprecio.Text);
-                int cantidad = Int32.Parse(tcantidad.Text);
-                decimal subtotal = precio * cantidad;
-
-                dgdetalle.Rows[n].Cells[4].Value = subtotal;
-
-                // Recorremos el datagrid para calcular el total
-                decimal total = 0;
-                foreach (DataGridViewRow fila in dgdetalle.Rows)
+                else
                 {
-                    if (!fila.IsNewRow && fila.Cells["Subtotal"].Value != null)
+                    if(Int32.Parse(tstock.Text) < Int32.Parse(tcantidad.Text))
                     {
-                        // Convertir el valor de la celda a decimal y acumularlo.
-                        total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                        MessageBox.Show("No hay stock disponible!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else
+                    {
+                        int n = dgdetalle.Rows.Add();
+
+                        // Anadimos registros al data grid
+                        dgdetalle.Rows[n].Cells[0].Value = tbuscarid.Text;
+                        dgdetalle.Rows[n].Cells[1].Value = tnombre.Text;
+                        dgdetalle.Rows[n].Cells[2].Value = tprecio.Text;
+                        dgdetalle.Rows[n].Cells[3].Value = tcantidad.Text;
+
+                        // Calcular el subtotal para la nueva fila
+                        decimal precio = decimal.Parse(tprecio.Text);
+                        int cantidad = Int32.Parse(tcantidad.Text);
+                        decimal subtotal = precio * cantidad;
+
+                        dgdetalle.Rows[n].Cells[4].Value = subtotal;
+
+                        // Recorremos el datagrid para calcular el total
+                        decimal total = 0;
+                        foreach (DataGridViewRow fila in dgdetalle.Rows)
+                        {
+                            if (!fila.IsNewRow && fila.Cells["Subtotal"].Value != null)
+                            {
+                                // Convertir el valor de la celda a decimal y acumularlo.
+                                total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                            }
+                        }
+
+                        lprecio.Text = " " + total.ToString("C0", new System.Globalization.CultureInfo("es-MX")); // Mostrar el total con formato de moneda.
+
+                        // Limpiar campos y ajustar el valor predeterminado de la cantidad.
+                        tcantidad.Text = "1";
+                        tnombre.Clear();
+                        tprecio.Clear();
+                        tstock.Clear();
+                        tbuscarid.Clear();
+                    }
+                    
+
                 }
-
-                lprecio.Text = total.ToString("C0", new System.Globalization.CultureInfo("es-MX")); // Mostrar el total con formato de moneda.
-
-                // Limpiar campos y ajustar el valor predeterminado de la cantidad.
-                tcantidad.Text = "1";
-                tnombre.Clear();
-                tprecio.Clear();
-                tstock.Clear();
-
+                
             }
            
         }
