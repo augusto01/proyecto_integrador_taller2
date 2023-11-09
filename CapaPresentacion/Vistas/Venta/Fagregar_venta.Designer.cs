@@ -46,7 +46,14 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgdetalle = new System.Windows.Forms.DataGridView();
+            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lprecio = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -71,13 +78,6 @@
             this.tbuscarid = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.ecantidad = new System.Windows.Forms.ErrorProvider(this.components);
-            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lprecio = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdetalle)).BeginInit();
@@ -251,7 +251,56 @@
             this.dgdetalle.Name = "dgdetalle";
             this.dgdetalle.Size = new System.Drawing.Size(751, 206);
             this.dgdetalle.TabIndex = 0;
-            this.dgdetalle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdetalle_CellClick);
+            this.dgdetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdetalle_CellContentClick);
+            // 
+            // idproducto
+            // 
+            this.idproducto.FillWeight = 95.63452F;
+            this.idproducto.HeaderText = "ID producto";
+            this.idproducto.Name = "idproducto";
+            // 
+            // producto
+            // 
+            this.producto.FillWeight = 95.63452F;
+            this.producto.HeaderText = "Producto";
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.FillWeight = 95.63452F;
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.FillWeight = 95.63452F;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.FillWeight = 95.63452F;
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            // 
+            // eliminar
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.eliminar.FillWeight = 121.8274F;
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // panel1
             // 
@@ -262,6 +311,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(105, 48);
             this.panel1.TabIndex = 13;
+            // 
+            // lprecio
+            // 
+            this.lprecio.AutoSize = true;
+            this.lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lprecio.ForeColor = System.Drawing.Color.Lime;
+            this.lprecio.Location = new System.Drawing.Point(3, 11);
+            this.lprecio.Name = "lprecio";
+            this.lprecio.Size = new System.Drawing.Size(21, 24);
+            this.lprecio.TabIndex = 14;
+            this.lprecio.Text = "$";
             // 
             // label10
             // 
@@ -553,66 +613,6 @@
             this.ecantidad.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ecantidad.ContainerControl = this;
             this.ecantidad.Icon = ((System.Drawing.Icon)(resources.GetObject("ecantidad.Icon")));
-            // 
-            // idproducto
-            // 
-            this.idproducto.FillWeight = 95.63452F;
-            this.idproducto.HeaderText = "ID producto";
-            this.idproducto.Name = "idproducto";
-            // 
-            // producto
-            // 
-            this.producto.FillWeight = 95.63452F;
-            this.producto.HeaderText = "Producto";
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.FillWeight = 95.63452F;
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.FillWeight = 95.63452F;
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // subtotal
-            // 
-            this.subtotal.FillWeight = 95.63452F;
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            // 
-            // eliminar
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.eliminar.FillWeight = 121.8274F;
-            this.eliminar.HeaderText = "Eliminar";
-            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // lprecio
-            // 
-            this.lprecio.AutoSize = true;
-            this.lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lprecio.ForeColor = System.Drawing.Color.Lime;
-            this.lprecio.Location = new System.Drawing.Point(3, 11);
-            this.lprecio.Name = "lprecio";
-            this.lprecio.Size = new System.Drawing.Size(21, 24);
-            this.lprecio.TabIndex = 14;
-            this.lprecio.Text = "$";
             // 
             // Fagregar_venta
             // 

@@ -221,17 +221,25 @@ namespace CapaPresentacion.Vistas.Venta
             }
         }
 
-        private void dgdetalle_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-         /*
-            foreach (DataGridViewRow fila in dgdetalle.Rows)
+        private void dgdetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {/*
+            if (e.ColumnIndex == dgdetalle.Columns["eliminar"].Index && e.RowIndex >= 0)
             {
-                // Convertir el valor de la celda a decimal y acumularlo.
-                total -= Convert.ToDecimal(fila.Cells["subtotal"].Value);
-                
-            }
-            this.dgdetalle.Rows.RemoveAt(this.dgdetalle.CurrentRow.Index);
-            lprecio.Text = total.ToString() + "$";*/
+                // Obtener el subtotal de la fila antes de eliminarla
+                decimal subtotalAEliminar = Convert.ToDecimal(dgdetalle.Rows[e.RowIndex].Cells["Subtotal"].Value);
+
+                // Restar el subtotal de la fila eliminada del total
+                total -= subtotalAEliminar;
+
+                // Asegurarse de que el total no sea negativo
+               // total = Math.Max(total, 0);
+
+                // Actualizar la etiqueta del total
+                lprecio.Text = " " + total.ToString("C0", new System.Globalization.CultureInfo("es-MX"));
+
+                // Eliminar la fila seleccionada del DataGridView
+                dgdetalle.Rows.RemoveAt(e.RowIndex);
+            }*/
         }
     }
 }
