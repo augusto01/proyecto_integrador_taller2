@@ -130,6 +130,7 @@ namespace CapaPresentacion.Vistas.Venta
                 tprecio.Text = dgproductos[4, posicion].Value.ToString();
                 tstock.Text = dgproductos[5, posicion].Value.ToString();
                 tnombre.Text = dgproductos[2, posicion].Value.ToString();
+               
 
             }
         }
@@ -142,17 +143,33 @@ namespace CapaPresentacion.Vistas.Venta
 
         private void bagregarproducto_Click(object sender, EventArgs e)
         {
-            int n = dgdetalle.Rows.Add();
-            //Anadimos registros al data grid
+
+            if (tcantidad.Text.Trim() != String.Empty)
+            {
+                decimal precio = decimal.Parse(tprecio.Text);
+                int cantidad = Int32.Parse(tcantidad.Text);
+
+                decimal subtotal = precio * cantidad;
+                int n = dgdetalle.Rows.Add();
+                //Anadimos registros al data grid
 
 
-            dgdetalle.Rows[n].Cells[0].Value = tnombre.Text;
-            dgdetalle.Rows[n].Cells[1].Value = tprecio.Text;
-            dgdetalle.Rows[n].Cells[2].Value = nucantidad.Text;
-            //dgproductos.Rows[n].Cells[4].Value = Tuser.Text;
+                dgdetalle.Rows[n].Cells[1].Value = tnombre.Text;
+                dgdetalle.Rows[n].Cells[2].Value = tprecio.Text;
+                dgdetalle.Rows[n].Cells[3].Value = tcantidad.Text;
+                dgdetalle.Rows[n].Cells[4].Value = subtotal;
 
-            //scroll automatico del dg
-            dgdetalle.FirstDisplayedScrollingRowIndex = dgdetalle.RowCount - 1;
+                //scroll automatico del dg
+                dgdetalle.FirstDisplayedScrollingRowIndex = dgdetalle.RowCount - 1;
+
+            }
+            else
+            {
+                MessageBox.Show("Ingrese una cantidad!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+           
         }
+
+       
     }
 }

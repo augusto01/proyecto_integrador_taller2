@@ -35,25 +35,25 @@
             this.nucantidad = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tfecha = new System.Windows.Forms.TextBox();
-            this.bbuscarproducto = new System.Windows.Forms.Button();
-            this.tdniproveedor = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tproveedor = new System.Windows.Forms.TextBox();
+            this.bbuscarproducto = new System.Windows.Forms.Button();
+            this.tfecha = new System.Windows.Forms.TextBox();
+            this.tdniproveedor = new System.Windows.Forms.TextBox();
             this.tid = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbuscarid = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tdescproducto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tpreciocompra = new System.Windows.Forms.TextBox();
-            this.tprecioventa = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.idproducto = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tprecioventa = new System.Windows.Forms.TextBox();
+            this.tpreciocompra = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tdescproducto = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbuscarid = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dgcompra = new System.Windows.Forms.DataGridView();
             this.id_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -156,15 +156,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion de compra";
             // 
-            // tfecha
+            // label8
             // 
-            this.tfecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tfecha.ForeColor = System.Drawing.Color.White;
-            this.tfecha.Location = new System.Drawing.Point(665, 36);
-            this.tfecha.Name = "tfecha";
-            this.tfecha.Size = new System.Drawing.Size(137, 23);
-            this.tfecha.TabIndex = 132;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(666, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 19);
+            this.label8.TabIndex = 138;
+            this.label8.Text = "FECHA";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 19);
+            this.label2.TabIndex = 137;
+            this.label2.Text = "DNI PROVEEDOR";
+            // 
+            // tproveedor
+            // 
+            this.tproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tproveedor.ForeColor = System.Drawing.Color.White;
+            this.tproveedor.Location = new System.Drawing.Point(198, 39);
+            this.tproveedor.Name = "tproveedor";
+            this.tproveedor.Size = new System.Drawing.Size(137, 23);
+            this.tproveedor.TabIndex = 136;
             // 
             // bbuscarproducto
             // 
@@ -178,6 +202,16 @@
             this.bbuscarproducto.TabIndex = 135;
             this.bbuscarproducto.UseVisualStyleBackColor = true;
             // 
+            // tfecha
+            // 
+            this.tfecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tfecha.ForeColor = System.Drawing.Color.White;
+            this.tfecha.Location = new System.Drawing.Point(665, 36);
+            this.tfecha.Name = "tfecha";
+            this.tfecha.Size = new System.Drawing.Size(137, 23);
+            this.tfecha.TabIndex = 132;
+            // 
             // tdniproveedor
             // 
             this.tdniproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
@@ -187,16 +221,6 @@
             this.tdniproveedor.Name = "tdniproveedor";
             this.tdniproveedor.Size = new System.Drawing.Size(137, 23);
             this.tdniproveedor.TabIndex = 134;
-            // 
-            // tproveedor
-            // 
-            this.tproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tproveedor.ForeColor = System.Drawing.Color.White;
-            this.tproveedor.Location = new System.Drawing.Point(198, 39);
-            this.tproveedor.Name = "tproveedor";
-            this.tproveedor.Size = new System.Drawing.Size(137, 23);
-            this.tproveedor.TabIndex = 136;
             // 
             // tid
             // 
@@ -231,129 +255,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion del producto";
             // 
-            // label2
+            // idproducto
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 19);
-            this.label2.TabIndex = 137;
-            this.label2.Text = "DNI PROVEEDOR";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 19);
-            this.label5.TabIndex = 138;
-            this.label5.Text = "ID PRODUCTO";
-            // 
-            // tbuscarid
-            // 
-            this.tbuscarid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tbuscarid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbuscarid.ForeColor = System.Drawing.Color.White;
-            this.tbuscarid.Location = new System.Drawing.Point(10, 48);
-            this.tbuscarid.Name = "tbuscarid";
-            this.tbuscarid.Size = new System.Drawing.Size(137, 23);
-            this.tbuscarid.TabIndex = 139;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(153, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 24);
-            this.button1.TabIndex = 140;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(666, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 19);
-            this.label8.TabIndex = 138;
-            this.label8.Text = "FECHA";
-            // 
-            // tdescproducto
-            // 
-            this.tdescproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tdescproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tdescproducto.ForeColor = System.Drawing.Color.White;
-            this.tdescproducto.Location = new System.Drawing.Point(198, 48);
-            this.tdescproducto.Name = "tdescproducto";
-            this.tdescproducto.Size = new System.Drawing.Size(137, 23);
-            this.tdescproducto.TabIndex = 141;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(194, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 19);
-            this.label1.TabIndex = 142;
-            this.label1.Text = "PRODUCTO";
-            // 
-            // tpreciocompra
-            // 
-            this.tpreciocompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tpreciocompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tpreciocompra.ForeColor = System.Drawing.Color.White;
-            this.tpreciocompra.Location = new System.Drawing.Point(359, 48);
-            this.tpreciocompra.Name = "tpreciocompra";
-            this.tpreciocompra.Size = new System.Drawing.Size(122, 23);
-            this.tpreciocompra.TabIndex = 143;
-            // 
-            // tprecioventa
-            // 
-            this.tprecioventa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tprecioventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tprecioventa.ForeColor = System.Drawing.Color.White;
-            this.tprecioventa.Location = new System.Drawing.Point(501, 49);
-            this.tprecioventa.Name = "tprecioventa";
-            this.tprecioventa.Size = new System.Drawing.Size(101, 23);
-            this.tprecioventa.TabIndex = 144;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(355, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 19);
-            this.label9.TabIndex = 145;
-            this.label9.Text = "PRECIO COMPRA";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(497, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 19);
-            this.label11.TabIndex = 146;
-            this.label11.Text = "PRECIO VENTA";
+            this.idproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.idproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.idproducto.ForeColor = System.Drawing.Color.White;
+            this.idproducto.Location = new System.Drawing.Point(105, 19);
+            this.idproducto.Name = "idproducto";
+            this.idproducto.Size = new System.Drawing.Size(83, 23);
+            this.idproducto.TabIndex = 139;
+            this.idproducto.Visible = false;
             // 
             // label12
             // 
@@ -367,16 +278,105 @@
             this.label12.TabIndex = 147;
             this.label12.Text = "CANTIDAD";
             // 
-            // idproducto
+            // label11
             // 
-            this.idproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.idproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.idproducto.ForeColor = System.Drawing.Color.White;
-            this.idproducto.Location = new System.Drawing.Point(105, 19);
-            this.idproducto.Name = "idproducto";
-            this.idproducto.Size = new System.Drawing.Size(83, 23);
-            this.idproducto.TabIndex = 139;
-            this.idproducto.Visible = false;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(497, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(105, 19);
+            this.label11.TabIndex = 146;
+            this.label11.Text = "PRECIO VENTA";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(355, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 19);
+            this.label9.TabIndex = 145;
+            this.label9.Text = "PRECIO COMPRA";
+            // 
+            // tprecioventa
+            // 
+            this.tprecioventa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tprecioventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tprecioventa.ForeColor = System.Drawing.Color.White;
+            this.tprecioventa.Location = new System.Drawing.Point(501, 49);
+            this.tprecioventa.Name = "tprecioventa";
+            this.tprecioventa.Size = new System.Drawing.Size(101, 23);
+            this.tprecioventa.TabIndex = 144;
+            // 
+            // tpreciocompra
+            // 
+            this.tpreciocompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tpreciocompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tpreciocompra.ForeColor = System.Drawing.Color.White;
+            this.tpreciocompra.Location = new System.Drawing.Point(359, 49);
+            this.tpreciocompra.Name = "tpreciocompra";
+            this.tpreciocompra.Size = new System.Drawing.Size(122, 23);
+            this.tpreciocompra.TabIndex = 143;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(194, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 19);
+            this.label1.TabIndex = 142;
+            this.label1.Text = "PRODUCTO";
+            // 
+            // tdescproducto
+            // 
+            this.tdescproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tdescproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tdescproducto.ForeColor = System.Drawing.Color.White;
+            this.tdescproducto.Location = new System.Drawing.Point(198, 48);
+            this.tdescproducto.Name = "tdescproducto";
+            this.tdescproducto.Size = new System.Drawing.Size(137, 23);
+            this.tdescproducto.TabIndex = 141;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(153, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 24);
+            this.button1.TabIndex = 140;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tbuscarid
+            // 
+            this.tbuscarid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tbuscarid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbuscarid.ForeColor = System.Drawing.Color.White;
+            this.tbuscarid.Location = new System.Drawing.Point(10, 48);
+            this.tbuscarid.Name = "tbuscarid";
+            this.tbuscarid.Size = new System.Drawing.Size(137, 23);
+            this.tbuscarid.TabIndex = 139;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(6, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 19);
+            this.label5.TabIndex = 138;
+            this.label5.Text = "ID PRODUCTO";
             // 
             // dgcompra
             // 
