@@ -13,6 +13,7 @@ using CapaEntidad;
 using CapaEntidad.Cache;
 using CapaNegocio;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static Fable.Import.Browser;
 
 namespace CapaPresentacion.Vistas.Venta
 {
@@ -26,7 +27,7 @@ namespace CapaPresentacion.Vistas.Venta
         {
             InitializeComponent();
             inicializar_cabecera();
-            cbproductos.DisplayMember = "descripcion"; 
+        
             
         }
 
@@ -49,6 +50,11 @@ namespace CapaPresentacion.Vistas.Venta
 
         private void inicializar_cabecera()
         {
+            // cargar productos 
+            
+
+
+
 
             //tnombre.Text = usuario.nombre;
             tfecha.Text = DateTime.Today.Date.ToString("d");
@@ -72,16 +78,8 @@ namespace CapaPresentacion.Vistas.Venta
 
             //cargar combobox productos
 
-            productoventa.obtener_productos();
-            List<string> productos = productoventa.obtener_productos();
-            cbproductos.DataSource = productos;
-            cbproductos.DropDownStyle = ComboBoxStyle.DropDownList;
-            productoventa.obtener_productos();
+           
 
-            nucantidad.Value = 1;
-            tidfactura.Text =  cliente.ObtenerSiguienteNumeroFactura().ToString();
-            double precio;
-            lprecio.Text = (0).ToString("C");
            
 
 
@@ -118,23 +116,43 @@ namespace CapaPresentacion.Vistas.Venta
             
         }
 
-        private void cbproductos_SelectedIndexChanged(object sender, EventArgs e)
+        private void Fagregar_venta_Load(object sender, EventArgs e)
         {
-            if (cbproductos.SelectedItem != null && cbproductos.SelectedItem is CN_PRODUCTO)
+            dgproductos.DataSource = productoventa.ConsultaDT();
+        }
+
+        private void dgproductos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            if (dgproductos.Columns[e.ColumnIndex].Name == "agregar" && this.dgproductos.CurrentRow.Index != -1)
             {
-                CN_PRODUCTO productoSeleccionado = (CN_PRODUCTO)cbproductos.SelectedItem;
+                posicion = dgproductos.CurrentRow.Index;
+                tprecio.Text = dgproductos[4, posicion].Value.ToString();
+                tstock.Text = dgproductos[5, posicion].Value.ToString();
+                tnombre.Text = dgproductos[2, posicion].Value.ToString();
 
-                int id = productoSeleccionado.id_proudcto; // Suponiendo que la clase Producto tiene una propiedad Id.
-                string nombre = productoSeleccionado.descripcion;
-                double precio = productoSeleccionado.precio_unitario;
-                int stock = productoSeleccionado.stock;
-
-                // Hacer lo que necesites con los datos del producto seleccionado.
-                tcodproducto.Text = ($"ID: {id}");
-                //Console.WriteLine($"Nombre: {nombre}");
-                tprecioproducto.Text=($"Precio: {precio:C}");
-                tstock.Text = ($"Stock: {stock}");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           // Fdatagridproductos formulariodg = new Fdatagridproductos();
+           // formulariodg.Show();
+        }
+
+        private void bagregarproducto_Click(object sender, EventArgs e)
+        {
+            int n = dgdetalle.Rows.Add();
+            //Anadimos registros al data grid
+
+
+            dgdetalle.Rows[n].Cells[0].Value = tnombre.Text;
+            dgdetalle.Rows[n].Cells[1].Value = tprecio.Text;
+            dgdetalle.Rows[n].Cells[2].Value = nucantidad.Text;
+            //dgproductos.Rows[n].Cells[4].Value = Tuser.Text;
+
+            //scroll automatico del dg
+            dgdetalle.FirstDisplayedScrollingRowIndex = dgdetalle.RowCount - 1;
         }
     }
 }
