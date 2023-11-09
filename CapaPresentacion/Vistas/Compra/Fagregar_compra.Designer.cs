@@ -65,7 +65,6 @@
             this.bagregarproducto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.lprecio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nucantidad)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -467,34 +466,23 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lprecio);
             this.panel1.Location = new System.Drawing.Point(761, 290);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(131, 48);
             this.panel1.TabIndex = 141;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(75, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 24);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "$";
-            // 
             // lprecio
             // 
             this.lprecio.AutoSize = true;
             this.lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lprecio.ForeColor = System.Drawing.Color.Lime;
-            this.lprecio.Location = new System.Drawing.Point(28, 12);
+            this.lprecio.Location = new System.Drawing.Point(54, 14);
             this.lprecio.Name = "lprecio";
-            this.lprecio.Size = new System.Drawing.Size(50, 24);
+            this.lprecio.Size = new System.Drawing.Size(21, 24);
             this.lprecio.TabIndex = 14;
-            this.lprecio.Text = "algo";
+            this.lprecio.Text = "$";
+            this.lprecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Fagregar_compra
             // 
@@ -566,7 +554,6 @@
         private System.Windows.Forms.Button bagregarproducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lprecio;
     }
 }

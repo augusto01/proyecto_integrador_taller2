@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_venta));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tidvendedor = new System.Windows.Forms.TextBox();
             this.cbtipopago = new System.Windows.Forms.ComboBox();
@@ -45,15 +46,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgdetalle = new System.Windows.Forms.DataGridView();
-            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lprecio = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,6 +70,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tbuscarid = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.ecantidad = new System.Windows.Forms.ErrorProvider(this.components);
+            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lprecio = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdetalle)).BeginInit();
@@ -84,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ecantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -249,86 +251,17 @@
             this.dgdetalle.Name = "dgdetalle";
             this.dgdetalle.Size = new System.Drawing.Size(751, 206);
             this.dgdetalle.TabIndex = 0;
-            // 
-            // idproducto
-            // 
-            this.idproducto.FillWeight = 95.63452F;
-            this.idproducto.HeaderText = "ID producto";
-            this.idproducto.Name = "idproducto";
-            // 
-            // producto
-            // 
-            this.producto.FillWeight = 95.63452F;
-            this.producto.HeaderText = "Producto";
-            this.producto.Name = "producto";
-            this.producto.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.FillWeight = 95.63452F;
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.FillWeight = 95.63452F;
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // subtotal
-            // 
-            this.subtotal.FillWeight = 95.63452F;
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            // 
-            // eliminar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.eliminar.FillWeight = 121.8274F;
-            this.eliminar.HeaderText = "Eliminar";
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Text = "Eliminar";
+            this.dgdetalle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdetalle_CellClick);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lprecio);
             this.panel1.Location = new System.Drawing.Point(806, 436);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(105, 48);
             this.panel1.TabIndex = 13;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(75, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 24);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "$";
-            // 
-            // lprecio
-            // 
-            this.lprecio.AutoSize = true;
-            this.lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lprecio.ForeColor = System.Drawing.Color.Lime;
-            this.lprecio.Location = new System.Drawing.Point(28, 12);
-            this.lprecio.Name = "lprecio";
-            this.lprecio.Size = new System.Drawing.Size(50, 24);
-            this.lprecio.TabIndex = 14;
-            this.lprecio.Text = "algo";
             // 
             // label10
             // 
@@ -427,14 +360,12 @@
             this.bcancelarventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bcancelarventa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.bcancelarventa.ForeColor = System.Drawing.Color.White;
-            this.bcancelarventa.Image = ((System.Drawing.Image)(resources.GetObject("bcancelarventa.Image")));
             this.bcancelarventa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bcancelarventa.Location = new System.Drawing.Point(806, 498);
             this.bcancelarventa.Name = "bcancelarventa";
             this.bcancelarventa.Size = new System.Drawing.Size(105, 48);
             this.bcancelarventa.TabIndex = 85;
             this.bcancelarventa.Text = "Cancelar";
-            this.bcancelarventa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bcancelarventa.UseVisualStyleBackColor = false;
             // 
             // Bgenerarventa
@@ -445,7 +376,6 @@
             this.Bgenerarventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bgenerarventa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.Bgenerarventa.ForeColor = System.Drawing.Color.White;
-            this.Bgenerarventa.Image = ((System.Drawing.Image)(resources.GetObject("Bgenerarventa.Image")));
             this.Bgenerarventa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Bgenerarventa.Location = new System.Drawing.Point(806, 552);
             this.Bgenerarventa.Name = "Bgenerarventa";
@@ -500,6 +430,7 @@
             this.tcantidad.Name = "tcantidad";
             this.tcantidad.Size = new System.Drawing.Size(65, 23);
             this.tcantidad.TabIndex = 147;
+            this.tcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tcantidad_KeyPress);
             // 
             // groupBox2
             // 
@@ -617,6 +548,72 @@
             this.label18.TabIndex = 138;
             this.label18.Text = "ID PRODUCTO";
             // 
+            // ecantidad
+            // 
+            this.ecantidad.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ecantidad.ContainerControl = this;
+            this.ecantidad.Icon = ((System.Drawing.Icon)(resources.GetObject("ecantidad.Icon")));
+            // 
+            // idproducto
+            // 
+            this.idproducto.FillWeight = 95.63452F;
+            this.idproducto.HeaderText = "ID producto";
+            this.idproducto.Name = "idproducto";
+            // 
+            // producto
+            // 
+            this.producto.FillWeight = 95.63452F;
+            this.producto.HeaderText = "Producto";
+            this.producto.Name = "producto";
+            this.producto.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.FillWeight = 95.63452F;
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.FillWeight = 95.63452F;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.FillWeight = 95.63452F;
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            // 
+            // eliminar
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.eliminar.FillWeight = 121.8274F;
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // lprecio
+            // 
+            this.lprecio.AutoSize = true;
+            this.lprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lprecio.ForeColor = System.Drawing.Color.Lime;
+            this.lprecio.Location = new System.Drawing.Point(3, 11);
+            this.lprecio.Name = "lprecio";
+            this.lprecio.Size = new System.Drawing.Size(21, 24);
+            this.lprecio.TabIndex = 14;
+            this.lprecio.Text = "$";
+            // 
             // Fagregar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,6 +648,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ecantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,8 +667,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lvendedor;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lprecio;
         private System.Windows.Forms.Button Bgenerarventa;
         private System.Windows.Forms.Button bcancelarventa;
         private System.Windows.Forms.TextBox tfecha;
@@ -690,12 +686,6 @@
         private System.Windows.Forms.TextBox tstock;
         private System.Windows.Forms.TextBox tnombre;
         private System.Windows.Forms.TextBox tcantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.DataGridViewButtonColumn eliminar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label14;
@@ -705,5 +695,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbuscarid;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ErrorProvider ecantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private System.Windows.Forms.Label lprecio;
     }
 }

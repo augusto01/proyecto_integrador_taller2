@@ -31,7 +31,8 @@ namespace CapaPresentacion.Vistas.Venta
             
         }
 
-       
+        //declaramos el total 
+        decimal total = 0;
 
         private void label10_Click(object sender, EventArgs e)
         {
@@ -76,6 +77,7 @@ namespace CapaPresentacion.Vistas.Venta
             cbtipopago.DropDownStyle = ComboBoxStyle.DropDownList;
             cliente.obtener_tipo_pago();
 
+            tcantidad.Text = "1";
             //cargar combobox productos
 
            
@@ -144,12 +146,14 @@ namespace CapaPresentacion.Vistas.Venta
         private void bagregarproducto_Click(object sender, EventArgs e)
         {
 
-            if (tcantidad.Text.Trim() != String.Empty)
+            if (tcantidad.Text.Trim() == String.Empty || tprecio.Text.Trim() == String.Empty || tnombre.Text.Trim() == String.Empty)
             {
-                decimal precio = decimal.Parse(tprecio.Text);
-                int cantidad = Int32.Parse(tcantidad.Text);
+                MessageBox.Show("Seleccione un producto!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                decimal subtotal = precio * cantidad;
+            }
+            else
+            {
+                /*          
                 int n = dgdetalle.Rows.Add();
                 //Anadimos registros al data grid
 
@@ -157,19 +161,86 @@ namespace CapaPresentacion.Vistas.Venta
                 dgdetalle.Rows[n].Cells[1].Value = tnombre.Text;
                 dgdetalle.Rows[n].Cells[2].Value = tprecio.Text;
                 dgdetalle.Rows[n].Cells[3].Value = tcantidad.Text;
+                dgdetalle.Rows[n].Cells[4].Value = float.Parse((tprecio.Text)) * Int32.Parse((tcantidad.Text)) ;
+
+                //recorremos el datagrid para calcular el total 
+
+                foreach (DataGridViewRow fila in dgdetalle.Rows)
+                {
+                    // Convertir el valor de la celda a decimal y acumularlo.
+                    total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                }
+                lprecio.Text = total.ToString();
+                //subtotal = 0;
+                ecantidad.Clear();
+                tcantidad.Text = "1";
+                tnombre.Clear();
+                tprecio.Clear();
+                tstock.Clear();
+                lprecio.Text = total.ToString()+"$";
+
+             
+                //scroll automatico del dg*/
+
+                int n = dgdetalle.Rows.Add();
+
+                // Anadimos registros al data grid
+                dgdetalle.Rows[n].Cells[1].Value = tnombre.Text;
+                dgdetalle.Rows[n].Cells[2].Value = tprecio.Text;
+                dgdetalle.Rows[n].Cells[3].Value = tcantidad.Text;
+
+                // Calcular el subtotal para la nueva fila
+                decimal precio = decimal.Parse(tprecio.Text);
+                int cantidad = Int32.Parse(tcantidad.Text);
+                decimal subtotal = precio * cantidad;
+
                 dgdetalle.Rows[n].Cells[4].Value = subtotal;
 
-                //scroll automatico del dg
-                dgdetalle.FirstDisplayedScrollingRowIndex = dgdetalle.RowCount - 1;
+                // Recorremos el datagrid para calcular el total
+                decimal total = 0;
+                foreach (DataGridViewRow fila in dgdetalle.Rows)
+                {
+                    if (!fila.IsNewRow && fila.Cells["Subtotal"].Value != null)
+                    {
+                        // Convertir el valor de la celda a decimal y acumularlo.
+                        total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                    }
+                }
 
-            }
-            else
-            {
-                MessageBox.Show("Ingrese una cantidad!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lprecio.Text = total.ToString("C0", new System.Globalization.CultureInfo("es-MX")); // Mostrar el total con formato de moneda.
+
+                // Limpiar campos y ajustar el valor predeterminado de la cantidad.
+                tcantidad.Text = "1";
+                tnombre.Clear();
+                tprecio.Clear();
+                tstock.Clear();
+
             }
            
         }
 
-       
+        private void tcantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                ecantidad.SetError(tcantidad, "Solo numeros!");
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void dgdetalle_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+         /*
+            foreach (DataGridViewRow fila in dgdetalle.Rows)
+            {
+                // Convertir el valor de la celda a decimal y acumularlo.
+                total -= Convert.ToDecimal(fila.Cells["subtotal"].Value);
+                
+            }
+            this.dgdetalle.Rows.RemoveAt(this.dgdetalle.CurrentRow.Index);
+            lprecio.Text = total.ToString() + "$";*/
+        }
     }
 }
