@@ -52,8 +52,15 @@ namespace CapaNegocio
             nueva_venta.registrar_cabecera(id_usuario,id_cliente,fecha_Venta,id_tipo_pago);
 
         }
+        public void resgistrar_detalle(int id_cabecera, int id_producto, string producto, decimal precio_unitario, int cantidad, decimal subtotal, decimal total)
+        {
+            CD_Venta nueva_venta = new CD_Venta();
+            nueva_venta.registrar_detalle(id_cabecera, id_producto, producto, precio_unitario, cantidad,subtotal,total);
 
-        
+        }
+
+
+
     }
     
 

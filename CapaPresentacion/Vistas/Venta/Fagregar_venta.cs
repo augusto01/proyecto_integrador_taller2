@@ -240,6 +240,8 @@ namespace CapaPresentacion.Vistas.Venta
 
         private void Bgenerarventa_Click(object sender, EventArgs e)
         {
+         
+            int cantidad_registros = 0;
             if (dgdetalle.RowCount == 0)
             {
 
@@ -248,8 +250,22 @@ namespace CapaPresentacion.Vistas.Venta
             }
             else
             {
+                cantidad_registros= dgdetalle.RowCount;
                 cliente.registrar_cabecera(Int32.Parse(tidvendedor.Text) , cbcliente.SelectedIndex, DateTime.Parse(tfecha.Text), cbtipopago.SelectedIndex);
-                MessageBox.Show("ok!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                for(int i=0; i < dgdetalle.Rows.Count; i++)
+                {
+                    DataGridViewRow fila = dgdetalle.Rows[i];
+
+                    // Obtener los valores de las celdas
+                    int id_producto = Convert.ToInt32(fila.Cells["id_producto"].Value);
+                    string producto = Convert.ToString(fila.Cells["Producto"].Value);
+                    decimal precioUnitario = Convert.ToDecimal(fila.Cells["PrecioUnitario"].Value);
+                    int cantidad = Convert.ToInt32(fila.Cells["Cantidad"].Value);
+                    decimal subtotal = Convert.ToDecimal(fila.Cells["Sutbotal"].Value);
+                    
+                    registrar_detalle();
+                }
             }
         }
     }

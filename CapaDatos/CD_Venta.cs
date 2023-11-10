@@ -171,6 +171,20 @@ namespace CapaDatos
             
         }
 
+        public int registrar_detalle(int id_cabecera,int id_producto, string producto, decimal precio_unitario, int cantidad, decimal subtotal, decimal total)
+        {
+
+            var conexion = GetConnection();
+            int flag = 0;
+            conexion.Open();
+            string query = "insert into Venta_detalle(id_cabecera, cantidad_producto, id_producto, subtotal, total) Values("+id_cabecera+", "+cantidad+", "+id_producto+", "+subtotal+", "+total+")";
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            flag = cmd.ExecuteNonQuery();
+            conexion.Close();
+            return flag;
+
+        }
+
 
 
     }
