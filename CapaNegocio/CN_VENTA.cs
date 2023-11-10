@@ -43,6 +43,9 @@ namespace CapaNegocio
             CD_Venta datos = new CD_Venta();
             return datos.ObtenerUltimoNumeroFactura();
         }
+
+
+        
     }
     
 

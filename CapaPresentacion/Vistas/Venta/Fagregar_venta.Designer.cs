@@ -251,7 +251,7 @@
             this.dgdetalle.Name = "dgdetalle";
             this.dgdetalle.Size = new System.Drawing.Size(751, 206);
             this.dgdetalle.TabIndex = 0;
-            this.dgdetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdetalle_CellContentClick);
+            this.dgdetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdetalle_CellContentClick_1);
             // 
             // idproducto
             // 

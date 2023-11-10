@@ -5,6 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices.ComTypes;
+using System.Data;
+using System.Configuration;
 
 namespace CapaDatos
 {
@@ -84,7 +87,7 @@ namespace CapaDatos
             var connection = GetConnection();
             connection.Open();
 
-            string sql = "SELECT MAX(id_detalle) FROM Venta_detalle";
+            string sql = "SELECT MAX(id_cabecera) FROM Venta_cabecera";
             using (SqlCommand command = new SqlCommand(sql, connection))
             {
                 object result = command.ExecuteScalar();
@@ -100,7 +103,72 @@ namespace CapaDatos
 
         }
 
+        public bool restar_stock(int stock, int cantidad, int id_producto)
+        {
+            bool respuesta = true;
+            var conexion = GetConnection();
+           
+            try
+            {
+
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("update Producto set stock = stock - @cantidad where id_producto =@id_producto ");
+                SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
+                cmd.Parameters.AddWithValue("@cantidad", cantidad);
+                cmd.Parameters.AddWithValue("@id_producto", id_producto);
+                cmd.CommandType = CommandType.Text;
+                conexion.Open();
+
+                respuesta = cmd.ExecuteNonQuery() > 0 ? true : false;
+            }
+            catch (Exception ex)
+            {
+                respuesta = false; 
+            }
+           
+            return respuesta;
+
+        }
+
+        public bool sumar_stock(int stock, int cantidad, int id_producto)
+        {
+            bool respuesta = true;
+            var conexion = GetConnection();
+
+            try
+            {
+
+                StringBuilder query = new StringBuilder();
+                query.AppendLine("update Producto set stock = stock + @cantidad where id_producto =@id_producto ");
+                SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
+                cmd.Parameters.AddWithValue("@cantidad", cantidad);
+                cmd.Parameters.AddWithValue("@id_producto", id_producto);
+                cmd.CommandType = CommandType.Text;
+                conexion.Open();
+
+                respuesta = cmd.ExecuteNonQuery() > 0 ? true : false;
+            }
+            catch (Exception ex)
+            {
+                respuesta = false;
+            }
+
+            return respuesta;
+
+        }
+
+        public void realizar_venta()
+        {
+            int codigo_venta;
+            var conexion = GetConnection();
+            conexion.Open();
+            SqlCommand codigomaxventa = new SqlCommand("Select MAX (Id_cabecera) From Venta_cabecera");                      
+            object resultado = codigomaxventa.ExecuteScalar();
+            ObtenerUltimoNumeroFactura();
       
+        }
+
+
 
     }
 }
