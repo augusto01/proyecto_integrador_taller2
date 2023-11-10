@@ -157,15 +157,18 @@ namespace CapaDatos
 
         }
 
-        public void realizar_venta()
+        public int registrar_cabecera(int id_usuario,int id_cliente, DateTime fecha_Venta, int id_tipo_pago)
         {
-            int codigo_venta;
-            var conexion = GetConnection();
-            conexion.Open();
-            SqlCommand codigomaxventa = new SqlCommand("Select MAX (Id_cabecera) From Venta_cabecera");                      
-            object resultado = codigomaxventa.ExecuteScalar();
-            ObtenerUltimoNumeroFactura();
-      
+          
+                var conexion = GetConnection();
+                int flag = 0;
+                conexion.Open();
+                string query = "insert into Venta_cabecera (id_usuario,id_cliente,id_tipo_pago,fecha_Venta) Values("+id_usuario+","+id_cliente+","+id_tipo_pago+",getdate())";
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                flag = cmd.ExecuteNonQuery();
+                conexion.Close();
+                return flag;
+            
         }
 
 

@@ -238,8 +238,19 @@ namespace CapaPresentacion.Vistas.Venta
             }
         }
 
-      
+        private void Bgenerarventa_Click(object sender, EventArgs e)
+        {
+            if (dgdetalle.RowCount == 0)
+            {
 
-       
+                MessageBox.Show("Ingrese al menos un producto!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                cliente.registrar_cabecera(Int32.Parse(tidvendedor.Text) , cbcliente.SelectedIndex, DateTime.Parse(tfecha.Text), cbtipopago.SelectedIndex);
+                MessageBox.Show("ok!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

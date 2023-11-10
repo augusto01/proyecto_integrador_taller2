@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using CapaEntidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,13 @@ namespace CapaNegocio
             return datos.ObtenerUltimoNumeroFactura();
         }
 
+
+        public void registrar_cabecera(int id_usuario, int id_cliente, DateTime fecha_Venta, int id_tipo_pago)
+        {
+            CD_Venta nueva_venta = new CD_Venta();
+            nueva_venta.registrar_cabecera(id_usuario,id_cliente,fecha_Venta,id_tipo_pago);
+
+        }
 
         
     }
