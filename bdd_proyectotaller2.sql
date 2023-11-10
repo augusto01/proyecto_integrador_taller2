@@ -36,9 +36,13 @@ create table Producto (
 	fecha_creacion datetime default getdate(),
 )
 CREATE TABLE Venta_detalle(
+	
 	id_venta int primary key identity not null,
 	id_producto int references Producto(id_producto),	
+	id_cabecera int references Venta_cabecera(id_cabecera),
 	descripcion varchar (100),
+	subtotal decimal not null,
+	cantidad int 
 )
 
 
@@ -68,13 +72,18 @@ CREATE TABLE Cliente (
 	fecha_creacion datetime default getdate(),
 )
 
+insert into Cliente (nombre_cliente,apellido_cliente) VALUES ('CONSUMIDOR FINAL','CONSUMIDOR FINAL')
 
+select * from Tipo_pago
 
+drop table Venta_cabecera
+drop table Venta_detalle
 
 CREATE TABLE Venta_cabecera(
-	id_cabecera int primary key identity NOT NULL,
+	id_cabecera int primary key identity (0,1) NOT NULL,
 	id_usuario int references Usuario(id_usuario),	
 	id_cliente int references Cliente (id_cliente),
+	tipo_pago int not null,
 	fecha_venta datetime default getdate(),
 )
 
@@ -96,7 +105,7 @@ INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Administrador')
 INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Empleado')
 INSERT INTO Tipo_Usuario (descripcion)  VALUES ('Gerente')
 
-select * from Usuario
+select * from Venta_cabecera
 
 
 INSERT INTO Usuario(id_tipo_usuario,nombre,apellido,correo,pass,estado,fecha_creacion,dni,username)VALUES(2,'augusto','almiron','user@gmial.com','1234',1,getdate(),42791957,'augusto01')

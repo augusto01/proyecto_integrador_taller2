@@ -157,13 +157,13 @@ namespace CapaDatos
 
         }
 
-        public int registrar_cabecera(int id_usuario,int id_cliente, DateTime fecha_Venta, int id_tipo_pago)
+        public int registrar_cabecera(int id_usuario,int id_cliente, int id_tipo_pago, DateTime fecha_Venta)
         {
           
                 var conexion = GetConnection();
                 int flag = 0;
                 conexion.Open();
-                string query = "insert into Venta_cabecera (id_usuario,id_cliente,id_tipo_pago,fecha_Venta) Values("+id_usuario+","+id_cliente+","+id_tipo_pago+",getdate())";
+                string query = "insert into Venta_cabecera (id_usuario,id_cliente,tipo_pago,fecha_Venta) Values("+id_usuario+","+id_cliente+","+id_tipo_pago+",getdate())";
                 SqlCommand cmd = new SqlCommand(query, conexion);
                 flag = cmd.ExecuteNonQuery();
                 conexion.Close();
@@ -171,13 +171,13 @@ namespace CapaDatos
             
         }
 
-        public int registrar_detalle(int id_cabecera,int id_producto, string producto, decimal precio_unitario, int cantidad, decimal subtotal, decimal total)
+        public int registrar_detalle(int id_cabecera,int id_producto, string producto, decimal precio_unitario, int cantidad, decimal subtotal)
         {
 
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
-            string query = "insert into Venta_detalle(id_cabecera, cantidad_producto, id_producto, subtotal, total) Values("+id_cabecera+", "+cantidad+", "+id_producto+", "+subtotal+", "+total+")";
+            string query = "insert into Venta_detalle(id_producto,id_cabecera,descripcion,subtotal,cantidad) Values(" + id_producto+", "+id_cabecera+", '"+producto+"', "+subtotal+","+cantidad+")";
             SqlCommand cmd = new SqlCommand(query, conexion);
             flag = cmd.ExecuteNonQuery();
             conexion.Close();

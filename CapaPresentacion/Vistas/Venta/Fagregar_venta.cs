@@ -61,6 +61,7 @@ namespace CapaPresentacion.Vistas.Venta
             tfecha.Text = DateTime.Today.Date.ToString("d");
             lvendedor.Text = CapaEntidad.Cache.UserLoginCache.nombre.Trim()+" "+ CapaEntidad.Cache.UserLoginCache.apellido.Trim();
             tidvendedor.Text = CapaEntidad.Cache.UserLoginCache.id_usuario.ToString();
+            tidfactura.Text = cliente.ObtenerSiguienteNumeroFactura().ToString();
             //cargar combobox clientes
 
             cliente.obtener_clientes();
@@ -251,20 +252,22 @@ namespace CapaPresentacion.Vistas.Venta
             else
             {
                 cantidad_registros= dgdetalle.RowCount;
-                cliente.registrar_cabecera(Int32.Parse(tidvendedor.Text) , cbcliente.SelectedIndex, DateTime.Parse(tfecha.Text), cbtipopago.SelectedIndex);
-
+                cliente.registrar_cabecera(Int32.Parse(tidvendedor.Text) , cbcliente.SelectedIndex,cbtipopago.SelectedIndex, DateTime.Parse(tfecha.Text));
+                int idcabecera = cliente.ObtenerSiguienteNumeroFactura();
                 for(int i=0; i < dgdetalle.Rows.Count; i++)
                 {
                     DataGridViewRow fila = dgdetalle.Rows[i];
 
                     // Obtener los valores de las celdas
-                    int id_producto = Convert.ToInt32(fila.Cells["id_producto"].Value);
+                    int id_producto = Convert.ToInt32(fila.Cells["idproducto"].Value);
                     string producto = Convert.ToString(fila.Cells["Producto"].Value);
-                    decimal precioUnitario = Convert.ToDecimal(fila.Cells["PrecioUnitario"].Value);
+                    decimal precioUnitario = Convert.ToDecimal(fila.Cells["precio"].Value);
                     int cantidad = Convert.ToInt32(fila.Cells["Cantidad"].Value);
-                    decimal subtotal = Convert.ToDecimal(fila.Cells["Sutbotal"].Value);
+                    decimal subtotal = Convert.ToDecimal(fila.Cells["subtotal"].Value);
+                    //decimal total = decimal.Parse(lprecio.Text);
                     
-                    registrar_detalle();
+                    cliente.resgistrar_detalle(cliente.ObtenerSiguienteNumeroFactura()-1 ,  id_producto,  producto,  precioUnitario,  cantidad,  subtotal);
+                    MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
