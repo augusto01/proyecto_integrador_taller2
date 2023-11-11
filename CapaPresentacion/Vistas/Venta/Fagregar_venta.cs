@@ -134,9 +134,6 @@ namespace CapaPresentacion.Vistas.Venta
                 tprecio.Text = dgproductos[4, posicion].Value.ToString();
                 tstock.Text = dgproductos[5, posicion].Value.ToString();
                 tnombre.Text = dgproductos[2, posicion].Value.ToString();
-               
-               
-
             }
         }
 
@@ -171,6 +168,7 @@ namespace CapaPresentacion.Vistas.Venta
                         int n = dgdetalle.Rows.Add();
 
                         // Anadimos registros al data grid
+                        cliente.restar_stock(Int32.Parse(tstock.Text) ,Int32.Parse(tcantidad.Text),Int32.Parse (tbuscarid.Text));
                         dgdetalle.Rows[n].Cells[0].Value = tbuscarid.Text;
                         dgdetalle.Rows[n].Cells[1].Value = tnombre.Text;
                         dgdetalle.Rows[n].Cells[2].Value = tprecio.Text;
@@ -254,7 +252,7 @@ namespace CapaPresentacion.Vistas.Venta
                 cantidad_registros= dgdetalle.RowCount;
                 cliente.registrar_cabecera(Int32.Parse(tidvendedor.Text) , cbcliente.SelectedIndex,cbtipopago.SelectedIndex, DateTime.Parse(tfecha.Text));
                 int idcabecera = cliente.ObtenerSiguienteNumeroFactura();
-                for(int i=0; i < dgdetalle.Rows.Count; i++)
+                for (int i = 0; i < dgdetalle.Rows.Count; i++)
                 {
                     DataGridViewRow fila = dgdetalle.Rows[i];
 
@@ -265,11 +263,17 @@ namespace CapaPresentacion.Vistas.Venta
                     int cantidad = Convert.ToInt32(fila.Cells["Cantidad"].Value);
                     decimal subtotal = Convert.ToDecimal(fila.Cells["subtotal"].Value);
                     //decimal total = decimal.Parse(lprecio.Text);
-                    
-                    cliente.resgistrar_detalle(cliente.ObtenerSiguienteNumeroFactura()-1 ,  id_producto,  producto,  precioUnitario,  cantidad,  subtotal);
-                    MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    cliente.resgistrar_detalle(cliente.ObtenerSiguienteNumeroFactura() - 1, id_producto, producto, precioUnitario, cantidad, subtotal);
                 }
+                MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void bcancelarventa_Click(object sender, EventArgs e)
+        {
+            //si la venta es cancelada reponemos el stock 
+            cliente.restar_stock(Int32.Parse(tstock.Text), Int32.Parse(tcantidad.Text), Int32.Parse(tbuscarid.Text));
         }
     }
 }

@@ -163,7 +163,7 @@ namespace CapaDatos
                 var conexion = GetConnection();
                 int flag = 0;
                 conexion.Open();
-                string query = "insert into Venta_cabecera (id_usuario,id_cliente,tipo_pago,fecha_Venta) Values("+id_usuario+","+id_cliente+","+id_tipo_pago+",getdate())";
+                string query = "insert into Venta_cabecera (id_usuario,id_cliente,id_tipo_pago,fecha_Venta) Values("+id_usuario+","+id_cliente+","+id_tipo_pago+",getdate())";
                 SqlCommand cmd = new SqlCommand(query, conexion);
                 flag = cmd.ExecuteNonQuery();
                 conexion.Close();
@@ -177,7 +177,7 @@ namespace CapaDatos
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
-            string query = "insert into Venta_detalle(id_producto,id_cabecera,descripcion,subtotal,cantidad) Values(" + id_producto+", "+id_cabecera+", '"+producto+"', "+subtotal+","+cantidad+")";
+            string query = "insert into Venta_detalle(id_cabecera,cantidad_producto,id_producto,subtotal) Values("+id_cabecera+","+cantidad+"," + id_producto+", "+subtotal+")";
             SqlCommand cmd = new SqlCommand(query, conexion);
             flag = cmd.ExecuteNonQuery();
             conexion.Close();

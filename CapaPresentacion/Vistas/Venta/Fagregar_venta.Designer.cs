@@ -427,6 +427,7 @@
             this.bcancelarventa.TabIndex = 85;
             this.bcancelarventa.Text = "Cancelar";
             this.bcancelarventa.UseVisualStyleBackColor = false;
+            this.bcancelarventa.Click += new System.EventHandler(this.bcancelarventa_Click);
             // 
             // Bgenerarventa
             // 
