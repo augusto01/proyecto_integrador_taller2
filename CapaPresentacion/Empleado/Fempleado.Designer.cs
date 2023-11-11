@@ -309,9 +309,10 @@
             this.bverventas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.bverventas.Size = new System.Drawing.Size(267, 45);
             this.bverventas.TabIndex = 3;
-            this.bverventas.Text = "Ver Ventas";
+            this.bverventas.Text = "Mis Ventas";
             this.bverventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bverventas.UseVisualStyleBackColor = true;
+            this.bverventas.Click += new System.EventHandler(this.bverventas_Click);
             // 
             // bagregarventas
             // 

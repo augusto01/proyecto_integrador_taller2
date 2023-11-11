@@ -188,5 +188,12 @@ namespace CapaPresentacion.Empleado
             abrirFormulario(new Fagregar_venta());
             ocultar_submenu();
         }
+
+        private void bverventas_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fmis_ventas());
+            ocultar_submenu();
+        }
     }
 }

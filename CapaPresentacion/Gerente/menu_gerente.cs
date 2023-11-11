@@ -270,5 +270,12 @@ namespace CapaPresentacion.Gerente
            ocultar_submenu();
             
         }
+
+        private void bverventas_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fmis_ventas());
+            ocultar_submenu();
+        }
     }
 }

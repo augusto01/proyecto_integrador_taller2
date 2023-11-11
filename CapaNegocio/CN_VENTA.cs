@@ -2,6 +2,7 @@
 using CapaEntidad;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -71,6 +72,12 @@ namespace CapaNegocio
             CD_Venta nueva_venta = new CD_Venta();
             nueva_venta.registrar_detalle(id_cabecera, id_producto, producto, precio_unitario, cantidad,subtotal,total);
 
+        }
+
+        public DataTable consultarventas(int id_usuario)
+        {
+            CD_Venta ventas = new CD_Venta();
+            return ventas.Consulta_ventasDG(id_usuario);
         }
 
 
