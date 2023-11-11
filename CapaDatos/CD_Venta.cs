@@ -17,7 +17,7 @@ namespace CapaDatos
         public DataTable Consulta_ventasDG(int id_usuario)
         {
             var conexion = GetConnection();
-            string consulta = "select vc.id_cabecera as 'ID-FACTURA', cli.nombre_cliente as 'Cliente', tp.desc_tipo_pago as 'Tipo Pago', vc.fecha_venta as 'Fecha de Venta' from Venta_detalle\r\ninner join Venta_cabecera vc on Venta_detalle.id_cabecera = vc.id_cabecera\r\ninner join Cliente cli on vc.id_cliente = cli.id_cliente\r\ninner join Usuario us on vc.id_usuario = us.id_usuario\r\ninner join Tipo_pago tp on tp.id_tipo_pago = vc.id_tipo_pago where us.id_usuario = "+id_usuario+"";
+            string consulta = "select distinct vc.id_cabecera as 'ID-FACTURA', cli.nombre_cliente as 'Cliente', tp.desc_tipo_pago as 'Tipo Pago', vc.fecha_venta as 'Fecha de Venta' from Venta_detalle\r\ninner join Venta_cabecera vc on Venta_detalle.id_cabecera = vc.id_cabecera\r\ninner join Cliente cli on vc.id_cliente = cli.id_cliente\r\ninner join Usuario us on vc.id_usuario = us.id_usuario\r\ninner join Tipo_pago tp on tp.id_tipo_pago = vc.id_tipo_pago where us.id_usuario = "+id_usuario+"";
             SqlCommand cmd = new SqlCommand(consulta, conexion);
             SqlDataAdapter data = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
