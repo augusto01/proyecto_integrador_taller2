@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_backup));
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tdesc = new System.Windows.Forms.TextBox();
+            this.truta = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tnombrearchivo = new System.Windows.Forms.TextBox();
             this.banadir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.eruta = new System.Windows.Forms.ErrorProvider(this.components);
+            this.enombre = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eruta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -103,18 +108,18 @@
             this.label3.TabIndex = 146;
             this.label3.Text = "Ubicacion:";
             // 
-            // tdesc
+            // truta
             // 
-            this.tdesc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.tdesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tdesc.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tdesc.ForeColor = System.Drawing.Color.White;
-            this.tdesc.Location = new System.Drawing.Point(47, 293);
-            this.tdesc.Name = "tdesc";
-            this.tdesc.Size = new System.Drawing.Size(566, 24);
-            this.tdesc.TabIndex = 145;
-            this.tdesc.Text = "Seleccione un destino";
+            this.truta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.truta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.truta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.truta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.truta.ForeColor = System.Drawing.Color.White;
+            this.truta.Location = new System.Drawing.Point(47, 293);
+            this.truta.Name = "truta";
+            this.truta.Size = new System.Drawing.Size(566, 24);
+            this.truta.TabIndex = 145;
+            this.truta.Text = "Seleccione un destino";
             // 
             // label4
             // 
@@ -127,17 +132,17 @@
             this.label4.TabIndex = 148;
             this.label4.Text = "Nombre de archivo:";
             // 
-            // textBox1
+            // tnombrearchivo
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(47, 361);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(566, 24);
-            this.textBox1.TabIndex = 147;
+            this.tnombrearchivo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tnombrearchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tnombrearchivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tnombrearchivo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tnombrearchivo.ForeColor = System.Drawing.Color.White;
+            this.tnombrearchivo.Location = new System.Drawing.Point(47, 361);
+            this.tnombrearchivo.Name = "tnombrearchivo";
+            this.tnombrearchivo.Size = new System.Drawing.Size(566, 24);
+            this.tnombrearchivo.TabIndex = 147;
             // 
             // banadir
             // 
@@ -147,12 +152,13 @@
             this.banadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.banadir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.banadir.ForeColor = System.Drawing.Color.White;
-            this.banadir.Location = new System.Drawing.Point(619, 289);
+            this.banadir.Location = new System.Drawing.Point(646, 289);
             this.banadir.Name = "banadir";
             this.banadir.Size = new System.Drawing.Size(125, 31);
             this.banadir.TabIndex = 149;
             this.banadir.Text = "Examinar...";
             this.banadir.UseVisualStyleBackColor = false;
+            this.banadir.Click += new System.EventHandler(this.banadir_Click);
             // 
             // button1
             // 
@@ -162,12 +168,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(619, 357);
+            this.button1.Location = new System.Drawing.Point(646, 357);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 31);
             this.button1.TabIndex = 150;
             this.button1.Text = "Backup";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -177,7 +184,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(619, 556);
+            this.button2.Location = new System.Drawing.Point(646, 556);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 31);
             this.button2.TabIndex = 153;
@@ -208,6 +215,18 @@
             this.textBox2.TabIndex = 151;
             this.textBox2.Text = "Seleccion el archivo .bak";
             // 
+            // eruta
+            // 
+            this.eruta.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.eruta.ContainerControl = this;
+            this.eruta.Icon = ((System.Drawing.Icon)(resources.GetObject("eruta.Icon")));
+            // 
+            // enombre
+            // 
+            this.enombre.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.enombre.ContainerControl = this;
+            this.enombre.Icon = ((System.Drawing.Icon)(resources.GetObject("enombre.Icon")));
+            // 
             // Fagregar_backup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,9 +239,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.banadir);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tnombrearchivo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tdesc);
+            this.Controls.Add(this.truta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -231,6 +250,8 @@
             this.Name = "Fagregar_backup";
             this.Text = "Fagregar_backup";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eruta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enombre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,13 +263,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tdesc;
+        private System.Windows.Forms.TextBox truta;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tnombrearchivo;
         private System.Windows.Forms.Button banadir;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ErrorProvider eruta;
+        private System.Windows.Forms.ErrorProvider enombre;
     }
 }

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_BACKUP.cs" />
     <Compile Include="CN_PRODUCTO.cs" />
     <Compile Include="CN_PROVEEDOR.cs" />
     <Compile Include="CN_USUARIO.cs" />

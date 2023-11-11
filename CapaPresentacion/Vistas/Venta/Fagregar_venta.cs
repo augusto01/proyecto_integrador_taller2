@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -200,6 +201,8 @@ namespace CapaPresentacion.Vistas.Venta
                         tprecio.Clear();
                         tstock.Clear();
                         tbuscarid.Clear();
+                        //consultamos de nuevo para actualizar el stock
+                        dgproductos.DataSource = productoventa.ConsultaDT();
                     }
                     
 
@@ -223,7 +226,8 @@ namespace CapaPresentacion.Vistas.Venta
         {
             if (e.ColumnIndex == dgdetalle.Columns["eliminar"].Index && e.RowIndex >= 0)
             {
-                
+              //  int n = dgdetalle.CurrentRow.Index;
+               // cliente.sumar_stock(Convert.ToInt32(tstock.Text), Convert.ToInt32(dgdetalle.Rows[n].Cells[3].Value), Convert.ToInt32(dgdetalle.Rows[n].Cells[0].Value));
                 dgdetalle.Rows.RemoveAt(e.RowIndex);
             }
 
@@ -268,13 +272,29 @@ namespace CapaPresentacion.Vistas.Venta
                     cliente.resgistrar_detalle(cliente.ObtenerSiguienteNumeroFactura() - 1, id_producto, producto, precioUnitario, cantidad, subtotal, preciototal);
                 }
                 MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgdetalle.Rows.Clear();
+                tstock.Clear();
+                tcantidad.Clear();
+                tbuscarid.Clear();
+                tprecio.Clear();
+                tnombre.Clear();    
+                inicializar_cabecera();
             }
         }
 
         private void bcancelarventa_Click(object sender, EventArgs e)
         {
+            if (dgdetalle.RowCount > 0)
+            {
+
+               
+                MessageBox.Show("Venta cancelada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgdetalle.Rows.Clear();
+                this.Close();
+
+            }
             //si la venta es cancelada reponemos el stock 
-            cliente.restar_stock(Int32.Parse(tstock.Text), Int32.Parse(tcantidad.Text), Int32.Parse(tbuscarid.Text));
+           
         }
     }
 }
