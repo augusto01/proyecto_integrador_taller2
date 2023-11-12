@@ -20,7 +20,11 @@ namespace CapaNegocio
             CD_Backup datosbackup = new CD_Backup();
             datosbackup.realizar_backup(rutaArchivo,nombrearchivo);
         }
-
+        public void RestaurarBackup(string rutaArchivo)
+        {
+            CD_Backup resturar = new CD_Backup();
+            resturar.restaurar_backup(rutaArchivo);
+        }
 
 
 
