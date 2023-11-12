@@ -3,6 +3,7 @@ using CapaPresentacion.Administrador.Usuario;
 using CapaPresentacion.Gerente.Producto;
 using CapaPresentacion.Vistas.Backup;
 using CapaPresentacion.Vistas.Compra;
+using CapaPresentacion.Vistas.Informes;
 using CapaPresentacion.Vistas.Proveedor;
 using CapaPresentacion.Vistas.Venta;
 using System;
@@ -275,6 +276,13 @@ namespace CapaPresentacion.Gerente
         {
             ocultarhora();
             abrirFormulario(new Fmis_ventas());
+            ocultar_submenu();
+        }
+
+        private void bverinformes_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fver_informes());
             ocultar_submenu();
         }
     }

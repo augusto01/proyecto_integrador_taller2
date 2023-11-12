@@ -358,6 +358,7 @@
             this.bverinformes.Text = "Ver informes";
             this.bverinformes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bverinformes.UseVisualStyleBackColor = true;
+            this.bverinformes.Click += new System.EventHandler(this.bverinformes_Click);
             // 
             // bagregarinforme
             // 
