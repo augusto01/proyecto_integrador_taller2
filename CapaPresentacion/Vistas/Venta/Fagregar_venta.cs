@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using CapaEntidad;
 using CapaEntidad.Cache;
 using CapaNegocio;
+using System.Drawing.Printing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static Fable.Import.Browser;
 
@@ -23,6 +24,7 @@ namespace CapaPresentacion.Vistas.Venta
         CN_VENTA cliente = new CN_VENTA();
         CN_PRODUCTO productoventa = new CN_PRODUCTO();
 
+        decimal preciototal = 0;
 
         public Fagregar_venta()
         {
@@ -256,7 +258,7 @@ namespace CapaPresentacion.Vistas.Venta
                 cantidad_registros= dgdetalle.RowCount;
                 cliente.registrar_cabecera(Int32.Parse(tidvendedor.Text) , cbcliente.SelectedIndex,cbtipopago.SelectedIndex, DateTime.Parse(tfecha.Text));
                 int idcabecera = cliente.ObtenerSiguienteNumeroFactura();
-                decimal preciototal = 0;
+                
                 for (int i = 0; i < dgdetalle.Rows.Count; i++)
                 {
                     DataGridViewRow fila = dgdetalle.Rows[i];
@@ -271,15 +273,78 @@ namespace CapaPresentacion.Vistas.Venta
 
                     cliente.resgistrar_detalle(cliente.ObtenerSiguienteNumeroFactura() - 1, id_producto, producto, precioUnitario, cantidad, subtotal, preciototal);
                 }
+             
+                /*================= IMPRESION DEL TICKET  ====================*/
+
+                pdfactura = new PrintDocument();
+                PrinterSettings ps = new PrinterSettings();
+                pdfactura.PrinterSettings = ps;
+                pdfactura.PrintPage += pdfactura_PrintPage;
+                pdfactura.Print();
+
+
+                /*================= LIMPIAR CAMPOS Y FINALIZAR VENTA  ====================*/
                 MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgdetalle.Rows.Clear();
                 tstock.Clear();
                 tcantidad.Clear();
                 tbuscarid.Clear();
                 tprecio.Clear();
-                tnombre.Clear();    
+                tnombre.Clear();
                 inicializar_cabecera();
+
+
+
             }
+        }
+
+        private void pdfactura_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font fontTitulo = new Font("Berlin Sans FB Demi", 32, FontStyle.Bold);
+            Font fontDetalle = new Font("Century Gothic", 12,FontStyle.Bold);
+            Font fontotal = new Font("Century Gothic", 14, FontStyle.Bold);
+            Font fontpie = new Font("Century Gothic", 20, FontStyle.Bold);
+            int ancho = 150;
+            int y = 20;
+
+            // Centrar el área de productos vendidos
+            StringFormat formatoCentro = new StringFormat();
+            formatoCentro.Alignment = StringAlignment.Center;
+
+            // Alinear a la izquierda
+            StringFormat formatoIzquierda = new StringFormat();
+            formatoIzquierda.Alignment = StringAlignment.Near;
+
+            e.Graphics.DrawString("SPORTS WORLDS", fontTitulo, Brushes.Lime, new RectangleF(0, y, e.PageBounds.Width, 0), formatoCentro);
+
+            // Encabezado de la factura
+            e.Graphics.DrawString($"Nro Factura: {tidfactura.Text}  Cliente: {cbcliente.Text}  Forma Pago: {cbtipopago.Text} Fecha: {tfecha.Text}", fontDetalle, Brushes.Black, new RectangleF(0, y += 50, e.PageBounds.Width, 0), formatoIzquierda);
+
+            // Título de productos
+            e.Graphics.DrawString("------------- PRODUCTOS -------------", fontDetalle, Brushes.Black, new RectangleF(0, y += 50, e.PageBounds.Width, 0), formatoCentro);
+
+            // Encabezados de columna
+            e.Graphics.DrawString("Producto", fontDetalle, Brushes.Black, new RectangleF(0, y += 30, ancho, 0));
+            e.Graphics.DrawString("Cantidad", fontDetalle, Brushes.Black, new RectangleF(ancho, y, ancho, 0));
+            e.Graphics.DrawString("Subtotal", fontDetalle, Brushes.Black, new RectangleF(ancho * 2, y, ancho, 0));
+
+            for (int i = 0; i < dgdetalle.Rows.Count; i++)
+            {
+                DataGridViewRow fila = dgdetalle.Rows[i];
+
+                // Detalles de la compra
+                e.Graphics.DrawString(Convert.ToString(fila.Cells["Producto"].Value), fontDetalle, Brushes.Black, new RectangleF(0, y += 30, ancho, 0));
+                e.Graphics.DrawString(Convert.ToInt32(fila.Cells["Cantidad"].Value).ToString(), fontDetalle, Brushes.Black, new RectangleF(ancho, y, ancho, 0));
+                e.Graphics.DrawString(Convert.ToDecimal(fila.Cells["precio"].Value).ToString("C", new System.Globalization.CultureInfo("es-MX")), fontDetalle, Brushes.Black, new RectangleF(ancho * 2, y, ancho, 0));
+            }
+
+            // Total
+            e.Graphics.DrawString($"------------- TOTAL: {preciototal.ToString("C0", new System.Globalization.CultureInfo("es-MX"))} -------------", fontDetalle, Brushes.Blue, new RectangleF(0, y += 30, e.PageBounds.Width, 0), formatoCentro);
+
+            // Pie de página
+            e.Graphics.DrawString("Gracias por elegirnos!", fontpie, Brushes.Lime, new RectangleF(0, y += 30, e.PageBounds.Width, 0), formatoCentro);
+
+
         }
 
         private void bcancelarventa_Click(object sender, EventArgs e)
@@ -296,5 +361,7 @@ namespace CapaPresentacion.Vistas.Venta
             //si la venta es cancelada reponemos el stock 
            
         }
+
+       
     }
 }

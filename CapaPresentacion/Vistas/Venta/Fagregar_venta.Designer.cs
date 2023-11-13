@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_venta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tidvendedor = new System.Windows.Forms.TextBox();
@@ -78,6 +78,7 @@
             this.tbuscarid = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.ecantidad = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pdfactura = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdetalle)).BeginInit();
@@ -289,12 +290,12 @@
             // 
             // eliminar
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle1;
             this.eliminar.FillWeight = 121.8274F;
             this.eliminar.HeaderText = "Eliminar";
             this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
@@ -616,6 +617,10 @@
             this.ecantidad.ContainerControl = this;
             this.ecantidad.Icon = ((System.Drawing.Icon)(resources.GetObject("ecantidad.Icon")));
             // 
+            // pdfactura
+            // 
+            this.pdfactura.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdfactura_PrintPage);
+            // 
             // Fagregar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -705,5 +710,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
         private System.Windows.Forms.Label lprecio;
+        private System.Drawing.Printing.PrintDocument pdfactura;
     }
 }

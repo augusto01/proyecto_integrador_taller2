@@ -11,13 +11,15 @@ using System.Configuration;
 
 namespace CapaDatos
 {
-    public class CD_Venta:Conexion
+    public class CD_Venta : Conexion
     {
+
+
 
         public DataTable Consulta_ventasDG(int id_usuario)
         {
             var conexion = GetConnection();
-            string consulta = "select distinct vc.id_cabecera as 'ID-FACTURA', cli.nombre_cliente as 'Cliente', tp.desc_tipo_pago as 'Tipo Pago', vc.fecha_venta as 'Fecha de Venta', sum (pro.precio_unitario * Venta_detalle.cantidad_producto) as 'Precio Total'from Venta_detalle\r\ninner join Producto pro on pro.id_producto = Venta_detalle.id_producto\r\ninner join Venta_cabecera vc on Venta_detalle.id_cabecera = vc.id_cabecera\r\ninner join Cliente cli on vc.id_cliente = cli.id_cliente\r\ninner join Usuario us on vc.id_usuario = us.id_usuario\r\ninner join Tipo_pago tp on tp.id_tipo_pago = vc.id_tipo_pago where us.id_usuario = "+id_usuario+"\r\ngroup by vc.id_cabecera, cli.nombre_cliente, tp.desc_tipo_pago, vc.fecha_venta";
+            string consulta = "select distinct vc.id_cabecera as 'ID-FACTURA', cli.nombre_cliente as 'Cliente', tp.desc_tipo_pago as 'Tipo Pago', vc.fecha_venta as 'Fecha de Venta', sum (pro.precio_unitario * Venta_detalle.cantidad_producto) as 'Precio Total'from Venta_detalle\r\ninner join Producto pro on pro.id_producto = Venta_detalle.id_producto\r\ninner join Venta_cabecera vc on Venta_detalle.id_cabecera = vc.id_cabecera\r\ninner join Cliente cli on vc.id_cliente = cli.id_cliente\r\ninner join Usuario us on vc.id_usuario = us.id_usuario\r\ninner join Tipo_pago tp on tp.id_tipo_pago = vc.id_tipo_pago where us.id_usuario = " + id_usuario + "\r\ngroup by vc.id_cabecera, cli.nombre_cliente, tp.desc_tipo_pago, vc.fecha_venta";
             SqlCommand cmd = new SqlCommand(consulta, conexion);
             SqlDataAdapter data = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
@@ -119,7 +121,7 @@ namespace CapaDatos
         {
             bool respuesta = true;
             var conexion = GetConnection();
-           
+
             try
             {
 
@@ -135,9 +137,9 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                respuesta = false; 
+                respuesta = false;
             }
-           
+
             return respuesta;
 
         }
@@ -169,27 +171,27 @@ namespace CapaDatos
 
         }
 
-        public int registrar_cabecera(int id_usuario,int id_cliente, int id_tipo_pago, DateTime fecha_Venta)
-        {
-          
-                var conexion = GetConnection();
-                int flag = 0;
-                conexion.Open();
-                string query = "insert into Venta_cabecera (id_usuario,id_cliente,id_tipo_pago,fecha_Venta) Values("+id_usuario+","+id_cliente+","+id_tipo_pago+",getdate())";
-                SqlCommand cmd = new SqlCommand(query, conexion);
-                flag = cmd.ExecuteNonQuery();
-                conexion.Close();
-                return flag;
-            
-        }
-
-        public int registrar_detalle(int id_cabecera,int id_producto, string producto, decimal precio_unitario, int cantidad, decimal subtotal, decimal total)
+        public int registrar_cabecera(int id_usuario, int id_cliente, int id_tipo_pago, DateTime fecha_Venta)
         {
 
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
-            string query = "insert into Venta_detalle(id_cabecera,cantidad_producto,id_producto,subtotal,total) Values("+id_cabecera+","+cantidad+"," + id_producto+", "+subtotal+","+total+")";
+            string query = "insert into Venta_cabecera (id_usuario,id_cliente,id_tipo_pago,fecha_Venta) Values(" + id_usuario + "," + id_cliente + "," + id_tipo_pago + ",getdate())";
+            SqlCommand cmd = new SqlCommand(query, conexion);
+            flag = cmd.ExecuteNonQuery();
+            conexion.Close();
+            return flag;
+
+        }
+
+        public int registrar_detalle(int id_cabecera, int id_producto, string producto, decimal precio_unitario, int cantidad, decimal subtotal, decimal total)
+        {
+
+            var conexion = GetConnection();
+            int flag = 0;
+            conexion.Open();
+            string query = "insert into Venta_detalle(id_cabecera,cantidad_producto,id_producto,subtotal,total) Values(" + id_cabecera + "," + cantidad + "," + id_producto + ", " + subtotal + "," + total + ")";
             SqlCommand cmd = new SqlCommand(query, conexion);
             flag = cmd.ExecuteNonQuery();
             conexion.Close();
@@ -199,5 +201,7 @@ namespace CapaDatos
 
 
 
+
     }
+
 }
