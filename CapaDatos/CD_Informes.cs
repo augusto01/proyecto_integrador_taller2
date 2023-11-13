@@ -53,7 +53,7 @@ namespace CapaDatos
             }
         }
 
-        public void ObtenerDatosDashboard(out float totVentas, out int nProd, out int nCateg, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado)
+        public void ObtenerDatosDashboard(out decimal totVentas, out int nProd, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado)
         {
             using (SqlConnection conexion = GetConnection())
             {
@@ -64,9 +64,8 @@ namespace CapaDatos
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     // Parámetros de salida
-                    cmd.Parameters.Add("@totVentas", SqlDbType.Float).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("@totVentas", SqlDbType.Decimal).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("@nprod", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("@ncateg", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("@ncliente", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("@nprov", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("@ncantidadventas", SqlDbType.Int).Direction = ParameterDirection.Output;
@@ -75,9 +74,8 @@ namespace CapaDatos
                     cmd.ExecuteNonQuery();
 
                     // Obtener los valores de los parámetros de salida
-                    totVentas = (float)cmd.Parameters["@totVentas"].Value;
+                    totVentas = Convert.ToDecimal(cmd.Parameters["@totVentas"].Value);
                     nProd = (int)cmd.Parameters["@nprod"].Value;
-                    nCateg = (int)cmd.Parameters["@ncateg"].Value;
                     nCliente = (int)cmd.Parameters["@ncliente"].Value;
                     nProv = (int)cmd.Parameters["@nprov"].Value;
                     nCantidadVentas = (int)cmd.Parameters["@ncantidadventas"].Value;

@@ -23,6 +23,7 @@ namespace CapaPresentacion.Vistas.Informes
         {
             cargar_chart(chartproductosporcategoria);
             CargarDatosEnChartMasElegidos(chartmaselegidos);
+            mostrar_labels();
 
         }
 
@@ -108,16 +109,15 @@ namespace CapaPresentacion.Vistas.Informes
         private void mostrar_labels()
         {
             
-            negocioDashboard.ObtenerDatosDashboard(out float totVentas, out int nProd, out int nCateg, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado);
+            negocioDashboard.ObtenerDatosDashboard(out decimal totVentas, out int nProd, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado);
 
             // Mostrar los valores en los labels (ajusta los nombres de los labels según tus necesidades)
-            ltotal.Text = $"Total Ventas: {totVentas:C}";
-            lnroproductos.Text = $"Total Productos: {nProd}";
- 
-            lnroclientes.Text = $"Total Clientes: {nCliente}";
-            lnroproveedores.Text = $"Total Proveedores: {nProv}";
-            lnroventas.Text = $"Total Cantidad Ventas: {nCantidadVentas}";
-            lnroempleados.Text = $"Total Empleados: {nEmpleado}";
+            ltotal.Text = $"{totVentas.ToString("C")}";
+            lnroproductos.Text = $"{nProd}";
+            lnroclientes.Text = $" {nCliente}";
+            lnroproveedores.Text = $" {nProv}";
+            lnroventas.Text = $" {nCantidadVentas}";
+            lnroempleados.Text = $"{nEmpleado}";
         }
 
     }

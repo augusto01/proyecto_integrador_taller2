@@ -51,9 +51,9 @@ namespace CapaNegocio
         private CD_Informes datosDashboard = new CD_Informes();
 
         // Método para obtener datos del dashboard y pasarlos a la capa de presentación
-        public void ObtenerDatosDashboard(out float totVentas, out int nProd, out int nCateg, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado)
+        public void ObtenerDatosDashboard(out decimal totVentas, out int nProd, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado)
         {
-            datosDashboard.ObtenerDatosDashboard(out totVentas, out nProd, out nCateg, out nCliente, out nProv, out nCantidadVentas, out nEmpleado);
+            datosDashboard.ObtenerDatosDashboard(out totVentas, out nProd, out nCliente, out nProv, out nCantidadVentas, out nEmpleado);
         }
     }
 }
