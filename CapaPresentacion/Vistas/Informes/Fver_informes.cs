@@ -26,6 +26,8 @@ namespace CapaPresentacion.Vistas.Informes
 
         }
 
+        private CN_INFORME negocioDashboard = new CN_INFORME();
+
 
         public void cargar_grafico()
         {
@@ -69,38 +71,54 @@ namespace CapaPresentacion.Vistas.Informes
 
         private void CargarDatosEnChartMasElegidos(Chart chart)
         {
-            CN_INFORME negocio = new CN_INFORME();
+                CN_INFORME negocio = new CN_INFORME();
+            
+                    // Llama al método de la capa de negocio para obtener los productos preferidos
+            DataTable datosProductosPreferidos = negocio.ObtenerProductosPreferidos();
+
+            // Utiliza los datos para actualizar el gráfico (chart) en la presentación
+            // (La implementación específica depende de cómo quieras mostrar los datos en el gráfico)
+
+            // Limpiar el gráfico antes de agregar nuevos datos
+            chart.Series.Clear();
+
+            // Crear una nueva serie para el gráfico
+            Series series = new Series("Productos Preferidos");
+            series.ChartType = SeriesChartType.Doughnut;
+
+            // Agregar datos al gráfico
+            foreach (DataRow row in datosProductosPreferidos.Rows)
             {
-                // Llama al método de la capa de negocio para obtener los productos preferidos
-        DataTable datosProductosPreferidos = negocio.ObtenerProductosPreferidos();
+                string producto = row["Producto"].ToString();
+                int vecesVendidas = Convert.ToInt32(row["Veces Vendidas"]);
 
-        // Utiliza los datos para actualizar el gráfico (chart) en la presentación
-        // (La implementación específica depende de cómo quieras mostrar los datos en el gráfico)
-
-        // Limpiar el gráfico antes de agregar nuevos datos
-        chart.Series.Clear();
-
-        // Crear una nueva serie para el gráfico
-        Series series = new Series("Productos Preferidos");
-        series.ChartType = SeriesChartType.Doughnut;
-
-        // Agregar datos al gráfico
-        foreach (DataRow row in datosProductosPreferidos.Rows)
-        {
-            string producto = row["Producto"].ToString();
-            int vecesVendidas = Convert.ToInt32(row["Veces Vendidas"]);
-
-            // Agregar el punto al gráfico
-            DataPoint point = new DataPoint();
-            point.SetValueXY(producto, vecesVendidas); // Establecer el nombre del producto como etiqueta y la cantidad como valor numérico
-            point.Label = $"{producto}: {vecesVendidas} veces"; // Mostrar información adicional en el tooltip
-            series.Points.Add(point);
-        }
-
-        // Agregar la serie al gráfico
-        chart.Series.Add(series);
-    
+                // Agregar el punto al gráfico
+                DataPoint point = new DataPoint();
+                point.SetValueXY(producto, vecesVendidas); // Establecer el nombre del producto como etiqueta y la cantidad como valor numérico
+                point.Label = $"{producto}: {vecesVendidas} veces"; // Mostrar información adicional en el tooltip
+                series.Points.Add(point);
             }
+
+            // Agregar la serie al gráfico
+            chart.Series.Add(series);
+    
+            
         }
+
+        private void mostrar_labels()
+        {
+            
+            negocioDashboard.ObtenerDatosDashboard(out float totVentas, out int nProd, out int nCateg, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado);
+
+            // Mostrar los valores en los labels (ajusta los nombres de los labels según tus necesidades)
+            ltotal.Text = $"Total Ventas: {totVentas:C}";
+            lnroproductos.Text = $"Total Productos: {nProd}";
+ 
+            lnroclientes.Text = $"Total Clientes: {nCliente}";
+            lnroproveedores.Text = $"Total Proveedores: {nProv}";
+            lnroventas.Text = $"Total Cantidad Ventas: {nCantidadVentas}";
+            lnroempleados.Text = $"Total Empleados: {nEmpleado}";
+        }
+
     }
 }
