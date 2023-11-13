@@ -200,6 +200,28 @@ namespace CapaDatos
         }
 
 
+     
+
+        public DataTable ObtenerProductosDeVenta(int idVenta)
+        {
+            var conexion = GetConnection();
+                conexion.Open();
+                using (SqlCommand comando = new SqlCommand("SELECT \r\n                            vc.id_cabecera,\r\n                            vc.fecha_venta,\r\n                            cli.nombre_cliente AS nombre_cliente,\r\n                            pro.descripcion AS nombre_producto,\r\n                            vd.cantidad_producto,\r\n                            pro.precio_unitario\r\n                        FROM \r\n                            Venta_cabecera vc\r\n                            INNER JOIN Cliente cli ON cli.id_cliente = vc.id_cliente\r\n                            INNER JOIN Venta_detalle vd ON vd.id_cabecera = vc.id_cabecera\r\n                            INNER JOIN Producto pro ON pro.id_producto = vd.id_producto\r\n                        WHERE \r\n                            vc.id_cabecera = 1005", conexion))
+                {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@IdVenta", idVenta);
+
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
+                    {
+                        DataTable tabla = new DataTable();
+                        adaptador.Fill(tabla);
+                        return tabla;
+                    }
+                }
+            
+        }
+
+
 
 
     }

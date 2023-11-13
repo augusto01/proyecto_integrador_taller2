@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CD_Backup.cs" />
+    <Compile Include="CD_Informes.cs" />
     <Compile Include="CD_Producto.cs" />
     <Compile Include="CD_Proveedor.cs" />
     <Compile Include="CD_Usuario.cs" />

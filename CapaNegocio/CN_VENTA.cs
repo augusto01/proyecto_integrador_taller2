@@ -80,6 +80,11 @@ namespace CapaNegocio
             return ventas.Consulta_ventasDG(id_usuario);
         }
 
+        public DataTable consultarventaespecifica(int id_venta)
+        {
+            CD_Venta ventas = new CD_Venta();
+            return ventas.Consulta_ventasDG(id_venta);
+        }
 
 
     }

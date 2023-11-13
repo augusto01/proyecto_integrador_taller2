@@ -37,5 +37,7 @@ namespace CapaPresentacion.Vistas.Venta
         {
             mostrar_ventas();
         }
+
+       
     }
 }

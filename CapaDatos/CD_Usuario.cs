@@ -46,10 +46,26 @@ namespace CapaDatos
         {
             var conexion = GetConnection();
             int flag = 0;
+
             conexion.Open();
-            string query = "update Usuario set nombre_usuario = '" + nombre_usuario + "' , apellido_usuario= '" + apellido_usuario + "',username='" + username + "',dni_usuario = " + dni_usuario + ",email_usuario ='" + email_usuario + "', domicilio_usuario= '" + domicilio_usuario + "', celular_usuario = " + celular + ",id_tipo_usuario = " + id_tipousuario + " WHERE dni_usuario = " + dni_usuario + "";
-            SqlCommand cmd = new SqlCommand(query, conexion);
-            flag = cmd.ExecuteNonQuery();
+
+            string query = "UPDATE Usuario SET nombre_usuario = @nombre_usuario, apellido_usuario = @apellido_usuario, username = @username, email_usuario = @email_usuario, domicilio_usuario = @domicilio_usuario, celular_usuario = @celular, id_tipo_usuario = @id_tipousuario WHERE dni_usuario = @dni_usuario";
+
+            using (SqlCommand cmd = new SqlCommand(query, conexion))
+            {
+                // Utiliza parámetros para evitar la concatenación directa de valores en la consulta y prevenir inyección SQL
+                cmd.Parameters.AddWithValue("@nombre_usuario", nombre_usuario);
+                cmd.Parameters.AddWithValue("@apellido_usuario", apellido_usuario);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@dni_usuario", dni_usuario);
+                cmd.Parameters.AddWithValue("@email_usuario", email_usuario);
+                cmd.Parameters.AddWithValue("@domicilio_usuario", domicilio_usuario);
+                cmd.Parameters.AddWithValue("@celular", celular);
+                cmd.Parameters.AddWithValue("@id_tipousuario", id_tipousuario);
+
+                flag = cmd.ExecuteNonQuery();
+            }
+
             conexion.Close();
             return flag;
 

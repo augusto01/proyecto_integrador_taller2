@@ -29,9 +29,23 @@ namespace CapaDatos
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
-            string query = "update Producto set id_talle = "+id_talle+", descripcion = '"+descripcion+"', precio_unitario = "+precio_unitario+", stock = "+stock+", fecha_alta = getdate(), id_categoria = "+id_categoria+", id_proveedor = "+id_proveedor+", estado = 1 where id_producto = "+id_producto+"";
-            SqlCommand cmd = new SqlCommand(query, conexion);
-            flag = cmd.ExecuteNonQuery();
+
+            string query = "UPDATE Producto SET id_talle = @id_talle, descripcion = @descripcion, precio_unitario = @precio_unitario, stock = @stock, fecha_alta = GETDATE(), id_categoria = @id_categoria, id_proveedor = @id_proveedor, estado = 1 WHERE id_producto = @id_producto";
+
+            using (SqlCommand cmd = new SqlCommand(query, conexion))
+            {
+                // Utiliza parámetros para evitar la concatenación directa de valores en la consulta y prevenir inyección SQL
+                cmd.Parameters.AddWithValue("@id_talle", id_talle);
+                cmd.Parameters.AddWithValue("@descripcion", descripcion);
+                cmd.Parameters.AddWithValue("@precio_unitario", precio_unitario);
+                cmd.Parameters.AddWithValue("@stock", stock);
+                cmd.Parameters.AddWithValue("@id_categoria", id_categoria);
+                cmd.Parameters.AddWithValue("@id_proveedor", id_proveedor);
+                cmd.Parameters.AddWithValue("@id_producto", id_producto);
+
+                flag = cmd.ExecuteNonQuery();
+            }
+
             conexion.Close();
             return flag;
         }

@@ -272,8 +272,11 @@ namespace CapaPresentacion.Vistas.Venta
                     preciototal += Convert.ToDecimal(fila.Cells["subtotal"].Value);
 
                     cliente.resgistrar_detalle(cliente.ObtenerSiguienteNumeroFactura() - 1, id_producto, producto, precioUnitario, cantidad, subtotal, preciototal);
+                    
                 }
-             
+
+                MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 /*================= IMPRESION DEL TICKET  ====================*/
 
                 pdfactura = new PrintDocument();
@@ -284,7 +287,7 @@ namespace CapaPresentacion.Vistas.Venta
 
 
                 /*================= LIMPIAR CAMPOS Y FINALIZAR VENTA  ====================*/
-                MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              
                 dgdetalle.Rows.Clear();
                 tstock.Clear();
                 tcantidad.Clear();
@@ -301,11 +304,12 @@ namespace CapaPresentacion.Vistas.Venta
         private void pdfactura_PrintPage(object sender, PrintPageEventArgs e)
         {
             Font fontTitulo = new Font("Berlin Sans FB Demi", 32, FontStyle.Bold);
-            Font fontDetalle = new Font("Century Gothic", 12,FontStyle.Bold);
+            Font fontDetalle = new Font("Century Gothic", 12, FontStyle.Bold);
             Font fontotal = new Font("Century Gothic", 14, FontStyle.Bold);
             Font fontpie = new Font("Century Gothic", 20, FontStyle.Bold);
             int ancho = 150;
             int y = 20;
+            int separacionEntreLineas = 40;  // Ajusta según sea necesario
 
             // Centrar el área de productos vendidos
             StringFormat formatoCentro = new StringFormat();
@@ -318,13 +322,13 @@ namespace CapaPresentacion.Vistas.Venta
             e.Graphics.DrawString("SPORTS WORLDS", fontTitulo, Brushes.Lime, new RectangleF(0, y, e.PageBounds.Width, 0), formatoCentro);
 
             // Encabezado de la factura
-            e.Graphics.DrawString($"Nro Factura: {tidfactura.Text}  Cliente: {cbcliente.Text}  Forma Pago: {cbtipopago.Text} Fecha: {tfecha.Text}", fontDetalle, Brushes.Black, new RectangleF(0, y += 50, e.PageBounds.Width, 0), formatoIzquierda);
+            e.Graphics.DrawString($"Nro Factura: {tidfactura.Text}  Cliente: {cbcliente.Text}  Forma Pago: {cbtipopago.Text} Fecha: {tfecha.Text}", fontDetalle, Brushes.Black, new RectangleF(0, y += separacionEntreLineas, e.PageBounds.Width, 0), formatoIzquierda);
 
             // Título de productos
-            e.Graphics.DrawString("------------- PRODUCTOS -------------", fontDetalle, Brushes.Black, new RectangleF(0, y += 50, e.PageBounds.Width, 0), formatoCentro);
+            e.Graphics.DrawString("------------- PRODUCTOS -------------", fontDetalle, Brushes.Black, new RectangleF(0, y += separacionEntreLineas, e.PageBounds.Width, 0), formatoCentro);
 
             // Encabezados de columna
-            e.Graphics.DrawString("Producto", fontDetalle, Brushes.Black, new RectangleF(0, y += 30, ancho, 0));
+            e.Graphics.DrawString("Producto", fontDetalle, Brushes.Black, new RectangleF(0, y += separacionEntreLineas, ancho, 0));
             e.Graphics.DrawString("Cantidad", fontDetalle, Brushes.Black, new RectangleF(ancho, y, ancho, 0));
             e.Graphics.DrawString("Subtotal", fontDetalle, Brushes.Black, new RectangleF(ancho * 2, y, ancho, 0));
 
@@ -333,16 +337,16 @@ namespace CapaPresentacion.Vistas.Venta
                 DataGridViewRow fila = dgdetalle.Rows[i];
 
                 // Detalles de la compra
-                e.Graphics.DrawString(Convert.ToString(fila.Cells["Producto"].Value), fontDetalle, Brushes.Black, new RectangleF(0, y += 30, ancho, 0));
+                e.Graphics.DrawString(Convert.ToString(fila.Cells["Producto"].Value), fontDetalle, Brushes.Black, new RectangleF(0, y += separacionEntreLineas, ancho, 0));
                 e.Graphics.DrawString(Convert.ToInt32(fila.Cells["Cantidad"].Value).ToString(), fontDetalle, Brushes.Black, new RectangleF(ancho, y, ancho, 0));
                 e.Graphics.DrawString(Convert.ToDecimal(fila.Cells["precio"].Value).ToString("C", new System.Globalization.CultureInfo("es-MX")), fontDetalle, Brushes.Black, new RectangleF(ancho * 2, y, ancho, 0));
             }
 
             // Total
-            e.Graphics.DrawString($"------------- TOTAL: {preciototal.ToString("C0", new System.Globalization.CultureInfo("es-MX"))} -------------", fontDetalle, Brushes.Blue, new RectangleF(0, y += 30, e.PageBounds.Width, 0), formatoCentro);
+            e.Graphics.DrawString($"------------- TOTAL: {preciototal.ToString("C0", new System.Globalization.CultureInfo("es-MX"))} -------------", fontDetalle, Brushes.Blue, new RectangleF(0, y += separacionEntreLineas, e.PageBounds.Width, 0), formatoCentro);
 
             // Pie de página
-            e.Graphics.DrawString("Gracias por elegirnos!", fontpie, Brushes.Lime, new RectangleF(0, y += 30, e.PageBounds.Width, 0), formatoCentro);
+            e.Graphics.DrawString("Gracias por elegirnos!", fontpie, Brushes.Lime, new RectangleF(0, y += separacionEntreLineas, e.PageBounds.Width, 0), formatoCentro);
 
 
         }

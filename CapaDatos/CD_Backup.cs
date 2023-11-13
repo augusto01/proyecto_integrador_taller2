@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace CapaDatos
         {
             var conexion = GetConnection();
 
-             
+           
                     conexion.Open();
 
             using (SqlCommand cmd = new SqlCommand())
@@ -33,26 +34,35 @@ namespace CapaDatos
         {
             try
             {
+                var conexion = GetConnection();
+                conexion.Open();
 
-                var conexion = GetConnection();               
-                    conexion.Open();
+                // Desconectar usuarios activos
+                using (SqlCommand cmdDisconnectUsers = new SqlCommand("ALTER DATABASE proyecto_taller2 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;", conexion))
+                {
+                    cmdDisconnectUsers.ExecuteNonQuery();
+                }
 
-                    using (SqlCommand cmd = new SqlCommand())
-                    {
-                        cmd.Connection = conexion;
-                        cmd.CommandText = $"use master";
-                        cmd.CommandText = $"RESTORE DATABASE proyecto_taller2 FROM DISK = '{rutaArchivo}' WITH REPLACE";
-                        cmd.CommandText = $"use proyecto_taller2";
-                    cmd.ExecuteNonQuery();
-                    }
-                
+                // Restaurar la base de datos
+                using (SqlCommand cmdRestore = new SqlCommand($"USE master; RESTORE DATABASE proyecto_taller2 FROM DISK = '{rutaArchivo}' WITH REPLACE; USE proyecto_taller2;", conexion))
+                {
+                    cmdRestore.ExecuteNonQuery();
+                }
+
+                // Restaurar la conexión múltiple
+                using (SqlCommand cmdReconnectUsers = new SqlCommand("ALTER DATABASE proyecto_taller2 SET MULTI_USER;", conexion))
+                {
+                    cmdReconnectUsers.ExecuteNonQuery();
+                }
             }
             catch (Exception ex)
             {
-                // Manejar la excepción según tus necesidades (puede ser un log, mensaje al usuario, etc.).
                 Console.WriteLine($"Error al restaurar el respaldo: {ex.Message}");
                 throw;
             }
+                    
+            
+            
         }
     }
 }

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmis_ventas));
             this.label10 = new System.Windows.Forms.Label();
             this.dgventasusuario = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgventasusuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +53,20 @@
             this.dgventasusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgventasusuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgventasusuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgventasusuario.Location = new System.Drawing.Point(31, 70);
+            this.dgventasusuario.Location = new System.Drawing.Point(35, 70);
             this.dgventasusuario.Name = "dgventasusuario";
             this.dgventasusuario.ReadOnly = true;
             this.dgventasusuario.Size = new System.Drawing.Size(804, 408);
             this.dgventasusuario.TabIndex = 85;
+             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Imprimir";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 761;
             // 
             // Fmis_ventas
             // 
@@ -78,5 +89,6 @@
 
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgventasusuario;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }
