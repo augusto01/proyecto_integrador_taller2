@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_proveedor));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.bcancelar = new System.Windows.Forms.Button();
             this.ldomicilio = new System.Windows.Forms.Label();
@@ -56,6 +57,12 @@
             this.edomicilio = new System.Windows.Forms.ErrorProvider(this.components);
             this.ecel = new System.Windows.Forms.ErrorProvider(this.components);
             this.erazonsocial = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgproveedores = new System.Windows.Forms.DataGridView();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tbuscarobjeto = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).BeginInit();
@@ -64,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.edomicilio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erazonsocial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgproveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -339,12 +347,87 @@
             this.erazonsocial.ContainerControl = this;
             this.erazonsocial.Icon = ((System.Drawing.Icon)(resources.GetObject("erazonsocial.Icon")));
             // 
+            // dgproveedores
+            // 
+            this.dgproveedores.AllowUserToAddRows = false;
+            this.dgproveedores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgproveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.editar,
+            this.eliminar});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgproveedores.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgproveedores.Location = new System.Drawing.Point(30, 610);
+            this.dgproveedores.Name = "dgproveedores";
+            this.dgproveedores.ReadOnly = true;
+            this.dgproveedores.Size = new System.Drawing.Size(875, 273);
+            this.dgproveedores.TabIndex = 90;
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.Image = global::CapaPresentacion.Properties.Resources.lapiz2;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Width = 40;
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = global::CapaPresentacion.Properties.Resources.borrarr2;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Width = 40;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(312, 578);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 24);
+            this.button2.TabIndex = 150;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // tbuscarobjeto
+            // 
+            this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbuscarobjeto.Location = new System.Drawing.Point(169, 581);
+            this.tbuscarobjeto.Name = "tbuscarobjeto";
+            this.tbuscarobjeto.Size = new System.Drawing.Size(137, 20);
+            this.tbuscarobjeto.TabIndex = 149;
+            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.tbuscarobjeto_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(29, 579);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(143, 19);
+            this.label13.TabIndex = 148;
+            this.label13.Text = "DNI (SIN PUNTOS):";
+            // 
             // Fagregar_proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(930, 1022);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tbuscarobjeto);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.dgproveedores);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.trazonsocial);
             this.Controls.Add(this.label11);
@@ -367,6 +450,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fagregar_proveedor";
             this.Text = "Fagregar_proveedor";
+            this.Load += new System.EventHandler(this.Fagregar_proveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).EndInit();
@@ -375,6 +459,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.edomicilio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erazonsocial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgproveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +493,11 @@
         private System.Windows.Forms.ErrorProvider edomicilio;
         private System.Windows.Forms.ErrorProvider ecel;
         private System.Windows.Forms.ErrorProvider erazonsocial;
+        private System.Windows.Forms.DataGridView dgproveedores;
+        private System.Windows.Forms.DataGridViewImageColumn editar;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbuscarobjeto;
+        private System.Windows.Forms.Label label13;
     }
 }

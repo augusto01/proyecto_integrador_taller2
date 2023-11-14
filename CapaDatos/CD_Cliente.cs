@@ -25,7 +25,7 @@ namespace CapaDatos
 
         }
 
-        public int insertar_cliente(string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente, int celular_cliente)
+        public int insertar_cliente(string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente,int celular_cliente)
         {
             var conexion = GetConnection();
             int flag = 0;

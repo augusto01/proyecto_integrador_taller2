@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,32 +15,57 @@ namespace CapaNegocio
         public int id_proveedor { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public string correo { get; set; }
-        public int dni { get; set; }
+        public string razonsocial { get; set; }
+ 
         public string direccion { get; set; }
-        public string razon_social { get; set; }
+
+        public string correo { get; set; }
         public int nro_telefono { get; set; }
+        public int dni { get; set; }
+
 
         public void CN_Proveedor(string nombre, string apellido, string correo, int dni, string direccion, string razon_social, int nro_telefono)
         {
             this.nombre = nombre.ToString();
             this.apellido = apellido.ToString();
+            this.razonsocial = razon_social.ToString();
             this.correo = correo.ToString();
             this.dni = dni;
             this.direccion = direccion.ToString();
-            this.razon_social = razon_social.ToString();
             this.nro_telefono = nro_telefono;
+      
 
         }
 
+        CD_Proveedor proveedor = new CD_Proveedor();
 
-        public int insertar_proveedor(string nombre, string apellido, string correo, int dni, string direccion, string razon_social, int nro_telefono)
+        public void registrar_proveedor(string nombre, string apellido, int dni, string email, string domicilio, string razonsocial, int celular)
         {
-            CD_Proveedor proveedor = new CD_Proveedor();
-            return proveedor.insertar_proveedor ( nombre,  apellido,  razon_social,  direccion,  correo,  nro_telefono,  dni);
+            
+            proveedor.insertar_proveedor(nombre, apellido, razonsocial, domicilio, email, celular, dni);
+        }
 
+        public DataTable ConsultaDT()
+        {
+         
+            return proveedor.ConsultarProveedoresDG();
+        }
+
+
+        public int modificar_cliente(string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente, int celular_cliente)
+        {
+            CD_Cliente cliente = new CD_Cliente();
+            return cliente.modificar_cliente(nombre_cliente, apellido_cliente, dni_cliente, email_cliente, domicilio_cliente, celular_cliente);
+        }
+
+        public int eliminar_cliente(int dni)
+        {
+            CD_Cliente cliente = new CD_Cliente();
+            return cliente.eliminar_cliente(dni);
 
         }
+
+
 
         public List<string> obtener_proveedores()
         {

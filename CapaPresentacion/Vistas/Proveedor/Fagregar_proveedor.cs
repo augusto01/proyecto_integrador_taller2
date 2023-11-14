@@ -118,6 +118,7 @@ namespace CapaPresentacion.Vistas.Proveedor
             eapellido.Clear();
             ecorreo.Clear();
             ecel.Clear();
+            trazonsocial.Clear();
           
 
         }
@@ -175,8 +176,8 @@ namespace CapaPresentacion.Vistas.Proveedor
 
                     if (resultado == DialogResult.Yes)
                     {
-                        //si la respuesta es si cargamos el proveedor
-                        proveedor.insertar_proveedor(tnombre.Text, tapellido.Text, Tcorreo.Text, Int32.Parse(tdni.Text) , tdomicilio.Text, trazonsocial.Text, Int32.Parse(Tcel.Text) );
+                        //string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente, int celular_cliente
+                        proveedor.registrar_proveedor(tnombre.Text, tapellido.Text, Int32.Parse(tdni.Text), Tcorreo.Text , tdomicilio.Text, trazonsocial.Text, Int32.Parse(Tcel.Text));
 
 
                         MessageBox.Show("El proveedor: " + tnombre.Text + " " + tapellido.Text + " se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -188,6 +189,40 @@ namespace CapaPresentacion.Vistas.Proveedor
                 }
 
 
+
+            }
+        }
+
+        private void Fagregar_proveedor_Load(object sender, EventArgs e)
+        {
+            dgproveedores.DataSource = proveedor.ConsultaDT();
+        }
+
+        private void tbuscarobjeto_TextChanged(object sender, EventArgs e)
+        {
+            string valorBuscado = "" + tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgproveedores.Rows)
+            {
+                if (fila.Cells["DNI"].Value != null && fila.Cells["DNI"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+
+
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgproveedores.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgproveedores.CurrentCell = dgproveedores[0, rowIndex]; // Esto seleccionará la fila encontrada
 
             }
         }

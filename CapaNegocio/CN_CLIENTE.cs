@@ -26,7 +26,7 @@ namespace CapaNegocio
         public int cel { get; set; }
 
 
-        public void CN_Usuario( string nombre, string apellido, string correo, int estado, int dni,  int cel, string domicilio)
+        public void CN_cliente( string nombre, string apellido, string correo, int estado, int dni,  int cel, string domicilio)
         {
             this.id_tipo_usuario = id_tipo_usuario;
             this.nombre = nombre.Trim();
@@ -38,10 +38,10 @@ namespace CapaNegocio
             this.domicilio = domicilio;
         }
 
-        public void registrar_cliente(string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente, int celular_cliente )
+        public void registrar_cliente(string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente, int celular_cliente)
         {
             CD_Cliente cliente = new CD_Cliente();
-            cliente.insertar_cliente(nombre_cliente, apellido_cliente, dni_cliente, email_cliente, domicilio_cliente, celular_cliente);
+            cliente.insertar_cliente(nombre_cliente, apellido_cliente, dni_cliente, email_cliente,domicilio_cliente, celular_cliente);
         }
         
         public DataTable ConsultaDT()
