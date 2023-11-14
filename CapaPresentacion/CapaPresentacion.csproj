@@ -73,6 +73,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Empleado\Fverproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Fverproductos.Designer.cs">
+      <DependentUpon>Fverproductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerente\menu_gerente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     <Compile Include="Vistas\Venta\Fmis_ventas.Designer.cs">
       <DependentUpon>Fmis_ventas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Empleado\Fverproductos.resx">
+      <DependentUpon>Fverproductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gerente\menu_gerente.resx">
       <DependentUpon>menu_gerente.cs</DependentUpon>
     </EmbeddedResource>

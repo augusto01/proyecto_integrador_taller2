@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_venta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tidvendedor = new System.Windows.Forms.TextBox();
@@ -51,17 +52,12 @@
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lprecio = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgproductos = new System.Windows.Forms.DataGridView();
-            this.agregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bagregarproducto = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bcancelarventa = new System.Windows.Forms.Button();
             this.Bgenerarventa = new System.Windows.Forms.Button();
             this.tprecio = new System.Windows.Forms.TextBox();
@@ -69,24 +65,31 @@
             this.tnombre = new System.Windows.Forms.TextBox();
             this.tcantidad = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.tbuscarid = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.ecantidad = new System.Windows.Forms.ErrorProvider(this.components);
             this.pdfactura = new System.Drawing.Printing.PrintDocument();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bagregarproducto = new System.Windows.Forms.Button();
+            this.agregar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ebuscarid = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdetalle)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ecantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ebuscarid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -288,21 +291,6 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
-            // eliminar
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.eliminar.FillWeight = 121.8274F;
-            this.eliminar.HeaderText = "Eliminar";
-            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -373,45 +361,6 @@
             this.dgproductos.Size = new System.Drawing.Size(780, 100);
             this.dgproductos.TabIndex = 1;
             this.dgproductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproductos_CellClick_1);
-            // 
-            // agregar
-            // 
-            this.agregar.HeaderText = "Agregar";
-            this.agregar.Image = ((System.Drawing.Image)(resources.GetObject("agregar.Image")));
-            this.agregar.Name = "agregar";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Agregar";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 697;
-            // 
-            // bagregarproducto
-            // 
-            this.bagregarproducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bagregarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bagregarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.bagregarproducto.FlatAppearance.BorderSize = 2;
-            this.bagregarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bagregarproducto.Image = ((System.Drawing.Image)(resources.GetObject("bagregarproducto.Image")));
-            this.bagregarproducto.Location = new System.Drawing.Point(701, 9);
-            this.bagregarproducto.Name = "bagregarproducto";
-            this.bagregarproducto.Size = new System.Drawing.Size(73, 72);
-            this.bagregarproducto.TabIndex = 89;
-            this.bagregarproducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bagregarproducto.UseVisualStyleBackColor = true;
-            this.bagregarproducto.Click += new System.EventHandler(this.bagregarproducto_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 37);
-            this.pictureBox1.TabIndex = 86;
-            this.pictureBox1.TabStop = false;
             // 
             // bcancelarventa
             // 
@@ -498,7 +447,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.tcantidad);
             this.groupBox2.Controls.Add(this.tnombre);
             this.groupBox2.Controls.Add(this.tstock);
@@ -507,7 +456,6 @@
             this.groupBox2.Controls.Add(this.tprecio);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.bagregarproducto);
             this.groupBox2.Controls.Add(this.tbuscarid);
             this.groupBox2.Controls.Add(this.label18);
@@ -517,17 +465,6 @@
             this.groupBox2.TabIndex = 148;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion del producto";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(105, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(83, 23);
-            this.textBox2.TabIndex = 139;
-            this.textBox2.Visible = false;
             // 
             // label14
             // 
@@ -577,18 +514,6 @@
             this.label17.TabIndex = 142;
             this.label17.Text = "PRODUCTO";
             // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(153, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(27, 24);
-            this.button2.TabIndex = 140;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // tbuscarid
             // 
             this.tbuscarid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
@@ -598,6 +523,8 @@
             this.tbuscarid.Name = "tbuscarid";
             this.tbuscarid.Size = new System.Drawing.Size(137, 23);
             this.tbuscarid.TabIndex = 139;
+            this.tbuscarid.TextChanged += new System.EventHandler(this.tbuscarid_TextChanged);
+            this.tbuscarid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbuscarid_KeyPress);
             // 
             // label18
             // 
@@ -605,11 +532,12 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(34, 26);
+            this.label18.Location = new System.Drawing.Point(19, 26);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 19);
+            this.label18.Size = new System.Drawing.Size(112, 19);
             this.label18.TabIndex = 138;
-            this.label18.Text = "ID PRODUCTO";
+            this.label18.Text = "BUSCAR POR ID";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // ecantidad
             // 
@@ -620,6 +548,95 @@
             // pdfactura
             // 
             this.pdfactura.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdfactura_PrintPage);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewImageColumn1.FillWeight = 121.8274F;
+            this.dataGridViewImageColumn1.HeaderText = "Agregar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 697;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Agregar";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 737;
+            // 
+            // bagregarproducto
+            // 
+            this.bagregarproducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bagregarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bagregarproducto.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.bagregarproducto.FlatAppearance.BorderSize = 2;
+            this.bagregarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregarproducto.Image = ((System.Drawing.Image)(resources.GetObject("bagregarproducto.Image")));
+            this.bagregarproducto.Location = new System.Drawing.Point(701, 9);
+            this.bagregarproducto.Name = "bagregarproducto";
+            this.bagregarproducto.Size = new System.Drawing.Size(73, 72);
+            this.bagregarproducto.TabIndex = 89;
+            this.bagregarproducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bagregarproducto.UseVisualStyleBackColor = true;
+            this.bagregarproducto.Click += new System.EventHandler(this.bagregarproducto_Click);
+            // 
+            // agregar
+            // 
+            this.agregar.HeaderText = "Agregar";
+            this.agregar.Image = ((System.Drawing.Image)(resources.GetObject("agregar.Image")));
+            this.agregar.Name = "agregar";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 37);
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
+            // eliminar
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.eliminar.FillWeight = 121.8274F;
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ebuscarid
+            // 
+            this.ebuscarid.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ebuscarid.ContainerControl = this;
+            this.ebuscarid.Icon = ((System.Drawing.Icon)(resources.GetObject("ebuscarid.Icon")));
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(171, 47);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 24);
+            this.button2.TabIndex = 148;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Fagregar_venta
             // 
@@ -652,10 +669,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgproductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ecantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ebuscarid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -694,12 +712,10 @@
         private System.Windows.Forms.TextBox tnombre;
         private System.Windows.Forms.TextBox tcantidad;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbuscarid;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider ecantidad;
@@ -711,5 +727,8 @@
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
         private System.Windows.Forms.Label lprecio;
         private System.Drawing.Printing.PrintDocument pdfactura;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.ErrorProvider ebuscarid;
+        private System.Windows.Forms.Button button2;
     }
 }

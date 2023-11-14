@@ -161,3 +161,4 @@ C:\Users\juancarruthers\Desktop\almiron\proyecto_integrador_taller2\CapaPresenta
 C:\Users\juancarruthers\Desktop\almiron\proyecto_integrador_taller2\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Vistas.Venta.Fmis_ventas.resources
 C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Vistas.Informes.Fver_informes.resources
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyectotaller2\CapaPresentacion\obj\Debug\CapaPresentacion.Empleado.Fverproductos.resources

@@ -30,12 +30,14 @@ namespace CapaPresentacion.Vistas.Venta
         {
             InitializeComponent();
             inicializar_cabecera();
-        
-            
+
+
         }
 
-        //declaramos el total 
-        decimal total = 0;
+       
+
+    //declaramos el total 
+    decimal total = 0;
 
         private void label10_Click(object sender, EventArgs e)
         {
@@ -366,6 +368,49 @@ namespace CapaPresentacion.Vistas.Venta
            
         }
 
-       
+        private void tbuscarid_TextChanged(object sender, EventArgs e)
+        {
+            string valorBuscado = "" + tbuscarid.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgproductos.Rows)
+            {
+                if (fila.Cells["id_producto"].Value != null && fila.Cells["id_producto"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+
+
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgproductos.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgproductos.CurrentCell = dgproductos[0, rowIndex]; // Esto seleccionará la fila encontrada
+
+            }
+        }
+
+        private void tbuscarid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                ebuscarid.SetError(tbuscarid, "Solo numeros!");
+                e.Handled = true;
+                return;
+
+            }
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

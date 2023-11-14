@@ -248,12 +248,13 @@ namespace CapaPresentacion.Administrador.Usuario
                         
 
                         usuario.insertar_usuario(tnombre.Text, tapellido.Text, Tuser.Text,Int32.Parse(tdni.Text) , Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text), Tpass.Text, cbtipo.SelectedIndex);
-                        dgusuarios.DataSource = usuario.ConsultaDT();
+                        
 
 
 
                         //si la respuesta es si cargamos el usuario 
                         MessageBox.Show("El usuario: "+tnombre.Text+" "+tapellido.Text+" se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgusuarios.DataSource = usuario.ConsultaDT();
                         LimpiarCampos();
                         LimpiarErrores();
 
