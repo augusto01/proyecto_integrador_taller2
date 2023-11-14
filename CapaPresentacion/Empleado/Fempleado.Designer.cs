@@ -31,46 +31,40 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fvendedor));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.bminimizar = new System.Windows.Forms.Button();
-            this.bcerrar = new System.Windows.Forms.Button();
-            this.brestarurar = new System.Windows.Forms.Button();
             this.menulateral = new System.Windows.Forms.Panel();
-            this.submenu_caja = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.bvercaja = new System.Windows.Forms.Button();
-            this.bcaja = new System.Windows.Forms.Button();
             this.submenu_clientes = new System.Windows.Forms.Panel();
             this.bverclientes = new System.Windows.Forms.Button();
-            this.bagregarclientes = new System.Windows.Forms.Button();
-            this.bClientes = new System.Windows.Forms.Button();
             this.submenu_ventas = new System.Windows.Forms.Panel();
             this.bverventas = new System.Windows.Forms.Button();
             this.bagregarventas = new System.Windows.Forms.Button();
-            this.bventas = new System.Windows.Forms.Button();
             this.submenu_productos = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.bproducto = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bcerrarsesion = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lnombre = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pcontent = new System.Windows.Forms.Panel();
             this.lfecha = new System.Windows.Forms.Label();
             this.lhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bClientes = new System.Windows.Forms.Button();
+            this.bventas = new System.Windows.Forms.Button();
+            this.bproducto = new System.Windows.Forms.Button();
+            this.bcerrarsesion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bminimizar = new System.Windows.Forms.Button();
+            this.bcerrar = new System.Windows.Forms.Button();
+            this.brestarurar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menulateral.SuspendLayout();
-            this.submenu_caja.SuspendLayout();
             this.submenu_clientes.SuspendLayout();
             this.submenu_ventas.SuspendLayout();
             this.submenu_productos.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pcontent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,64 +81,9 @@
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1101, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 29);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // bminimizar
-            // 
-            this.bminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bminimizar.FlatAppearance.BorderSize = 0;
-            this.bminimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bminimizar.Image = ((System.Drawing.Image)(resources.GetObject("bminimizar.Image")));
-            this.bminimizar.Location = new System.Drawing.Point(1058, 3);
-            this.bminimizar.Name = "bminimizar";
-            this.bminimizar.Size = new System.Drawing.Size(37, 29);
-            this.bminimizar.TabIndex = 6;
-            this.bminimizar.UseVisualStyleBackColor = true;
-            this.bminimizar.Click += new System.EventHandler(this.bminimizar_Click);
-            // 
-            // bcerrar
-            // 
-            this.bcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bcerrar.FlatAppearance.BorderSize = 0;
-            this.bcerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bcerrar.Image = ((System.Drawing.Image)(resources.GetObject("bcerrar.Image")));
-            this.bcerrar.Location = new System.Drawing.Point(1144, 3);
-            this.bcerrar.Name = "bcerrar";
-            this.bcerrar.Size = new System.Drawing.Size(37, 29);
-            this.bcerrar.TabIndex = 7;
-            this.bcerrar.UseVisualStyleBackColor = true;
-            this.bcerrar.Click += new System.EventHandler(this.bcerrar_Click);
-            // 
-            // brestarurar
-            // 
-            this.brestarurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.brestarurar.FlatAppearance.BorderSize = 0;
-            this.brestarurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brestarurar.Image = ((System.Drawing.Image)(resources.GetObject("brestarurar.Image")));
-            this.brestarurar.Location = new System.Drawing.Point(1097, 3);
-            this.brestarurar.Name = "brestarurar";
-            this.brestarurar.Size = new System.Drawing.Size(37, 29);
-            this.brestarurar.TabIndex = 8;
-            this.brestarurar.UseVisualStyleBackColor = true;
-            this.brestarurar.Visible = false;
-            this.brestarurar.Click += new System.EventHandler(this.brestarurar_Click);
-            // 
             // menulateral
             // 
             this.menulateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.menulateral.Controls.Add(this.submenu_caja);
-            this.menulateral.Controls.Add(this.bcaja);
             this.menulateral.Controls.Add(this.submenu_clientes);
             this.menulateral.Controls.Add(this.bClientes);
             this.menulateral.Controls.Add(this.submenu_ventas);
@@ -159,78 +98,14 @@
             this.menulateral.Size = new System.Drawing.Size(267, 1022);
             this.menulateral.TabIndex = 5;
             // 
-            // submenu_caja
-            // 
-            this.submenu_caja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.submenu_caja.Controls.Add(this.button11);
-            this.submenu_caja.Controls.Add(this.bvercaja);
-            this.submenu_caja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_caja.Location = new System.Drawing.Point(0, 505);
-            this.submenu_caja.Name = "submenu_caja";
-            this.submenu_caja.Size = new System.Drawing.Size(267, 90);
-            this.submenu_caja.TabIndex = 25;
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 45);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(267, 45);
-            this.button11.TabIndex = 3;
-            this.button11.Text = "Cerrar Caja";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // bvercaja
-            // 
-            this.bvercaja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bvercaja.FlatAppearance.BorderSize = 0;
-            this.bvercaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bvercaja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bvercaja.ForeColor = System.Drawing.Color.White;
-            this.bvercaja.Location = new System.Drawing.Point(0, 0);
-            this.bvercaja.Name = "bvercaja";
-            this.bvercaja.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.bvercaja.Size = new System.Drawing.Size(267, 45);
-            this.bvercaja.TabIndex = 2;
-            this.bvercaja.Text = "Ver caja";
-            this.bvercaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bvercaja.UseVisualStyleBackColor = true;
-            // 
-            // bcaja
-            // 
-            this.bcaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.bcaja.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bcaja.FlatAppearance.BorderSize = 0;
-            this.bcaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bcaja.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bcaja.ForeColor = System.Drawing.Color.Lime;
-            this.bcaja.Image = global::CapaPresentacion.Properties.Resources.caja_registradora;
-            this.bcaja.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bcaja.Location = new System.Drawing.Point(0, 460);
-            this.bcaja.Name = "bcaja";
-            this.bcaja.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bcaja.Size = new System.Drawing.Size(267, 45);
-            this.bcaja.TabIndex = 24;
-            this.bcaja.Text = "Caja";
-            this.bcaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bcaja.UseVisualStyleBackColor = false;
-            this.bcaja.Click += new System.EventHandler(this.bcaja_Click);
-            // 
             // submenu_clientes
             // 
             this.submenu_clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.submenu_clientes.Controls.Add(this.bverclientes);
-            this.submenu_clientes.Controls.Add(this.bagregarclientes);
             this.submenu_clientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenu_clientes.Location = new System.Drawing.Point(0, 370);
             this.submenu_clientes.Name = "submenu_clientes";
-            this.submenu_clientes.Size = new System.Drawing.Size(267, 90);
+            this.submenu_clientes.Size = new System.Drawing.Size(267, 48);
             this.submenu_clientes.TabIndex = 23;
             // 
             // bverclientes
@@ -240,7 +115,7 @@
             this.bverclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bverclientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bverclientes.ForeColor = System.Drawing.Color.White;
-            this.bverclientes.Location = new System.Drawing.Point(0, 45);
+            this.bverclientes.Location = new System.Drawing.Point(0, 0);
             this.bverclientes.Name = "bverclientes";
             this.bverclientes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.bverclientes.Size = new System.Drawing.Size(267, 45);
@@ -248,43 +123,7 @@
             this.bverclientes.Text = "Ver Clientes";
             this.bverclientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bverclientes.UseVisualStyleBackColor = true;
-            // 
-            // bagregarclientes
-            // 
-            this.bagregarclientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bagregarclientes.FlatAppearance.BorderSize = 0;
-            this.bagregarclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bagregarclientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bagregarclientes.ForeColor = System.Drawing.Color.White;
-            this.bagregarclientes.Location = new System.Drawing.Point(0, 0);
-            this.bagregarclientes.Name = "bagregarclientes";
-            this.bagregarclientes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.bagregarclientes.Size = new System.Drawing.Size(267, 45);
-            this.bagregarclientes.TabIndex = 2;
-            this.bagregarclientes.Text = "Agregar Clientes";
-            this.bagregarclientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bagregarclientes.UseVisualStyleBackColor = true;
-            this.bagregarclientes.Click += new System.EventHandler(this.bagregarclientes_Click);
-            // 
-            // bClientes
-            // 
-            this.bClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.bClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bClientes.FlatAppearance.BorderSize = 0;
-            this.bClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bClientes.ForeColor = System.Drawing.Color.Lime;
-            this.bClientes.Image = ((System.Drawing.Image)(resources.GetObject("bClientes.Image")));
-            this.bClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bClientes.Location = new System.Drawing.Point(0, 325);
-            this.bClientes.Name = "bClientes";
-            this.bClientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bClientes.Size = new System.Drawing.Size(267, 45);
-            this.bClientes.TabIndex = 22;
-            this.bClientes.Text = "Clientes";
-            this.bClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bClientes.UseVisualStyleBackColor = false;
-            this.bClientes.Click += new System.EventHandler(this.bClientes_Click);
+            this.bverclientes.Click += new System.EventHandler(this.bverclientes_Click);
             // 
             // submenu_ventas
             // 
@@ -309,9 +148,10 @@
             this.bverventas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.bverventas.Size = new System.Drawing.Size(267, 45);
             this.bverventas.TabIndex = 3;
-            this.bverventas.Text = "Ver Ventas";
+            this.bverventas.Text = "Mis Ventas";
             this.bverventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bverventas.UseVisualStyleBackColor = true;
+            this.bverventas.Click += new System.EventHandler(this.bverventas_Click);
             // 
             // bagregarventas
             // 
@@ -328,26 +168,7 @@
             this.bagregarventas.Text = "Agregar Ventas";
             this.bagregarventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarventas.UseVisualStyleBackColor = true;
-            // 
-            // bventas
-            // 
-            this.bventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.bventas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bventas.FlatAppearance.BorderSize = 0;
-            this.bventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bventas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bventas.ForeColor = System.Drawing.Color.Lime;
-            this.bventas.Image = ((System.Drawing.Image)(resources.GetObject("bventas.Image")));
-            this.bventas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bventas.Location = new System.Drawing.Point(0, 190);
-            this.bventas.Name = "bventas";
-            this.bventas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bventas.Size = new System.Drawing.Size(267, 45);
-            this.bventas.TabIndex = 20;
-            this.bventas.Text = "Ventas";
-            this.bventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bventas.UseVisualStyleBackColor = false;
-            this.bventas.Click += new System.EventHandler(this.bventas_Click);
+            this.bagregarventas.Click += new System.EventHandler(this.bagregarventas_Click);
             // 
             // submenu_productos
             // 
@@ -375,26 +196,7 @@
             this.button1.Text = "Ver Productos";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // bproducto
-            // 
-            this.bproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
-            this.bproducto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bproducto.FlatAppearance.BorderSize = 0;
-            this.bproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bproducto.ForeColor = System.Drawing.Color.Lime;
-            this.bproducto.Image = global::CapaPresentacion.Properties.Resources.camiseta;
-            this.bproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bproducto.Location = new System.Drawing.Point(0, 100);
-            this.bproducto.Name = "bproducto";
-            this.bproducto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.bproducto.Size = new System.Drawing.Size(267, 45);
-            this.bproducto.TabIndex = 2;
-            this.bproducto.Text = "Productos";
-            this.bproducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bproducto.UseVisualStyleBackColor = false;
-            this.bproducto.Click += new System.EventHandler(this.bproducto_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -409,20 +211,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(267, 100);
             this.panel3.TabIndex = 1;
-            // 
-            // bcerrarsesion
-            // 
-            this.bcerrarsesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bcerrarsesion.FlatAppearance.BorderSize = 0;
-            this.bcerrarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bcerrarsesion.Image = ((System.Drawing.Image)(resources.GetObject("bcerrarsesion.Image")));
-            this.bcerrarsesion.Location = new System.Drawing.Point(218, 6);
-            this.bcerrarsesion.Name = "bcerrarsesion";
-            this.bcerrarsesion.Size = new System.Drawing.Size(49, 35);
-            this.bcerrarsesion.TabIndex = 18;
-            this.bcerrarsesion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bcerrarsesion.UseVisualStyleBackColor = true;
-            this.bcerrarsesion.Click += new System.EventHandler(this.bcerrarsesion_Click);
             // 
             // label2
             // 
@@ -456,16 +244,6 @@
             this.lnombre.Size = new System.Drawing.Size(149, 21);
             this.lnombre.TabIndex = 0;
             this.lnombre.Text = "nombre y apellido";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -522,6 +300,143 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // bClientes
+            // 
+            this.bClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.bClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bClientes.FlatAppearance.BorderSize = 0;
+            this.bClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bClientes.ForeColor = System.Drawing.Color.Lime;
+            this.bClientes.Image = ((System.Drawing.Image)(resources.GetObject("bClientes.Image")));
+            this.bClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bClientes.Location = new System.Drawing.Point(0, 325);
+            this.bClientes.Name = "bClientes";
+            this.bClientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bClientes.Size = new System.Drawing.Size(267, 45);
+            this.bClientes.TabIndex = 22;
+            this.bClientes.Text = "Clientes";
+            this.bClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bClientes.UseVisualStyleBackColor = false;
+            this.bClientes.Click += new System.EventHandler(this.bClientes_Click);
+            // 
+            // bventas
+            // 
+            this.bventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.bventas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bventas.FlatAppearance.BorderSize = 0;
+            this.bventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bventas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bventas.ForeColor = System.Drawing.Color.Lime;
+            this.bventas.Image = ((System.Drawing.Image)(resources.GetObject("bventas.Image")));
+            this.bventas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bventas.Location = new System.Drawing.Point(0, 190);
+            this.bventas.Name = "bventas";
+            this.bventas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bventas.Size = new System.Drawing.Size(267, 45);
+            this.bventas.TabIndex = 20;
+            this.bventas.Text = "Ventas";
+            this.bventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bventas.UseVisualStyleBackColor = false;
+            this.bventas.Click += new System.EventHandler(this.bventas_Click);
+            // 
+            // bproducto
+            // 
+            this.bproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+            this.bproducto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bproducto.FlatAppearance.BorderSize = 0;
+            this.bproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bproducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bproducto.ForeColor = System.Drawing.Color.Lime;
+            this.bproducto.Image = global::CapaPresentacion.Properties.Resources.camiseta;
+            this.bproducto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bproducto.Location = new System.Drawing.Point(0, 100);
+            this.bproducto.Name = "bproducto";
+            this.bproducto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bproducto.Size = new System.Drawing.Size(267, 45);
+            this.bproducto.TabIndex = 2;
+            this.bproducto.Text = "Productos";
+            this.bproducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bproducto.UseVisualStyleBackColor = false;
+            this.bproducto.Click += new System.EventHandler(this.bproducto_Click);
+            // 
+            // bcerrarsesion
+            // 
+            this.bcerrarsesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bcerrarsesion.FlatAppearance.BorderSize = 0;
+            this.bcerrarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bcerrarsesion.Image = ((System.Drawing.Image)(resources.GetObject("bcerrarsesion.Image")));
+            this.bcerrarsesion.Location = new System.Drawing.Point(218, 6);
+            this.bcerrarsesion.Name = "bcerrarsesion";
+            this.bcerrarsesion.Size = new System.Drawing.Size(49, 35);
+            this.bcerrarsesion.TabIndex = 18;
+            this.bcerrarsesion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bcerrarsesion.UseVisualStyleBackColor = true;
+            this.bcerrarsesion.Click += new System.EventHandler(this.bcerrarsesion_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(1101, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 29);
+            this.button2.TabIndex = 7;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // bminimizar
+            // 
+            this.bminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bminimizar.FlatAppearance.BorderSize = 0;
+            this.bminimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bminimizar.Image = ((System.Drawing.Image)(resources.GetObject("bminimizar.Image")));
+            this.bminimizar.Location = new System.Drawing.Point(1058, 3);
+            this.bminimizar.Name = "bminimizar";
+            this.bminimizar.Size = new System.Drawing.Size(37, 29);
+            this.bminimizar.TabIndex = 6;
+            this.bminimizar.UseVisualStyleBackColor = true;
+            this.bminimizar.Click += new System.EventHandler(this.bminimizar_Click);
+            // 
+            // bcerrar
+            // 
+            this.bcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bcerrar.FlatAppearance.BorderSize = 0;
+            this.bcerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bcerrar.Image = ((System.Drawing.Image)(resources.GetObject("bcerrar.Image")));
+            this.bcerrar.Location = new System.Drawing.Point(1144, 3);
+            this.bcerrar.Name = "bcerrar";
+            this.bcerrar.Size = new System.Drawing.Size(37, 29);
+            this.bcerrar.TabIndex = 7;
+            this.bcerrar.UseVisualStyleBackColor = true;
+            this.bcerrar.Click += new System.EventHandler(this.bcerrar_Click);
+            // 
+            // brestarurar
+            // 
+            this.brestarurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.brestarurar.FlatAppearance.BorderSize = 0;
+            this.brestarurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brestarurar.Image = ((System.Drawing.Image)(resources.GetObject("brestarurar.Image")));
+            this.brestarurar.Location = new System.Drawing.Point(1097, 3);
+            this.brestarurar.Name = "brestarurar";
+            this.brestarurar.Size = new System.Drawing.Size(37, 29);
+            this.brestarurar.TabIndex = 8;
+            this.brestarurar.UseVisualStyleBackColor = true;
+            this.brestarurar.Visible = false;
+            this.brestarurar.Click += new System.EventHandler(this.brestarurar_Click);
+            // 
             // Fvendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,21 +446,21 @@
             this.Controls.Add(this.menulateral);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Fvendedor";
             this.Text = "Fempleado";
             this.Load += new System.EventHandler(this.S_Load);
             this.panel1.ResumeLayout(false);
             this.menulateral.ResumeLayout(false);
             this.menulateral.PerformLayout();
-            this.submenu_caja.ResumeLayout(false);
             this.submenu_clientes.ResumeLayout(false);
             this.submenu_ventas.ResumeLayout(false);
             this.submenu_productos.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pcontent.ResumeLayout(false);
             this.pcontent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,13 +473,8 @@
         private System.Windows.Forms.Button bcerrar;
         private System.Windows.Forms.Button brestarurar;
         private System.Windows.Forms.Panel menulateral;
-        private System.Windows.Forms.Panel submenu_caja;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button bvercaja;
-        private System.Windows.Forms.Button bcaja;
         private System.Windows.Forms.Panel submenu_clientes;
         private System.Windows.Forms.Button bverclientes;
-        private System.Windows.Forms.Button bagregarclientes;
         private System.Windows.Forms.Button bClientes;
         private System.Windows.Forms.Panel submenu_ventas;
         private System.Windows.Forms.Button bverventas;

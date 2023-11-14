@@ -1,5 +1,6 @@
 ﻿
 using CapaPresentacion.Administrador.Clientes;
+using CapaPresentacion.Vistas.Venta;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,7 @@ namespace CapaPresentacion.Empleado
         }
         private void customizar_design()
         {
-            submenu_caja.Visible = false;
+            
             submenu_clientes.Visible = false;  //cuando aparece el submenu por primera vez no es visible      
             submenu_ventas.Visible = false;
             submenu_productos.Visible = false;
@@ -129,7 +130,7 @@ namespace CapaPresentacion.Empleado
         {            
             if (submenu_productos.Visible == true) submenu_productos.Visible = false;    
             if (submenu_ventas.Visible == true) submenu_ventas.Visible = false;
-            if (submenu_caja.Visible == true) submenu_caja.Visible = false;
+  
             if (submenu_clientes.Visible == true) submenu_clientes.Visible = false;
 
         }
@@ -144,10 +145,7 @@ namespace CapaPresentacion.Empleado
             mostrar_submenu(submenu_clientes);
         }
 
-        private void bcaja_Click(object sender, EventArgs e)
-        {
-            mostrar_submenu(submenu_caja);
-        }
+      
 
         private void bcerrarsesion_Click(object sender, EventArgs e)
         {
@@ -175,6 +173,34 @@ namespace CapaPresentacion.Empleado
         }
 
         private void bagregarclientes_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_cliente());
+            ocultar_submenu();
+        }
+
+        private void bagregarventas_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_venta());
+            ocultar_submenu();
+        }
+
+        private void bverventas_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fmis_ventas());
+            ocultar_submenu();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fverproductos());
+            ocultar_submenu();
+        }
+
+        private void bverclientes_Click(object sender, EventArgs e)
         {
             ocultarhora();
             abrirFormulario(new Fagregar_cliente());

@@ -8,12 +8,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
+using CapaEntidad;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static Fable.Import.Browser;
 
 namespace CapaPresentacion.Administrador.Usuario
 {
     public partial class Fagregar_usuario : Form
     {
+        CN_USUARIO usuario = new CN_USUARIO();
+       
         public Fagregar_usuario()
         {
             InitializeComponent();
@@ -34,6 +40,7 @@ namespace CapaPresentacion.Administrador.Usuario
         }
         private void Fagregar_usuario_Load(object sender, EventArgs e)
         {
+            dgusuarios.DataSource = usuario.ConsultaDT();
 
         }
 
@@ -238,8 +245,16 @@ namespace CapaPresentacion.Administrador.Usuario
 
                     if (resultado == DialogResult.Yes)
                     {
+                        
+
+                        usuario.insertar_usuario(tnombre.Text, tapellido.Text, Tuser.Text,Int32.Parse(tdni.Text) , Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text), Tpass.Text, cbtipo.SelectedIndex);
+                        
+
+
+
                         //si la respuesta es si cargamos el usuario 
-                        MessageBox.Show("Exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El usuario: "+tnombre.Text+" "+tapellido.Text+" se agrego correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgusuarios.DataSource = usuario.ConsultaDT();
                         LimpiarCampos();
                         LimpiarErrores();
 
@@ -252,6 +267,7 @@ namespace CapaPresentacion.Administrador.Usuario
             }
 
         }
+       
 
         private void LimpiarCampos()
         {
@@ -285,6 +301,221 @@ namespace CapaPresentacion.Administrador.Usuario
             if (resultado == DialogResult.Yes)
             {
                 Close();
+            }
+        }
+
+
+
+        private void dgusuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgusuarios.Columns[e.ColumnIndex].Name == "eliminar" && this.dgusuarios.CurrentRow.Index != -1)
+            {
+                EliminarUsuario();
+            }
+        }
+
+        private void EliminarUsuario()
+        {
+            CN_USUARIO usuario = new CN_USUARIO();  
+            if (this.dgusuarios.CurrentRow.Index != -1 )
+            {
+                int posicion = dgusuarios.CurrentRow.Index;
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {                  
+                      
+                    usuario.eliminar_usuario(Int32.Parse (dgusuarios[6, posicion].Value.ToString()) );
+                    this.dgusuarios.Rows.RemoveAt(this.dgusuarios.CurrentRow.Index);
+                }
+                else
+                {
+                    tnombre.Clear();
+                    tapellido.Clear();
+                    Tuser.Clear();
+                    tdni.Clear();
+                    Tcorreo.Clear();
+                    tdomicilio.Clear();
+                    Tcel.Clear();
+
+                    bcancelaredicion.Visible = false;
+                    beditar.Visible = false;
+                    bcancelar.Visible = true;
+                    bnover.Visible = true;
+                    bver.Visible = true;
+                    Tpass.Visible = true;
+                    Tconfcontra.Visible = true;
+                    lcontra.Visible = true;
+                    lconfcontra.Visible = true;
+                }
+
+            }
+           
+
+        }
+
+        private void editar_accion()
+        {
+            bcancelaredicion.Visible = true;
+            beditar.Visible = true;
+            bcancelar.Visible = false;
+            bnover.Visible = false; 
+            bver.Visible = false;
+            Tpass.Visible = false;
+            Tconfcontra.Visible = false;
+            lcontra.Visible = false;
+            lconfcontra.Visible = false;  
+ 
+        }
+        private void dgusuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+      
+            if (this.dgusuarios.CurrentRow.Index != -1 && dgusuarios.Columns[e.ColumnIndex].Index == 0)
+            {
+                int posicion;
+                editar_accion();
+                posicion = dgusuarios.CurrentRow.Index;
+                tnombre.Text = dgusuarios[3, posicion].Value.ToString();
+                tapellido.Text = dgusuarios[4, posicion].Value.ToString();
+                Tuser.Text = dgusuarios[5, posicion].Value.ToString();
+                tdni.Text = dgusuarios[6, posicion].Value.ToString();
+                Tcorreo.Text = dgusuarios[8, posicion].Value.ToString(); 
+                tdomicilio.Text = dgusuarios[7, posicion].Value.ToString();
+                Tcel.Text = dgusuarios[9, posicion].Value.ToString();
+                cbtipo.Text = dgusuarios[10, posicion].Value.ToString();
+         
+
+            }
+            
+        }
+
+        private void bcancelaredicion_Click(object sender, EventArgs e)
+        {
+
+            DialogResult resultado = MessageBox.Show("Seguro quiere cancelar la edicion?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                tnombre.Clear();
+                tapellido.Clear();
+                Tuser.Clear();
+                tdni.Clear();
+                Tcorreo.Clear();
+                tdomicilio.Clear();
+                Tcel.Clear();
+
+
+
+
+                bcancelaredicion.Visible = false;
+                beditar.Visible = false;
+                bcancelar.Visible = true;
+                bnover.Visible = true;
+                bver.Visible = true;
+                Tpass.Visible = true;
+                Tconfcontra.Visible = true;
+                lcontra.Visible = true;
+                lconfcontra.Visible = true;
+            }
+        
+        }
+
+        private void beditar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro quiere editar el usuario?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                if(cbtipo.SelectedIndex != -1)
+                {
+                    CN_USUARIO usuario = new CN_USUARIO();
+                    usuario.modificar_usuario(tnombre.Text, tapellido.Text, Tuser.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text), cbtipo.SelectedIndex);
+                    MessageBox.Show("El usuario se edito correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgusuarios.DataSource = usuario.ConsultaDT();
+                }
+                else
+                {
+                    etipouser.SetError(cbtipo, "Campo Obligatorio!");
+                }
+
+               
+            }
+            tnombre.Clear();
+            tapellido.Clear();
+            Tuser.Clear();
+            tdni.Clear();
+            Tcorreo.Clear();
+            tdomicilio.Clear();
+            Tcel.Clear();
+
+
+
+
+            bcancelaredicion.Visible = false;
+            beditar.Visible = false;
+            bcancelar.Visible = true;
+            bnover.Visible = true;
+            bver.Visible = true;
+            Tpass.Visible = true;
+            Tconfcontra.Visible = true;
+            lcontra.Visible = true;
+            lconfcontra.Visible = true;
+        }
+
+        private void bbuscar_Click(object sender, EventArgs e)
+        {
+            string valorBuscado =""+tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgusuarios.Rows)
+            {
+                if (fila.Cells["username"].Value != null && fila.Cells["username"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                dgusuarios.CurrentCell = dgusuarios[0, rowIndex]; // Esto seleccionará la fila encontrada
+            }
+            else
+            {
+                MessageBox.Show("El usuario no existe", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbuscarobjeto_TextChanged(object sender, EventArgs e)
+        {
+            string valorBuscado = "" + tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgusuarios.Rows)
+            {
+                if (fila.Cells["DNI"].Value != null && fila.Cells["DNI"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+
+
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgusuarios.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgusuarios.CurrentCell = dgusuarios[0, rowIndex]; // Esto seleccionará la fila encontrada
+
             }
         }
     }

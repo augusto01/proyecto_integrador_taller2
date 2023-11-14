@@ -14,6 +14,7 @@ using CapaEntidad;
 using CapaPresentacion.Administrador.Usuario;
 using CapaPresentacion.Administrador.Clientes;
 using CapaPresentacion.Gerente.Producto;
+using CapaPresentacion.Vistas.Venta;
 
 namespace CapaPresentacion.Administrador
 {
@@ -26,7 +27,7 @@ namespace CapaPresentacion.Administrador
           
 
         }
-        string username = CN_Usuario.username;
+
 
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -35,9 +36,9 @@ namespace CapaPresentacion.Administrador
         private static extern void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int intlparam);
         private void customizar_design()
         {
-            submenu_caja.Visible = false;
+        
             submenu_clientes.Visible = false;  //cuando aparece el submenu por primera vez no es visible
-            submenu_compras.Visible = false;
+ 
             submenu_usuarios.Visible = false;
             submenu_ventas.Visible = false;
             submenu_productos.Visible = false;
@@ -149,12 +150,12 @@ namespace CapaPresentacion.Administrador
         }
         private void ocultar_submenu()
         {
-            if (submenu_compras.Visible == true) submenu_compras.Visible = false;
+             
             if (submenu_productos.Visible == true) submenu_productos.Visible = false;
             if (submenu_usuarios.Visible == true) submenu_usuarios.Visible = false;
             if (submenu_ventas.Visible == true) submenu_ventas.Visible = false;
 
-            if (submenu_caja.Visible == true) submenu_caja.Visible = false;
+          
             if (submenu_clientes.Visible == true) submenu_clientes.Visible = false;
 
         }
@@ -261,11 +262,7 @@ namespace CapaPresentacion.Administrador
             ocultar_submenu();
         }
 
-        private void bcaja_Click(object sender, EventArgs e)
-        {
-            mostrar_submenu(submenu_caja);
-        }
-
+       
         private void bvercaja_Click(object sender, EventArgs e)
         {
             /*
@@ -290,10 +287,7 @@ namespace CapaPresentacion.Administrador
             ocultar_submenu();
         }
 
-        private void bcompras_Click(object sender, EventArgs e)
-        {
-            mostrar_submenu(submenu_compras);
-        }
+     
 
         private void bagregarcompra_Click(object sender, EventArgs e)
         {
@@ -319,17 +313,7 @@ namespace CapaPresentacion.Administrador
             ocultar_submenu();
         }
 
-       
-
-        private void bcaja_Click_1(object sender, EventArgs e)
-        {
-            mostrar_submenu(submenu_caja);
-        }
-
-        private void bcompras_Click_1(object sender, EventArgs e)
-        {
-            mostrar_submenu(submenu_compras);
-        }
+      
 
         private void bventas_Click_1(object sender, EventArgs e)
         {
@@ -403,6 +387,18 @@ namespace CapaPresentacion.Administrador
         {
             ocultarhora();
             abrirFormulario(new Fagregar_producto());
+            ocultar_submenu();
+        }
+
+        private void bagregarcompra_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bverventas_Click_1(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fmis_ventas());
             ocultar_submenu();
         }
     }
