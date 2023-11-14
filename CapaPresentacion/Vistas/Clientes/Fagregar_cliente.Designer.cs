@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_cliente));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.econfcontra = new System.Windows.Forms.ErrorProvider(this.components);
             this.econtra = new System.Windows.Forms.ErrorProvider(this.components);
@@ -57,6 +58,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tnombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgclientes = new System.Windows.Forms.DataGridView();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.econfcontra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.econtra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.etipouser)).BeginInit();
@@ -67,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgclientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -333,12 +338,51 @@
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
             // 
+            // dgclientes
+            // 
+            this.dgclientes.AllowUserToAddRows = false;
+            this.dgclientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgclientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.editar,
+            this.eliminar});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgclientes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgclientes.Location = new System.Drawing.Point(12, 491);
+            this.dgclientes.Name = "dgclientes";
+            this.dgclientes.ReadOnly = true;
+            this.dgclientes.Size = new System.Drawing.Size(906, 273);
+            this.dgclientes.TabIndex = 71;
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.Image = global::CapaPresentacion.Properties.Resources.lapiz2;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Width = 40;
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Image = global::CapaPresentacion.Properties.Resources.borrarr2;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Width = 40;
+            // 
             // Fagregar_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(930, 1022);
+            this.Controls.Add(this.dgclientes);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bcancelar);
@@ -359,6 +403,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fagregar_cliente";
             this.Text = "Fagregar_cliente";
+            this.Load += new System.EventHandler(this.Fagregar_cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.econfcontra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.econtra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.etipouser)).EndInit();
@@ -369,6 +414,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgclientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,5 +449,8 @@
         private System.Windows.Forms.ErrorProvider eapellido;
         private System.Windows.Forms.ErrorProvider enombre;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridView dgclientes;
+        private System.Windows.Forms.DataGridViewImageColumn editar;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }
 }

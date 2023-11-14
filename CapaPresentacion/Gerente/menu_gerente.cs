@@ -2,8 +2,7 @@
 using CapaPresentacion.Administrador.Usuario;
 using CapaPresentacion.Gerente.Producto;
 using CapaPresentacion.Vistas.Backup;
-using CapaPresentacion.Vistas.Compra;
-using CapaPresentacion.Vistas.Informes;
+ using CapaPresentacion.Vistas.Informes;
 using CapaPresentacion.Vistas.Proveedor;
 using CapaPresentacion.Vistas.Venta;
 using System;
@@ -234,9 +233,7 @@ namespace CapaPresentacion.Gerente
             }
             private void bagregarcompra_Click(object sender, EventArgs e)
             {
-                ocultarhora();
-                abrirFormulario(new Fagregar_compra());
-                ocultar_submenu();
+               
             }
         //PROVEEDOR
         private void bagregarproveedor_Click(object sender, EventArgs e)
@@ -264,13 +261,7 @@ namespace CapaPresentacion.Gerente
             }
         }
 
-        private void bagregarcompra_Click_1(object sender, EventArgs e)
-        {           
-           ocultarhora();
-           abrirFormulario(new Fagregar_compra());
-           ocultar_submenu();
-            
-        }
+        
 
         private void bverventas_Click(object sender, EventArgs e)
         {

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CN_BACKUP.cs" />
+    <Compile Include="CN_CLIENTE.cs" />
     <Compile Include="CN_FACTURA.cs" />
     <Compile Include="CN_INFORME.cs" />
     <Compile Include="CN_PRODUCTO.cs" />

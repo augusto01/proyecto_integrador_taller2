@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,10 @@ namespace CapaPresentacion.Administrador.Clientes
         public Fagregar_cliente()
         {
             InitializeComponent();
+            cliente.ConsultaDT();
         }
+
+        CN_CLIENTE cliente = new CN_CLIENTE();
 
         //BANDERAS PARA SABER EL ESTADOS DE LOS TEXT BOX 
         bool banderaDNI = false;
@@ -179,6 +183,8 @@ namespace CapaPresentacion.Administrador.Clientes
                     if (resultado == DialogResult.Yes)
                     {
                         //si la respuesta es si cargamos el usuario 
+                        CN_CLIENTE cliente = new CN_CLIENTE();
+                        cliente.registrar_cliente(tnombre.Text, tapellido.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text) );
                         MessageBox.Show("Exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                         LimpiarErrores();
@@ -199,6 +205,11 @@ namespace CapaPresentacion.Administrador.Clientes
             {
                 Close();
             }
+        }
+
+        private void Fagregar_cliente_Load(object sender, EventArgs e)
+        {
+            dgclientes.DataSource = cliente.ConsultaDT();
         }
     }
 }

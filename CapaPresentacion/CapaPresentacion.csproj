@@ -107,12 +107,6 @@
     <Compile Include="Administrador\Fadministradornuevo.Designer.cs">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Compra\Fagregar_compra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Compra\Fagregar_compra.Designer.cs">
-      <DependentUpon>Fagregar_compra.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Informes\Fver_informes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\Fadministradornuevo.resx">
       <DependentUpon>Fadministradornuevo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Compra\Fagregar_compra.resx">
-      <DependentUpon>Fagregar_compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Informes\Fver_informes.resx">
       <DependentUpon>Fver_informes.cs</DependentUpon>
