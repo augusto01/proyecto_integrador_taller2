@@ -17,7 +17,7 @@ namespace CapaPresentacion.Administrador.Clientes
         public Fagregar_cliente()
         {
             InitializeComponent();
-            cliente.ConsultaDT();
+            
         }
 
         CN_CLIENTE cliente = new CN_CLIENTE();
@@ -88,7 +88,7 @@ namespace CapaPresentacion.Administrador.Clientes
 
         private void tdomicilio_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
 
         private void tdni_KeyPress(object sender, KeyPressEventArgs e)
@@ -111,14 +111,14 @@ namespace CapaPresentacion.Administrador.Clientes
         //metodos esteticos
         private void LimpiarCampos()
         {
-           
+
             tdni.Clear();
             tdomicilio.Clear();
             Tcel.Clear();
             tnombre.Clear();
             tapellido.Clear();
             Tcorreo.Clear();
-           
+
         }
 
         private void LimpiarErrores()
@@ -130,14 +130,14 @@ namespace CapaPresentacion.Administrador.Clientes
             ecel.Clear();
             econtra.Clear();
             etipouser.Clear();
-           
+
         }
 
         //boton agregar
         private void Bagregar_Click(object sender, EventArgs e)
         {
             if (tdni.Text.Trim() == String.Empty || tnombre.Text.Trim() == string.Empty || tapellido.Text.Trim() == string.Empty
-              || Tcorreo.Text.Trim() == String.Empty )
+              || Tcorreo.Text.Trim() == String.Empty)
             {
                 MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -151,7 +151,7 @@ namespace CapaPresentacion.Administrador.Clientes
                 {
                     enombre.SetError(tnombre, "Campo Obligatorio!!");
                 }
-              
+
                 if (tapellido.Text.Trim() == String.Empty)
                 {
                     eapellido.SetError(tapellido, "Campo Obligatorio!");
@@ -166,7 +166,7 @@ namespace CapaPresentacion.Administrador.Clientes
             else
             {
 
-                if (banderaDNI == false || banderaEmail == false )
+                if (banderaDNI == false || banderaEmail == false)
                 {
 
                     MessageBox.Show("Valores invalidos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -184,7 +184,7 @@ namespace CapaPresentacion.Administrador.Clientes
                     {
                         //si la respuesta es si cargamos el usuario 
                         CN_CLIENTE cliente = new CN_CLIENTE();
-                        cliente.registrar_cliente(tnombre.Text, tapellido.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text) );
+                        cliente.registrar_cliente(tnombre.Text, tapellido.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text));
                         MessageBox.Show("Exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                         LimpiarErrores();
@@ -210,6 +210,116 @@ namespace CapaPresentacion.Administrador.Clientes
         private void Fagregar_cliente_Load(object sender, EventArgs e)
         {
             dgclientes.DataSource = cliente.ConsultaDT();
+        }
+        private void editar_accion()
+        {
+            bcancelaredicion.Visible = true;
+            beditar.Visible = true;
+            bcancelar.Visible = false;
+
+
+        }
+        private void dgclientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgclientes.Columns[e.ColumnIndex].Name == "editar" && this.dgclientes.CurrentRow.Index != -1)
+            {
+                int posicion;
+                editar_accion();
+                posicion = dgclientes.CurrentRow.Index;
+                tnombre.Text = dgclientes[3, posicion].Value.ToString();
+                tapellido.Text = dgclientes[4, posicion].Value.ToString();
+                tdni.Text = dgclientes[5, posicion].Value.ToString();
+                Tcorreo.Text = dgclientes[6, posicion].Value.ToString();
+                tdomicilio.Text = dgclientes[7, posicion].Value.ToString();
+                Tcel.Text = dgclientes[8, posicion].Value.ToString();
+
+            }
+        }
+
+        private void beditar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro quiere editar el usuario?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+
+
+                CN_CLIENTE cliente = new CN_CLIENTE();
+                cliente.modificar_cliente(tnombre.Text, tapellido.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, Int32.Parse(Tcel.Text));
+                MessageBox.Show("El cliente se edito correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgclientes.DataSource = cliente.ConsultaDT();
+
+            }
+            tnombre.Clear();
+            tapellido.Clear();
+            tdni.Clear();
+            Tcorreo.Clear();
+            tdomicilio.Clear();
+            Tcel.Clear();
+            bcancelaredicion.Visible = false;
+            beditar.Visible = false;
+            bcancelar.Visible = true;
+
+        }
+
+        private void bcancelaredicion_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro quiere cancelar la edicion?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                tnombre.Clear();
+                tapellido.Clear();
+                tdni.Clear();
+                Tcorreo.Clear();
+                tdomicilio.Clear();
+                Tcel.Clear();
+                bcancelaredicion.Visible = false;
+                beditar.Visible = false;
+                bcancelar.Visible = true;
+
+            }
+        }
+        private void EliminarCliente()
+        {
+            CN_USUARIO usuario = new CN_USUARIO();
+            if (this.dgclientes.CurrentRow.Index != -1)
+            {
+                int posicion = dgclientes.CurrentRow.Index;
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+
+                    cliente.eliminar_cliente(Int32.Parse(dgclientes[5, posicion].Value.ToString()));
+                    this.dgclientes.Rows.RemoveAt(this.dgclientes.CurrentRow.Index);
+                    MessageBox.Show("El cliente se elimino correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgclientes.DataSource = cliente.ConsultaDT();
+
+                }
+                else
+                {
+                    tnombre.Clear();
+                    tapellido.Clear();
+          
+                    tdni.Clear();
+                    Tcorreo.Clear();
+                    tdomicilio.Clear();
+                    Tcel.Clear();
+
+                    bcancelaredicion.Visible = false;
+                    beditar.Visible = false;
+                    bcancelar.Visible = true;
+                
+                }
+
+            }
+
+
+        }
+        private void dgclientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgclientes.Columns[e.ColumnIndex].Name == "eliminar" && this.dgclientes.CurrentRow.Index != -1)
+            {
+                EliminarCliente();
+            }
         }
     }
 }

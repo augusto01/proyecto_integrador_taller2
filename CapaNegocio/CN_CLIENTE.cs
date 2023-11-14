@@ -49,29 +49,20 @@ namespace CapaNegocio
             CD_Cliente cliente = new CD_Cliente();
             return cliente.ConsultaClientesDg();
         }
-        /*
+        
 
         public int modificar_cliente(string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente, int celular_cliente)
         {
-            CD_Usuario cliente = new CD_Usuario();
+            CD_Cliente cliente = new CD_Cliente();
             return cliente.modificar_cliente(nombre_cliente, apellido_cliente, dni_cliente, email_cliente, domicilio_cliente, celular_cliente);
-        }
-
-        public int insertar_usuario(string nombre_usuario, string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, string pass, int id_tipousuario)
-        {
-            CD_Usuario cliente = new CD_Usuario();
-            return cliente.registrar_cliente(nombre_usuario, apellido_usuario, username, dni_usuario, email_usuario, domicilio_usuario, celular, pass, id_tipousuario);
-
-
         }
 
         public int eliminar_cliente(int dni)
         {
-            CD_Usuario cliente = new CD_Usuario();
+            CD_Cliente cliente = new CD_Cliente();
             return cliente.eliminar_cliente(dni);
 
-
-        }*/
+        }
     }
 }
 
