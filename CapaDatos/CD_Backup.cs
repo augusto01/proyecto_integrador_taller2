@@ -23,7 +23,7 @@ namespace CapaDatos
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = conexion;
-                cmd.CommandText = $"BACKUP DATABASE proyecto_taller2 TO DISK = '{rutaArchivo}\\{nombrearchivo}' WITH INIT, STATS = 10";
+                cmd.CommandText = $"BACKUP DATABASE proyectotaller2_final TO DISK = '{rutaArchivo}\\{nombrearchivo}' WITH INIT, STATS = 10";
                 cmd.ExecuteNonQuery();
             }
 
@@ -38,19 +38,19 @@ namespace CapaDatos
                 conexion.Open();
 
                 // Desconectar usuarios activos
-                using (SqlCommand cmdDisconnectUsers = new SqlCommand("ALTER DATABASE proyecto_taller2 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;", conexion))
+                using (SqlCommand cmdDisconnectUsers = new SqlCommand("ALTER DATABASE proyectotaller2_final SET SINGLE_USER WITH ROLLBACK IMMEDIATE;", conexion))
                 {
                     cmdDisconnectUsers.ExecuteNonQuery();
                 }
 
                 // Restaurar la base de datos
-                using (SqlCommand cmdRestore = new SqlCommand($"USE master; RESTORE DATABASE proyecto_taller2 FROM DISK = '{rutaArchivo}' WITH REPLACE; USE proyecto_taller2;", conexion))
+                using (SqlCommand cmdRestore = new SqlCommand($"USE master; RESTORE DATABASE proyectotaller2_final FROM DISK = '{rutaArchivo}' WITH REPLACE; USE proyectotaller2_final;", conexion))
                 {
                     cmdRestore.ExecuteNonQuery();
                 }
 
                 // Restaurar la conexión múltiple
-                using (SqlCommand cmdReconnectUsers = new SqlCommand("ALTER DATABASE proyecto_taller2 SET MULTI_USER;", conexion))
+                using (SqlCommand cmdReconnectUsers = new SqlCommand("ALTER DATABASE proyectotaller2_final SET MULTI_USER;", conexion))
                 {
                     cmdReconnectUsers.ExecuteNonQuery();
                 }

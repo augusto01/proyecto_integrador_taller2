@@ -149,6 +149,7 @@
             this.tprecio.Name = "tprecio";
             this.tprecio.Size = new System.Drawing.Size(216, 24);
             this.tprecio.TabIndex = 117;
+            this.tprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tprecio_KeyPress);
             // 
             // label1
             // 

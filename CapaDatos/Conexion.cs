@@ -17,7 +17,7 @@ namespace CapaDatos
 
         public Conexion()
         {
-            connectionString = "Server=DESKTOP-FG0LK48; integrated Security = True; Database =proyecto_taller2";
+            connectionString = "Server=DESKTOP-FG0LK48; integrated Security = True; Database =proyectotaller2_final";
 
 
         }

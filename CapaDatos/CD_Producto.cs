@@ -14,14 +14,38 @@ namespace CapaDatos
     {
         public int insertar_producto(string descripcion, float precio_unitario, int stock, int id_talle, int id_categoria, int id_proveedor)
         {
-            var conexion = GetConnection();
             int flag = 0;
-            conexion.Open();
-            string query = "INSERT INTO Producto(id_talle, descripcion, precio_unitario, stock, fecha_alta, id_categoria, id_proveedor, estado)" +
-                            "VALUES("+id_talle+",'" + descripcion + "', " + precio_unitario + ", " + stock + ", getdate(), " + id_categoria + ", " + id_proveedor + ",1)";
-            SqlCommand cmd = new SqlCommand(query, conexion);
-            flag = cmd.ExecuteNonQuery();
-            conexion.Close();
+            var conexion = GetConnection();
+            try
+            {
+                conexion.Open();
+
+                // Usar parámetros en lugar de concatenar directamente los valores
+                string query = "INSERT INTO Producto (descripcion, precio_unitario, stock, fecha_alta, id_categoria, id_proveedor, id_talle, estado) " +
+                               "VALUES (@descripcion, @precio_unitario, @stock, GETDATE(), @id_categoria, @id_proveedor, @id_talle, 1)";
+
+                SqlCommand cmd = new SqlCommand(query, conexion);
+
+                // Agregar parámetros
+                cmd.Parameters.AddWithValue("@descripcion", descripcion);
+                cmd.Parameters.AddWithValue("@precio_unitario", precio_unitario);
+                cmd.Parameters.AddWithValue("@stock", stock);
+                cmd.Parameters.AddWithValue("@id_categoria", id_categoria);
+                cmd.Parameters.AddWithValue("@id_proveedor", id_proveedor);
+                cmd.Parameters.AddWithValue("@id_talle", id_talle);
+
+                flag = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier excepción que pueda ocurrir durante la ejecución de la consulta
+                Console.WriteLine("Error al insertar producto: " + ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
             return flag;
         }
         public int modificar_producto(int id_producto, string descripcion, float precio_unitario, int stock, int id_talle, int id_categoria, int id_proveedor)
@@ -150,7 +174,7 @@ namespace CapaDatos
         public DataTable ConsultaProductosDG()
         {
             var conexion = GetConnection();
-            string consulta = "select Producto.id_producto,Producto.descripcion as 'Producto',Talle.descripcion as 'Talle',precio_unitario as 'Precio',stock as 'Stock',Categoria.descripcion as 'Categoria',pro.nombre as 'Proveedor' from Producto\r\ninner join Proveedor pro on Producto.id_proveedor = pro.id_proveedor\r\ninner join Talle on Producto.id_talle = Talle.id_talle\r\ninner join Categoria on Producto.id_categoria = Categoria.id_categoria";
+            string consulta = "select Producto.id_producto,Producto.descripcion as 'Producto',\r\n\t\tTalle.descripcion as 'Talle',precio_unitario as 'Precio',\r\n\t\tstock as 'Stock',\r\n\t\tCategoria.descripcion as 'Categoria',\r\n\t\tpro.nombre as 'Proveedor' from Producto\r\n\t\tinner join Proveedor pro on Producto.id_proveedor = pro.id_proveedor \r\n\t\tinner join Talle on Producto.id_talle = Talle.id_talle\r\n\t\tinner join Categoria on Producto.id_categoria = Categoria.id_categoria";
             SqlCommand cmd = new SqlCommand(consulta, conexion);
             SqlDataAdapter data = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();

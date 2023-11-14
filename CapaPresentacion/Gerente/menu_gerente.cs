@@ -36,7 +36,7 @@ namespace CapaPresentacion.Gerente
         {
             submenu_informe.Visible = false;
             submenu_clientes.Visible = false;  //cuando aparece el submenu por primera vez no es visible
-            submenu_compras.Visible = false;
+             
             submenu_usuarios.Visible = false;
             submenu_ventas.Visible = false;
             submenu_productos.Visible = false;
@@ -75,7 +75,7 @@ namespace CapaPresentacion.Gerente
         }
         private void ocultar_submenu()
         {
-            if (submenu_compras.Visible == true) submenu_compras.Visible = false;
+           
             if (submenu_productos.Visible == true) submenu_productos.Visible = false;
             if (submenu_usuarios.Visible == true) submenu_usuarios.Visible = false;
             if (submenu_ventas.Visible == true) submenu_ventas.Visible = false;
@@ -230,7 +230,7 @@ namespace CapaPresentacion.Gerente
 
             private void bcompras_Click(object sender, EventArgs e)
             {
-                mostrar_submenu(submenu_compras);
+                
             }
             private void bagregarcompra_Click(object sender, EventArgs e)
             {
@@ -284,6 +284,11 @@ namespace CapaPresentacion.Gerente
             ocultarhora();
             abrirFormulario(new Fver_informes());
             ocultar_submenu();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

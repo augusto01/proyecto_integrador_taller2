@@ -67,14 +67,14 @@ namespace CapaPresentacion.Vistas.Backup
         {
             CN_BACKUP restaurar = new CN_BACKUP();
             // Asegúrate de que se haya seleccionado un archivo antes de intentar restaurar
-            if (string.IsNullOrWhiteSpace(truta.Text))
+            if (string.IsNullOrWhiteSpace(tarchivo.Text))
             {
                 MessageBox.Show("Por favor, selecciona un archivo de respaldo antes de intentar restaurar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Continúa con la función de restaurar_backup utilizando txtRutaArchivoRestaurar.Text
-            restaurar.RestaurarBackup(truta.Text);
+            restaurar.RestaurarBackup(tarchivo.Text);
 
             MessageBox.Show("Restauracion Exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
