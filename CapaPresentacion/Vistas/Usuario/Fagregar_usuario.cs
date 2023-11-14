@@ -488,5 +488,34 @@ namespace CapaPresentacion.Administrador.Usuario
         {
 
         }
+
+        private void tbuscarobjeto_TextChanged(object sender, EventArgs e)
+        {
+            string valorBuscado = "" + tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgusuarios.Rows)
+            {
+                if (fila.Cells["DNI"].Value != null && fila.Cells["DNI"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+
+
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgusuarios.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgusuarios.CurrentCell = dgusuarios[0, rowIndex]; // Esto seleccionará la fila encontrada
+
+            }
+        }
     }
 }

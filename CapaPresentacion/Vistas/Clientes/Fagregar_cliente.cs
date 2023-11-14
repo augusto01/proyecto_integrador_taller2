@@ -321,5 +321,34 @@ namespace CapaPresentacion.Administrador.Clientes
                 EliminarCliente();
             }
         }
+
+        private void tbuscarobjeto_TextChanged(object sender, EventArgs e)
+        {
+            string valorBuscado = "" + tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgclientes.Rows)
+            {
+                if (fila.Cells["dni_cliente"].Value != null && fila.Cells["dni_cliente"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+
+
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgclientes.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgclientes.CurrentCell = dgclientes[0, rowIndex]; // Esto seleccionará la fila encontrada
+
+            }
+        }
     }
 }

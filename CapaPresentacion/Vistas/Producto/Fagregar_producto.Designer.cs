@@ -68,6 +68,9 @@
             this.tstock = new System.Windows.Forms.TextBox();
             this.cancelaredicion = new System.Windows.Forms.Button();
             this.beditar = new System.Windows.Forms.Button();
+            this.tbuscarobjeto = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).BeginInit();
             this.panel1.SuspendLayout();
@@ -447,7 +450,7 @@
             this.dgproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editar,
             this.eliminar});
-            this.dgproductos.Location = new System.Drawing.Point(25, 513);
+            this.dgproductos.Location = new System.Drawing.Point(26, 572);
             this.dgproductos.Name = "dgproductos";
             this.dgproductos.ReadOnly = true;
             this.dgproductos.Size = new System.Drawing.Size(833, 132);
@@ -518,12 +521,49 @@
             this.beditar.Visible = false;
             this.beditar.Click += new System.EventHandler(this.beditar_Click);
             // 
+            // tbuscarobjeto
+            // 
+            this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbuscarobjeto.Location = new System.Drawing.Point(151, 536);
+            this.tbuscarobjeto.Name = "tbuscarobjeto";
+            this.tbuscarobjeto.Size = new System.Drawing.Size(137, 20);
+            this.tbuscarobjeto.TabIndex = 130;
+            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.tbuscarobjeto_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(41, 534);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 19);
+            this.label13.TabIndex = 129;
+            this.label13.Text = "Descripcion:";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(294, 532);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 24);
+            this.button2.TabIndex = 141;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // Fagregar_producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(914, 983);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tbuscarobjeto);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.beditar);
             this.Controls.Add(this.cancelaredicion);
             this.Controls.Add(this.tstock);
@@ -609,5 +649,8 @@
         private System.Windows.Forms.DataGridViewImageColumn eliminar;
         private System.Windows.Forms.Button beditar;
         private System.Windows.Forms.Button cancelaredicion;
+        private System.Windows.Forms.TextBox tbuscarobjeto;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button2;
     }
 }

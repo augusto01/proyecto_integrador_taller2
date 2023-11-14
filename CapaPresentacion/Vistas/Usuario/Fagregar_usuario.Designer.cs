@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_usuario));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,10 +66,6 @@
             this.bcancelar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tbuscarobjeto = new System.Windows.Forms.TextBox();
-            this.bbuscar = new System.Windows.Forms.Button();
             this.dgusuarios = new System.Windows.Forms.DataGridView();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -82,6 +78,9 @@
             this.bnover = new System.Windows.Forms.Button();
             this.beditar = new System.Windows.Forms.Button();
             this.bcancelaredicion = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tbuscarobjeto = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edni)).BeginInit();
@@ -456,51 +455,6 @@
             this.label12.TabIndex = 45;
             this.label12.Text = "Usuarios";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 547);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 21);
-            this.comboBox1.TabIndex = 46;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(22, 549);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 19);
-            this.label13.TabIndex = 47;
-            this.label13.Text = "Buscar por";
-            // 
-            // tbuscarobjeto
-            // 
-            this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbuscarobjeto.Location = new System.Drawing.Point(290, 547);
-            this.tbuscarobjeto.Name = "tbuscarobjeto";
-            this.tbuscarobjeto.Size = new System.Drawing.Size(137, 20);
-            this.tbuscarobjeto.TabIndex = 48;
-            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // bbuscar
-            // 
-            this.bbuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bbuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.bbuscar.FlatAppearance.BorderSize = 0;
-            this.bbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bbuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbuscar.ForeColor = System.Drawing.Color.White;
-            this.bbuscar.Location = new System.Drawing.Point(433, 547);
-            this.bbuscar.Name = "bbuscar";
-            this.bbuscar.Size = new System.Drawing.Size(106, 21);
-            this.bbuscar.TabIndex = 49;
-            this.bbuscar.Text = "Buscar";
-            this.bbuscar.UseVisualStyleBackColor = false;
-            this.bbuscar.Click += new System.EventHandler(this.bbuscar_Click);
-            // 
             // dgusuarios
             // 
             this.dgusuarios.AllowUserToAddRows = false;
@@ -509,14 +463,14 @@
             this.dgusuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editar,
             this.eliminar});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgusuarios.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgusuarios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgusuarios.Location = new System.Drawing.Point(4, 587);
             this.dgusuarios.Name = "dgusuarios";
             this.dgusuarios.ReadOnly = true;
@@ -634,19 +588,51 @@
             this.bcancelaredicion.Visible = false;
             this.bcancelaredicion.Click += new System.EventHandler(this.bcancelaredicion_Click);
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(295, 552);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 24);
+            this.button2.TabIndex = 147;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // tbuscarobjeto
+            // 
+            this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbuscarobjeto.Location = new System.Drawing.Point(152, 555);
+            this.tbuscarobjeto.Name = "tbuscarobjeto";
+            this.tbuscarobjeto.Size = new System.Drawing.Size(137, 20);
+            this.tbuscarobjeto.TabIndex = 146;
+            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.tbuscarobjeto_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 553);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(143, 19);
+            this.label13.TabIndex = 145;
+            this.label13.Text = "DNI (SIN PUNTOS):";
+            // 
             // Fagregar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(946, 1061);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tbuscarobjeto);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.bcancelaredicion);
             this.Controls.Add(this.beditar);
             this.Controls.Add(this.dgusuarios);
-            this.Controls.Add(this.bbuscar);
-            this.Controls.Add(this.tbuscarobjeto);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
@@ -737,10 +723,6 @@
         private System.Windows.Forms.Button bcancelar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button bbuscar;
-        private System.Windows.Forms.TextBox tbuscarobjeto;
         private System.Windows.Forms.DataGridView dgusuarios;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
@@ -750,5 +732,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
         private System.Windows.Forms.Button beditar;
         private System.Windows.Forms.Button bcancelaredicion;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbuscarobjeto;
+        private System.Windows.Forms.Label label13;
     }
 }

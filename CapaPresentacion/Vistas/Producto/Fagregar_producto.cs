@@ -281,6 +281,64 @@ namespace CapaPresentacion.Gerente.Producto
 
             }
         }
+
+       
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string valorBuscado = "" + tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgproductos.Rows)
+            {
+                if (fila.Cells["Producto"].Value != null && fila.Cells["Producto"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgproductos.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgproductos.CurrentCell = dgproductos[0, rowIndex]; // Esto seleccionará la fila encontrada
+            }
+        }
+
+        private void tbuscarobjeto_TextChanged(object sender, EventArgs e)
+        {
+            string valorBuscado = "" + tbuscarobjeto.Text;
+
+            // Si estás usando un BindingSource
+            int rowIndex = -1;
+
+            foreach (DataGridViewRow fila in dgproductos.Rows)
+            {
+                if (fila.Cells["Producto"].Value != null && fila.Cells["Producto"].Value.ToString() == valorBuscado)
+                {
+                    rowIndex = fila.Index;
+
+
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgproductos.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgproductos.CurrentCell = dgproductos[0, rowIndex]; // Esto seleccionará la fila encontrada
+               
+            }
+            
+        }
     }
 }
 
