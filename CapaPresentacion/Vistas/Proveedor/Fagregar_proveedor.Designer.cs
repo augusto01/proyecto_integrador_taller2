@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_proveedor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.bcancelar = new System.Windows.Forms.Button();
             this.ldomicilio = new System.Windows.Forms.Label();
@@ -357,19 +357,20 @@
             this.dgproveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editar,
             this.eliminar});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgproveedores.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgproveedores.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgproveedores.Location = new System.Drawing.Point(30, 610);
             this.dgproveedores.Name = "dgproveedores";
             this.dgproveedores.ReadOnly = true;
             this.dgproveedores.Size = new System.Drawing.Size(875, 273);
             this.dgproveedores.TabIndex = 90;
+            this.dgproveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproveedores_CellClick);
             this.dgproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproveedores_CellContentClick);
             // 
             // editar

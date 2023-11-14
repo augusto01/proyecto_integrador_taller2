@@ -355,17 +355,18 @@ namespace CapaPresentacion.Vistas.Venta
 
         private void bcancelarventa_Click(object sender, EventArgs e)
         {
-            if (dgdetalle.RowCount > 0)
-            {
+           
 
-               
+            DialogResult resultado = MessageBox.Show("Seguro que quiere cancelar la venta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
                 MessageBox.Show("Venta cancelada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgdetalle.Rows.Clear();
                 this.Close();
 
             }
             //si la venta es cancelada reponemos el stock 
-           
+
         }
 
         private void tbuscarid_TextChanged(object sender, EventArgs e)

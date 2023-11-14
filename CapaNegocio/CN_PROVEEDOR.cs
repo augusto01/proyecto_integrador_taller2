@@ -58,10 +58,11 @@ namespace CapaNegocio
             return proveedor.modificar_proveedor(nombre, apellido, dni, email, domicilio, razonsocial,celular);
         }
 
-        public int eliminar_cliente(int dni)
+        public int eliminar_proveedor(int dni)
         {
-            CD_Cliente cliente = new CD_Cliente();
-            return cliente.eliminar_cliente(dni);
+            CD_Proveedor proveedor = new CD_Proveedor();
+            return proveedor.eliminar_proveedor(dni);
+
 
         }
 

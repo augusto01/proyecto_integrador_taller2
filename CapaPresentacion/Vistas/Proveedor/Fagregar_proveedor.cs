@@ -281,5 +281,44 @@ namespace CapaPresentacion.Vistas.Proveedor
             bcancelar.Visible = true;
          
         }
+        private void EliminarProveedor()
+        {
+            CN_PROVEEDOR proveedor= new CN_PROVEEDOR();
+            if (this.dgproveedores.CurrentRow.Index != -1)
+            {
+                int posicion = dgproveedores.CurrentRow.Index;
+                DialogResult resultado = MessageBox.Show("Seguro que desea eliminar el proveedor?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+
+                    proveedor.eliminar_proveedor(Int32.Parse(dgproveedores[9, posicion].Value.ToString()));
+                    this.dgproveedores.Rows.RemoveAt(this.dgproveedores.CurrentRow.Index);
+                }
+                else
+                {
+                    tnombre.Clear();
+                    tapellido.Clear();              
+                    tdni.Clear();
+                    Tcorreo.Clear();
+                    tdomicilio.Clear();
+                    Tcel.Clear();
+
+                    bcancelaredicion.Visible = false;
+                    beditar.Visible = false;
+                    bcancelar.Visible = true;
+                
+                }
+
+            }
+
+
+        }
+        private void dgproveedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgproveedores.Columns[e.ColumnIndex].Name == "eliminar" && this.dgproveedores.CurrentRow.Index != -1)
+            {
+                EliminarProveedor();
+            }
+        }
     }
 }
