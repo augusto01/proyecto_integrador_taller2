@@ -52,10 +52,10 @@ namespace CapaNegocio
         }
 
 
-        public int modificar_cliente(string nombre_cliente, string apellido_cliente, int dni_cliente, string email_cliente, string domicilio_cliente, int celular_cliente)
+        public int modificar_proveedor(string nombre, string apellido, int dni, string email, string domicilio, string razonsocial, int celular)
         {
-            CD_Cliente cliente = new CD_Cliente();
-            return cliente.modificar_cliente(nombre_cliente, apellido_cliente, dni_cliente, email_cliente, domicilio_cliente, celular_cliente);
+            CD_Proveedor proveedor = new CD_Proveedor();
+            return proveedor.modificar_proveedor(nombre, apellido, dni, email, domicilio, razonsocial,celular);
         }
 
         public int eliminar_cliente(int dni)

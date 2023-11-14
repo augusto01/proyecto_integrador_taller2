@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 //using static Fable.Import.JS;
 
 namespace CapaPresentacion.Vistas.Proveedor
@@ -125,8 +126,11 @@ namespace CapaPresentacion.Vistas.Proveedor
 
         private void Bagregar_Click(object sender, EventArgs e)
         {
-            if (tdni.Text.Trim() == String.Empty || tnombre.Text.Trim() == string.Empty || tapellido.Text.Trim() == string.Empty
-              || Tcorreo.Text.Trim() == String.Empty||Tcel.Text.Trim() == String.Empty)
+            if (tdni.Text.Trim() == String.Empty
+                || tnombre.Text.Trim() == string.Empty
+                || tapellido.Text.Trim() == string.Empty
+                || Tcorreo.Text.Trim() == String.Empty
+                || Tcel.Text.Trim() == String.Empty)
             {
                 MessageBox.Show("Falta Completar Campos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -225,6 +229,57 @@ namespace CapaPresentacion.Vistas.Proveedor
                 dgproveedores.CurrentCell = dgproveedores[0, rowIndex]; // Esto seleccionará la fila encontrada
 
             }
+        }
+        private void editar_accion()
+        {
+            bcancelaredicion.Visible = true;
+            beditar.Visible = true;
+            bcancelar.Visible = false;
+        
+
+        }
+        private void dgproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgproveedores.CurrentRow.Index != -1 && dgproveedores.Columns[e.ColumnIndex].Index == 0)
+            {
+                int posicion;
+                editar_accion();
+                posicion = dgproveedores.CurrentRow.Index;
+                tnombre.Text = dgproveedores[3, posicion].Value.ToString();
+                tapellido.Text = dgproveedores[4, posicion].Value.ToString();        
+                trazonsocial.Text = dgproveedores[5, posicion].Value.ToString();
+                Tcorreo.Text = dgproveedores[7, posicion].Value.ToString();
+                tdomicilio.Text = dgproveedores[6, posicion].Value.ToString();
+                Tcel.Text = dgproveedores[8, posicion].Value.ToString();
+                tdni.Text = dgproveedores[9, posicion].Value.ToString();
+            }
+        }
+
+        private void beditar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Seguro quiere editar el usuario?", "Informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+               
+                proveedor.modificar_proveedor(tnombre.Text, tapellido.Text, Int32.Parse(tdni.Text), Tcorreo.Text, tdomicilio.Text, trazonsocial.Text,Int32.Parse(Tcel.Text) ) ;
+                MessageBox.Show("El usuario se edito correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgproveedores.DataSource = proveedor.ConsultaDT();
+             
+              
+
+
+            }
+            tnombre.Clear();
+            tapellido.Clear();
+ 
+            tdni.Clear();
+            Tcorreo.Clear();
+            tdomicilio.Clear();
+            Tcel.Clear();
+            bcancelaredicion.Visible = false;
+            beditar.Visible = false;
+            bcancelar.Visible = true;
+         
         }
     }
 }

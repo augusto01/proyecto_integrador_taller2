@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_proveedor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.bcancelar = new System.Windows.Forms.Button();
             this.ldomicilio = new System.Windows.Forms.Label();
@@ -63,6 +63,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tbuscarobjeto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.beditar = new System.Windows.Forms.Button();
+            this.bcancelaredicion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).BeginInit();
@@ -93,7 +95,7 @@
             this.bcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bcancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bcancelar.ForeColor = System.Drawing.Color.White;
-            this.bcancelar.Location = new System.Drawing.Point(758, 328);
+            this.bcancelar.Location = new System.Drawing.Point(758, 326);
             this.bcancelar.Name = "bcancelar";
             this.bcancelar.Size = new System.Drawing.Size(114, 48);
             this.bcancelar.TabIndex = 79;
@@ -239,7 +241,7 @@
             this.Bagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bagregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bagregar.ForeColor = System.Drawing.Color.White;
-            this.Bagregar.Location = new System.Drawing.Point(638, 328);
+            this.Bagregar.Location = new System.Drawing.Point(638, 326);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(114, 48);
             this.Bagregar.TabIndex = 78;
@@ -355,19 +357,20 @@
             this.dgproveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editar,
             this.eliminar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgproveedores.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgproveedores.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgproveedores.Location = new System.Drawing.Point(30, 610);
             this.dgproveedores.Name = "dgproveedores";
             this.dgproveedores.ReadOnly = true;
             this.dgproveedores.Size = new System.Drawing.Size(875, 273);
             this.dgproveedores.TabIndex = 90;
+            this.dgproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgproveedores_CellContentClick);
             // 
             // editar
             // 
@@ -418,12 +421,45 @@
             this.label13.TabIndex = 148;
             this.label13.Text = "DNI (SIN PUNTOS):";
             // 
+            // beditar
+            // 
+            this.beditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.beditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.beditar.FlatAppearance.BorderSize = 0;
+            this.beditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.beditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beditar.ForeColor = System.Drawing.Color.White;
+            this.beditar.Location = new System.Drawing.Point(638, 326);
+            this.beditar.Name = "beditar";
+            this.beditar.Size = new System.Drawing.Size(114, 48);
+            this.beditar.TabIndex = 151;
+            this.beditar.Text = "Editar";
+            this.beditar.UseVisualStyleBackColor = false;
+            this.beditar.Visible = false;
+            this.beditar.Click += new System.EventHandler(this.beditar_Click);
+            // 
+            // bcancelaredicion
+            // 
+            this.bcancelaredicion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bcancelaredicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.bcancelaredicion.FlatAppearance.BorderSize = 0;
+            this.bcancelaredicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bcancelaredicion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bcancelaredicion.ForeColor = System.Drawing.Color.White;
+            this.bcancelaredicion.Location = new System.Drawing.Point(758, 326);
+            this.bcancelaredicion.Name = "bcancelaredicion";
+            this.bcancelaredicion.Size = new System.Drawing.Size(114, 48);
+            this.bcancelaredicion.TabIndex = 152;
+            this.bcancelaredicion.Text = "Cancelar";
+            this.bcancelaredicion.UseVisualStyleBackColor = false;
+            // 
             // Fagregar_proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(930, 1022);
+            this.Controls.Add(this.beditar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tbuscarobjeto);
             this.Controls.Add(this.label13);
@@ -447,6 +483,7 @@
             this.Controls.Add(this.Bagregar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tnombre);
+            this.Controls.Add(this.bcancelaredicion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fagregar_proveedor";
             this.Text = "Fagregar_proveedor";
@@ -499,5 +536,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbuscarobjeto;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button beditar;
+        private System.Windows.Forms.Button bcancelaredicion;
     }
 }

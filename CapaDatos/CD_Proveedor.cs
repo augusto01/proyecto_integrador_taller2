@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CapaDatos
 {
@@ -39,6 +41,35 @@ namespace CapaDatos
             flag = cmd.ExecuteNonQuery();
             conexion.Close();
             return flag;
+        }
+
+        public int modificar_proveedor( string nombre, string apellido, int dni,string email, string domicilio,string razonsocial, int celular)
+        {
+            var conexion = GetConnection();
+            int flag = 0;
+
+            conexion.Open();
+
+            string query = "UPDATE Proveedor SET nombre = @nombre_usuario, apellido = @apellido_usuario, razonsocial = @razonsocial, direccion = @domicilio_usuario, correo = @email_usuario, nro_telefono = @celular, dni = @dni_usuario WHERE dni = @dni_usuario";
+
+            using (SqlCommand cmd = new SqlCommand(query, conexion))
+            {
+                // Utiliza parámetros para evitar la concatenación directa de valores en la consulta y prevenir inyección SQL
+                cmd.Parameters.AddWithValue("@nombre_usuario", nombre);
+                cmd.Parameters.AddWithValue("@apellido_usuario", apellido);
+                cmd.Parameters.AddWithValue("@dni_usuario", dni);
+                cmd.Parameters.AddWithValue("@email_usuario", email);
+                cmd.Parameters.AddWithValue("@domicilio_usuario", domicilio);
+                cmd.Parameters.AddWithValue("@celular", celular);
+                cmd.Parameters.AddWithValue("@razonsocial", razonsocial);
+
+                flag = cmd.ExecuteNonQuery();
+            }
+
+            conexion.Close();
+            return flag;
+
+
         }
 
         public List<string> obtener_proveedores()
