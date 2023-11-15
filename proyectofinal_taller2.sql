@@ -153,9 +153,9 @@ select * from Usuario
 
 
 --USUARIO
-INSERT INTO Usuario (nombre_usuario,apellido_usuario,username,dni_usuario,email_usuario,domicilio_usuario,celular_usuario,pass,fecha_creacion,estado_usuario,id_tipo_usuario) VALUES ('Augusto','Almiron','augusto01',1234,'user@gmail.com','laprida1234',37771923,'1234',getdate(),1,0)
-INSERT INTO Usuario (nombre_usuario,apellido_usuario,username,dni_usuario,email_usuario,domicilio_usuario,celular_usuario,pass,fecha_creacion,estado_usuario,id_tipo_usuario) VALUES ('Jose','Blanco','josesito1',12345,'user1@gmail.com','laprida1234',37771923,'1234',getdate(),1,1)
-INSERT INTO Usuario (nombre_usuario,apellido_usuario,username,dni_usuario,email_usuario,domicilio_usuario,celular_usuario,pass,fecha_creacion,estado_usuario,id_tipo_usuario) VALUES ('Micaela','Giovino','mica1',123456,'user2@gmail.com','laprida1234',37771923,'1234',getdate(),1,2)
+INSERT INTO Usuario (nombre_usuario,apellido_usuario,username,dni_usuario,email_usuario,domicilio_usuario,celular_usuario,pass,fecha_creacion,estado_usuario,id_tipo_usuario) VALUES ('Augusto','Almiron','augusto01',1234,'user@gmail.com','laprida1234',37771923,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',getdate(),1,0)
+INSERT INTO Usuario (nombre_usuario,apellido_usuario,username,dni_usuario,email_usuario,domicilio_usuario,celular_usuario,pass,fecha_creacion,estado_usuario,id_tipo_usuario) VALUES ('Jose','Blanco','josesito1',12345,'user1@gmail.com','laprida1234',37771923,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',getdate(),1,1)
+INSERT INTO Usuario (nombre_usuario,apellido_usuario,username,dni_usuario,email_usuario,domicilio_usuario,celular_usuario,pass,fecha_creacion,estado_usuario,id_tipo_usuario) VALUES ('Micaela','Giovino','mica1',123456,'user2@gmail.com','laprida1234',37771923,'03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',getdate(),1,2)
  --TIPO PAGO
 INSERT INTO Tipo_pago (desc_tipo_pago) values ('EFECTIVO')
 INSERT INTO Tipo_pago (desc_tipo_pago) values ('MERCADO PAGO')
@@ -228,6 +228,7 @@ as
 	
 go
 
+select * from Usuario
 
 
 productos_preferidos
@@ -240,3 +241,6 @@ as
 	group by  cat.descripcion
 	order by  count (Producto.id_categoria) DESC
 go
+
+
+select * from Usuario

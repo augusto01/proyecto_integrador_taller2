@@ -14,6 +14,7 @@ namespace CapaDatos
     {
         private object commandType;
 
+        CD_Usuario usuario = new CD_Usuario();  
         public bool loguin (string user, string pass)
         {
 
@@ -25,7 +26,7 @@ namespace CapaDatos
                     command.Connection = connection;
                     command.CommandText = "select * from Usuario where username=@username  and pass=@pass";
                     command.Parameters.AddWithValue ("@username", user);
-                    command.Parameters.AddWithValue("@pass", pass);
+                    command.Parameters.AddWithValue("@pass", usuario.ObtenerHashSHA256(pass));
                     command.CommandType= CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader ();
                     if (reader.HasRows)

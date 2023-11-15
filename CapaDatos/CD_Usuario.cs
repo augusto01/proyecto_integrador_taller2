@@ -28,14 +28,29 @@ namespace CapaDatos
 
 
         }
+        public string ObtenerHashSHA256(string texto)
+        {
+            using (var sha256 = System.Security.Cryptography.SHA256.Create())
+            {
+                // Convierte el texto en bytes
+                byte[] bytes = Encoding.UTF8.GetBytes(texto);
+
+                // Calcula el hash SHA-256
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                // Convierte el hash en una cadena hexadecimal
+                return BitConverter.ToString(hash).Replace("-", String.Empty);
+            }
+        }
 
         public int insertar_usuario(string nombre_usuario, string apellido_usuario, string username, int dni_usuario, string email_usuario, string domicilio_usuario, int celular, string pass, int id_tipousuario)
         {
+            string contraseñaCifrada = ObtenerHashSHA256(pass);
             var conexion = GetConnection();
             int flag = 0;
             conexion.Open();
             string query = "INSERT INTO Usuario(nombre_usuario, apellido_usuario, username, dni_usuario, email_usuario, domicilio_usuario, celular_usuario, pass, fecha_creacion, estado_usuario, id_tipo_usuario) " +
-                            "VALUES('" + nombre_usuario + "', '" + apellido_usuario + "', '" + username + "', " + dni_usuario + ", '" + email_usuario + "', '" + domicilio_usuario + "', " + celular + ", '" + pass + "', getdate(), 1, " + id_tipousuario + ")";
+                            "VALUES('" + nombre_usuario + "', '" + apellido_usuario + "', '" + username + "', " + dni_usuario + ", '" + email_usuario + "', '" + domicilio_usuario + "', " + celular + ", '" + contraseñaCifrada + "', getdate(), 1, " + id_tipousuario + ")";
             SqlCommand cmd = new SqlCommand(query, conexion);
             flag = cmd.ExecuteNonQuery();
             conexion.Close();
