@@ -401,5 +401,12 @@ namespace CapaPresentacion.Administrador
             abrirFormulario(new Fmis_ventas());
             ocultar_submenu();
         }
+
+        private void bagregarventas_Click_1(object sender, EventArgs e)
+        {
+            ocultarhora();
+            abrirFormulario(new Fagregar_venta());
+            ocultar_submenu();
+        }
     }
 }

@@ -36,6 +36,8 @@
             this.bcerrar = new System.Windows.Forms.Button();
             this.brestarurar = new System.Windows.Forms.Button();
             this.menulateral = new System.Windows.Forms.Panel();
+            this.submenu_proveedor = new System.Windows.Forms.Panel();
+            this.bagregarproveedor = new System.Windows.Forms.Button();
             this.bproveedor = new System.Windows.Forms.Button();
             this.submenu_clientes = new System.Windows.Forms.Panel();
             this.bagregarclientes = new System.Windows.Forms.Button();
@@ -61,10 +63,9 @@
             this.lfecha = new System.Windows.Forms.Label();
             this.lhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bagregarproveedor = new System.Windows.Forms.Button();
-            this.submenu_proveedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menulateral.SuspendLayout();
+            this.submenu_proveedor.SuspendLayout();
             this.submenu_clientes.SuspendLayout();
             this.submenu_ventas.SuspendLayout();
             this.submenu_productos.SuspendLayout();
@@ -72,7 +73,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pcontent.SuspendLayout();
-            this.submenu_proveedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,6 +163,32 @@
             this.menulateral.Name = "menulateral";
             this.menulateral.Size = new System.Drawing.Size(267, 1061);
             this.menulateral.TabIndex = 4;
+            // 
+            // submenu_proveedor
+            // 
+            this.submenu_proveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.submenu_proveedor.Controls.Add(this.bagregarproveedor);
+            this.submenu_proveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.submenu_proveedor.Location = new System.Drawing.Point(0, 558);
+            this.submenu_proveedor.Name = "submenu_proveedor";
+            this.submenu_proveedor.Size = new System.Drawing.Size(267, 51);
+            this.submenu_proveedor.TabIndex = 30;
+            // 
+            // bagregarproveedor
+            // 
+            this.bagregarproveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bagregarproveedor.FlatAppearance.BorderSize = 0;
+            this.bagregarproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bagregarproveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagregarproveedor.ForeColor = System.Drawing.Color.White;
+            this.bagregarproveedor.Location = new System.Drawing.Point(0, 0);
+            this.bagregarproveedor.Name = "bagregarproveedor";
+            this.bagregarproveedor.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.bagregarproveedor.Size = new System.Drawing.Size(267, 45);
+            this.bagregarproveedor.TabIndex = 2;
+            this.bagregarproveedor.Text = "Agregar Proveedor";
+            this.bagregarproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bagregarproveedor.UseVisualStyleBackColor = true;
             // 
             // bproveedor
             // 
@@ -274,6 +300,7 @@
             this.bagregarventas.Text = "Agregar Ventas";
             this.bagregarventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bagregarventas.UseVisualStyleBackColor = true;
+            this.bagregarventas.Click += new System.EventHandler(this.bagregarventas_Click_1);
             // 
             // bventas
             // 
@@ -517,32 +544,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // bagregarproveedor
-            // 
-            this.bagregarproveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bagregarproveedor.FlatAppearance.BorderSize = 0;
-            this.bagregarproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bagregarproveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bagregarproveedor.ForeColor = System.Drawing.Color.White;
-            this.bagregarproveedor.Location = new System.Drawing.Point(0, 0);
-            this.bagregarproveedor.Name = "bagregarproveedor";
-            this.bagregarproveedor.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.bagregarproveedor.Size = new System.Drawing.Size(267, 45);
-            this.bagregarproveedor.TabIndex = 2;
-            this.bagregarproveedor.Text = "Agregar Proveedor";
-            this.bagregarproveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bagregarproveedor.UseVisualStyleBackColor = true;
-            // 
-            // submenu_proveedor
-            // 
-            this.submenu_proveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.submenu_proveedor.Controls.Add(this.bagregarproveedor);
-            this.submenu_proveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenu_proveedor.Location = new System.Drawing.Point(0, 558);
-            this.submenu_proveedor.Name = "submenu_proveedor";
-            this.submenu_proveedor.Size = new System.Drawing.Size(267, 51);
-            this.submenu_proveedor.TabIndex = 30;
-            // 
             // Fadministradornuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,6 +560,7 @@
             this.panel1.ResumeLayout(false);
             this.menulateral.ResumeLayout(false);
             this.menulateral.PerformLayout();
+            this.submenu_proveedor.ResumeLayout(false);
             this.submenu_clientes.ResumeLayout(false);
             this.submenu_ventas.ResumeLayout(false);
             this.submenu_productos.ResumeLayout(false);
@@ -568,7 +570,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pcontent.ResumeLayout(false);
             this.pcontent.PerformLayout();
-            this.submenu_proveedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
