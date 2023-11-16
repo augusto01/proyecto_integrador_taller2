@@ -26,6 +26,20 @@ namespace CapaPresentacion.Gerente.Producto
         public Fagregar_producto()
         {
             InitializeComponent();
+                 inicializartipobusqueda();
+        }
+
+        String[] tipobusqueda = { "id_producto", "Producto" };
+        private void inicializartipobusqueda()
+        {
+            int i;
+
+            for (i = 0; i < tipobusqueda.Length; i++)
+            {
+                cbbuscarpor.Items.Add(tipobusqueda[i]);
+            }
+
+            cbbuscarpor.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private void tstock_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -310,20 +324,17 @@ namespace CapaPresentacion.Gerente.Producto
             }
         }
 
-        private void tbuscarobjeto_TextChanged(object sender, EventArgs e)
+        
+
+        private void tbuscarobjeto_TextChanged_1(object sender, EventArgs e)
         {
-            string valorBuscado = "" + tbuscarobjeto.Text;
-
-            // Si estás usando un BindingSource
             int rowIndex = -1;
-
+            string columnaSeleccionada = cbbuscarpor.SelectedItem.ToString();
             foreach (DataGridViewRow fila in dgproductos.Rows)
             {
-                if (fila.Cells["Producto"].Value != null && fila.Cells["Producto"].Value.ToString() == valorBuscado)
+                if (fila.Cells[columnaSeleccionada].Value != null && fila.Cells[columnaSeleccionada].Value.ToString() == tbuscarobjeto.Text)
                 {
                     rowIndex = fila.Index;
-
-
                     break;
                 }
             }
@@ -335,9 +346,7 @@ namespace CapaPresentacion.Gerente.Producto
                 // Seleccionar toda la fila
                 row.Selected = true;
                 dgproductos.CurrentCell = dgproductos[0, rowIndex]; // Esto seleccionará la fila encontrada
-               
             }
-            
         }
     }
 }

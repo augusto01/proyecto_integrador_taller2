@@ -79,8 +79,9 @@
             this.beditar = new System.Windows.Forms.Button();
             this.bcancelaredicion = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.tbuscarobjeto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbbuscarpor = new System.Windows.Forms.ComboBox();
+            this.tbuscarobjeto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.enombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eapellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edni)).BeginInit();
@@ -595,20 +596,11 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(295, 552);
+            this.button2.Location = new System.Drawing.Point(545, 555);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 24);
             this.button2.TabIndex = 147;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // tbuscarobjeto
-            // 
-            this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbuscarobjeto.Location = new System.Drawing.Point(152, 555);
-            this.tbuscarobjeto.Name = "tbuscarobjeto";
-            this.tbuscarobjeto.Size = new System.Drawing.Size(137, 20);
-            this.tbuscarobjeto.TabIndex = 146;
-            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.tbuscarobjeto_TextChanged);
             // 
             // label13
             // 
@@ -617,9 +609,35 @@
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(12, 553);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 19);
+            this.label13.Size = new System.Drawing.Size(94, 19);
             this.label13.TabIndex = 145;
-            this.label13.Text = "DNI (SIN PUNTOS):";
+            this.label13.Text = "Buscar por:";
+            // 
+            // cbbuscarpor
+            // 
+            this.cbbuscarpor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbuscarpor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.cbbuscarpor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbbuscarpor.ForeColor = System.Drawing.Color.White;
+            this.cbbuscarpor.FormattingEnabled = true;
+            this.cbbuscarpor.ItemHeight = 20;
+            this.cbbuscarpor.Location = new System.Drawing.Point(112, 553);
+            this.cbbuscarpor.Name = "cbbuscarpor";
+            this.cbbuscarpor.Size = new System.Drawing.Size(214, 28);
+            this.cbbuscarpor.TabIndex = 148;
+            // 
+            // tbuscarobjeto
+            // 
+            this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbuscarobjeto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tbuscarobjeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbuscarobjeto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbuscarobjeto.ForeColor = System.Drawing.Color.White;
+            this.tbuscarobjeto.Location = new System.Drawing.Point(337, 557);
+            this.tbuscarobjeto.Name = "tbuscarobjeto";
+            this.tbuscarobjeto.Size = new System.Drawing.Size(202, 24);
+            this.tbuscarobjeto.TabIndex = 149;
+            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.tbuscarobjeto_TextChanged_1);
             // 
             // Fagregar_usuario
             // 
@@ -627,8 +645,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(946, 1061);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.tbuscarobjeto);
+            this.Controls.Add(this.cbbuscarpor);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.bcancelaredicion);
             this.Controls.Add(this.beditar);
@@ -733,7 +752,8 @@
         private System.Windows.Forms.Button beditar;
         private System.Windows.Forms.Button bcancelaredicion;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox tbuscarobjeto;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbuscarobjeto;
+        private System.Windows.Forms.ComboBox cbbuscarpor;
     }
 }

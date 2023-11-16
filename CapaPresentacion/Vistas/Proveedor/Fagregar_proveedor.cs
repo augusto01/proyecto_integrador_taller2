@@ -19,6 +19,7 @@ namespace CapaPresentacion.Vistas.Proveedor
         public Fagregar_proveedor()
         {
             InitializeComponent();
+            inicializartipobusqueda();
         }
 
         CN_PROVEEDOR proveedor = new CN_PROVEEDOR();
@@ -26,6 +27,19 @@ namespace CapaPresentacion.Vistas.Proveedor
         
         bool banderaDNI = false;
         bool banderaEmail = false;
+        
+        String[] tipobusqueda = { "id_proveedor", "razonsocial", "dni" };
+        private void inicializartipobusqueda()
+        {
+            int i;
+
+            for (i = 0; i < tipobusqueda.Length; i++)
+            {
+                cbbuscarpor.Items.Add(tipobusqueda[i]);
+            }
+
+            cbbuscarpor.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
 
         private void tnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -318,6 +332,29 @@ namespace CapaPresentacion.Vistas.Proveedor
             if (dgproveedores.Columns[e.ColumnIndex].Name == "eliminar" && this.dgproveedores.CurrentRow.Index != -1)
             {
                 EliminarProveedor();
+            }
+        }
+
+        private void tbuscarobjeto_TextChanged_1(object sender, EventArgs e)
+        {
+            int rowIndex = -1;
+            string columnaSeleccionada = cbbuscarpor.SelectedItem.ToString();
+            foreach (DataGridViewRow fila in dgproveedores.Rows)
+            {
+                if (fila.Cells[columnaSeleccionada].Value != null && fila.Cells[columnaSeleccionada].Value.ToString() == tbuscarobjeto.Text)
+                {
+                    rowIndex = fila.Index;
+                    break;
+                }
+            }
+
+            if (rowIndex != -1)
+            {
+                DataGridViewRow row = dgproveedores.Rows[rowIndex];
+
+                // Seleccionar toda la fila
+                row.Selected = true;
+                dgproveedores.CurrentCell = dgproveedores[0, rowIndex]; // Esto seleccionará la fila encontrada
             }
         }
     }

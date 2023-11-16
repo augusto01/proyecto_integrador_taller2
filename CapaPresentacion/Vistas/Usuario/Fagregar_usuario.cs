@@ -19,11 +19,14 @@ namespace CapaPresentacion.Administrador.Usuario
     public partial class Fagregar_usuario : Form
     {
         CN_USUARIO usuario = new CN_USUARIO();
-       
+
+
+        int columnaSeleccionada = -1;
         public Fagregar_usuario()
         {
             InitializeComponent();
             inicializarUsuarios();
+            inicializartipobusqueda();
         }
 
         String[] TipoUsuario = { "Empleado", "Administrador", "Gerente" };
@@ -37,6 +40,19 @@ namespace CapaPresentacion.Administrador.Usuario
             }
 
             cbtipo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        String[] tipobusqueda = { "ID", "Username", "DNI" };
+        private void inicializartipobusqueda()
+        {
+            int i;
+
+            for (i = 0; i < TipoUsuario.Length; i++)
+            {
+                cbbuscarpor.Items.Add(tipobusqueda[i]);
+            }
+
+            cbbuscarpor.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private void Fagregar_usuario_Load(object sender, EventArgs e)
         {
@@ -485,25 +501,17 @@ namespace CapaPresentacion.Administrador.Usuario
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+       
+
+        private void tbuscarobjeto_TextChanged_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void tbuscarobjeto_TextChanged(object sender, EventArgs e)
-        {
-            string valorBuscado = "" + tbuscarobjeto.Text;
-
-            // Si estás usando un BindingSource
             int rowIndex = -1;
-
+            string columnaSeleccionada = cbbuscarpor.SelectedItem.ToString();
             foreach (DataGridViewRow fila in dgusuarios.Rows)
             {
-                if (fila.Cells["DNI"].Value != null && fila.Cells["DNI"].Value.ToString() == valorBuscado)
+                if (fila.Cells[columnaSeleccionada].Value != null && fila.Cells[columnaSeleccionada].Value.ToString() == tbuscarobjeto.Text)
                 {
                     rowIndex = fila.Index;
-
-
                     break;
                 }
             }
@@ -515,7 +523,6 @@ namespace CapaPresentacion.Administrador.Usuario
                 // Seleccionar toda la fila
                 row.Selected = true;
                 dgusuarios.CurrentCell = dgusuarios[0, rowIndex]; // Esto seleccionará la fila encontrada
-
             }
         }
     }

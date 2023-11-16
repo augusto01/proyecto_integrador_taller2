@@ -69,8 +69,9 @@
             this.cancelaredicion = new System.Windows.Forms.Button();
             this.beditar = new System.Windows.Forms.Button();
             this.tbuscarobjeto = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.cbbuscarpor = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.edesctalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ecategoria)).BeginInit();
             this.panel1.SuspendLayout();
@@ -524,22 +525,28 @@
             // tbuscarobjeto
             // 
             this.tbuscarobjeto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbuscarobjeto.Location = new System.Drawing.Point(151, 536);
+            this.tbuscarobjeto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.tbuscarobjeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbuscarobjeto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbuscarobjeto.ForeColor = System.Drawing.Color.White;
+            this.tbuscarobjeto.Location = new System.Drawing.Point(362, 541);
             this.tbuscarobjeto.Name = "tbuscarobjeto";
-            this.tbuscarobjeto.Size = new System.Drawing.Size(137, 20);
-            this.tbuscarobjeto.TabIndex = 130;
-            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.tbuscarobjeto_TextChanged);
+            this.tbuscarobjeto.Size = new System.Drawing.Size(202, 24);
+            this.tbuscarobjeto.TabIndex = 153;
+            this.tbuscarobjeto.TextChanged += new System.EventHandler(this.tbuscarobjeto_TextChanged_1);
             // 
-            // label13
+            // cbbuscarpor
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(41, 534);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 19);
-            this.label13.TabIndex = 129;
-            this.label13.Text = "Descripcion:";
+            this.cbbuscarpor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbuscarpor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.cbbuscarpor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbbuscarpor.ForeColor = System.Drawing.Color.White;
+            this.cbbuscarpor.FormattingEnabled = true;
+            this.cbbuscarpor.ItemHeight = 20;
+            this.cbbuscarpor.Location = new System.Drawing.Point(137, 537);
+            this.cbbuscarpor.Name = "cbbuscarpor";
+            this.cbbuscarpor.Size = new System.Drawing.Size(214, 28);
+            this.cbbuscarpor.TabIndex = 152;
             // 
             // button2
             // 
@@ -548,12 +555,22 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(294, 532);
+            this.button2.Location = new System.Drawing.Point(570, 539);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 24);
-            this.button2.TabIndex = 141;
+            this.button2.TabIndex = 151;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(37, 537);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 19);
+            this.label13.TabIndex = 150;
+            this.label13.Text = "Buscar por:";
             // 
             // Fagregar_producto
             // 
@@ -561,8 +578,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(914, 983);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.tbuscarobjeto);
+            this.Controls.Add(this.cbbuscarpor);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.beditar);
             this.Controls.Add(this.cancelaredicion);
@@ -650,7 +668,8 @@
         private System.Windows.Forms.Button beditar;
         private System.Windows.Forms.Button cancelaredicion;
         private System.Windows.Forms.TextBox tbuscarobjeto;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbbuscarpor;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label13;
     }
 }
