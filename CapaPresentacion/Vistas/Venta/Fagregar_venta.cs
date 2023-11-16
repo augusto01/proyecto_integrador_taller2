@@ -302,10 +302,11 @@ namespace CapaPresentacion.Vistas.Venta
                 foreach (DataGridViewRow row in dgdetalle.Rows)
                 {
                     filas += "<tr>";
-                    filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells["Producto"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["precio"].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells["subtotal"].Value.ToString() + "</td>";
-                   
+
                     filas += "</tr>";
                   
                 }
