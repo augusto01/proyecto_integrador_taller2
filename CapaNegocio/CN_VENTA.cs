@@ -88,8 +88,22 @@ namespace CapaNegocio
 
 
     }
-    
 
-    
+    public class CN_SALESREPORT
+    {
+        public DateTime reportdate { get; set; }
+
+        public DateTime dia { get; set; }
+
+        public List<CN_SALESREPORT> saleslisting { get; set; }
+
+
+        public decimal total { get; set; }
+
+
+
+
+
+    }
 
 }

@@ -322,6 +322,8 @@ namespace CapaPresentacion.Vistas.Venta
 
                         pdf.Open();
                         pdf.Add(new Phrase(""));
+                  
+
 
                         using (StringReader sr = new StringReader(paginahtml))
                         {

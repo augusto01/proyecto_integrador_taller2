@@ -22,6 +22,7 @@ namespace CapaPresentacion.Vistas.Informes
         private void Fver_informes_Load(object sender, EventArgs e)
         {
             cargar_chart(chartproductosporcategoria);
+            cargar_chartvpu(chart_ventasporusuario);
             CargarDatosEnChartMasElegidos(chartmaselegidos);
             mostrar_labels();
 
@@ -65,6 +66,36 @@ namespace CapaPresentacion.Vistas.Informes
 
             // Agregar la serie al gráfico
             chartproductosporcategoria.Series.Add(series);
+
+
+
+        }
+
+        public void cargar_chartvpu(Chart chartventasporusuario)
+        {
+            CN_INFORME negocio = new CN_INFORME();
+            // Llama al método de la capa de negocio para obtener los datos de productos por categoría
+            Dictionary<string, int> datosParaGrafico = negocio.ObtenerVentasPorUsuario();
+
+            // Utiliza los datos para actualizar el gráfico (chart) en la presentación
+            // (La implementación específica depende de cómo quieras mostrar los datos en el gráfico)
+
+            // Limpiar el gráfico antes de agregar nuevos datos
+            chartventasporusuario.Series.Clear();
+            chartventasporusuario.ChartAreas[0].AxisX.Interval = 1;
+
+            // Crear una nueva serie para el gráfico
+            Series series = new Series("Ventas");
+            series.ChartType = SeriesChartType.Column;
+
+            // Agregar datos al gráfico
+            foreach (var dato in datosParaGrafico)
+            {
+                series.Points.AddXY(dato.Key, dato.Value);
+            }
+
+            // Agregar la serie al gráfico
+            chartventasporusuario.Series.Add(series);
 
 
 

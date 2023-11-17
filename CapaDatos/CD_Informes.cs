@@ -32,6 +32,27 @@ namespace CapaDatos
                 conexion.Close();
             }
         }
+
+        public DataTable ObtenerVentasPorUsuario()
+        {
+            var conexion = GetConnection();
+            SqlCommand cmd = new SqlCommand("ventas_por_usuario", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                conexion.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable ventasporusuario = new DataTable();
+                adapter.Fill(ventasporusuario);
+
+                return ventasporusuario;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
         public DataTable ObtenerProductosPreferidos()
         {
             var conexion = GetConnection();

@@ -38,6 +38,25 @@ namespace CapaNegocio
             return datosParaGrafico;
         }
 
+        public Dictionary<string, int> ObtenerVentasPorUsuario()
+        {
+            // Llama al método de la capa de datos para obtener los productos por categoría
+            DataTable ventasporusuario = datos.ObtenerVentasPorUsuario();
+
+            // Convierte los datos obtenidos en un diccionario para facilitar su uso en la presentación
+            Dictionary<string, int> datosParaGrafico = new Dictionary<string, int>();
+
+            foreach (DataRow row in ventasporusuario.Rows)
+            {
+                string usuario = row["Usuario"].ToString();
+                int cantidad = Convert.ToInt32(row["Cantidad de Ventas"]);
+
+                datosParaGrafico.Add(usuario, cantidad);
+            }
+
+            return datosParaGrafico;
+        }
+
         // Instancia de la capa de datos
         private CD_Informes datosdona = new CD_Informes();
 
