@@ -223,39 +223,40 @@ namespace CapaDatos
             
         }
 
-        public DataTable getSalesOrder(DateTime dia )
+        public DataTable getSalesOrder(DateTime fecha_desde, DateTime fecha_hasta)
         {
             using (var conexion = GetConnection())
             {
-
                 conexion.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conexion;
-                    command.CommandText = @"select distinct vc.id_cabecera as 'ID-FACTURA', cli.nombre_cliente as 'Cliente', tp.desc_tipo_pago as 'Tipo Pago', vc.fecha_venta as 'Fecha de Venta', sum (pro.precio_unitario * Venta_detalle.cantidad_producto) as 'Precio Total'from Venta_detalle
-                                            inner join Producto pro on pro.id_producto = Venta_detalle.id_producto
-                                            inner join Venta_cabecera vc on Venta_detalle.id_cabecera = vc.id_cabecera
-                                            inner join Cliente cli on vc.id_cliente = cli.id_cliente 
-                                            inner join Usuario us on vc.id_usuario = us.id_usuario
-                                            inner join Tipo_pago tp on tp.id_tipo_pago = vc.id_tipo_pago where fecha_venta = '@dia'
-                                            group by vc.id_cabecera, cli.nombre_cliente, tp.desc_tipo_pago, vc.fecha_venta";
-                    
-                    
-                    
-                    command.Parameters.Add("@dia", SqlDbType.Date).Value = dia;
+                    command.CommandText = @"select distinct vc.id_cabecera as 'ID-FACTURA', 
+                    cli.nombre_cliente as 'Cliente', 
+                    tp.desc_tipo_pago as 'Tipo Pago', 
+                    vc.fecha_venta as 'Fecha de Venta', 
+                    sum(pro.precio_unitario * Venta_detalle.cantidad_producto) as 'Precio Total'
+                    from Venta_detalle
+                    inner join Producto pro on pro.id_producto = Venta_detalle.id_producto
+                    inner join Venta_cabecera vc on Venta_detalle.id_cabecera = vc.id_cabecera
+                    inner join Cliente cli on vc.id_cliente = cli.id_cliente 
+                    inner join Usuario us on vc.id_usuario = us.id_usuario
+                    inner join Tipo_pago tp on tp.id_tipo_pago = vc.id_tipo_pago 
+                    where vc.fecha_venta between @fecha_desde and @fecha_hasta
+                    group by vc.id_cabecera, cli.nombre_cliente, tp.desc_tipo_pago, vc.fecha_venta;";
+
+                    // Corrección: Cambia los nombres de los parámetros y su tipo
+                    command.Parameters.Add("@fecha_desde", SqlDbType.Date).Value = fecha_desde;
+                    command.Parameters.Add("@fecha_hasta", SqlDbType.Date).Value = fecha_hasta;
+
                     command.CommandType = CommandType.Text;
 
                     var reader = command.ExecuteReader();
-                    var table = new DataTable();    
+                    var table = new DataTable();
                     table.Load(reader);
                     reader.Dispose();
                     return table;
-
-
                 }
-
-
-
             }
         }
 

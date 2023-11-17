@@ -282,6 +282,7 @@ namespace CapaPresentacion.Vistas.Venta
                 }
 
                 MessageBox.Show("Venta generada con exito!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
 
                 /*================= IMPRESION DEL TICKET  ====================*/
 
@@ -345,7 +346,7 @@ namespace CapaPresentacion.Vistas.Venta
 
                 }
 
-
+                dgdetalle.Rows.Clear();
             }
         }
 

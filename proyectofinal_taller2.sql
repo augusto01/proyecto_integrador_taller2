@@ -200,39 +200,60 @@ INSERT INTO Producto (descripcion,precio_unitario,stock,fecha_alta,id_categoria,
 
 
 
-create proc DashboardDatos 
-@totVentas decimal out,
-@nprod int out,
-@ncliente int out,
-@nprov int out,
-@ncantidadventas int out,
-@nempleado int out
-as
-SET @totVentas = (select SUM(total) as TotalVentas from Venta_detalle)
-set @nprod = (select count (id_producto) from Producto)
-set @nempleado = (select count (id_usuario) from Usuario)
-set @ncliente = (select count (id_cliente) from Cliente)
-set @nprov = (select count (id_proveedor) from Proveedor)
-set @ncantidadventas = (select count (id_cabecera) from Venta_cabecera)
-go
+CREATE PROCEDURE DashboardDatos 
+    @fecha_desde DATE,
+    @fecha_hasta DATE,
+    @totVentas DECIMAL OUT,
+    @nprod INT OUT,
+    @ncliente INT OUT,
+    @nprov INT OUT,
+    @ncantidadventas INT OUT,
+    @nempleado INT OUT
+AS
+BEGIN
+    SET @totVentas = (
+        SELECT SUM(total) as TotalVentas
+        FROM Venta_detalle
+		inner join Venta_cabecera vc on Venta_detalle.id_cabecera = vc.id_cabecera
+        WHERE fecha_venta BETWEEN @fecha_desde AND @fecha_hasta
+    );
+
+    SET @nprod = (SELECT COUNT(id_producto) FROM Producto);
+    SET @nempleado = (SELECT COUNT(id_usuario) FROM Usuario);
+    SET @ncliente = (SELECT COUNT(id_cliente) FROM Cliente);
+    SET @nprov = (SELECT COUNT(id_proveedor) FROM Proveedor);
+    SET @ncantidadventas = (
+        SELECT COUNT(id_cabecera)
+        FROM Venta_cabecera
+        WHERE fecha_venta BETWEEN @fecha_desde AND @fecha_hasta
+    );
+END;
 
 
-create proc productos_preferidos 
-as
-	SELECT top 5 pro.id_producto, count (vd.id_producto) as 'Veces Vendidas',pro.descripcion 'Producto' from Venta_detalle as vd
+drop proc DashboardDatos
 
-	INNER JOIN Producto pro on  pro.id_producto = vd.id_producto
-	group by pro.id_producto, pro.descripcion
-	order by count (2)desc
+CREATE PROCEDURE productos_preferidos 
+    @fecha_desde DATE,
+    @fecha_hasta DATE
+AS
+BEGIN
+    SELECT TOP 5 pro.id_producto, COUNT(vd.id_producto) as 'Veces Vendidas', pro.descripcion as 'Producto'
+    FROM Venta_detalle as vd
+    INNER JOIN Producto pro ON pro.id_producto = vd.id_producto
+	 INNER JOIN Venta_cabecera vc  ON vc.id_cabecera = vd.id_cabecera
+    WHERE vc.fecha_venta BETWEEN @fecha_desde AND @fecha_hasta
+    GROUP BY pro.id_producto, pro.descripcion
+    ORDER BY COUNT(vd.id_producto) DESC;
+END;
 
-	
-go
+drop proc productos_preferidos
 
 select * from Usuario
 
-
+select * from Usuario
 productos_preferidos
 
+select * from Usuario
 --PRODUCTOS POR CATEGORIA
 create proc productos_por_categoria 
 as
@@ -242,12 +263,31 @@ as
 	order by  count (Producto.id_categoria) DESC
 go
 
---VENTAS POR USUARIO
-create proc ventas_por_usuario 
-as
-	select us.nombre_usuario as 'Usuario', count (Venta_cabecera.id_cabecera) as 'Cantidad de Ventas' from Venta_cabecera
-	INNER JOIN Usuario us on   Venta_cabecera.id_usuario = us.id_usuario
-	group by  us.nombre_usuario
-	order by  count (Venta_cabecera.id_cabecera) DESC
-go
 
+CREATE PROCEDURE productos_por_categoria 
+    @fecha_desde DATE,
+    @fecha_hasta DATE
+AS
+BEGIN
+    SELECT cat.descripcion as 'Descripcion', COUNT(Producto.id_categoria) as Cant
+    FROM Producto
+    INNER JOIN Categoria cat ON cat.id_categoria = Producto.id_categoria
+    WHERE Producto.fecha_alta BETWEEN @fecha_desde AND @fecha_hasta
+    GROUP BY cat.descripcion
+    ORDER BY COUNT(Producto.id_categoria) DESC;
+END;
+
+
+--VENTAS POR USUARIO
+CREATE PROCEDURE ventas_por_usuario 
+    @fecha_desde DATE,
+    @fecha_hasta DATE
+AS
+BEGIN
+    SELECT us.nombre_usuario as 'Usuario', COUNT(Venta_cabecera.id_cabecera) as 'Cantidad de Ventas'
+    FROM Venta_cabecera
+    INNER JOIN Usuario us ON Venta_cabecera.id_usuario = us.id_usuario
+    WHERE Venta_cabecera.fecha_venta BETWEEN @fecha_desde AND @fecha_hasta
+    GROUP BY us.nombre_usuario
+    ORDER BY COUNT(Venta_cabecera.id_cabecera) DESC;
+END;

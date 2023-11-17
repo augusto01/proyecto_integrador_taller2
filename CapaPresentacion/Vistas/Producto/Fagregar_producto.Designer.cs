@@ -91,7 +91,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Berlin Sans FB Demi", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Lime;
-            this.label10.Location = new System.Drawing.Point(300, 9);
+            this.label10.Location = new System.Drawing.Point(307, 42);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(407, 55);
             this.label10.TabIndex = 90;
@@ -102,7 +102,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 247);
+            this.label7.Location = new System.Drawing.Point(28, 280);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 19);
             this.label7.TabIndex = 83;
@@ -115,7 +115,7 @@
             this.cbcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcategoria.ForeColor = System.Drawing.Color.White;
             this.cbcategoria.FormattingEnabled = true;
-            this.cbcategoria.Location = new System.Drawing.Point(25, 271);
+            this.cbcategoria.Location = new System.Drawing.Point(32, 304);
             this.cbcategoria.Name = "cbcategoria";
             this.cbcategoria.Size = new System.Drawing.Size(214, 32);
             this.cbcategoria.TabIndex = 120;
@@ -125,7 +125,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 169);
+            this.label6.Location = new System.Drawing.Point(28, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 79;
@@ -136,7 +136,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(324, 105);
+            this.label2.Location = new System.Drawing.Point(331, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 19);
             this.label2.TabIndex = 75;
@@ -149,7 +149,7 @@
             this.tprecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tprecio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tprecio.ForeColor = System.Drawing.Color.White;
-            this.tprecio.Location = new System.Drawing.Point(328, 129);
+            this.tprecio.Location = new System.Drawing.Point(335, 162);
             this.tprecio.Name = "tprecio";
             this.tprecio.Size = new System.Drawing.Size(216, 24);
             this.tprecio.TabIndex = 117;
@@ -183,7 +183,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(324, 169);
+            this.label3.Location = new System.Drawing.Point(331, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 19);
             this.label3.TabIndex = 99;
@@ -196,7 +196,7 @@
             this.cbtalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbtalle.ForeColor = System.Drawing.Color.White;
             this.cbtalle.FormattingEnabled = true;
-            this.cbtalle.Location = new System.Drawing.Point(328, 191);
+            this.cbtalle.Location = new System.Drawing.Point(335, 224);
             this.cbtalle.Name = "cbtalle";
             this.cbtalle.Size = new System.Drawing.Size(214, 32);
             this.cbtalle.TabIndex = 119;
@@ -206,7 +206,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(324, 247);
+            this.label12.Location = new System.Drawing.Point(331, 280);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 19);
             this.label12.TabIndex = 101;
@@ -219,7 +219,7 @@
             this.cbproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbproveedor.ForeColor = System.Drawing.Color.White;
             this.cbproveedor.FormattingEnabled = true;
-            this.cbproveedor.Location = new System.Drawing.Point(328, 271);
+            this.cbproveedor.Location = new System.Drawing.Point(335, 304);
             this.cbproveedor.Name = "cbproveedor";
             this.cbproveedor.Size = new System.Drawing.Size(214, 32);
             this.cbproveedor.TabIndex = 121;
@@ -232,7 +232,7 @@
             this.bcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bcancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bcancelar.ForeColor = System.Drawing.Color.White;
-            this.bcancelar.Location = new System.Drawing.Point(750, 258);
+            this.bcancelar.Location = new System.Drawing.Point(757, 291);
             this.bcancelar.Name = "bcancelar";
             this.bcancelar.Size = new System.Drawing.Size(109, 45);
             this.bcancelar.TabIndex = 78;
@@ -248,7 +248,7 @@
             this.Bagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bagregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bagregar.ForeColor = System.Drawing.Color.White;
-            this.Bagregar.Location = new System.Drawing.Point(635, 258);
+            this.Bagregar.Location = new System.Drawing.Point(642, 291);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(109, 45);
             this.Bagregar.TabIndex = 122;
@@ -289,7 +289,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 105);
+            this.label5.Location = new System.Drawing.Point(28, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 19);
             this.label5.TabIndex = 117;
@@ -302,7 +302,7 @@
             this.tdesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tdesc.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tdesc.ForeColor = System.Drawing.Color.White;
-            this.tdesc.Location = new System.Drawing.Point(25, 127);
+            this.tdesc.Location = new System.Drawing.Point(32, 160);
             this.tdesc.Name = "tdesc";
             this.tdesc.Size = new System.Drawing.Size(214, 24);
             this.tdesc.TabIndex = 116;
@@ -321,7 +321,7 @@
             this.bagregarcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagregarcategoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bagregarcategoria.ForeColor = System.Drawing.Color.White;
-            this.bagregarcategoria.Location = new System.Drawing.Point(483, 447);
+            this.bagregarcategoria.Location = new System.Drawing.Point(490, 480);
             this.bagregarcategoria.Name = "bagregarcategoria";
             this.bagregarcategoria.Size = new System.Drawing.Size(109, 33);
             this.bagregarcategoria.TabIndex = 120;
@@ -334,7 +334,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(479, 383);
+            this.label8.Location = new System.Drawing.Point(486, 416);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 19);
             this.label8.TabIndex = 119;
@@ -358,7 +358,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(483, 333);
+            this.label9.Location = new System.Drawing.Point(490, 366);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(160, 19);
             this.label9.TabIndex = 121;
@@ -378,7 +378,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tdesctalle);
-            this.panel1.Location = new System.Drawing.Point(25, 319);
+            this.panel1.Location = new System.Drawing.Point(32, 352);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(421, 188);
             this.panel1.TabIndex = 122;
@@ -398,7 +398,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.tcategoria);
-            this.panel2.Location = new System.Drawing.Point(466, 319);
+            this.panel2.Location = new System.Drawing.Point(473, 352);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(388, 188);
             this.panel2.TabIndex = 123;
@@ -417,7 +417,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(635, 105);
+            this.pictureBox1.Location = new System.Drawing.Point(642, 138);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(224, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -451,7 +451,7 @@
             this.dgproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editar,
             this.eliminar});
-            this.dgproductos.Location = new System.Drawing.Point(26, 572);
+            this.dgproductos.Location = new System.Drawing.Point(33, 605);
             this.dgproductos.Name = "dgproductos";
             this.dgproductos.ReadOnly = true;
             this.dgproductos.Size = new System.Drawing.Size(833, 132);
@@ -482,7 +482,7 @@
             this.tstock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tstock.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tstock.ForeColor = System.Drawing.Color.White;
-            this.tstock.Location = new System.Drawing.Point(25, 195);
+            this.tstock.Location = new System.Drawing.Point(32, 228);
             this.tstock.Name = "tstock";
             this.tstock.Size = new System.Drawing.Size(214, 24);
             this.tstock.TabIndex = 118;
@@ -496,7 +496,7 @@
             this.cancelaredicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelaredicion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelaredicion.ForeColor = System.Drawing.Color.White;
-            this.cancelaredicion.Location = new System.Drawing.Point(750, 258);
+            this.cancelaredicion.Location = new System.Drawing.Point(757, 291);
             this.cancelaredicion.Name = "cancelaredicion";
             this.cancelaredicion.Size = new System.Drawing.Size(109, 45);
             this.cancelaredicion.TabIndex = 123;
@@ -513,7 +513,7 @@
             this.beditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.beditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.beditar.ForeColor = System.Drawing.Color.White;
-            this.beditar.Location = new System.Drawing.Point(635, 258);
+            this.beditar.Location = new System.Drawing.Point(642, 291);
             this.beditar.Name = "beditar";
             this.beditar.Size = new System.Drawing.Size(109, 45);
             this.beditar.TabIndex = 127;
@@ -529,7 +529,7 @@
             this.tbuscarobjeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbuscarobjeto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbuscarobjeto.ForeColor = System.Drawing.Color.White;
-            this.tbuscarobjeto.Location = new System.Drawing.Point(362, 541);
+            this.tbuscarobjeto.Location = new System.Drawing.Point(369, 574);
             this.tbuscarobjeto.Name = "tbuscarobjeto";
             this.tbuscarobjeto.Size = new System.Drawing.Size(202, 24);
             this.tbuscarobjeto.TabIndex = 153;
@@ -543,7 +543,7 @@
             this.cbbuscarpor.ForeColor = System.Drawing.Color.White;
             this.cbbuscarpor.FormattingEnabled = true;
             this.cbbuscarpor.ItemHeight = 20;
-            this.cbbuscarpor.Location = new System.Drawing.Point(137, 537);
+            this.cbbuscarpor.Location = new System.Drawing.Point(144, 570);
             this.cbbuscarpor.Name = "cbbuscarpor";
             this.cbbuscarpor.Size = new System.Drawing.Size(214, 28);
             this.cbbuscarpor.TabIndex = 152;
@@ -555,7 +555,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(570, 539);
+            this.button2.Location = new System.Drawing.Point(577, 572);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 24);
             this.button2.TabIndex = 151;
@@ -566,7 +566,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(37, 537);
+            this.label13.Location = new System.Drawing.Point(44, 570);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 19);
             this.label13.TabIndex = 150;
@@ -577,7 +577,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(914, 983);
+            this.ClientSize = new System.Drawing.Size(914, 788);
             this.Controls.Add(this.tbuscarobjeto);
             this.Controls.Add(this.cbbuscarpor);
             this.Controls.Add(this.button2);

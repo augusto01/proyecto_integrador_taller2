@@ -10,3 +10,9 @@ C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaEntidad
 C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\juancarruthers\Desktop\proyecto\proyecto_integrador_taller2\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaEntidad\obj\Debug\CapaEntidad.pdb

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fagregar_usuario));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +65,6 @@
             this.ldomicilio = new System.Windows.Forms.Label();
             this.bcancelar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.dgusuarios = new System.Windows.Forms.DataGridView();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -100,7 +99,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 120);
+            this.label1.Location = new System.Drawing.Point(29, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 19);
             this.label1.TabIndex = 16;
@@ -113,7 +112,7 @@
             this.tnombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tnombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tnombre.ForeColor = System.Drawing.Color.White;
-            this.tnombre.Location = new System.Drawing.Point(34, 144);
+            this.tnombre.Location = new System.Drawing.Point(33, 203);
             this.tnombre.Name = "tnombre";
             this.tnombre.Size = new System.Drawing.Size(214, 24);
             this.tnombre.TabIndex = 15;
@@ -127,7 +126,7 @@
             this.Bagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bagregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bagregar.ForeColor = System.Drawing.Color.White;
-            this.Bagregar.Location = new System.Drawing.Point(617, 403);
+            this.Bagregar.Location = new System.Drawing.Point(616, 462);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(141, 48);
             this.Bagregar.TabIndex = 25;
@@ -140,7 +139,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(333, 120);
+            this.label2.Location = new System.Drawing.Point(332, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 19);
             this.label2.TabIndex = 19;
@@ -153,7 +152,7 @@
             this.tapellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tapellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tapellido.ForeColor = System.Drawing.Color.White;
-            this.tapellido.Location = new System.Drawing.Point(337, 144);
+            this.tapellido.Location = new System.Drawing.Point(336, 203);
             this.tapellido.Name = "tapellido";
             this.tapellido.Size = new System.Drawing.Size(202, 24);
             this.tapellido.TabIndex = 16;
@@ -164,7 +163,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(333, 262);
+            this.label3.Location = new System.Drawing.Point(332, 321);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 19);
             this.label3.TabIndex = 21;
@@ -177,7 +176,7 @@
             this.tdni.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tdni.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tdni.ForeColor = System.Drawing.Color.White;
-            this.tdni.Location = new System.Drawing.Point(337, 286);
+            this.tdni.Location = new System.Drawing.Point(336, 345);
             this.tdni.Name = "tdni";
             this.tdni.Size = new System.Drawing.Size(202, 24);
             this.tdni.TabIndex = 20;
@@ -188,7 +187,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(333, 184);
+            this.label5.Location = new System.Drawing.Point(332, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 19);
             this.label5.TabIndex = 25;
@@ -201,7 +200,7 @@
             this.Tcel.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Tcel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tcel.ForeColor = System.Drawing.Color.White;
-            this.Tcel.Location = new System.Drawing.Point(336, 208);
+            this.Tcel.Location = new System.Drawing.Point(335, 267);
             this.Tcel.Name = "Tcel";
             this.Tcel.Size = new System.Drawing.Size(202, 24);
             this.Tcel.TabIndex = 18;
@@ -212,7 +211,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 184);
+            this.label6.Location = new System.Drawing.Point(29, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(173, 19);
             this.label6.TabIndex = 23;
@@ -225,7 +224,7 @@
             this.Tcorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Tcorreo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tcorreo.ForeColor = System.Drawing.Color.White;
-            this.Tcorreo.Location = new System.Drawing.Point(34, 208);
+            this.Tcorreo.Location = new System.Drawing.Point(33, 267);
             this.Tcorreo.Name = "Tcorreo";
             this.Tcorreo.Size = new System.Drawing.Size(214, 24);
             this.Tcorreo.TabIndex = 17;
@@ -239,7 +238,7 @@
             this.cbtipo.ForeColor = System.Drawing.Color.White;
             this.cbtipo.FormattingEnabled = true;
             this.cbtipo.ItemHeight = 24;
-            this.cbtipo.Location = new System.Drawing.Point(34, 286);
+            this.cbtipo.Location = new System.Drawing.Point(33, 345);
             this.cbtipo.Name = "cbtipo";
             this.cbtipo.Size = new System.Drawing.Size(214, 32);
             this.cbtipo.TabIndex = 19;
@@ -249,7 +248,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 262);
+            this.label7.Location = new System.Drawing.Point(29, 321);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 19);
             this.label7.TabIndex = 29;
@@ -262,7 +261,7 @@
             this.Tuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Tuser.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tuser.ForeColor = System.Drawing.Color.White;
-            this.Tuser.Location = new System.Drawing.Point(337, 351);
+            this.Tuser.Location = new System.Drawing.Point(336, 410);
             this.Tuser.Name = "Tuser";
             this.Tuser.Size = new System.Drawing.Size(202, 24);
             this.Tuser.TabIndex = 22;
@@ -272,7 +271,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(333, 327);
+            this.label4.Location = new System.Drawing.Point(332, 386);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(181, 19);
             this.label4.TabIndex = 31;
@@ -283,7 +282,7 @@
             this.lconfcontra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lconfcontra.AutoSize = true;
             this.lconfcontra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lconfcontra.Location = new System.Drawing.Point(332, 391);
+            this.lconfcontra.Location = new System.Drawing.Point(331, 450);
             this.lconfcontra.Name = "lconfcontra";
             this.lconfcontra.Size = new System.Drawing.Size(202, 19);
             this.lconfcontra.TabIndex = 35;
@@ -296,7 +295,7 @@
             this.Tconfcontra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Tconfcontra.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tconfcontra.ForeColor = System.Drawing.Color.White;
-            this.Tconfcontra.Location = new System.Drawing.Point(336, 417);
+            this.Tconfcontra.Location = new System.Drawing.Point(335, 476);
             this.Tconfcontra.Name = "Tconfcontra";
             this.Tconfcontra.Size = new System.Drawing.Size(202, 24);
             this.Tconfcontra.TabIndex = 24;
@@ -308,7 +307,7 @@
             this.lcontra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lcontra.AutoSize = true;
             this.lcontra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lcontra.Location = new System.Drawing.Point(30, 391);
+            this.lcontra.Location = new System.Drawing.Point(29, 450);
             this.lcontra.Name = "lcontra";
             this.lcontra.Size = new System.Drawing.Size(121, 19);
             this.lcontra.TabIndex = 33;
@@ -321,7 +320,7 @@
             this.Tpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Tpass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tpass.ForeColor = System.Drawing.Color.White;
-            this.Tpass.Location = new System.Drawing.Point(32, 415);
+            this.Tpass.Location = new System.Drawing.Point(31, 474);
             this.Tpass.Name = "Tpass";
             this.Tpass.Size = new System.Drawing.Size(216, 24);
             this.Tpass.TabIndex = 23;
@@ -334,7 +333,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Lime;
-            this.label10.Location = new System.Drawing.Point(326, 9);
+            this.label10.Location = new System.Drawing.Point(303, 90);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(401, 56);
             this.label10.TabIndex = 36;
@@ -401,7 +400,7 @@
             this.tdomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tdomicilio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tdomicilio.ForeColor = System.Drawing.Color.White;
-            this.tdomicilio.Location = new System.Drawing.Point(34, 351);
+            this.tdomicilio.Location = new System.Drawing.Point(33, 410);
             this.tdomicilio.Name = "tdomicilio";
             this.tdomicilio.Size = new System.Drawing.Size(214, 24);
             this.tdomicilio.TabIndex = 21;
@@ -411,7 +410,7 @@
             this.ldomicilio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ldomicilio.AutoSize = true;
             this.ldomicilio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ldomicilio.Location = new System.Drawing.Point(30, 327);
+            this.ldomicilio.Location = new System.Drawing.Point(29, 386);
             this.ldomicilio.Name = "ldomicilio";
             this.ldomicilio.Size = new System.Drawing.Size(82, 19);
             this.ldomicilio.TabIndex = 40;
@@ -425,7 +424,7 @@
             this.bcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bcancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bcancelar.ForeColor = System.Drawing.Color.White;
-            this.bcancelar.Location = new System.Drawing.Point(764, 403);
+            this.bcancelar.Location = new System.Drawing.Point(763, 462);
             this.bcancelar.Name = "bcancelar";
             this.bcancelar.Size = new System.Drawing.Size(141, 48);
             this.bcancelar.TabIndex = 26;
@@ -438,23 +437,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(671, 116);
+            this.label11.Location = new System.Drawing.Point(670, 165);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(183, 19);
             this.label11.TabIndex = 43;
             this.label11.Text = "Campo Obligatorio (*)";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Lime;
-            this.label12.Location = new System.Drawing.Point(385, 480);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(216, 56);
-            this.label12.TabIndex = 45;
-            this.label12.Text = "Usuarios";
             // 
             // dgusuarios
             // 
@@ -464,14 +451,14 @@
             this.dgusuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editar,
             this.eliminar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgusuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgusuarios.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgusuarios.Location = new System.Drawing.Point(4, 587);
             this.dgusuarios.Name = "dgusuarios";
             this.dgusuarios.ReadOnly = true;
@@ -522,7 +509,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(617, 138);
+            this.pictureBox1.Location = new System.Drawing.Point(616, 197);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(288, 256);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -535,7 +522,7 @@
             this.bver.FlatAppearance.BorderSize = 0;
             this.bver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bver.Image = ((System.Drawing.Image)(resources.GetObject("bver.Image")));
-            this.bver.Location = new System.Drawing.Point(575, 416);
+            this.bver.Location = new System.Drawing.Point(574, 475);
             this.bver.Name = "bver";
             this.bver.Size = new System.Drawing.Size(26, 29);
             this.bver.TabIndex = 37;
@@ -548,7 +535,7 @@
             this.bnover.FlatAppearance.BorderSize = 0;
             this.bnover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnover.Image = ((System.Drawing.Image)(resources.GetObject("bnover.Image")));
-            this.bnover.Location = new System.Drawing.Point(575, 416);
+            this.bnover.Location = new System.Drawing.Point(574, 475);
             this.bnover.Name = "bnover";
             this.bnover.Size = new System.Drawing.Size(26, 29);
             this.bnover.TabIndex = 38;
@@ -563,7 +550,7 @@
             this.beditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.beditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.beditar.ForeColor = System.Drawing.Color.White;
-            this.beditar.Location = new System.Drawing.Point(617, 403);
+            this.beditar.Location = new System.Drawing.Point(616, 462);
             this.beditar.Name = "beditar";
             this.beditar.Size = new System.Drawing.Size(141, 48);
             this.beditar.TabIndex = 51;
@@ -580,7 +567,7 @@
             this.bcancelaredicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bcancelaredicion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bcancelaredicion.ForeColor = System.Drawing.Color.White;
-            this.bcancelaredicion.Location = new System.Drawing.Point(764, 404);
+            this.bcancelaredicion.Location = new System.Drawing.Point(763, 463);
             this.bcancelaredicion.Name = "bcancelaredicion";
             this.bcancelaredicion.Size = new System.Drawing.Size(141, 48);
             this.bcancelaredicion.TabIndex = 52;
@@ -644,7 +631,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(946, 1061);
+            this.ClientSize = new System.Drawing.Size(946, 788);
             this.Controls.Add(this.tbuscarobjeto);
             this.Controls.Add(this.cbbuscarpor);
             this.Controls.Add(this.button2);
@@ -652,7 +639,6 @@
             this.Controls.Add(this.bcancelaredicion);
             this.Controls.Add(this.beditar);
             this.Controls.Add(this.dgusuarios);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bcancelar);
@@ -741,7 +727,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bcancelar;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dgusuarios;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;

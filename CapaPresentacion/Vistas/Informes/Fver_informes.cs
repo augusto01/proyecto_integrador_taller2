@@ -21,9 +21,9 @@ namespace CapaPresentacion.Vistas.Informes
 
         private void Fver_informes_Load(object sender, EventArgs e)
         {
-            cargar_chart(chartproductosporcategoria);
-            cargar_chartvpu(chart_ventasporusuario);
-            CargarDatosEnChartMasElegidos(chartmaselegidos);
+            cargar_chart(chartproductosporcategoria,dtdesde.Value,dthasta.Value);
+            cargar_chartvpu(chart_ventasporusuario, dtdesde.Value, dthasta.Value);
+            CargarDatosEnChartMasElegidos(chartmaselegidos, dtdesde.Value, dthasta.Value);
             mostrar_labels();
 
         }
@@ -41,11 +41,11 @@ namespace CapaPresentacion.Vistas.Informes
 
         }
 
-        public void cargar_chart(Chart chartproductosporcategoria)
+        public void cargar_chart(Chart chartproductosporcategoria, DateTime fechaDesde, DateTime fechaHasta)
         {
             CN_INFORME negocio = new CN_INFORME();
             // Llama al método de la capa de negocio para obtener los datos de productos por categoría
-            Dictionary<string, int> datosParaGrafico = negocio.ObtenerProductosPorCategoria();
+            Dictionary<string, int> datosParaGrafico = negocio.ObtenerProductosPorCategoria(dtdesde.Value, dthasta.Value);
 
             // Utiliza los datos para actualizar el gráfico (chart) en la presentación
             // (La implementación específica depende de cómo quieras mostrar los datos en el gráfico)
@@ -71,11 +71,11 @@ namespace CapaPresentacion.Vistas.Informes
 
         }
 
-        public void cargar_chartvpu(Chart chartventasporusuario)
+        public void cargar_chartvpu(Chart chartventasporusuario, DateTime fechaDesde, DateTime fechaHasta)
         {
             CN_INFORME negocio = new CN_INFORME();
             // Llama al método de la capa de negocio para obtener los datos de productos por categoría
-            Dictionary<string, int> datosParaGrafico = negocio.ObtenerVentasPorUsuario();
+            Dictionary<string, int> datosParaGrafico = negocio.ObtenerVentasPorUsuario(dtdesde.Value,dthasta.Value);
 
             // Utiliza los datos para actualizar el gráfico (chart) en la presentación
             // (La implementación específica depende de cómo quieras mostrar los datos en el gráfico)
@@ -101,12 +101,12 @@ namespace CapaPresentacion.Vistas.Informes
 
         }
 
-        private void CargarDatosEnChartMasElegidos(Chart chart)
+        private void CargarDatosEnChartMasElegidos(Chart chart, DateTime fechaDesde, DateTime fechaHasta)
         {
                 CN_INFORME negocio = new CN_INFORME();
             
                     // Llama al método de la capa de negocio para obtener los productos preferidos
-            DataTable datosProductosPreferidos = negocio.ObtenerProductosPreferidos();
+            DataTable datosProductosPreferidos = negocio.ObtenerProductosPreferidos(dtdesde.Value, dthasta.Value);
 
             // Utiliza los datos para actualizar el gráfico (chart) en la presentación
             // (La implementación específica depende de cómo quieras mostrar los datos en el gráfico)
@@ -139,8 +139,8 @@ namespace CapaPresentacion.Vistas.Informes
 
         private void mostrar_labels()
         {
-            
-            negocioDashboard.ObtenerDatosDashboard(out decimal totVentas, out int nProd, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado);
+
+            negocioDashboard.ObtenerDatosDashboard(out decimal totVentas, out int nProd, out int nCliente, out int nProv, out int nCantidadVentas, out int nEmpleado, dtdesde.Value, dthasta.Value);
 
             // Mostrar los valores en los labels (ajusta los nombres de los labels según tus necesidades)
             ltotal.Text = $"{totVentas.ToString("C")}";
@@ -151,5 +151,15 @@ namespace CapaPresentacion.Vistas.Informes
             lnroempleados.Text = $"{nEmpleado}";
         }
 
+        private void baplicarfiltro_Click(object sender, EventArgs e)
+        {
+            DateTime fechaDesde = dtdesde.Value;
+            DateTime fechaHasta = dthasta.Value;
+
+            mostrar_labels();
+            cargar_chart(chartproductosporcategoria, fechaDesde, fechaHasta);
+            cargar_chartvpu(chart_ventasporusuario, fechaDesde, fechaHasta);
+            CargarDatosEnChartMasElegidos(chartmaselegidos, fechaDesde, fechaHasta);
+        }
     }
 }
