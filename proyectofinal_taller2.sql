@@ -242,5 +242,12 @@ as
 	order by  count (Producto.id_categoria) DESC
 go
 
+--VENTAS POR USUARIO
+create proc ventas_por_usuario 
+as
+	select us.nombre_usuario as 'Usuario', count (Venta_cabecera.id_cabecera) as 'Cantidad de Ventas' from Venta_cabecera
+	INNER JOIN Usuario us on   Venta_cabecera.id_usuario = us.id_usuario
+	group by  us.nombre_usuario
+	order by  count (Venta_cabecera.id_cabecera) DESC
+go
 
-select * from Usuario
