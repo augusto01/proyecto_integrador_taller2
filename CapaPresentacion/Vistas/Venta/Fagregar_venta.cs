@@ -344,7 +344,7 @@ namespace CapaPresentacion.Vistas.Venta
 
 
                 }
-
+                dgdetalle.Rows.Clear(); 
 
             }
         }
