@@ -345,13 +345,13 @@ namespace CapaPresentacion.Vistas.Venta
 
 
                 }
-<<<<<<< HEAD
+
 
                 dgdetalle.Rows.Clear();
-=======
+
                 dgdetalle.Rows.Clear(); 
 
->>>>>>> 1bd5e2219a76e7e52f96639b79e6fc911078e993
+
             }
         }
 

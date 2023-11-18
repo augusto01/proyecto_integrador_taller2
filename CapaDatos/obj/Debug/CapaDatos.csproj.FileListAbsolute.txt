@@ -34,3 +34,12 @@ C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaD
 C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\fedec\OneDrive\Escritorio\SportWorlds\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Augusto\Desktop\taller2\proyecto_integrador\SportsOn\proyecto_integrador_taller2\CapaDatos\obj\Debug\CapaDatos.pdb
