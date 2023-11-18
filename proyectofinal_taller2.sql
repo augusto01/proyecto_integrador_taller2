@@ -229,7 +229,7 @@ BEGIN
     );
 END;
 
-
+select * from Proveedor
 drop proc DashboardDatos
 
 CREATE PROCEDURE productos_preferidos 
